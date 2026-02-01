@@ -1,8 +1,8 @@
-streamlit>=1.35
-streamlit
 openai>=1.0.0
+langchain-openai
+chromadb>=0.5.0
 pydantic>=2.7
 pydantic-settings>=2.0
-chromadb>=0.5.0
-langchain-chroma
-langchain-openai
+numpy
+streamlit
+
