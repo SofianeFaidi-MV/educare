@@ -6,22 +6,24 @@
       "module": "420-411 - Interfaces humain-machine "
     },
     "time_by_module_sec": {
-      "420-111 - Introduction à la programmation": 25484,
-      "420-112 - Création de sites web": 4,
-      "420-211 - Applications Web": 0.7915539741516113,
-      "420-210 - Programmation orientée-objet": 461,
+      "420-111 - Introduction à la programmation": 25768,
+      "420-112 - Création de sites web": 10,
+      "420-211 - Applications Web": 12,
+      "420-210 - Programmation orientée-objet": 475,
       "420-411 - Interfaces humain-machine ": 16710.89883351326,
-      "420-413 - Développement d'applications pour entreprise": 9202,
-      "420-511 - Développement de jeux vidéo": 1333.4315693378448,
-      "420-512 - Développement d'applications mobiles": 53954.502917051315,
-      "420-514 - Collecte et interprétation de données": 4847,
-      "420-411 - Interfaces humain-machine": 6
+      "420-413 - Développement d'applications pour entreprise": 9204,
+      "420-511 - Développement de jeux vidéo": 1333,
+      "420-512 - Développement d'applications mobiles": 53960,
+      "420-514 - Collecte et interprétation de données": 4853,
+      "420-411 - Interfaces humain-machine": 10,
+      "420-311 - Structures de données": 1490
     },
     "questions_by_module": {
-      "420-111 - Introduction à la programmation": 75,
+      "420-111 - Introduction à la programmation": 82,
       "420-210 - Programmation orientée-objet": 4,
       "420-413 - Développement d'applications pour entreprise": 1,
-      "420-514 - Collecte et interprétation de données": 1
+      "420-514 - Collecte et interprétation de données": 1,
+      "420-311 - Structures de données": 6
     },
     "competences": {},
     "badges": [
@@ -800,6 +802,71 @@
         "ts": 1769916582.17025,
         "type": "question",
         "module": "420-210 - Programmation orientée-objet"
+      },
+      {
+        "ts": 1769972259.306422,
+        "type": "question",
+        "module": "420-311 - Structures de données"
+      },
+      {
+        "ts": 1769972341.843586,
+        "type": "question",
+        "module": "420-111 - Introduction à la programmation"
+      },
+      {
+        "ts": 1769972390.969921,
+        "type": "question",
+        "module": "420-311 - Structures de données"
+      },
+      {
+        "ts": 1769973746.615444,
+        "type": "question",
+        "module": "420-311 - Structures de données"
+      },
+      {
+        "ts": 1769973766.196355,
+        "type": "question",
+        "module": "420-111 - Introduction à la programmation"
+      },
+      {
+        "ts": 1769977546.850965,
+        "type": "question",
+        "module": "420-311 - Structures de données"
+      },
+      {
+        "ts": 1769977575.5044858,
+        "type": "question",
+        "module": "420-311 - Structures de données"
+      },
+      {
+        "ts": 1769977618.096714,
+        "type": "question",
+        "module": "420-111 - Introduction à la programmation"
+      },
+      {
+        "ts": 1769981390.393151,
+        "type": "question",
+        "module": "420-111 - Introduction à la programmation"
+      },
+      {
+        "ts": 1769981538.705353,
+        "type": "question",
+        "module": "420-111 - Introduction à la programmation"
+      },
+      {
+        "ts": 1769981564.414689,
+        "type": "question",
+        "module": "420-111 - Introduction à la programmation"
+      },
+      {
+        "ts": 1769981731.5735471,
+        "type": "question",
+        "module": "420-311 - Structures de données"
+      },
+      {
+        "ts": 1769981750.876226,
+        "type": "question",
+        "module": "420-111 - Introduction à la programmation"
       }
     ]
   }

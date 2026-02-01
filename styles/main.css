@@ -975,11 +975,3 @@ div[data-testid="stTextArea"] > div:has(textarea:not(:placeholder-shown)){
 }
 
 
-.bot-bubble, .user-bubble { white-space: pre-wrap; word-break: break-word; }
-#intro-bot .bot-bubble,
-#intro-bot .user-bubble {
-  color: white !important;
-  opacity: 1 !important;
-  visibility: visible !important;
-}
-
