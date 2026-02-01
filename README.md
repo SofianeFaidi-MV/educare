@@ -10,6 +10,9 @@ source .venv/bin/activate  # macOS/Linux
 pip install -r requirements.txt
 ```
 
+
+
+
 ## Lancer l’app
 ```bash
 streamlit run app.py
