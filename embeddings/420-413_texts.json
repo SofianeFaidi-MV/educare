@@ -1,0 +1,372 @@
+[
+  {
+    "text": "Développement d'applications pour entreprise\n\nPlans de cours\n\n📋 Samuel Fostiné :\n\nPlan de cours\n\nHoraire et disponibilités des enseignants\n\n✔️ Samuel Fostiné :\n\nLien vers mon horaire et mes disponibilités\n\nSamuel Fostiné\n\nNom de l’évaluation\n\nPondération\n\nSemaine de l’évaluation\n\n10 quiz (8 meilleures notes)\n\n15 %\n\nSemaine 2 à 14\n\nExamen 1\n\n20%\n\nSemaine 4\n\nExamen 2\n\n25 %\n\nSemaine 12\n\nProjet remise 1\n\n5 %\n\nSemaine 6\n\nProjet remise 2\n\n5 %\n\nSemaine 8\n\nProjet remise 3\n\n5 %\n\nSemaine 10\n\nProjet remise 4\n\n5 %\n\nSemaine 13\n\nProjet remise final\n\n20 %\n\nSemaine 15",
+    "metadata": {
+      "module": "420-413",
+      "source": "https://cegepmv.github.io/420-413/",
+      "title": "Développement d'applications pour entreprise :: Développement d'applications pour entreprises",
+      "type": "web",
+      "corpus": "cours"
+    }
+  },
+  {
+    "text": "Introduction à Visual Studio 2022\n\n1. Introduction à Visual Studio 2022\n\nQu’est-ce que Visual Studio ?\n\nVisual Studio 2022 est l’\n\nEnvironnement de Développement Intégré (IDE)\n\nde Microsoft dédié au développement d’applications sur les plateformes\n\n.NET\n\n. Il offre un ensemble complet d’outils pour coder, tester, déboguer, déployer et collaborer efficacement.\n\nLes éditions de Visual Studio 2022\n\nÉdition\n\nPublic cible\n\nCommunity\n\nGratuit : étudiants, développeurs open source et particuliers.\n\nProfessional\n\nDéveloppeurs professionnels et petites équipes.\n\nEnterprise\n\nGrandes équipes : outils avancés de test, performance et intégration continue.\n\n2. Installation et Configuration\n\nÉtapes d’installation\n\nTéléchargement :\n\nSe rendre sur\n\nvisualstudio.microsoft.com/fr\n\npour choisir sa version.\n\nSélection des charges de travail :",
+    "metadata": {
+      "module": "420-413",
+      "source": "https://cegepmv.github.io/420-413/intro/index.html",
+      "title": "Introduction à Visual Studio 2022 :: Développement d'applications pour entreprises",
+      "type": "web",
+      "corpus": "cours"
+    }
+  },
+  {
+    "text": ". Installation et Configuration\n\nÉtapes d’installation\n\nTéléchargement :\n\nSe rendre sur\n\nvisualstudio.microsoft.com/fr\n\npour choisir sa version.\n\nSélection des charges de travail :\n\nPour le développement C# (Windows Forms ou WPF), il est impératif de sélectionner\n\n.NET Desktop Development\n\nSi vous disposez déjà de Visual Studio\n\n, vous pouvez ajouter la charge de travail de développement de bureau .NET comme suit :\n\nLancez Visual Studio Installer.\n\nSi vous y êtes invité, autorisez le programme d’installation à se mettre à jour.\n\nSi une mise à jour pour Visual Studio est disponible, un bouton Mettre à jour s’affiche. Sélectionnez-la pour la mettre à jour avant de modifier l’installation.\n\nRecherchez votre installation de Visual Studio et sélectionnez le bouton Modifier .\n\nS’il n’est pas déjà sélectionné, sélectionnez la charge de travail de développement du bureau .NET , puis sélectionnez le bouton Modifier . Sinon, fermez simplement la fenêtre de dialogue.\n\nPersonnalisation",
+    "metadata": {
+      "module": "420-413",
+      "source": "https://cegepmv.github.io/420-413/intro/index.html",
+      "title": "Introduction à Visual Studio 2022 :: Développement d'applications pour entreprises",
+      "type": "web",
+      "corpus": "cours"
+    }
+  },
+  {
+    "text": "ionné, sélectionnez la charge de travail de développement du bureau .NET , puis sélectionnez le bouton Modifier . Sinon, fermez simplement la fenêtre de dialogue.\n\nPersonnalisation\n\nL’interface est entièrement personnalisable : thèmes, raccourcis clavier et extensions. Pour un environnement complet, il est recommandé d’installer\n\nGit\n\npour la gestion de versions.\n\nCaution\n\nNote sur l’IA :\n\nDes outils comme\n\nGitHub Copilot\n\nsont disponibles, mais ils\n\nne doivent pas être utilisés\n\ndans le cadre de ce cours afin de ne pas nuire à l’apprentissage des concepts fondamentaux.\n\n3. Fonctionnalités principales\n\nSource :\n\nhttps://learn.microsoft.com/fr-fr/visualstudio/get-started/media/visual-studio-overview.png?view=vs-2022\n\nL’éditeur de texte\n\nL’éditeur de texte de Visual Studio est un puissant outil permettant de saisir le code de l’application.\n\nVoici quelques fonctionnalités de l’éditeur de texte:\n\nLes mots-clés et les types sont colorés pour faciliter la lecture et la compréhension du code.",
+    "metadata": {
+      "module": "420-413",
+      "source": "https://cegepmv.github.io/420-413/intro/index.html",
+      "title": "Introduction à Visual Studio 2022 :: Développement d'applications pour entreprises",
+      "type": "web",
+      "corpus": "cours"
+    }
+  },
+  {
+    "text": "sir le code de l’application.\n\nVoici quelques fonctionnalités de l’éditeur de texte:\n\nLes mots-clés et les types sont colorés pour faciliter la lecture et la compréhension du code.\n\nLa qualité du document en cours de visualisation est annoncée grâce à l’icône en bas du document pour indiquer s’il contient des suggestions, des avertissements ou des erreurs.\n\nL’intellisense\n\npermet d’afficher les classes et leurs membres en rapport avec le code saisi ainsi que les paramètres et les surcharges possibles pour les méthodes\n\nL’intellicode\n\nvous permet d’assurer la précision et la cohérence de l’exécution du code qui peut remplir une ligne entière à la fois. L’IA détecte votre contexte de code, notamment les noms de variables, les fonctions et le type de code que vous écrivez, pour vous donner les meilleures suggestions. Encore mieux : IntelliCode s’exécute sur votre ordinateur, ce qui garantit que votre code privé reste privé.\n\nAutres outils de Visual Studio Code 2022\n\nGestion de builds :",
+    "metadata": {
+      "module": "420-413",
+      "source": "https://cegepmv.github.io/420-413/intro/index.html",
+      "title": "Introduction à Visual Studio 2022 :: Développement d'applications pour entreprises",
+      "type": "web",
+      "corpus": "cours"
+    }
+  },
+  {
+    "text": "estions. Encore mieux : IntelliCode s’exécute sur votre ordinateur, ce qui garantit que votre code privé reste privé.\n\nAutres outils de Visual Studio Code 2022\n\nGestion de builds :\n\nCréation de configurations adaptées aux environnements de développement ou de production.\n\nDébogage et tests :\n\nDébogueur intégré pour l’exécution pas à pas et outils de tests unitaires (NUnit, xUnit).\n\nLe mode débogage peut être lancé en allant sur Déboguer -> Démarrer le débogage ou juste F5\n\nCollaboration :\n\nIntégration native de Git/GitHub et support de\n\nLive Share\n\npour le développement collaboratif en temps réel.\n\n4. Exploration de l’interface\n\nLors du lancement, la\n\nfenêtre de démarrage\n\npropose quatre options principales:\n\nClone a repository :\n\nRécupérer du code depuis GitHub ou Azure DevOps.\n\nOpen a project or solution :\n\nOuvrir un fichier projet local.\n\nOpen a local folder :\n\nNaviguer et éditer du code dans n’importe quel dossier.\n\nCreate a new project :\n\nCommencer à partir d’un modèle prédéfini.\n\n5. Projets et Solutions\n\nCréer votre solution et projet",
+    "metadata": {
+      "module": "420-413",
+      "source": "https://cegepmv.github.io/420-413/intro/index.html",
+      "title": "Introduction à Visual Studio 2022 :: Développement d'applications pour entreprises",
+      "type": "web",
+      "corpus": "cours"
+    }
+  },
+  {
+    "text": "Naviguer et éditer du code dans n’importe quel dossier.\n\nCreate a new project :\n\nCommencer à partir d’un modèle prédéfini.\n\n5. Projets et Solutions\n\nCréer votre solution et projet\n\nDémarrez Visual Studio et sélectionnez Créer un projet.\n\nDans la fenêtre\n\nCréer un projet\n\n, recherchez et sélectionnez un modèle d’application console C#, puis sélectionnez Suivant..\n\nConfigurez votre projet (nom, emplacement). À cette étape, vous pouvez décidez de placer la solution\n\n.sln\n\net le projet\n\n.csproj\n\n. Puis sélectionnez Suivant.\n\nDans la fenêtre Informations supplémentaires , vérifiez que .NET 8.0 apparaît dans le menu déroulant Framework, puis sélectionnez Créer.\n\nDifférences fondamentales entre projet et solution\n\nUn projet est un ensemble de fichiers qui seront compilés en un seul assemblage.\n\nUne solution est un ensemble d’un ou plusieurs projets.\n\nUn projet d’application exécutable possède un point d’entrée. C’est la méthode\n\nMain\n\n. Cette méthode doit être publique et statique en utilisant les mots-clés\n\npublic\n\nstatic",
+    "metadata": {
+      "module": "420-413",
+      "source": "https://cegepmv.github.io/420-413/intro/index.html",
+      "title": "Introduction à Visual Studio 2022 :: Développement d'applications pour entreprises",
+      "type": "web",
+      "corpus": "cours"
+    }
+  },
+  {
+    "text": "ts.\n\nUn projet d’application exécutable possède un point d’entrée. C’est la méthode\n\nMain\n\n. Cette méthode doit être publique et statique en utilisant les mots-clés\n\npublic\n\nstatic\n\n, qui spécifient respectivement que la méthode est accessible depuis l’application et en dehors, que la méthode est globale et que la classe n’a pas besoin d’être instanciée pour pouvoir l’appeler.\n\nUne solution possède aussi un projet de démarrage. Ce projet est identifiable dans l’explorateur de solutions, car son nom est en gras. Pour modifier cette propriété, un clic droit sur le projet permet de sélectionner Définir en tant que projet de démarrage dans le menu contextuel.\n\nLe point d’entrée (Méthode Main)\n\nUn projet exécutable possède une méthode\n\nMain\n\n. Elle doit être définie comme suit:\n\npublic\n\n: Accessible depuis l’application et l’extérieur.\n\nstatic\n\n: La méthode est globale et la classe n’a pas besoin d’être instanciée pour l’appeler.\n\nProjet de démarrage :\n\nDans une solution, le projet de démarrage apparaît en\n\ngras",
+    "metadata": {
+      "module": "420-413",
+      "source": "https://cegepmv.github.io/420-413/intro/index.html",
+      "title": "Introduction à Visual Studio 2022 :: Développement d'applications pour entreprises",
+      "type": "web",
+      "corpus": "cours"
+    }
+  },
+  {
+    "text": "static\n\n: La méthode est globale et la classe n’a pas besoin d’être instanciée pour l’appeler.\n\nProjet de démarrage :\n\nDans une solution, le projet de démarrage apparaît en\n\ngras\n\ndans l’explorateur de solutions. On peut le modifier via un clic droit ->\n\nDéfinir en tant que projet de démarrage\n\n6. Exécution et Débogage\n\nLancement :\n\nCliquez sur la flèche verte ou appuyez sur\n\nPoints d’arrêt (Breakpoints) :\n\nPermettent d’interrompre l’exécution pour examiner l’état des variables à des endroits précis.\n\nLes différents fichiers compris dans la solution\n\nLe fichier\n\nprogram.cs\n\nqui contient le code qui est compilé et exécuté\n\nQuand on fait un clic droit sur le projet, ensuite on choisit\n\n“Ouvrir le dossier dans l’Explorateur de fichiers”\n\n, on peut voir le fichier du projet dont l’extension est\n\ncsproj\n\nUn niveau plus haut, on voit le fichier de la solution dont l’extension est sln.\n\nPlus bas, dans le dossier bin -> Debug -> net8.0, on peut voir le fichier exécutable .exe qui est l’application qui vient d’être créée.",
+    "metadata": {
+      "module": "420-413",
+      "source": "https://cegepmv.github.io/420-413/intro/index.html",
+      "title": "Introduction à Visual Studio 2022 :: Développement d'applications pour entreprises",
+      "type": "web",
+      "corpus": "cours"
+    }
+  },
+  {
+    "text": "er de la solution dont l’extension est sln.\n\nPlus bas, dans le dossier bin -> Debug -> net8.0, on peut voir le fichier exécutable .exe qui est l’application qui vient d’être créée.\n\nSi on double-clique sur l’exécutable, on ouvre l’application.\n\nOn peut aussi ouvrir la ligne de commande cmd et exécuter l’application en tapant le nom de l’exécutable.\n\nRessources supplémentaires\n\nDocumentation Visual Studio\n\nDocumentation IntelliCode",
+    "metadata": {
+      "module": "420-413",
+      "source": "https://cegepmv.github.io/420-413/intro/index.html",
+      "title": "Introduction à Visual Studio 2022 :: Développement d'applications pour entreprises",
+      "type": "web",
+      "corpus": "cours"
+    }
+  },
+  {
+    "text": "Architecture .NET\n\nIntroduction à .NET\n\n.NET\n\n: Un écosystème pour le développement dʼapplications qui prend en charge plusieurs langages, dont C#, F#, et\n\nVB.NET. Il fournit des outils, des bibliothèques, et un environnement dʼexécution pour faciliter le développement\n\nd’applications.\n\nLa plateforme .NET\n\nLa plateforme .NET repose sur une architecture en couches qui permet l’exécution de code écrit dans différents langages (C#, F#, VB.NET) de manière unifiée et performante.\n\n1. Les composants fondamentaux\n\nL’architecture s’appuie principalement sur deux piliers :\n\nCLR (Common Language Runtime) :\n\nC’est le\n\nmoteur/coeur\n\nd’exécution. Il gère l’exécution des programmes, la mémoire (Garbage Collector), la sécurité et la compilation à la volée (JIT).\n\nMoteur d’exécution\n\n: Le CLR est responsable de charger et exécuter des programmes .NET et assure la gestion de la",
+    "metadata": {
+      "module": "420-413",
+      "source": "https://cegepmv.github.io/420-413/architecture/index.html",
+      "title": "Architecture .NET :: Développement d'applications pour entreprises",
+      "type": "web",
+      "corpus": "cours"
+    }
+  },
+  {
+    "text": "bage Collector), la sécurité et la compilation à la volée (JIT).\n\nMoteur d’exécution\n\n: Le CLR est responsable de charger et exécuter des programmes .NET et assure la gestion de la\n\nmémoire, la sécurité, et la gestion des exceptions.\n\nConversion IL\n\n-> Code natif : Le code C# est d’abord compilé en Intermediate Language (IL), puis converti en code\n\nmachine natif par le CLR.\n\nGestion de la mémoire\n\n: Le CLR gère automatiquement la mémoire via la garbage collection (collecte des objets non\n\nutilisés).\n\nSécurité\n\n: Le CLR applique des règles de sécurité pour exécuter les programmes de manière sécurisée.\n\nBCL (Base Class Library) :\n\nUne immense bibliothèque de classes réutilisables qui fournit les fonctionnalités de base (gestion des fichiers, réseau, dates, collections, etc.).\n\n2. Le Mécanisme de Compilation du Code Source C#\n\nCode source C#\n\n: Lorsqu’un programme C# est écrit, le code source est d’abord compilé en IL (Intermediate Language). Le compilateur C# s’appelle\n\nRoslyn\n\nLe CIL (Common Intermediate Language)",
+    "metadata": {
+      "module": "420-413",
+      "source": "https://cegepmv.github.io/420-413/architecture/index.html",
+      "title": "Architecture .NET :: Développement d'applications pour entreprises",
+      "type": "web",
+      "corpus": "cours"
+    }
+  },
+  {
+    "text": "C#\n\n: Lorsqu’un programme C# est écrit, le code source est d’abord compilé en IL (Intermediate Language). Le compilateur C# s’appelle\n\nRoslyn\n\nLe CIL (Common Intermediate Language)\n\n: Le compilateur ne crée pas tout de suite un programme fini. Il traduit votre C# en un langage intermédiaire (autrefois appelé MSIL).\n\nPourquoi ? Parce que ce langage est universel au sein de l’écosystème .NET. Que vous écriviez en C#, F# ou VB.NET, tout finit en CIL. Cela permet à différents langages de fonctionner ensemble.\n\nEn plus du code IL, le compilateur génère des informations cruciales :\n\nMétadonnées : Une description de chaque classe, méthode et variable définie dans votre code.\n\nManifeste : La “carte d’identité” du programme (nom, version, bibliothèques externes nécessaires).\n\nAssembly\n\n: Le code et les ressources sont stockés dans un fichier assembly (généralement avec l’extension .dll ou .exe).\n\nUn assembly contient un manifeste qui décrit ses types, sa version, et ses métadonnées.\n\nCompilation Just-In-Time (JIT)",
+    "metadata": {
+      "module": "420-413",
+      "source": "https://cegepmv.github.io/420-413/architecture/index.html",
+      "title": "Architecture .NET :: Développement d'applications pour entreprises",
+      "type": "web",
+      "corpus": "cours"
+    }
+  },
+  {
+    "text": "hier assembly (généralement avec l’extension .dll ou .exe).\n\nUn assembly contient un manifeste qui décrit ses types, sa version, et ses métadonnées.\n\nCompilation Just-In-Time (JIT)\n\n: Lorsque le programme est exécuté, le CLR charge lʼassembly, et le code IL est compilé en\n\ncode natif via la compilation JIT.\n\nParticularité : Le JIT ne compile que les morceaux de code au fur et à mesure qu’ils sont appelés (“Juste à temps”). Si une fonction n’est jamais utilisée pendant une session, elle n’est jamais compilée en code machine, ce qui économise des ressources.",
+    "metadata": {
+      "module": "420-413",
+      "source": "https://cegepmv.github.io/420-413/architecture/index.html",
+      "title": "Architecture .NET :: Développement d'applications pour entreprises",
+      "type": "web",
+      "corpus": "cours"
+    }
+  },
+  {
+    "text": "Introduction et syntaxe du langage C#\n\nIntroduction à C#\n\n(prononcé “C Sharp”) est un langage de programmation moderne, orienté objet et fortement typé. C# est développé par Microsoft en 2000 et est principalement utilisé pour le développement dʼapplications sous la plateforme .NET. La syntaxe de C# est influencée par C, C++ et Java, mais elle présente certaines spécificités qui lui sont propres.\n\nC# est un langage sensible à la casse.\n\nL’extension des fichiers C# est\n\n.cs\n\nCaractéristiques principales:\n\nOrienté objet\n\n: tout est basé sur des classes et des objets\n\nTypé statiquement\n\n: les types de variables doivent être déclarés\n\nGéré\n\n: la mémoire est gérée automatiquement par le garbage collector\n\nPolyvalent\n\n: applications desktop, web, mobile, jeux vidéo (Unity)\n\nModerne\n\n: syntaxe claire et évolutive\n\nDomaines d’utilisation:\n\nAvec C#, on peut créer :\n\n🖥️ des applications console",
+    "metadata": {
+      "module": "420-413",
+      "source": "https://cegepmv.github.io/420-413/intro_syntaxe_c_sharp/index.html",
+      "title": "Introduction et syntaxe du langage C# :: Développement d'applications pour entreprises",
+      "type": "web",
+      "corpus": "cours"
+    }
+  },
+  {
+    "text": "ent\n\n: applications desktop, web, mobile, jeux vidéo (Unity)\n\nModerne\n\n: syntaxe claire et évolutive\n\nDomaines d’utilisation:\n\nAvec C#, on peut créer :\n\n🖥️ des applications console\n\n🖥️ Applications Windows (WPF, WinForms)\n\n🌐 des sites Web et des API\n\n📱 des applications mobiles\n\n🎮 des jeux (Unity utilise C#)\n\n👉 Bref : un langage, plusieurs carrières possibles.\n\nStructure de base d’un programme C#\n\nUn programme C# est composé de plusieurs éléments clés : l’espace de noms (namespace), les classes, et la méthode Main, qui est le point d’entrée de l’application.\n\nusing\n\nSystem\n\n// Importation des bibliothèques\n\nnamespace\n\nMyProgram\n\n// Définition de l'espace de noms\n\nclass\n\nProgram\n\n// Définition de la classe\n\nstatic\n\nvoid\n\nMain\n\nstring\n\nargs\n\n// Méthode Main, point d'entrée du programme\n\nConsole\n\nWriteLine\n\n\"Hello, World!\"\n\n// Affichage d'un message et aller à la prochaine ligne\n\nusing\n\n: Utilisé pour importer des bibliothèques externes (par exemple,\n\nSystem\n\ncontient des classes utiles comme\n\nConsole\n\nnamespace",
+    "metadata": {
+      "module": "420-413",
+      "source": "https://cegepmv.github.io/420-413/intro_syntaxe_c_sharp/index.html",
+      "title": "Introduction et syntaxe du langage C# :: Développement d'applications pour entreprises",
+      "type": "web",
+      "corpus": "cours"
+    }
+  },
+  {
+    "text": "e d'un message et aller à la prochaine ligne\n\nusing\n\n: Utilisé pour importer des bibliothèques externes (par exemple,\n\nSystem\n\ncontient des classes utiles comme\n\nConsole\n\nnamespace\n\n: Un conteneur logique pour les classes et autres types. En d’autres termes, c’est une façon d’organiser le code. Pense à un namespace comme : un dossier une section ou un casier pour ranger des classes.\n\nSans namespaces, ce serait le chaos total 😱.\n\nImagine des milliers de classes, toutes avec des noms simples comme Console, List, Button.\n\nSans namespace :\n\n💥 conflits de noms\n\n💥 code impossible à lire\n\n💥 développeurs en dépression\n\nclass\n\n: Un modèle pour créer des objets. Tout programme C# doit contenir au moins une classe.\n\nMain\n\n: La méthode Main est le point de départ d’une application C#. C’est ici que l’exécution du programme commence.\n\nLes identifiants ou les identificateurs\n\nCe sont les noms donnés aux classes et à leurs membres.",
+    "metadata": {
+      "module": "420-413",
+      "source": "https://cegepmv.github.io/420-413/intro_syntaxe_c_sharp/index.html",
+      "title": "Introduction et syntaxe du langage C# :: Développement d'applications pour entreprises",
+      "type": "web",
+      "corpus": "cours"
+    }
+  },
+  {
+    "text": "t de départ d’une application C#. C’est ici que l’exécution du programme commence.\n\nLes identifiants ou les identificateurs\n\nCe sont les noms donnés aux classes et à leurs membres.\n\nUn identifiant doit être composé d’un seul mot commençant par une lettre ou un caractère underscore (_). Mais, il peut contenir aussi un chiffre qui ne doit pas se placer au début de l’identifiant.\n\nIls peuvent être composés de lettres majuscules et minuscules, mais le langage C# étant sensible à la casse, les majuscules et minuscules doivent être respectées pour faire référence au bon identifiant\n\nPar exemple: les identifiants suivants ne sont pas les mêmes\n\nmonIdentifiant\n\nMonIdentifiant\n\nLes mots-clés\n\nLes mots clés sont des noms réservés par le langage C#, qui ont des significations spécifiques pour le compilateur. Ils ne peuvent pas être utilisés comme identifiants dans votre programme, sauf s’ils incluent\n\ncomme préfixe. Par exemple,\n\n@if\n\nest un identifiant valide, mais pas\n\n, car\n\nest un mot clé.\n\nPar défaut, les mots-clés sont colorés en bleu dans l’éditeur de Visual Studio.",
+    "metadata": {
+      "module": "420-413",
+      "source": "https://cegepmv.github.io/420-413/intro_syntaxe_c_sharp/index.html",
+      "title": "Introduction et syntaxe du langage C# :: Développement d'applications pour entreprises",
+      "type": "web",
+      "corpus": "cours"
+    }
+  },
+  {
+    "text": "uent\n\ncomme préfixe. Par exemple,\n\n@if\n\nest un identifiant valide, mais pas\n\n, car\n\nest un mot clé.\n\nPar défaut, les mots-clés sont colorés en bleu dans l’éditeur de Visual Studio.\n\nLe caractère\n\npeut également préfixer des identifiants qui n’ont aucun conflit avec les mots-clés. Ainsi\n\n@monIdentifiant\n\nmonIdentifiant\n\nseront interprétés de la même manière (la même variable).\n\nLes commentaires\n\nC# prend en charge deux formes différentes de commentaires:\n\nLes commentaires sur une seule ligne commencent par // et se terminent à la fin de cette ligne de code.\n\nLes commentaires multilignes commencent par /* et se terminent par */\n\nLe commentaire sur plusieurs lignes peut également être utilisé pour insérer du texte dans une ligne de code. Étant donné que ces commentaires ont un caractère de fermeture explicite, vous pouvez inclure plus de code exécutable après le commentaire:\n\npublic\n\nstatic\n\nint\n\nadditioner\n\nint\n\nnombre1\n\nint\n\nnombre2\n\nreturn\n\nnombre1\n\n/* première opérande */\n\nnombre2\n\n/* deuxième opérande*/",
+    "metadata": {
+      "module": "420-413",
+      "source": "https://cegepmv.github.io/420-413/intro_syntaxe_c_sharp/index.html",
+      "title": "Introduction et syntaxe du langage C# :: Développement d'applications pour entreprises",
+      "type": "web",
+      "corpus": "cours"
+    }
+  },
+  {
+    "text": "lus de code exécutable après le commentaire:\n\npublic\n\nstatic\n\nint\n\nadditioner\n\nint\n\nnombre1\n\nint\n\nnombre2\n\nreturn\n\nnombre1\n\n/* première opérande */\n\nnombre2\n\n/* deuxième opérande*/\n\nLe commentaire sur une seule ligne peut apparaître après le code exécutable sur la même ligne. Le commentaire se termine à la fin de la ligne de texte :\n\nfloat\n\ntemperature\n\n34.4f\n\n// Si nous n'ajoutons pas le f ou le F après la valeur, nous obtiendrons une erreur",
+    "metadata": {
+      "module": "420-413",
+      "source": "https://cegepmv.github.io/420-413/intro_syntaxe_c_sharp/index.html",
+      "title": "Introduction et syntaxe du langage C# :: Développement d'applications pour entreprises",
+      "type": "web",
+      "corpus": "cours"
+    }
+  },
+  {
+    "text": "Variables\n\n1. Déclaration de variables et types de données\n\nC# est un langage fortement typé, ce qui signifie que chaque variable doit être déclarée avec un type spécifique. Voici quelques types de base :\n\nint\n\nage\n\n// Entier\n\ndouble\n\nprice\n\n19.99\n\n// Nombre à virgule flottante\n\nchar\n\ngrade\n\n'A'\n\n// Caractère unique\n\nstring\n\nname\n\n\"John\"\n\n// Chaîne de caractères\n\nbool\n\nisActive\n\ntrue\n\n// Booléen (vrai ou faux)\n\nUne variable peut être déclarée et initialisée avec la même instruction.\n\nstring salutation = \"Bonjour tout le monde!\";\n\nIl est également possible de déclarer et d’initier plusieurs variables en une seule instruction, à la condition qu’elles soient du même type. Dans ce cas, les variables sont séparées par une virgule.\n\nbool joyeux = true, content = true;\n\nUne variable peut également être marquée par le mot-clé\n\nconst",
+    "metadata": {
+      "module": "420-413",
+      "source": "https://cegepmv.github.io/420-413/variables/index.html",
+      "title": "Variables :: Développement d'applications pour entreprises",
+      "type": "web",
+      "corpus": "cours"
+    }
+  },
+  {
+    "text": "soient du même type. Dans ce cas, les variables sont séparées par une virgule.\n\nbool joyeux = true, content = true;\n\nUne variable peut également être marquée par le mot-clé\n\nconst\n\nqui spécifie que la valeur de la variable ne peut pas être modifiée pendant l’exécution. C’est une variable en lecture seule.\n\nconst double pi = 3.14;\n\nL’inférence de type (var) : Le mot-clé var permet au compilateur de deviner le type de la variable lors de l’initialisation. Attention : le type reste fixe après l’assignation.\n\nvar total = 15.5; // Le compilateur déduit 'double'\n\n💡 Voici quelques conventions de codage applicables aux variables :\n\nLa règle d’or :\n\nCamel Case\n\nPour les variables locales (celles définies à l’intérieur d’une méthode), la convention universelle en C# est le camelCase.\n\nPar exemple : string thisIsCamelCase;.\n\nLe premier mot commence par une lettre minuscule.\n\nChaque mot suivant commence par une lettre majuscule.\n\nOn ne doit pas utiliser de chiffres au début du nom.\n\nLe trait de soulignement (_) est proscrit pour le moment.\n\nint\n\nnombreEtudiants\n\n// Correct",
+    "metadata": {
+      "module": "420-413",
+      "source": "https://cegepmv.github.io/420-413/variables/index.html",
+      "title": "Variables :: Développement d'applications pour entreprises",
+      "type": "web",
+      "corpus": "cours"
+    }
+  },
+  {
+    "text": "ommence par une lettre majuscule.\n\nOn ne doit pas utiliser de chiffres au début du nom.\n\nLe trait de soulignement (_) est proscrit pour le moment.\n\nint\n\nnombreEtudiants\n\n// Correct\n\nstring\n\ncodePermanent\n\n// Correct\n\ndouble\n\nsoldeBanque\n\n// Correct\n\nint\n\nNombreEtudiants\n\n// (PascalCase) Incorrect (ou non conventionnel)\n\nstring\n\ncode_permanent\n\n// (snake_case) non conventionnel)\n\ndouble\n\nsoldebanque\n\n// (tout en minuscule) Incorrect (ou non conventionnel)\n\nSémantique (Donner du sens)\n\nUne variable doit décrire son contenu sans ambiguïté. En programmation professionnelle, on évite les noms d’une seule lettre.\n\nÉvitez\n\nstring s = \"Informatique\";\n\nPrivilégiez\n\nstring nomProgramme = \"Informatique\";\n\nTableau récapitulatif des conventions de nommage C#\n\nÉlément\n\nConvention\n\nExemple\n\nVariable locale\n\ncamelCase\n\nuniteDisponible\n\nParamètre de méthode\n\ncamelCase\n\n(int quantiteItems)\n\nConstante\n\nPascalCase\n\ntauxTaxeFederale\n\nClasse\n\nPascalCase\n\nGestionnaireEtudiant\n\nMéthode\n\nPascalCase\n\nCalculerSalaire()\n\n2. Les types de base",
+    "metadata": {
+      "module": "420-413",
+      "source": "https://cegepmv.github.io/420-413/variables/index.html",
+      "title": "Variables :: Développement d'applications pour entreprises",
+      "type": "web",
+      "corpus": "cours"
+    }
+  },
+  {
+    "text": "ode\n\ncamelCase\n\n(int quantiteItems)\n\nConstante\n\nPascalCase\n\ntauxTaxeFederale\n\nClasse\n\nPascalCase\n\nGestionnaireEtudiant\n\nMéthode\n\nPascalCase\n\nCalculerSalaire()\n\n2. Les types de base\n\nLes types de données permettent de stocker des valeurs dans l’application.\n\nLes langages .NET étant fortement typés, il n’est pas toujours possible de convertir un type de données à un autre.\n\nLes conversions permettent de convertir les types de données.\n\nCela est possible, car tous les types du Framework .NET dérivent du type Object qui est le type de case de tous les autres types\n\nLes types numériques\n\nLes types numériques sont décomposés en deux parties: Les entiers et les décimaux.\n\nChacun dispose d’un ensemble de types pour représenter les données de la manière la plus judicieuse en fonction des besoins.\n\nLes entiers\n\nUne valeur peut être assignée à un entier avec une notation décimale:\n\nint\n\nnombre\n\n//Notation décimale\n\nLa notation hexadécimale peut être utilisée et elle doit être précédée du préfixe 0x:\n\nint\n\nnombre\n\n0x4B\n\n// Notation hexadécimale équivalente à 75",
+    "metadata": {
+      "module": "420-413",
+      "source": "https://cegepmv.github.io/420-413/variables/index.html",
+      "title": "Variables :: Développement d'applications pour entreprises",
+      "type": "web",
+      "corpus": "cours"
+    }
+  },
+  {
+    "text": "nt\n\nnombre\n\n//Notation décimale\n\nLa notation hexadécimale peut être utilisée et elle doit être précédée du préfixe 0x:\n\nint\n\nnombre\n\n0x4B\n\n// Notation hexadécimale équivalente à 75\n\nLa notation binaire peut être utilisée et elle doit être précédée du préfixe 0b:\n\nint\n\nnombre\n\nb1101\n\n// Notation binaire équivalente à 13\n\nLes décimaux\n\nLes booléens\n\nUn booléen est un type qui permet de représenter une valeur qui est soit true, soit false. Le type .NET correspondant est System.Boolean et son nom C# est bool.\n\nIl est possible d’assigner à un booléen le résultat d’une comparaison:\n\nint\n\nnombre\n\nbool\n\nestPair\n\nnombre\n\nLes chaînes de caractères\n\nLe type\n\nSystem.String\n\n(string) est un type de référence qui représente une série de types\n\nSystem.Char\n\n(char)\n\nUne variable de type\n\nchar\n\nest assignée avec un caractère placé entre guillemets simples:\n\nchar\n\npremiereLettre\n\n'a'\n\nUne variable de type string est assignée avec une chaîne de caractère placée entre des guillemets doubles\n\nstring\n\nsalutation\n\n\"Bonjour tout le monde!\"\n\nLa propriété\n\nLength",
+    "metadata": {
+      "module": "420-413",
+      "source": "https://cegepmv.github.io/420-413/variables/index.html",
+      "title": "Variables :: Développement d'applications pour entreprises",
+      "type": "web",
+      "corpus": "cours"
+    }
+  },
+  {
+    "text": "'a'\n\nUne variable de type string est assignée avec une chaîne de caractère placée entre des guillemets doubles\n\nstring\n\nsalutation\n\n\"Bonjour tout le monde!\"\n\nLa propriété\n\nLength\n\npermet de savoir quelle est la longueur d’un string\n\nConsole\n\nWriteLine\n\n\"Hello\"\n\nLength\n\n// Résultat: 5\n\nDéclaration des chaines de caractères\n\n// Déclarer sans initialiser.\n\nstring\n\nmessage1\n\n// Initialiser à null.\n\nstring\n\nmessage2\n\nnull\n\n// Initialise comme une chaîne vide (empty string).\n\n// Utilise la constante Empty au lieu de \"\".\n\nstring\n\nmessage3\n\nSystem\n\nString\n\nEmpty\n\n// Initialiser avec une chaîne de caractères normale.\n\nstring\n\nvieuxChemin\n\n\"c:\\\\Program Files\\\\Microsoft Visual Studio 8.0\"\n\n// Initialiser avec un littéral de chaîne verbatim (pratique pour les chemins).\n\nstring\n\nnouveauChemin\n\n@\"c:\\Program Files\\Microsoft Visual Studio 9.0\"\n\n// Utilisez System.String si vous préférez.\n\nSystem\n\nString\n\nsalutation\n\n\"Hello World!\"\n\n// Dans les variables locales (c'est-à-dire dans le corps d'une méthode),\n\n// vous pouvez utiliser le typage implicite.\n\nvar\n\ntemporaire",
+    "metadata": {
+      "module": "420-413",
+      "source": "https://cegepmv.github.io/420-413/variables/index.html",
+      "title": "Variables :: Développement d'applications pour entreprises",
+      "type": "web",
+      "corpus": "cours"
+    }
+  },
+  {
+    "text": "System\n\nString\n\nsalutation\n\n\"Hello World!\"\n\n// Dans les variables locales (c'est-à-dire dans le corps d'une méthode),\n\n// vous pouvez utiliser le typage implicite.\n\nvar\n\ntemporaire\n\n\"I'm still a strongly-typed System.String!\"\n\n// Utilisez une chaîne const pour empêcher la variable de stocker une autre valeur.\n\nconst\n\nstring\n\nmessagePermanent\n\n\"Tu ne peux pas te débarrasser de moi!\"\n\n// Utilisez le constructeur String uniquement lors de la création\n\n// d'une chaîne à partir d'un char*, char[] ou sbyte*.\n\nchar\n\nlettres\n\n'A'\n\n'B'\n\n'C'\n\nstring\n\nalphabet\n\nnew\n\nstring\n\nlettres\n\nQuelques propriétés et méthodes de la classe string\n\nSoit la variable suivante :\n\nstring salutation = \"Bonjour tout le monde!\";\n\nLa nombre de caractère:\n\nint\n\nnombreCaractere\n\nsalutation\n\nLength\n\n// 22\n\nConvertir tous les caractères de la chaîne en majuscule:\n\nstring\n\nsalutationMajuscule\n\nsalutation\n\nToUpper\n\n();\n\n// BONJOUR TOUT LE MONDE!\n\nConvertir tous les caractères de la chaîne en lettre minuscule\n\nstring\n\nsalutationMinuscule\n\nsalutation\n\nToLower\n\n();\n\n// bonjour tout le monde!",
+    "metadata": {
+      "module": "420-413",
+      "source": "https://cegepmv.github.io/420-413/variables/index.html",
+      "title": "Variables :: Développement d'applications pour entreprises",
+      "type": "web",
+      "corpus": "cours"
+    }
+  },
+  {
+    "text": "er\n\n();\n\n// BONJOUR TOUT LE MONDE!\n\nConvertir tous les caractères de la chaîne en lettre minuscule\n\nstring\n\nsalutationMinuscule\n\nsalutation\n\nToLower\n\n();\n\n// bonjour tout le monde!\n\nVérifier si le string contient une sous-chaîne de caractère ou un mot\n\nbool\n\ncontientBonjour\n\nsalutation\n\nContains\n\n\"bonjour\"\n\ncontientBonjour\n\nsalutation\n\nContains\n\n\"Bonjour\"\n\n//true\n\nRemplacer toutes les occurrences d’un caractère dans la chaîne par un autre\n\nstring\n\nsalut\n\nsalutation\n\nReplace\n\n\"Bonjour\"\n\n\"Salut\"\n\n// Salut tout le monde!\n\nRetourne une partie de la chaine, le 0 est l’index du début, et le 7 est le nombre de caractère à considérer\n\nstring\n\nbonjour\n\nsalutation\n\nSubstring\n\n// Bonjour\n\nAdmettons que j’ajoute un autre string, pour Concaténer les strings\n\nstring\n\nquestion\n\n\"Comment allez-vous?\"\n\nString\n\nnouvelleSalutation\n\nstring\n\nConcat\n\nsalutation\n\n\" \"\n\nquestion\n\n//Bonjour tout le monde! Comment allez-vous?",
+    "metadata": {
+      "module": "420-413",
+      "source": "https://cegepmv.github.io/420-413/variables/index.html",
+      "title": "Variables :: Développement d'applications pour entreprises",
+      "type": "web",
+      "corpus": "cours"
+    }
+  },
+  {
+    "text": "Concaténer les strings\n\nstring\n\nquestion\n\n\"Comment allez-vous?\"\n\nString\n\nnouvelleSalutation\n\nstring\n\nConcat\n\nsalutation\n\n\" \"\n\nquestion\n\n//Bonjour tout le monde! Comment allez-vous?\n\nFormatter la chaine de caractère pour remplacer les expressions de type {0}, {1}, {2}, {3}, etc. Présentes dans la chaîne par les valeurs passées en paramètres lors de l’appel de la fonction.\n\nstring\n\nfirstName\n\n\"Sara\"\n\nint\n\ncount\n\nfloat\n\ntemperature\n\n34.4f\n\nConsole\n\nWriteLine\n\n\"Bonjour, {0}! Tu as {1} messages dans ta boîte. La température est {2} celsius.\"\n\nprenom\n\ncount\n\ntemperature\n\nL’interpolation de string\n\nSoit les variables suivantes:\n\nstring\n\nnom\n\n\"Samuel\"\n\nint\n\nage\n\nOn aimerait créer le string: Je m’appelle Marc, j’ai 20 ans. Si on utilise l’addition des chaînes de caractères, on aurait:\n\nstring\n\npresentation\n\n\"Je m'appelle \"\n\nnom\n\n\", j'ai \"\n\nage\n\n\" ans.\"\n\nEn utilisant la méthode string.format:\n\nstring\n\npresentation\n\nstring\n\nFormat\n\n\"Je m'appelle {0}, j'ai {1} ans. \"\n\nnom\n\nage\n\nEn utilisant l’interpolation:\n\nstring\n\npresentation\n\n$\"Je m'appelle {nom}, j'ai {age} ans. \"",
+    "metadata": {
+      "module": "420-413",
+      "source": "https://cegepmv.github.io/420-413/variables/index.html",
+      "title": "Variables :: Développement d'applications pour entreprises",
+      "type": "web",
+      "corpus": "cours"
+    }
+  },
+  {
+    "text": "t:\n\nstring\n\npresentation\n\nstring\n\nFormat\n\n\"Je m'appelle {0}, j'ai {1} ans. \"\n\nnom\n\nage\n\nEn utilisant l’interpolation:\n\nstring\n\npresentation\n\n$\"Je m'appelle {nom}, j'ai {age} ans. \"\n\nConvertir une chaîne de caractères aux autres types\n\nUtiliser la méthode Parse pour convertir un string vers un autre type\n\nint\n\nage\n\nint\n\nParse\n\n\"35\"\n\nbool\n\nvrai\n\nbool\n\nParse\n\n\"true\"\n\nIl se peut qu’on essaie de convertir une valeur incorrecte. Par exemple, si on essaie de convertir la chaîne de caractère “Samuel” en int. On aura une erreur lors de l’exécution.\n\nPour éviter d’avoir une erreur, on utilise TryParse pour vérifier si la chaîne de caractère peut se convertir au type désiré\n\nType implicite et explicite\n\nJusqu’à maintenant, on a vu différents types explicites qui existent, par exemple :\n\nint, double, bool, string, etc.\n\nDepuis C# 3, C# permet d’utiliser un type implicite. De ce fait, le programmeur demande à C# de trouver le type associé à la variable.\n\nOn utilise le mot-clé\n\nvar\n\npour définir une variable implicite\n\nvar\n\nnombre\n\n// C# sait que c'est un int\n\nvar\n\ncontent",
+    "metadata": {
+      "module": "420-413",
+      "source": "https://cegepmv.github.io/420-413/variables/index.html",
+      "title": "Variables :: Développement d'applications pour entreprises",
+      "type": "web",
+      "corpus": "cours"
+    }
+  },
+  {
+    "text": "meur demande à C# de trouver le type associé à la variable.\n\nOn utilise le mot-clé\n\nvar\n\npour définir une variable implicite\n\nvar\n\nnombre\n\n// C# sait que c'est un int\n\nvar\n\ncontent\n\ntrue\n\n// C# sait que c'est un booléen\n\nvar\n\nsalutation\n\n\"Bonjour\"\n\n// sait que c'est un string\n\nPar contre, si on déclare une variable implicite sans l’initialiser, C# donnera une erreur de compilation.\n\n// ❌ Erreur de compilation : \"Implicitly-typed variables must be initialized\"\n\nvar\n\nmessage\n\n// ✅ Correct : Le compilateur voit \"Bonjour\" et déduit que 'message' est de type string\n\nvar\n\nmessage\n\n\"Bonjour\"\n\nAvec\n\nstring message;\n\n, vous dites explicitement au compilateur : “Réserve une boîte pour du texte”. Avec\n\nvar message;\n\n, vous ne lui donnez aucun indice. Le compilateur refuse de deviner ou de laisser la variable “sans type” jusqu’à plus tard.*",
+    "metadata": {
+      "module": "420-413",
+      "source": "https://cegepmv.github.io/420-413/variables/index.html",
+      "title": "Variables :: Développement d'applications pour entreprises",
+      "type": "web",
+      "corpus": "cours"
+    }
+  },
+  {
+    "text": "Opérateurs\n\nLes opérateurs\n\nOpérateurs Arithmétiques en C#\n\nOpérateur\n\nNom\n\nDescription\n\nExemple\n\nRésultat\n\nAddition\n\nSomme de deux valeurs\n\nint x = 10 + 5;\n\nSoustraction\n\nDifférence entre deux valeurs\n\nint x = 20 - 8;\n\nMultiplication\n\nProduit de deux valeurs\n\ndouble x = 5.5 * 2;\n\n11.0\n\nDivision\n\nQuotient de la division\n\nint x = 10 / 3;\n\n(Entier)\n\nModulo\n\nReste de la division entière\n\nint x = 10 % 3;\n\nOpérateurs d’incrémentation et de décrémentation\n\nOpérateur\n\nNom\n\nPosition\n\nDescription\n\nExemple\n\nRésultat (x)\n\n++x\n\nPré-incrémentation\n\nAvant\n\nIncrémente, puis retourne la valeur\n\nint y = ++x;\n\nAugmenté de 1\n\nx++\n\nPost-incrémentation\n\nAprès\n\nRetourne la valeur, puis incrémente\n\nint y = x++;\n\nAugmenté de 1\n\n--x\n\nPré-décrémentation\n\nAvant\n\nDécrémente, puis retourne la valeur\n\nint y = --x;\n\nDiminué de 1\n\nx--\n\nPost-décrémentation\n\nAprès\n\nRetourne la valeur, puis décrémente\n\nint y = x--;",
+    "metadata": {
+      "module": "420-413",
+      "source": "https://cegepmv.github.io/420-413/operateurs/index.html",
+      "title": "Opérateurs :: Développement d'applications pour entreprises",
+      "type": "web",
+      "corpus": "cours"
+    }
+  },
+  {
+    "text": "--x\n\nPré-décrémentation\n\nAvant\n\nDécrémente, puis retourne la valeur\n\nint y = --x;\n\nDiminué de 1\n\nx--\n\nPost-décrémentation\n\nAprès\n\nRetourne la valeur, puis décrémente\n\nint y = x--;\n\nDiminué de 1\n\nPourquoi la position est-elle importante ?\n\nLa différence réside dans la\n\nvaleur retournée\n\npar l’expression au moment de l’exécution :\n\nPré (\n\n++x\n\n) :\n\nC’est le mode “Mise à jour d’abord”. On change la valeur et on utilise le nouveau résultat tout de suite.\n\nPost (\n\nx++\n\n) :\n\nC’est le mode “Utilisation d’abord”. On utilise la valeur actuelle dans le calcul, et l’ajout de 1 se fait juste après.\n\nExemple de comparaison :\n\nint\n\nint\n\nint\n\nresultatA\n\n// a devient 11, puis resultatA reçoit 11.\n\nint\n\nresultatB\n\n++;\n\n// resultatB reçoit 10, puis b devient 11.\n\n// À la fin :\n\n// a est 11, resultatA est 11\n\n// b est 11, resultatB est 10\n\nOpérateurs Logiques en C#\n\nLes opérateurs logiques permettent de tester plusieurs conditions à la fois et retournent toujours une valeur booléenne (\n\ntrue\n\nfalse\n\nOpérateur\n\nNom\n\nDescription\n\nExemple\n\nET (AND)\n\nRetourne\n\ntrue\n\ntoutes",
+    "metadata": {
+      "module": "420-413",
+      "source": "https://cegepmv.github.io/420-413/operateurs/index.html",
+      "title": "Opérateurs :: Développement d'applications pour entreprises",
+      "type": "web",
+      "corpus": "cours"
+    }
+  },
+  {
+    "text": "rmettent de tester plusieurs conditions à la fois et retournent toujours une valeur booléenne (\n\ntrue\n\nfalse\n\nOpérateur\n\nNom\n\nDescription\n\nExemple\n\nET (AND)\n\nRetourne\n\ntrue\n\ntoutes\n\nles conditions sont vraies.\n\n(age >= 18 && aPermis)\n\nOU (OR)\n\nRetourne\n\ntrue\n\nau moins une\n\ndes conditions est vraie.\n\n(estSamedi || estDimanche)\n\nNON (NOT)\n\nInverse l’état logique (vrai devient faux et inversement).\n\n!estConnecte\n\nOU exclusif (XOR)\n\nRetourne\n\ntrue\n\nune seule\n\ndes deux conditions est vraie.\n\n(estOptionA ^ estOptionB)\n\nTables de vérité (Résumé)\n\nA && B\n\nA || B\n\nA ^ B\n\ntrue\n\ntrue\n\ntrue\n\ntrue\n\nfalse\n\nfalse\n\ntrue\n\nfalse\n\nfalse\n\ntrue\n\ntrue\n\nfalse\n\nfalse\n\ntrue\n\nfalse\n\ntrue\n\ntrue\n\ntrue\n\nfalse\n\nfalse\n\nfalse\n\nfalse\n\nfalse\n\ntrue\n\nLe concept de “Court-circuit” (Short-circuit)\n\nLes opérateurs\n\nsont dits “intelligents” en C# :\n\nAvec\n\nSi la première condition est\n\nfausse\n\n, C# n’évalue même pas la deuxième (car le résultat sera forcément faux).\n\nAvec\n\nSi la première condition est\n\nvraie\n\n, C# s’arrête là (car le résultat sera forcément vrai).\n\nAstuce :",
+    "metadata": {
+      "module": "420-413",
+      "source": "https://cegepmv.github.io/420-413/operateurs/index.html",
+      "title": "Opérateurs :: Développement d'applications pour entreprises",
+      "type": "web",
+      "corpus": "cours"
+    }
+  },
+  {
+    "text": "# n’évalue même pas la deuxième (car le résultat sera forcément faux).\n\nAvec\n\nSi la première condition est\n\nvraie\n\n, C# s’arrête là (car le résultat sera forcément vrai).\n\nAstuce :\n\nPlacez toujours la condition la plus “lourde” ou risquée en deuxième position pour profiter du court-circuit.\n\nOpérateurs logiques : Court-circuit vs Évaluation complète\n\nIl existe deux variantes pour les opérateurs\n\n. La différence réside dans la gestion de la deuxième condition.\n\nType\n\nComportement\n\nCourt-circuit\n\nÉvalue la 2e condition\n\nuniquement si nécessaire\n\nÉvaluation complète\n\nÉvalue\n\ntoujours\n\nles deux conditions, sans exception.\n\nPourquoi utiliser l’évaluation complète (\n\n) ?\n\nL’utilisation de\n\nsur des booléens est plus rare, mais elle est nécessaire si la deuxième condition contient un\n\neffet de bord\n\n(une action qui doit absolument se produire, comme une incrémentation ou l’appel d’une méthode).\n\nExemple de différence :\n\nint\n\ncompteur\n\nbool\n\nconditionFausse\n\nfalse\n\n// Cas 1 : Court-circuit (&&)\n\nconditionFausse\n\ncompteur\n\n/* ... */\n\nConsole\n\nWriteLine\n\ncompteur",
+    "metadata": {
+      "module": "420-413",
+      "source": "https://cegepmv.github.io/420-413/operateurs/index.html",
+      "title": "Opérateurs :: Développement d'applications pour entreprises",
+      "type": "web",
+      "corpus": "cours"
+    }
+  },
+  {
+    "text": "e méthode).\n\nExemple de différence :\n\nint\n\ncompteur\n\nbool\n\nconditionFausse\n\nfalse\n\n// Cas 1 : Court-circuit (&&)\n\nconditionFausse\n\ncompteur\n\n/* ... */\n\nConsole\n\nWriteLine\n\ncompteur\n\n// Affiche 0 (le ++ n'a jamais été exécuté)\n\n// Cas 2 : Évaluation complète (&)\n\nconditionFausse\n\ncompteur\n\n/* ... */\n\nConsole\n\nWriteLine\n\ncompteur\n\n// Affiche 1 (le ++ a été exécuté malgré le faux)\n\nOpérateurs de comparaison en C#\n\nLes opérateurs de comparaison permettent de vérifier la relation entre deux expressions. Le résultat est toujours une valeur booléenne (\n\ntrue\n\nfalse\n\nOpérateur\n\nNom\n\nDescription\n\nExemple\n\nRésultat\n\nÉgalité\n\ntrue\n\nsi les valeurs sont identiques\n\n5 == 5\n\ntrue\n\nInégalité\n\ntrue\n\nsi les valeurs sont différentes\n\n5 != 3\n\ntrue\n\nPlus grand que\n\ntrue\n\nsi la gauche est strictement supérieure\n\n10 > 5\n\ntrue\n\nPlus petit que\n\ntrue\n\nsi la gauche est strictement inférieure\n\n2 < 1\n\nfalse\n\nPlus grand ou égal\n\ntrue\n\nsi la gauche est supérieure ou égale\n\n5 >= 5\n\ntrue\n\nPlus petit ou égal\n\ntrue\n\nsi la gauche est inférieure ou égale\n\n4 <= 3\n\nfalse\n\nConfusion entre",
+    "metadata": {
+      "module": "420-413",
+      "source": "https://cegepmv.github.io/420-413/operateurs/index.html",
+      "title": "Opérateurs :: Développement d'applications pour entreprises",
+      "type": "web",
+      "corpus": "cours"
+    }
+  },
+  {
+    "text": "false\n\nPlus grand ou égal\n\ntrue\n\nsi la gauche est supérieure ou égale\n\n5 >= 5\n\ntrue\n\nPlus petit ou égal\n\ntrue\n\nsi la gauche est inférieure ou égale\n\n4 <= 3\n\nfalse\n\nConfusion entre\n\nC’est l’erreur la plus fréquente chez les débutants :\n\nest l’opérateur d’\n\nassignation\n\n(on donne une valeur à une variable).\n\nest l’opérateur de\n\ncomparaison\n\n(on vérifie si deux valeurs sont égales).\n\nComparaison de chaînes de caractères (\n\nstring\n\nEn C#, l’opérateur\n\nfonctionne pour comparer le contenu des chaînes de caractères. Attention : la comparaison est\n\nsensible à la casse\n\nstring\n\nnomUn\n\n\"Bob\"\n\nstring\n\nnomDeux\n\n\"bob\"\n\nbool\n\nsontEgaux\n\nnomUn\n\nnomDeux\n\n// Résultat: false",
+    "metadata": {
+      "module": "420-413",
+      "source": "https://cegepmv.github.io/420-413/operateurs/index.html",
+      "title": "Opérateurs :: Développement d'applications pour entreprises",
+      "type": "web",
+      "corpus": "cours"
+    }
+  }
+]

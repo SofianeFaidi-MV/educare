@@ -1,0 +1,19 @@
+{
+  "competences": [
+    {
+      "id": "c1",
+      "titre": "Résolution de problèmes",
+      "niveau": 1
+    },
+    {
+      "id": "c2",
+      "titre": "Programmation",
+      "niveau": 1
+    },
+    {
+      "id": "c3",
+      "titre": "Web",
+      "niveau": 1
+    }
+  ]
+}

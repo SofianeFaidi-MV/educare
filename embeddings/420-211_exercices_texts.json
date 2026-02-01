@@ -1,0 +1,102 @@
+[
+  {
+    "text": "Exercices\n\nExercice 1 - Structure DOM\n\nÀ partir du DOM suivant, faites le fichier HTML correspondant (nommez votre fichier\n\nexercice-dom-1.html\n\n) :\n\nExercice 2 - Manipulation par\n\nDans le document\n\nexercice-dom-2.html\n\n, remplacez les mots\n\napple\n\npomme\n\npear\n\npoire\n\nbanana\n\nbanane\n\nEn utilisant des appels à la fonction\n\ngetElementById()\n\n(vous devez créer le fichier\n\nexercice-dom-2.js\n\nExercice 3 - Manipulaiton par\n\nclass\n\nDans le document\n\nexercice-dom-3.html\n\n, utilisez\n\ngetElementsByClass()\n\npour:\n\nappliquer la police\n\nArial\n\nchanger la couleur du texte en\n\nbleu\n\nVous devez créer le fichier\n\nexercice-dom-3.js\n\nExercice 4 - Mode sombre\n\nÀ partir du fichier\n\nexercice-dom-4.html\n\n, implémentez la fonction associée au bouton pour basculer en\n\nmode sombre\n\nen modifiant les styles des éléments HTML.\n\nVous pouvez utiliser le site suivant pour les références aux couleurs :\n\nhttps://htmlcolorcodes.com/\n\nLe résultat devrait ressembler à ceci (les titres sont en vert pâle et le texte en gris) :\n\nExercice 5 - Mise en forme CSS\n\nEn utilisant un fichier CSS, définissez des classes de style pour obtenir la page suivante à partir du fichier\n\nexercice-css.html",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-211/0-intro/1-html-dom-css/exercices/index.html",
+      "title": "Exercices :: App Web",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "- Mise en forme CSS\n\nEn utilisant un fichier CSS, définissez des classes de style pour obtenir la page suivante à partir du fichier\n\nexercice-css.html\n\nExercice 6 – Refactorisation sémantique HTML\n\nLe fichier\n\nexercice-semantique.html\n\ncontient un code fonctionnel, mais qui\n\nn’utilise pas les balises HTML sémantiques appropriées\n\n. On vous demande de:\n\nRemplacer les\n\n<div>\n\npar des balises sémantiques appropriées\n\nConserve la même structure visuelle\n\nNe pas modifier le contenu textuel\n\nLe fichier final doit être plus lisible et mieux structuré\n\nAstuces\n\nLe menu devrait être contenu dans une balise\n\nLe contenu principal devrait être contenu dans\n\nChaque publication devrait être un",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-211/0-intro/1-html-dom-css/exercices/index.html",
+      "title": "Exercices :: App Web",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "Exercice dirigé\n\nRéutilisabilité des composants\n\nL’objectif de cet exercice est de\n\nrefactoriser\n\nla page web précédemment développée afin d’\n\naméliorer la réutilisabilité\n\ndes composants. Vous devrez optimiser votre implémentation en appliquant les bonnes pratiques de développement avec React, notamment en structurant le code de manière\n\nmodulaire\n\net en favorisant la transmission efficace des données entre les composants.\n\n🎯 Objectifs :\n\nIdentifier et extraire les éléments communs dans des\n\ncomposants réutilisables\n\nUtiliser\n\nles props\n\npour transmettre les données nécessaires aux composants.\n\nSimplifier et structurer votre code en évitant les répétitions.\n\nPoints clés à améliorer :\n\nRefactoriser le composant\n\nListItem\n\nPlutôt que d’avoir plusieurs éléments statiques pour les différentes raisons d’aimer l’informatique, vous devez transformer ListItem en un composant réutilisable prenant\n\nimage, titre et description\n\nen props.\n\nOrganiser les données de manière dynamique\n\nCréez un tableau d’objets contenant les différentes raisons, puis affichez les éléments dynamiquement en\n\nmappant\n\nce tableau pour générer les composants\n\nListItem\n\nSimplifier l’architecture des fichiers",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-211/2-dda/5-exercice-dirige/index.html",
+      "title": "Exercice dirigé :: App Web",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "aisons, puis affichez les éléments dynamiquement en\n\nmappant\n\nce tableau pour générer les composants\n\nListItem\n\nSimplifier l’architecture des fichiers\n\nSi ce n’est pas encore fait, organisez les composants dans des fichiers séparés (\n\nHeader.js\n\nListItem.js\n\nFooter.js\n\n, etc.) pour améliorer la clarté et la maintenabilité de votre code.\n\nEn appliquant ces principes, vous écrirez un code\n\nplus modulaire, maintenable et évolutif\n\n. Cela vous permettra d’ajouter de nouvelles raisons sans modifier directement le JSX, rendant votre application plus flexible.\n\n🚀 À vous de jouer !\n\nReprenez votre implémentation précédente et appliquez ces améliorations.",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-211/2-dda/5-exercice-dirige/index.html",
+      "title": "Exercice dirigé :: App Web",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "Exercices - JSX et les props\n\nLa section suivante présente une série d’exercices visant à renforcer votre compréhension de la transmission des données entre composants et la réutilisabilité de ceux-ci.\n\nExercice 1 : Affichage dynamique d’un message d’accueil\n\nObjectif\n\n: Créez un composant\n\nWelcomeBanner\n\nqui affiche un message de bienvenue basé sur la prop\n\nusername\n\nInstructions\n\nCréez un composant\n\nWelcomeBanner\n\nqui prend une prop\n\nusername\n\n(string) et affiche :\n\n\"Bienvenue sur notre site, [username] !\"\n\nDans le composant\n\nApp\n\n, utilisez\n\nWelcomeBanner\n\navec trois utilisateurs différents (par exemple, “Alice”, “Bob”, “Charlie”).\n\nVérification\n\nVérifiez que le message s’affiche correctement pour chaque utilisateur.\n\nChangez la valeur de\n\nusername\n\ndans\n\nApp\n\net assurez-vous que le message se met à jour dynamiquement.\n\nExemple d’affichage attendu\n\nBienvenue sur notre site, Alice !\n\nBienvenue sur notre site, Bob !\n\nBienvenue sur notre site, Charlie !\n\nExercice 2 : Afficher l’état d’un capteur\n\nObjectif\n\n: Afficher dynamiquement l’état d’un capteur (actif ou inactif) selon une prop.\n\nInstructions\n\nCréez un composant\n\nSensorStatus\n\nqui prend une prop\n\nisActive\n\n(booléen).",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-211/2-dda/6-exercices-props/index.html",
+      "title": "Exercices - JSX et les props :: App Web",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "ement l’état d’un capteur (actif ou inactif) selon une prop.\n\nInstructions\n\nCréez un composant\n\nSensorStatus\n\nqui prend une prop\n\nisActive\n\n(booléen).\n\nisActive\n\nest\n\ntrue\n\n, affichez\n\n\"Le capteur est actif.\"\n\n, sinon affichez\n\n\"Le capteur est inactif.\"\n\nTestez plusieurs valeurs de\n\nisActive\n\ndans\n\nApp\n\n(par exemple,\n\ntrue\n\nfalse\n\nVérification\n\nVérifiez que le texte change correctement en fonction de la valeur de\n\nisActive\n\nTestez avec des valeurs différentes pour vous assurer que le composant réagit bien.\n\nExemple d’affichage attendu\n\nLe capteur est actif.\n\nLe capteur est inactif.\n\nExercice 3 : Vérifier la disponibilité d’une salle\n\nObjectif\n\n: Utiliser une condition avec props pour indiquer si une salle est disponible ou occupée.\n\nInstructions\n\nCréez un composant\n\nRoomAvailability\n\nqui prend une prop\n\nisAvailable\n\n(booléen).\n\nAffichez\n\n\"Salle disponible\"\n\nisAvailable\n\nest\n\ntrue\n\n, sinon\n\n\"Salle occupée\"\n\nDans\n\nApp\n\n, affichez\n\nRoomAvailability\n\navec différentes valeurs (par exemple,\n\ntrue\n\nfalse\n\nVérification\n\nVérifiez que le texte change en fonction de la disponibilité de la salle.\n\nTestez avec plusieurs valeurs pour vous assurer que le composant fonctionne correctement.\n\nExemple d’affichage attendu\n\nSalle disponible\n\nSalle occupée\n\nExercice 4 : Liste des cours disponibles\n\nObjectif",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-211/2-dda/6-exercices-props/index.html",
+      "title": "Exercices - JSX et les props :: App Web",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "e composant fonctionne correctement.\n\nExemple d’affichage attendu\n\nSalle disponible\n\nSalle occupée\n\nExercice 4 : Liste des cours disponibles\n\nObjectif\n\n: Afficher une liste de cours en utilisant un tableau passé en prop.\n\nInstructions\n\nCréez un composant\n\nCourseList\n\nqui prend une prop\n\ncourses\n\n(tableau de strings).\n\nAffichez chaque cours sous forme de\n\n<li>\n\nDans\n\nApp\n\n, testez\n\nCourseList\n\navec au moins deux listes différentes (par exemple,\n\n[\"Mathématiques\", \"Informatique\", \"Histoire\"]\n\n[\"Biologie\", \"Physique\", \"Philosophie\"]\n\nVérification\n\nVérifiez que chaque élément du tableau est bien affiché dans une liste.\n\nTestez avec des tableaux de différentes tailles pour vous assurer que le composant s’adapte.\n\nExemple d’affichage attendu\n\nCours disponibles :\n\n- Mathématiques\n\n- Informatique\n\n- Histoire\n\nAutres cours :\n\n- Biologie\n\n- Physique\n\n- Philosophie\n\nExercice 5 : Profil d’un véhicule\n\nObjectif\n\n: Passer un objet en prop et afficher dynamiquement les informations d’un véhicule.\n\nInstructions\n\nCréez un composant\n\nVehicleProfile\n\nqui prend une prop\n\nvehicle\n\n(objet\n\n{ brand, model, year }\n\nAffichez les informations sous forme de paragraphe (par exemple,\n\n\"Toyota Corolla (2020)\"\n\nDans\n\nApp\n\n, affichez\n\nVehicleProfile\n\npour plusieurs véhicules (par exemple,\n\n{ brand: \"Toyota\", model: \"Corolla\", year: 2020 }\n\nVérification",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-211/2-dda/6-exercices-props/index.html",
+      "title": "Exercices - JSX et les props :: App Web",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "2020)\"\n\nDans\n\nApp\n\n, affichez\n\nVehicleProfile\n\npour plusieurs véhicules (par exemple,\n\n{ brand: \"Toyota\", model: \"Corolla\", year: 2020 }\n\nVérification\n\nVérifiez que les informations du véhicule sont correctement affichées.\n\nTestez avec plusieurs objets pour vous assurer que le composant fonctionne avec différentes données.\n\nExemple d’affichage attendu\n\nToyota Corolla (2020)\n\nFord Mustang (2022)\n\nTesla Model 3 (2023)\n\nExercice 6 : Bouton interactif pour activer un mode\n\nObjectif\n\n: Transmettre une fonction en prop et l’exécuter dans un composant enfant.\n\nInstructions\n\nCréez un composant\n\nModeButton\n\nqui prend une prop\n\nonActivate\n\n(fonction).\n\nLorsque l’utilisateur clique sur le bouton, la fonction doit être exécutée.\n\nDans\n\nApp\n\n, définissez une fonction\n\nactivateMode\n\nqui affiche une alerte (par exemple,\n\n\"Mode activé !\"\n\nVérification\n\nVérifiez que l’alerte s’affiche bien lorsque vous cliquez sur le bouton.\n\nTestez avec différentes fonctions pour vous assurer que le composant est réutilisable.\n\nExercice 7 : Liste de tâches avec état d’achèvement\n\nObjectif\n\n: Générer dynamiquement des tâches avec un statut.\n\nInstructions\n\nDéfinissez un tableau\n\ntasks\n\ncontenant\n\n{ id, title, completed }\n\nCréez un composant\n\nTaskList\n\nqui génère dynamiquement des tâches en utilisant\n\nmap()\n\nAffichez\n\nTaskList\n\ndans\n\nApp\n\nVérification",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-211/2-dda/6-exercices-props/index.html",
+      "title": "Exercices - JSX et les props :: App Web",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "title, completed }\n\nCréez un composant\n\nTaskList\n\nqui génère dynamiquement des tâches en utilisant\n\nmap()\n\nAffichez\n\nTaskList\n\ndans\n\nApp\n\nVérification\n\nVérifiez que chaque tâche est affichée avec son statut (✅ ou ❌).\n\nTestez avec plusieurs tableaux de tâches pour vous assurer que le composant s’adapte.\n\nExemple d’affichage attendu\n\n- Faire les courses ✅\n\n- Nettoyer la voiture ❌\n\n- Étudier React ✅\n\nExercice 8 : Carte météo\n\nObjectif\n\n: Afficher des informations météo en utilisant des props.\n\nInstructions\n\nCréez un composant\n\nWeatherCard\n\nqui prend en props\n\n{ temperature, condition }\n\nAffichez\n\n\"Température : X°C - Condition : [condition]\"\n\nTestez différentes valeurs dans\n\nApp\n\n(par exemple,\n\n{ temperature: 22, condition: \"Ensoleillé\" }\n\nVérification\n\nVérifiez que les informations météo sont correctement affichées.\n\nTestez avec plusieurs jeux de données pour vous assurer que le composant fonctionne correctement.\n\nExemple d’affichage attendu\n\nTempérature : 22°C - Condition : Ensoleillé\n\nTempérature : 15°C - Condition : Nuageux\n\nTempérature : -5°C - Condition : Neigeux\n\nExercice 9 : Gestion des places de parking\n\nObjectif\n\n: Indiquer dynamiquement si une place est disponible et permettre la réservation.\n\nInstructions\n\nCréez un composant\n\nParkingSpot\n\nqui prend\n\nisAvailable\n\nonReserve\n\nen props.\n\nisAvailable\n\nest\n\ntrue\n\n, affichez",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-211/2-dda/6-exercices-props/index.html",
+      "title": "Exercices - JSX et les props :: App Web",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "ettre la réservation.\n\nInstructions\n\nCréez un composant\n\nParkingSpot\n\nqui prend\n\nisAvailable\n\nonReserve\n\nen props.\n\nisAvailable\n\nest\n\ntrue\n\n, affichez\n\n\"Place disponible\"\n\navec un bouton\n\n\"Réserver\"\n\nLorsqu’on clique sur\n\n\"Réserver\"\n\n, exécutez\n\nonReserve\n\nTestez différentes valeurs de\n\nisAvailable\n\net de\n\nonReserve\n\ndans\n\nApp\n\nVérification\n\nVérifiez que le texte et le bouton s’affichent correctement en fonction de\n\nisAvailable\n\nTestez la fonction\n\nonReserve\n\npour vous assurer qu’elle est bien exécutée.\n\nExemple d’affichage attendu\n\nPlace disponible [Réserver]\n\nPlace occupée",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-211/2-dda/6-exercices-props/index.html",
+      "title": "Exercices - JSX et les props :: App Web",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  }
+]

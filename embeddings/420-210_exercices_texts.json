@@ -1,0 +1,472 @@
+[
+  {
+    "text": "Exercices de révision\n\nExercices de révision\n\n🎮 Projet 1 : Système de Gestion de Notes Scolaires\n\n📋 Contexte\n\nVous devez créer un système pour gérer et analyser les notes d’une classe d’étudiants. Le système permettra de calculer des statistiques, d’attribuer des mentions et de générer des rapports.\n\n🎯 Objectifs pédagogiques\n\nManipulation de tableaux\n\nCalculs statistiques (moyenne, min, max)\n\nStructures conditionnelles pour la classification\n\nBoucles pour parcourir des données\n\nMéthodes avec paramètres et valeurs de retour\n\n📝 Instructions détaillées\n\nCréez une classe\n\nGestionNotes\n\navec les méthodes suivantes :\n\n1. Méthode\n\ncalculerMoyenne\n\nBut :\n\nCalculer la moyenne arithmétique d’un tableau de notes.\n\nParamètres :\n\nnotes\n\n: un tableau de\n\ndouble\n\ncontenant les notes\n\nRetour :\n\nLa moyenne sous forme de\n\ndouble\n\nAlgorithme :\n\nParcourir toutes les notes du tableau\n\nAdditionner toutes les notes\n\nDiviser la somme par le nombre de notes\n\nRetourner le résultat\n\nExemple :\n\nPour les notes [15.5, 12.0, 18.0], la moyenne est (15.5 + 12.0 + 18.0) / 3 = 15.17\n\n2. Méthode\n\ntrouverMaximum\n\nBut :\n\nTrouver la note la plus élevée dans le tableau.\n\nParamètres :\n\nnotes\n\n: un tableau de\n\ndouble",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/exo_revisions/index.html",
+      "title": "Exercices de révision :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "+ 18.0) / 3 = 15.17\n\n2. Méthode\n\ntrouverMaximum\n\nBut :\n\nTrouver la note la plus élevée dans le tableau.\n\nParamètres :\n\nnotes\n\n: un tableau de\n\ndouble\n\nRetour :\n\nLa note maximale (\n\ndouble\n\nAlgorithme :\n\nInitialiser une variable avec la première note\n\nParcourir toutes les autres notes\n\nSi une note est supérieure au maximum actuel, la remplacer\n\nRetourner le maximum trouvé\n\n3. Méthode\n\ntrouverMinimum\n\nBut :\n\nTrouver la note la plus basse dans le tableau.\n\nParamètres :\n\nnotes\n\n: un tableau de\n\ndouble\n\nRetour :\n\nLa note minimale (\n\ndouble\n\nAlgorithme :\n\nSimilaire à\n\ntrouverMaximum\n\n, mais en cherchant la plus petite valeur.\n\n4. Méthode\n\ncompterReussites\n\nBut :\n\nCompter combien d’étudiants ont une note supérieure ou égale à 10 (seuil de réussite).\n\nParamètres :\n\nnotes\n\n: un tableau de\n\ndouble\n\nRetour :\n\nLe nombre d’étudiants ayant réussi (\n\nint\n\nAlgorithme :\n\nInitialiser un compteur à 0\n\nParcourir toutes les notes\n\nPour chaque note >= 10, incrémenter le compteur\n\nRetourner le compteur\n\n5. Méthode\n\nobtenirMention\n\nBut :\n\nDéterminer la mention obtenue selon la moyenne d’un étudiant.\n\nParamètres :\n\nmoyenne\n\n: la moyenne de l’étudiant (\n\ndouble\n\nRetour :\n\nUne chaîne de caractères (\n\nString\n\n) représentant la mention\n\nRègles de mentions :\n\nmoyenne >= 16 : “Très Bien”\n\nmoyenne >= 14 : “Bien”\n\nmoyenne >= 12 : “Assez Bien”",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/exo_revisions/index.html",
+      "title": "Exercices de révision :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "ractères (\n\nString\n\n) représentant la mention\n\nRègles de mentions :\n\nmoyenne >= 16 : “Très Bien”\n\nmoyenne >= 14 : “Bien”\n\nmoyenne >= 12 : “Assez Bien”\n\nmoyenne >= 10 : “Passable”\n\nmoyenne < 10 : “Échec”\n\nAlgorithme :\n\nUtiliser une série de conditions if/else if/else\n\nComparer la moyenne aux seuils (du plus élevé au plus bas)\n\nRetourner la mention correspondante\n\n6. Méthode\n\nafficherRapport\n\nBut :\n\nGénérer et afficher un rapport complet des statistiques de la classe.\n\nParamètres :\n\nnotes\n\n: un tableau de\n\ndouble\n\nRetour :\n\nvoid\n\n(la méthode affiche directement à l’écran)\n\nInformations à afficher :\n\nNombre total d’étudiants (taille du tableau)\n\nMoyenne générale de la classe (utiliser\n\ncalculerMoyenne\n\nNote maximale et minimale (utiliser les méthodes correspondantes)\n\nTaux de réussite en pourcentage : (nombre de réussites / total) × 100\n\nDistribution des mentions :\n\nCompter combien d’étudiants ont chaque mention\n\nPour cela, parcourir toutes les notes, calculer la mention de chaque note, et compter\n\nFormat d’affichage attendu :\n\n===== RAPPORT DE NOTES =====\n\nNombre d'étudiants : 10\n\nMoyenne générale : 12.60\n\nNote maximale : 18.00\n\nNote minimale : 7.50\n\nTaux de réussite : 70.00%\n\nDistribution des mentions :\n\n- Très Bien : 2\n\n- Bien : 2\n\n- Assez Bien : 2\n\n- Passable : 1\n\n- Échec : 3\n\n7. Méthode\n\nmain\n\nBut :",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/exo_revisions/index.html",
+      "title": "Exercices de révision :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "de réussite : 70.00%\n\nDistribution des mentions :\n\n- Très Bien : 2\n\n- Bien : 2\n\n- Assez Bien : 2\n\n- Passable : 1\n\n- Échec : 3\n\n7. Méthode\n\nmain\n\nBut :\n\nTester toutes les fonctionnalités du système.\n\nInstructions :\n\nCréer un tableau de notes de test :\n\n{15.5, 8.0, 12.5, 18.0, 9.5, 14.0, 16.5, 11.0, 7.5, 13.5}\n\nAppeler la méthode\n\nafficherRapport\n\navec ce tableau\n\nTester également les méthodes individuellement pour vérifier leur bon fonctionnement\n\n✅ Critères de validation\n\nToutes les méthodes sont créées avec les bons paramètres et types de retour\n\nLa moyenne est calculée correctement\n\nLe maximum et minimum sont trouvés correctement\n\nLe comptage des réussites fonctionne\n\nLes mentions sont attribuées selon les bons seuils\n\nLe rapport affiche toutes les informations demandées\n\nLe code est lisible avec des noms de variables significatifs\n\n💡 Conseils\n\nTestez chaque méthode individuellement avant de créer le rapport complet\n\nUtilisez\n\nSystem.out.printf(\"%.2f\", nombre)\n\npour formater les nombres avec 2 décimales\n\nPour calculer un pourcentage :\n\n(partieDouble / totalDouble) * 100.0\n\n💰 Projet 2 : Calculateur de Salaire et Impôts\n\n📋 Contexte\n\nDéveloppez un système de calcul de salaire net avec différentes déductions, heures supplémentaires, bonus et impôts. Ce système doit générer une fiche de paie complète.\n\n🎯 Objectifs pédagogiques",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/exo_revisions/index.html",
+      "title": "Exercices de révision :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "et avec différentes déductions, heures supplémentaires, bonus et impôts. Ce système doit générer une fiche de paie complète.\n\n🎯 Objectifs pédagogiques\n\nCalculs arithmétiques complexes\n\nConditions imbriquées pour les tranches d’imposition\n\nFormules mathématiques appliquées\n\nOrganisation de code en méthodes réutilisables\n\n📝 Instructions détaillées\n\nCréez une classe\n\nCalculateurSalaire\n\navec les méthodes suivantes :\n\n1. Méthode\n\ncalculerSalaireBrut\n\nBut :\n\nCalculer le salaire brut mensuel en prenant en compte les heures supplémentaires.\n\nParamètres :\n\ntauxHoraire\n\n: taux horaire en euros (\n\ndouble\n\nheuresTravaillees\n\n: nombre d’heures travaillées dans le mois (\n\nint\n\nRetour :\n\nLe salaire brut (\n\ndouble\n\nRègles :\n\nLe nombre d’heures normales par mois est 151.67 heures\n\nLes heures au-delà sont des heures supplémentaires\n\nLes heures supplémentaires sont payées avec un bonus de 25%\n\nAlgorithme :\n\nSi heuresTravaillees <= 151.67 : salaire = tauxHoraire × heuresTravaillees\n\nSinon :\n\nCalculer le salaire des heures normales : 151.67 × tauxHoraire\n\nCalculer les heures supplémentaires : heuresTravaillees - 151.67\n\nCalculer le salaire des heures sup : heuresSup × tauxHoraire × 1.25\n\nAdditionner les deux montants\n\nExemple :\n\nSi tauxHoraire = 15€ et heures = 170\n\nHeures normales : 151.67 × 15 = 2275.05€",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/exo_revisions/index.html",
+      "title": "Exercices de révision :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "uresSup × tauxHoraire × 1.25\n\nAdditionner les deux montants\n\nExemple :\n\nSi tauxHoraire = 15€ et heures = 170\n\nHeures normales : 151.67 × 15 = 2275.05€\n\nHeures supplémentaires : 18.33 × 15 × 1.25 = 343.69€\n\nTotal brut : 2618.74€\n\n2. Méthode\n\ncalculerCotisations\n\nBut :\n\nCalculer le montant des cotisations sociales.\n\nParamètres :\n\nsalaireBrut\n\n: salaire brut mensuel (\n\ndouble\n\nRetour :\n\nMontant des cotisations (\n\ndouble\n\nRègle :\n\nLes cotisations représentent 22% du salaire brut\n\nFormule :\n\nsalaireBrut * 0.22\n\n3. Méthode\n\ncalculerImpot\n\nBut :\n\nCalculer l’impôt sur le revenu annuel selon le système de tranches progressives.\n\nParamètres :\n\nsalaireAnnuelNet\n\n: salaire net annuel après cotisations (\n\ndouble\n\nRetour :\n\nMontant total de l’impôt annuel (\n\ndouble\n\nTranches d’imposition :\n\n0 à 10 000€ : 0%\n\n10 001€ à 25 000€ : 11%\n\n25 001€ à 50 000€ : 30%\n\nAu-delà de 50 000€ : 41%\n\nAlgorithme (système de tranches) :\n\nL’impôt se calcule tranche par tranche\n\nExemple pour un salaire de 30 000€ :\n\nTranche 1 (0-10000) : 10000 × 0% = 0€\n\nTranche 2 (10001-25000) : 15000 × 11% = 1650€\n\nTranche 3 (25001-30000) : 5000 × 30% = 1500€\n\nTotal impôt : 3150€\n\nPseudo-code :\n\nimpot = 0\n\nreste = salaireAnnuelNet\n\nSi reste > 10000:\n\nimpot += (min(reste, 25000) - 10000) × 0.11\n\nSi reste > 25000:\n\nimpot += (min(reste, 50000) - 25000) × 0.30\n\nSi reste > 50000:",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/exo_revisions/index.html",
+      "title": "Exercices de révision :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "Net\n\nSi reste > 10000:\n\nimpot += (min(reste, 25000) - 10000) × 0.11\n\nSi reste > 25000:\n\nimpot += (min(reste, 50000) - 25000) × 0.30\n\nSi reste > 50000:\n\nimpot += (reste - 50000) × 0.41\n\n4. Méthode\n\ncalculerBonus\n\nBut :\n\nCalculer le bonus annuel selon l’ancienneté et la performance.\n\nParamètres :\n\nsalaireBrut\n\n: salaire brut mensuel (\n\ndouble\n\nanciennete\n\n: années d’ancienneté (\n\nint\n\nperformance\n\n: note de performance de 0 à 10 (\n\nint\n\nRetour :\n\nMontant du bonus mensuel (\n\ndouble\n\nRègles :\n\nSi performance < 7 : aucun bonus (retourner 0)\n\nSi performance >= 7 :\n\nBonus de base : 5% du salaire brut\n\nBonus d’ancienneté : +1% par année d’ancienneté (maximum +10%)\n\nLe bonus total ne peut pas dépasser 15% du salaire brut\n\nExemple :\n\nSalaire brut = 2000€, ancienneté = 8 ans, performance = 8\n\nBonus de base : 2000 × 5% = 100€\n\nBonus ancienneté : 2000 × 8% = 160€ (limité à 10% = 200€)\n\nTotal bonus : 100 + 160 = 260€\n\n5. Méthode\n\ngenererFichePaie\n\nBut :\n\nGénérer et afficher une fiche de paie complète.\n\nParamètres :\n\nnom\n\n: nom de l’employé (\n\nString\n\ntauxHoraire\n\n: taux horaire (\n\ndouble\n\nheuresTravaillees\n\n: heures travaillées (\n\nint\n\nanciennete\n\n: années d’ancienneté (\n\nint\n\nperformance\n\n: note de performance (\n\nint\n\nRetour :\n\nvoid\n\nCalculs à effectuer et afficher :\n\nCalculer le salaire brut (utiliser\n\ncalculerSalaireBrut",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/exo_revisions/index.html",
+      "title": "Exercices de révision :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "performance\n\n: note de performance (\n\nint\n\nRetour :\n\nvoid\n\nCalculs à effectuer et afficher :\n\nCalculer le salaire brut (utiliser\n\ncalculerSalaireBrut\n\nCalculer le nombre d’heures supplémentaires : max(0, heuresTravaillees - 151.67)\n\nCalculer les cotisations (utiliser\n\ncalculerCotisations\n\nCalculer le salaire net avant impôt : salaireBrut - cotisations\n\nCalculer le bonus mensuel (utiliser\n\ncalculerBonus\n\nCalculer le salaire annuel net : (salaire net + bonus) × 12\n\nCalculer l’impôt annuel estimé (utiliser\n\ncalculerImpot\n\nCalculer l’impôt mensuel : impôt annuel / 12\n\nCalculer le salaire net mensuel final : salaire net + bonus - impôt mensuel\n\nFormat d’affichage :\n\n╔════════════════════════════════════╗\n\n║         FICHE DE PAIE              ║\n\n╚════════════════════════════════════╝\n\nEmployé : Jean Dupont\n\nPériode : Janvier 2026\n\n--- DÉTAILS DES HEURES ---\n\nHeures travaillées : 170h\n\nHeures supplémentaires : 18.33h\n\nTaux horaire : 15.50€\n\n--- CALCUL DU SALAIRE ---\n\nSalaire brut : 2618.74€\n\nCotisations sociales (22%) : 576.12€\n\nSalaire net avant impôt : 2042.62€\n\nBonus de performance : 131.00€\n\nSalaire net avant impôt : 2173.62€\n\n--- IMPÔTS (estimation annuelle) ---\n\nSalaire annuel net : 26083.44€\n\nImpôt annuel estimé : 1765.17€\n\nImpôt mensuel : 147.10€\n\n--- NET À PAYER ---\n\nSalaire net mensuel : 2026.52€\n\n6. Méthode\n\nmain\n\nBut :",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/exo_revisions/index.html",
+      "title": "Exercices de révision :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "net : 26083.44€\n\nImpôt annuel estimé : 1765.17€\n\nImpôt mensuel : 147.10€\n\n--- NET À PAYER ---\n\nSalaire net mensuel : 2026.52€\n\n6. Méthode\n\nmain\n\nBut :\n\nTester le système avec plusieurs cas.\n\nTests à effectuer :\n\nCas 1 : Employé standard sans heures sup\n\nCas 2 : Employé avec heures supplémentaires\n\nCas 3 : Employé avec haute performance et ancienneté\n\nCas 4 : Employé avec basse performance (pas de bonus)\n\n✅ Critères de validation\n\nLes heures supplémentaires sont calculées avec le bon taux (25%)\n\nLes cotisations sont correctement appliquées (22%)\n\nLe système de tranches d’imposition fonctionne correctement\n\nLe bonus est calculé selon les règles (performance et ancienneté)\n\nLa fiche de paie affiche tous les éléments demandés\n\nLes montants sont arrondis à 2 décimales\n\n💡 Conseils\n\nTestez chaque méthode séparément avec des valeurs simples\n\nUtilisez\n\nSystem.out.printf(\"%.2f€%n\", montant)\n\npour l’affichage\n\nFaites attention aux conversions int/double dans les calculs\n\nVérifiez les cas limites (0 heures sup, performance minimale, etc.)\n\n🎲 Projet 3 : Jeu de Devinette Avancé\n\n📋 Contexte\n\nCréez un jeu où l’ordinateur génère un nombre aléatoire et le joueur doit le deviner. Le jeu donne des indices de proximité et calcule un score selon la performance.\n\n🎯 Objectifs pédagogiques\n\nUtilisation de la classe Random\n\nBoucles while pour le jeu",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/exo_revisions/index.html",
+      "title": "Exercices de révision :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "s indices de proximité et calcule un score selon la performance.\n\n🎯 Objectifs pédagogiques\n\nUtilisation de la classe Random\n\nBoucles while pour le jeu\n\nConditions multiples pour les indices\n\nInteraction avec l’utilisateur (Scanner)\n\nCalcul de scores\n\n📝 Instructions détaillées\n\nCréez une classe\n\nJeuDevinette\n\navec les méthodes suivantes :\n\n1. Méthode\n\ngenererNombre\n\nBut :\n\nGénérer un nombre aléatoire dans un intervalle.\n\nParamètres :\n\nmin\n\n: valeur minimale (\n\nint\n\nmax\n\n: valeur maximale (\n\nint\n\nRetour :\n\nNombre aléatoire entre min et max inclus (\n\nint\n\nAlgorithme :\n\nRandom\n\nrandom\n\nnew\n\nRandom\n\n();\n\n// Générer un nombre entre 0 et (max-min)\n\nAjouter\n\nmin\n\npour\n\nobtenir\n\nnombre\n\nentre\n\nmin\n\nmax\n\nFormule :\n\nrandom.nextInt(max - min + 1) + min\n\n2. Méthode\n\ncalculerDifference\n\nBut :\n\nCalculer la différence absolue entre deux nombres.\n\nParamètres :\n\nnombre1\n\n: premier nombre (\n\nint\n\nnombre2\n\n: deuxième nombre (\n\nint\n\nRetour :\n\nDifférence absolue (\n\nint\n\nFormule :\n\nMath.abs(nombre1 - nombre2)\n\n3. Méthode\n\ndonnerIndice\n\nBut :\n\nFournir un indice textuel selon la proximité de la proposition.\n\nParamètres :\n\nproposition\n\n: nombre proposé par le joueur (\n\nint\n\nsecret\n\n: nombre à deviner (\n\nint\n\nRetour :\n\nMessage d’indice (\n\nString\n\nRègles :\n\nCalculer la différence avec\n\ncalculerDifference\n\nSelon la différence :",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/exo_revisions/index.html",
+      "title": "Exercices de révision :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "ret\n\n: nombre à deviner (\n\nint\n\nRetour :\n\nMessage d’indice (\n\nString\n\nRègles :\n\nCalculer la différence avec\n\ncalculerDifference\n\nSelon la différence :\n\n<= 5 : “🔥 Brûlant ! Vous êtes très proche !”\n\n<= 10 : “♨️ Chaud ! Vous approchez !”\n\n<= 20 : “🌡️ Tiède… continuez dans cette direction”\n\n20 : “❄️ Froid ! Vous êtes loin”\n\nBonus :\n\nAjouter aussi si le nombre est trop grand ou trop petit :\n\n“Le nombre secret est plus petit”\n\n“Le nombre secret est plus grand”\n\n4. Méthode\n\ncalculerScore\n\nBut :\n\nCalculer le score final selon le nombre d’essais et la difficulté.\n\nParamètres :\n\nnombreEssais\n\n: nombre de tentatives utilisées (\n\nint\n\ndifficulte\n\n: niveau choisi : “Facile”, “Moyen” ou “Difficile” (\n\nString\n\nRetour :\n\nScore (entre 0 et 1000+) (\n\nint\n\nFormule de base :\n\n1000 - (nombreEssais × 50)\n\nMultiplicateurs de difficulté :\n\n“Facile” : ×1 (pas de bonus)\n\n“Moyen” : ×1.5\n\n“Difficile” : ×2\n\nScore minimum :\n\n0 (ne peut pas être négatif)\n\nExemple :\n\n8 essais en mode Difficile\n\nScore de base : 1000 - (8 × 50) = 600\n\nAvec multiplicateur ×2 : 600 × 2 = 1200\n\nAlgorithme :\n\nscoreBase = 1000 - (nombreEssais × 50)\n\nSi scoreBase < 0 alors scoreBase = 0\n\nSelon difficulte:\n\n\"Facile\" : multiplicateur = 1.0\n\n\"Moyen\" : multiplicateur = 1.5\n\n\"Difficile\" : multiplicateur = 2.0\n\nscoreFinal = scoreBase × multiplicateur\n\n5. Méthode\n\njouerPartie\n\nBut :",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/exo_revisions/index.html",
+      "title": "Exercices de révision :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "eur = 1.0\n\n\"Moyen\" : multiplicateur = 1.5\n\n\"Difficile\" : multiplicateur = 2.0\n\nscoreFinal = scoreBase × multiplicateur\n\n5. Méthode\n\njouerPartie\n\nBut :\n\nGérer une partie complète du jeu.\n\nParamètres :\n\ndifficulte\n\n: niveau choisi (“Facile”, “Moyen”, “Difficile”) (\n\nString\n\nRetour :\n\nScore obtenu (\n\nint\n\nRègles selon la difficulté :\n\nFacile : nombre entre 1 et 50\n\nMoyen : nombre entre 1 et 100\n\nDifficile : nombre entre 1 et 200\n\nAlgorithme détaillé :\n\nDéterminer min et max selon la difficulté\n\nGénérer le nombre secret avec\n\ngenererNombre\n\nInitialiser le compteur d’essais à 0\n\nCréer un Scanner pour lire les entrées\n\nBoucle de jeu (tant que pas trouvé) :\n\nIncrémenter le compteur d’essais\n\nAfficher “Essai #X - Entrez un nombre :”\n\nLire la proposition du joueur\n\nSi proposition == secret :\n\nAfficher “🎉 Bravo ! Vous avez trouvé en X essais !”\n\nSortir de la boucle\n\nSinon :\n\nAppeler\n\ndonnerIndice\n\net afficher le message\n\nContinuer la boucle\n\nCalculer le score avec\n\ncalculerScore\n\nAfficher “Score obtenu : X points”\n\nRetourner le score\n\n6. Méthode\n\nafficherMenu\n\nBut :\n\nAfficher le menu de sélection de difficulté.\n\nRetour :\n\nvoid\n\nAffichage :\n\n╔═══════════════════════════════╗\n\n║     JEU DE DEVINETTE 🎲      ║\n\n╚═══════════════════════════════╝\n\nChoisissez votre difficulté :\n\n1. 😊 Facile (1-50)\n\n2. 🤔 Moyen (1-100)\n\n3. 😈 Difficile (1-200)",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/exo_revisions/index.html",
+      "title": "Exercices de révision :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "E DEVINETTE 🎲      ║\n\n╚═══════════════════════════════╝\n\nChoisissez votre difficulté :\n\n1. 😊 Facile (1-50)\n\n2. 🤔 Moyen (1-100)\n\n3. 😈 Difficile (1-200)\n\n4. 🚪 Quitter\n\nVotre choix :\n\n7. Méthode\n\nmain\n\nBut :\n\nGérer le programme principal avec menu et statistiques.\n\nAlgorithme :\n\nInitialiser :\n\n- scoreTotal = 0\n\n- nombreParties = 0\n\n- Scanner scanner\n\nBoucle principale (continuer = true) :\n\n1. Afficher le menu\n\n2. Lire le choix du joueur\n\n3. Selon le choix :\n\n- 1 : jouer en mode Facile\n\n- 2 : jouer en mode Moyen\n\n- 3 : jouer en mode Difficile\n\n- 4 : sortir de la boucle\n\n- Autre : afficher \"Choix invalide\"\n\n4. Si une partie a été jouée :\n\n- Ajouter le score à scoreTotal\n\n- Incrémenter nombreParties\n\n- Demander \"Voulez-vous rejouer ? (o/n)\"\n\n- Lire la réponse\n\n- Si \"n\" : continuer = false\n\nAprès la boucle :\n\nAfficher les statistiques finales :\n\n- Nombre de parties jouées\n\n- Score total\n\n- Score moyen (si parties > 0)\n\n- Meilleur type de partie jouée\n\n✅ Critères de validation\n\nLe nombre secret est bien généré aléatoirement\n\nLes indices de proximité sont corrects\n\nLe score est calculé selon la formule avec multiplicateur\n\nLe jeu se termine quand le joueur trouve\n\nLes statistiques finales sont correctes\n\nLe menu fonctionne avec tous les choix\n\nLe joueur peut rejouer ou quitter\n\n💡 Conseils",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/exo_revisions/index.html",
+      "title": "Exercices de révision :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "quand le joueur trouve\n\nLes statistiques finales sont correctes\n\nLe menu fonctionne avec tous les choix\n\nLe joueur peut rejouer ou quitter\n\n💡 Conseils\n\nTestez d’abord avec un nombre fixe au lieu d’aléatoire pour déboguer\n\nAjoutez des\n\nSystem.out.println\n\npour suivre la progression\n\nGérez les cas où l’utilisateur entre des lettres au lieu de nombres (try-catch)\n\nAméliorez l’expérience avec des emojis et des couleurs ANSI\n\n🎁 Extensions possibles\n\nAjouter un nombre maximum de tentatives\n\nCréer un mode “duel” (2 joueurs)\n\nSauvegarder les meilleurs scores dans un fichier\n\nAjouter un mode “Expert” avec intervalle très large\n\n📅 Projet 4 : Calculateur de Dates\n\n📋 Contexte\n\nCréez un système complet de manipulation de dates sans utiliser les classes Java de dates (LocalDate, etc.). Tout doit être calculé manuellement avec des algorithmes.\n\n🎯 Objectifs pédagogiques\n\nAlgorithmes mathématiques\n\nConditions complexes imbriquées\n\nManipulation de nombres\n\nValidation de données\n\n📝 Instructions détaillées\n\nCréez une classe\n\nCalculateurDates\n\navec les méthodes suivantes :\n\n1. Méthode\n\nestBissextile\n\nBut :\n\nDéterminer si une année est bissextile.\n\nParamètres :\n\nannee\n\n: année à tester (\n\nint\n\nRetour :\n\ntrue\n\nsi bissextile,\n\nfalse\n\nsinon (\n\nboolean\n\nRègle officielle :\n\nUne année est bissextile si :",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/exo_revisions/index.html",
+      "title": "Exercices de révision :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "ramètres :\n\nannee\n\n: année à tester (\n\nint\n\nRetour :\n\ntrue\n\nsi bissextile,\n\nfalse\n\nsinon (\n\nboolean\n\nRègle officielle :\n\nUne année est bissextile si :\n\nElle est divisible par 4 ET (non divisible par 100 OU divisible par 400)\n\nExemples :\n\n2024 : divisible par 4 et pas par 100 → bissextile\n\n2000 : divisible par 400 → bissextile\n\n1900 : divisible par 100 mais pas par 400 → non bissextile\n\n2023 : pas divisible par 4 → non bissextile\n\nFormule logique :\n\n(annee % 4 == 0) && ((annee % 100 != 0) || (annee % 400 == 0))\n\n2. Méthode\n\nnombreJoursDansMois\n\nBut :\n\nRetourner le nombre de jours dans un mois donné.\n\nParamètres :\n\nmois\n\n: numéro du mois (1-12) (\n\nint\n\nannee\n\n: année (pour gérer février) (\n\nint\n\nRetour :\n\nNombre de jours (\n\nint\n\nRègles :\n\nJanvier (1), Mars (3), Mai (5), Juillet (7), Août (8), Octobre (10), Décembre (12) : 31 jours\n\nAvril (4), Juin (6), Septembre (9), Novembre (11) : 30 jours\n\nFévrier (2) : 28 jours (29 si année bissextile)\n\nAlgorithme :\n\nSi mois == 2:\n\nSi estBissextile(annee):\n\nretourner 29\n\nSinon:\n\nretourner 28\n\nSi mois == 4 ou 6 ou 9 ou 11:\n\nretourner 30\n\nSinon:\n\nretourner 31\n\n3. Méthode\n\ndateValide\n\nBut :\n\nVérifier si une date est valide.\n\nParamètres :\n\njour\n\n: jour (1-31) (\n\nint\n\nmois\n\n: mois (1-12) (\n\nint\n\nannee\n\n: année (\n\nint\n\nRetour :\n\ntrue\n\nsi valide,\n\nfalse\n\nsinon (\n\nboolean\n\nVérifications :",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/exo_revisions/index.html",
+      "title": "Exercices de révision :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": ":\n\njour\n\n: jour (1-31) (\n\nint\n\nmois\n\n: mois (1-12) (\n\nint\n\nannee\n\n: année (\n\nint\n\nRetour :\n\ntrue\n\nsi valide,\n\nfalse\n\nsinon (\n\nboolean\n\nVérifications :\n\nLe mois doit être entre 1 et 12\n\nL’année doit être positive (> 0)\n\nLe jour doit être entre 1 et le nombre de jours du mois\n\n(utiliser\n\nnombreJoursDansMois\n\nExemples :\n\n29/02/2024 : valide (année bissextile)\n\n29/02/2023 : invalide (pas bissextile)\n\n31/04/2024 : invalide (avril a 30 jours)\n\n15/13/2024 : invalide (mois 13 n’existe pas)\n\n4. Méthode\n\njourDeLannee\n\nBut :\n\nCalculer le numéro du jour dans l’année (1-366).\n\nParamètres :\n\njour\n\nmois\n\nannee\n\n: la date (\n\nint\n\nRetour :\n\nNuméro du jour (1er janvier = 1) (\n\nint\n\nAlgorithme :\n\nVérifier que la date est valide\n\nInitialiser total = 0\n\nPour chaque mois avant le mois actuel :\n\nAjouter le nombre de jours de ce mois au total\n\nAjouter le jour du mois actuel\n\nRetourner le total\n\nExemple :\n\n15 mars 2024\n\nJanvier : 31 jours\n\nFévrier : 29 jours (bissextile)\n\nMars : 15 jours\n\nTotal : 31 + 29 + 15 = 75ème jour de l’année\n\n5. Méthode\n\njourDeLaSemaine\n\nBut :\n\nDéterminer quel jour de la semaine correspond à une date.\n\nParamètres :\n\njour\n\nmois\n\nannee\n\n: la date (\n\nint\n\nRetour :\n\nNom du jour (“Lundi”, “Mardi”, etc.) (\n\nString\n\nAlgorithme simplifié (formule de Zeller modifiée) :\n\nPour simplifier, utilisez cette formule :\n\nSi mois < 3:",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/exo_revisions/index.html",
+      "title": "Exercices de révision :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "jour (“Lundi”, “Mardi”, etc.) (\n\nString\n\nAlgorithme simplifié (formule de Zeller modifiée) :\n\nPour simplifier, utilisez cette formule :\n\nSi mois < 3:\n\nmois = mois + 12\n\nannee = annee - 1\n\nq = jour\n\nm = mois\n\nk = annee % 100\n\nj = annee / 100\n\nh = (q + (13*(m+1))/5 + k + k/4 + j/4 - 2*j) % 7\n\nConvertir h en jour :\n\nh = 0 : Samedi\n\nh = 1 : Dimanche\n\nh = 2 : Lundi\n\nh = 3 : Mardi\n\nh = 4 : Mercredi\n\nh = 5 : Jeudi\n\nh = 6 : Vendredi\n\nAlternative plus simple :\n\nVous pouvez aussi créer un tableau de référence avec des dates connues et calculer la différence en jours.\n\n6. Méthode\n\ncalculerAge\n\nBut :\n\nCalculer l’âge exact d’une personne.\n\nParamètres :\n\njourNaissance\n\nmoisNaissance\n\nanneeNaissance\n\n: date de naissance\n\njourActuel\n\nmoisActuel\n\nanneeActuel\n\n: date actuelle\n\nRetour :\n\nÂge en années (\n\nint\n\nAlgorithme :\n\nage = anneeActuel - anneeNaissance\n\nSi moisActuel < moisNaissance:\n\nage = age - 1\n\nSinon si moisActuel == moisNaissance et jourActuel < jourNaissance:\n\nage = age - 1\n\nretourner age\n\nExemple :\n\nNé le 15/03/2000\n\nDate actuelle : 28/01/2026\n\nDifférence d’années : 2026 - 2000 = 26\n\nMais le mois (01) est avant mars (03) → encore 25 ans\n\nÂge : 25 ans\n\n7. Méthode\n\ndeterminerSaison\n\nBut :\n\nDéterminer la saison selon la date.\n\nParamètres :\n\njour\n\nmois\n\n: la date (sans l’année) (\n\nint\n\nRetour :\n\nNom de la saison (\n\nString",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/exo_revisions/index.html",
+      "title": "Exercices de révision :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "nerSaison\n\nBut :\n\nDéterminer la saison selon la date.\n\nParamètres :\n\njour\n\nmois\n\n: la date (sans l’année) (\n\nint\n\nRetour :\n\nNom de la saison (\n\nString\n\nRègles (hémisphère nord) :\n\nPrintemps : du 21 mars au 20 juin\n\nÉté : du 21 juin au 20 septembre\n\nAutomne : du 21 septembre au 20 décembre\n\nHiver : du 21 décembre au 20 mars\n\nAlgorithme :\n\nSi (mois == 3 et jour >= 21) ou (mois == 4 ou 5) ou (mois == 6 et jour < 21):\n\nretourner \"Printemps\"\n\nSi (mois == 6 et jour >= 21) ou (mois == 7 ou 8) ou (mois == 9 et jour < 21):\n\nretourner \"Été\"\n\nSi (mois == 9 et jour >= 21) ou (mois == 10 ou 11) ou (mois == 12 et jour < 21):\n\nretourner \"Automne\"\n\nSinon:\n\nretourner \"Hiver\"\n\n8. Méthode\n\ndifferenceEnJours\n\nBut :\n\nCalculer le nombre de jours entre deux dates.\n\nParamètres :\n\nDate 1 :\n\njour1\n\nmois1\n\nannee1\n\nDate 2 :\n\njour2\n\nmois2\n\nannee2\n\nRetour :\n\nNombre de jours de différence (\n\nint\n\nAlgorithme (méthode simplifiée) :\n\nVérifier que les deux dates sont valides\n\nConvertir chaque date en “nombre de jours depuis une référence”\n\nPar exemple, depuis l’an 1 ou depuis l’an 2000\n\nCalculer la différence absolue\n\nPour convertir une date en jours depuis l’an 2000 :\n\njoursDepuis2000 = 0\n\nPour chaque année de 2000 à (annee - 1):\n\nSi bissextile: joursDepuis2000 += 366\n\nSinon: joursDepuis2000 += 365\n\njoursDepuis2000 += jourDeLannee(jour, mois, annee)",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/exo_revisions/index.html",
+      "title": "Exercices de révision :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "année de 2000 à (annee - 1):\n\nSi bissextile: joursDepuis2000 += 366\n\nSinon: joursDepuis2000 += 365\n\njoursDepuis2000 += jourDeLannee(jour, mois, annee)\n\nFaire ce calcul pour les deux dates\n\nRetourner la différence absolue\n\n9. Méthode\n\nafficherRapportDate\n\nBut :\n\nAfficher un rapport complet d’analyse d’une date.\n\nParamètres :\n\njour\n\nmois\n\nannee\n\n: la date à analyser (\n\nint\n\nRetour :\n\nvoid\n\nInformations à afficher :\n\nLa date au format “DD/MM/YYYY”\n\nSi la date est valide ou non\n\nLe jour de la semaine\n\nLe numéro du jour dans l’année\n\nLa saison\n\nSi l’année est bissextile\n\nNombre de jours restants dans l’année\n\nNombre de jours dans le mois\n\nCombien de jours jusqu’à la fin du mois\n\nFormat attendu :\n\n╔════════════════════════════════════╗\n\n║     ANALYSE DE DATE COMPLÈTE      ║\n\n╚════════════════════════════════════╝\n\nDate : 15/08/2024\n\nJour de la semaine : Jeudi\n\nJour de l'année : 228/366\n\nSaison : Été\n\nInformations sur l'année :\n\n- Année bissextile : Oui\n\n- Jours restants : 138\n\nInformations sur le mois :\n\n- Août a 31 jours\n\n- Jours restants ce mois : 16\n\n10. Méthode\n\nmain\n\nBut :\n\nTester toutes les fonctionnalités.\n\nTests à effectuer :\n\nAfficher le rapport pour plusieurs dates\n\nTester\n\ncalculerAge\n\navec différentes dates de naissance\n\nTester\n\ndifferenceEnJours\n\nentre deux dates\n\nTester des dates invalides",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/exo_revisions/index.html",
+      "title": "Exercices de révision :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "our plusieurs dates\n\nTester\n\ncalculerAge\n\navec différentes dates de naissance\n\nTester\n\ndifferenceEnJours\n\nentre deux dates\n\nTester des dates invalides\n\nTester des années bissextiles et non-bissextiles\n\n✅ Critères de validation\n\nLa détection d’année bissextile fonctionne correctement\n\nLe nombre de jours par mois est correct (y compris février)\n\nLa validation de date détecte toutes les erreurs\n\nLe calcul du jour de l’année est précis\n\nLe jour de la semaine est correct\n\nLe calcul d’âge fonctionne même pour les dates limites\n\nLa différence entre dates est exacte\n\nLes saisons sont correctement déterminées\n\n💡 Conseils\n\nTestez d’abord les années bissextiles : 2000, 2024, 1900, 2100\n\nTestez février : 28/02 et 29/02 pour années bissextiles et non-bissextiles\n\nTestez des dates limites : 31/12, 1/1, 29/02\n\nVérifiez les calculs avec un calendrier réel\n\n🎁 Extensions possibles\n\nAjouter la conversion entre calendriers (grégorien, julien)\n\nCalculer le nombre de jours ouvrables entre deux dates\n\nTrouver les dates de Pâques (algorithme de Gauss)\n\nCalculer les jours fériés\n\n🏦 Projet 5 : Simulateur de Compte Bancaire\n\n📋 Contexte\n\nDéveloppez un système complet de simulation de compte bancaire avec transactions, découvert, intérêts, frais et projections d’épargne.\n\n🎯 Objectifs pédagogiques\n\nGestion d’état (solde)\n\nValidation de transactions",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/exo_revisions/index.html",
+      "title": "Exercices de révision :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "avec transactions, découvert, intérêts, frais et projections d’épargne.\n\n🎯 Objectifs pédagogiques\n\nGestion d’état (solde)\n\nValidation de transactions\n\nCalculs financiers\n\nSimulation temporelle\n\n📝 Instructions détaillées\n\nCréez une classe\n\nCompteBancaire\n\navec les méthodes suivantes :\n\n1. Méthode\n\neffectuerDepot\n\nBut :\n\nEffectuer un dépôt sur le compte.\n\nParamètres :\n\nsoldeActuel\n\n: solde avant l’opération (\n\ndouble\n\nmontant\n\n: montant à déposer (\n\ndouble\n\nRetour :\n\nNouveau solde après dépôt, ou -1 si invalide (\n\ndouble\n\nRègles de validation :\n\nLe montant doit être strictement positif (> 0)\n\nSi invalide, retourner -1 et ne pas modifier le solde\n\nAlgorithme :\n\nSi montant <= 0:\n\nAfficher \"Erreur : montant invalide\"\n\nRetourner -1\n\nnouveauSolde = soldeActuel + montant\n\nAfficher \"Dépôt de X€ effectué. Nouveau solde : Y€\"\n\nRetourner nouveauSolde\n\n2. Méthode\n\neffectuerRetrait\n\nBut :\n\nEffectuer un retrait avec gestion du découvert.\n\nParamètres :\n\nsoldeActuel\n\n: solde actuel (\n\ndouble\n\nmontant\n\n: montant à retirer (\n\ndouble\n\ndecouvertAutorise\n\n: montant de découvert maximum (\n\ndouble\n\nRetour :\n\nNouveau solde, ou -1 si impossible (\n\ndouble\n\nRègles :\n\nLe montant doit être positif\n\nLe solde après retrait doit rester >= -decouvertAutorise\n\nSi impossible, retourner -1\n\nExemple :\n\nSolde actuel : 100€\n\nDécouvert autorisé : 200€",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/exo_revisions/index.html",
+      "title": "Exercices de révision :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "itif\n\nLe solde après retrait doit rester >= -decouvertAutorise\n\nSi impossible, retourner -1\n\nExemple :\n\nSolde actuel : 100€\n\nDécouvert autorisé : 200€\n\nRetrait possible jusqu’à : 100 + 200 = 300€\n\nSi retrait de 250€ : possible (nouveau solde = -150€)\n\nSi retrait de 350€ : impossible\n\nAlgorithme :\n\nSi montant <= 0:\n\nRetourner -1\n\nnouveauSolde = soldeActuel - montant\n\nSi nouveauSolde < -decouvertAutorise:\n\nAfficher \"Erreur : découvert dépassé\"\n\nRetourner -1\n\nSi nouveauSolde < 0:\n\nAfficher \"Attention : vous êtes à découvert\"\n\nAfficher \"Retrait de X€ effectué\"\n\nRetourner nouveauSolde\n\n3. Méthode\n\ncalculerInterets\n\nBut :\n\nCalculer les intérêts mensuels pour un solde créditeur.\n\nParamètres :\n\nsolde\n\n: solde du compte (\n\ndouble\n\ntauxAnnuel\n\n: taux d’intérêt annuel en pourcentage (\n\ndouble\n\nRetour :\n\nMontant des intérêts (\n\ndouble\n\nRègles :\n\nLes intérêts ne sont calculés que si le solde est positif\n\nSi solde <= 0 : retourner 0\n\nFormule mensuelle : solde × (tauxAnnuel / 100) / 12\n\nExemple :\n\nSolde : 1000€\n\nTaux annuel : 2%\n\nIntérêts mensuels : 1000 × (2 / 100) / 12 = 1.67€\n\n4. Méthode\n\ncalculerFraisDecouvert\n\nBut :\n\nCalculer les frais appliqués en cas de découvert.\n\nParamètres :\n\nsolde\n\n: solde actuel (\n\ndouble\n\nRetour :\n\nMontant des frais (\n\ndouble\n\nRègle :\n\nSi solde < 0 : frais de 8€\n\nSinon : 0€\n\nNote :",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/exo_revisions/index.html",
+      "title": "Exercices de révision :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "ouvert.\n\nParamètres :\n\nsolde\n\n: solde actuel (\n\ndouble\n\nRetour :\n\nMontant des frais (\n\ndouble\n\nRègle :\n\nSi solde < 0 : frais de 8€\n\nSinon : 0€\n\nNote :\n\nDans une vraie banque, ce serait des frais par jour de découvert, mais on simplifie ici.\n\n5. Méthode\n\ndeterminerTypeCompte\n\nBut :\n\nDéterminer le type de compte selon le solde moyen.\n\nParamètres :\n\nsoldeMoyen\n\n: solde moyen sur la période (\n\ndouble\n\nRetour :\n\nType de compte (\n\nString\n\nClassification :\n\n= 5000€ : “Premium”\n\n= 2000€ : “Gold”\n\n< 2000€ : “Standard”\n\n6. Méthode\n\ncalculerFraisGestion\n\nBut :\n\nCalculer les frais de gestion mensuels.\n\nParamètres :\n\ntypeCompte\n\n: type du compte (\n\nString\n\nnombreTransactions\n\n: nombre de transactions du mois (\n\nint\n\nRetour :\n\nMontant des frais (\n\ndouble\n\nGrille tarifaire :\n\nPremium :\n\nGratuit (toutes transactions)\n\nGold :\n\nGratuit si <= 20 transactions\n\n5€ si > 20 transactions\n\nStandard :\n\n10€ de frais de base\n\n0,50€ par transaction au-delà de 10 transactions gratuites\n\nExemples :\n\nStandard avec 15 transactions : 10 + (5 × 0.50) = 12.50€\n\nStandard avec 8 transactions : 10€\n\nGold avec 25 transactions : 5€\n\nPremium avec 100 transactions : 0€\n\n7. Méthode\n\nvirementPossible\n\nBut :\n\nVérifier si un virement est réalisable.\n\nParamètres :\n\nsoldeActuel\n\n: solde actuel (\n\ndouble\n\nmontant\n\n: montant du virement (\n\ndouble\n\ndecouvertAutorise",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/exo_revisions/index.html",
+      "title": "Exercices de révision :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "ifier si un virement est réalisable.\n\nParamètres :\n\nsoldeActuel\n\n: solde actuel (\n\ndouble\n\nmontant\n\n: montant du virement (\n\ndouble\n\ndecouvertAutorise\n\n: découvert maximum (\n\ndouble\n\nRetour :\n\ntrue\n\nsi possible,\n\nfalse\n\nsinon (\n\nboolean\n\nCondition :\n\nsoldeActuel - montant >= -decouvertAutorise\n\n8. Méthode\n\nsimulerMois\n\nBut :\n\nSimuler un mois complet d’opérations bancaires.\n\nParamètres :\n\nsoldeInitial\n\n: solde au début du mois (\n\ndouble\n\ndepots\n\n: tableau des dépôts du mois (\n\ndouble[]\n\nretraits\n\n: tableau des retraits du mois (\n\ndouble[]\n\ntauxInteret\n\n: taux annuel (\n\ndouble\n\ndecouvertAutorise\n\n: découvert maximum (\n\ndouble\n\nRetour :\n\nvoid\n\n(affiche les résultats)\n\nAlgorithme détaillé :\n\n1. Initialiser :\n\n- solde = soldeInitial\n\n- nombreTransactions = 0\n\n- sommePositions = 0 (pour calculer le solde moyen)\n\n- compteurJours = 30\n\n2. Afficher l'en-tête\n\n\"=== SIMULATION MENSUELLE ===\"\n\n\"Solde initial : X€\"\n\n3. Traiter tous les dépôts :\n\nPour chaque dépôt dans le tableau :\n\n- nouveauSolde = effectuerDepot(solde, dépôt)\n\n- Si valide : solde = nouveauSolde\n\n- nombreTransactions++\n\n- sommePositions += solde\n\n4. Traiter tous les retraits :\n\nPour chaque retrait dans le tableau :\n\n- nouveauSolde = effectuerRetrait(solde, retrait, découvert)\n\n- Si valide : solde = nouveauSolde\n\n- nombreTransactions++\n\n- sommePositions += solde",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/exo_revisions/index.html",
+      "title": "Exercices de révision :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": ":\n\n- nouveauSolde = effectuerRetrait(solde, retrait, découvert)\n\n- Si valide : solde = nouveauSolde\n\n- nombreTransactions++\n\n- sommePositions += solde\n\n5. Calculer le solde moyen :\n\nsoldeMoyen = sommePositions / (nombreTransactions + 1)\n\n6. Déterminer le type de compte :\n\ntypeCompte = determinerTypeCompte(soldeMoyen)\n\n7. Appliquer intérêts ou frais de découvert :\n\nSi solde > 0 :\n\n- interets = calculerInterets(solde, tauxInteret)\n\n- solde += interets\n\n- Afficher \"Intérêts créditeurs : +X€\"\n\nSinon :\n\n- frais = calculerFraisDecouvert(solde)\n\n- solde -= frais\n\n- Afficher \"Frais de découvert : -X€\"\n\n8. Appliquer les frais de gestion :\n\nfraisGestion = calculerFraisGestion(typeCompte, nombreTransactions)\n\nsolde -= fraisGestion\n\nAfficher \"Frais de gestion : -X€\"\n\n9. Afficher le récapitulatif :\n\n- Type de compte\n\n- Nombre de transactions\n\n- Solde moyen\n\n- Solde final\n\nFormat d'affichage :\n\n\"\"\"\n\n=== SIMULATION MENSUELLE ===\n\nSolde initial : 1000.00€\n\n--- OPÉRATIONS DU MOIS ---\n\nDépôt de 500.00€ effectué. Nouveau solde : 1500.00€\n\nDépôt de 300.00€ effectué. Nouveau solde : 1800.00€\n\n...\n\nRetrait de 150.00€ effectué. Nouveau solde : 1650.00€\n\n...\n\n--- FIN DE MOIS ---\n\nIntérêts créditeurs : +1.67€\n\nFrais de gestion (Standard) : -10.00€\n\n=== RÉCAPITULATIF ===\n\nType de compte : Standard\n\nSolde moyen du mois : 1450.00€",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/exo_revisions/index.html",
+      "title": "Exercices de révision :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "Intérêts créditeurs : +1.67€\n\nFrais de gestion (Standard) : -10.00€\n\n=== RÉCAPITULATIF ===\n\nType de compte : Standard\n\nSolde moyen du mois : 1450.00€\n\nNombre de transactions : 7\n\nSolde final : 1641.67€\n\n\"\"\"\n\n9. Méthode\n\nprojeterEpargne\n\nBut :\n\nCalculer le solde futur avec épargne régulière et intérêts composés.\n\nParamètres :\n\nsoldeInitial\n\n: solde de départ (\n\ndouble\n\ndepotMensuel\n\n: montant épargné chaque mois (\n\ndouble\n\ntauxInteret\n\n: taux annuel (\n\ndouble\n\nnombreMois\n\n: durée de la projection (\n\nint\n\nRetour :\n\nSolde projeté (\n\ndouble\n\nAlgorithme :\n\nsolde = soldeInitial\n\nPour i de 1 à nombreMois :\n\n1. Ajouter le dépôt mensuel :\n\nsolde += depotMensuel\n\n2. Calculer les intérêts du mois :\n\ninterets = calculerInterets(solde, tauxInteret)\n\nsolde += interets\n\n3. (Optionnel) Afficher l'état après chaque mois :\n\n\"Mois X : +depotMensuel€ +interets€ → solde€\"\n\nRetourner solde\n\nExemple de calcul manuel :\n\nSolde initial : 1000€\n\nDépôt mensuel : 200€\n\nTaux annuel : 2%\n\nDurée : 3 mois\n\nMois 1 :\n\nSolde après dépôt : 1000 + 200 = 1200€\n\nIntérêts : 1200 × 0.02 / 12 = 2€\n\nNouveau solde : 1202€\n\nMois 2 :\n\nSolde après dépôt : 1202 + 200 = 1402€\n\nIntérêts : 1402 × 0.02 / 12 = 2.34€\n\nNouveau solde : 1404.34€\n\nEt ainsi de suite…\n\n10. Méthode\n\nmain\n\nBut :\n\nTester toutes les fonctionnalités avec des scénarios réalistes.\n\nScénarios à tester :",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/exo_revisions/index.html",
+      "title": "Exercices de révision :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "solde : 1404.34€\n\nEt ainsi de suite…\n\n10. Méthode\n\nmain\n\nBut :\n\nTester toutes les fonctionnalités avec des scénarios réalistes.\n\nScénarios à tester :\n\nTest 1 : Simulation mensuelle normale\n\ndouble\n\nsoldeInitial\n\n1000\n\ndouble\n\ndepots\n\n500\n\n300\n\n200\n\ndouble\n\nretraits\n\n150\n\n200\n\ndouble\n\ntauxInteret\n\ndouble\n\ndecouvertAutorise\n\n200\n\nsimulerMois\n\nsoldeInitial\n\ndepots\n\nretraits\n\ntauxInteret\n\ndecouvertAutorise\n\nTest 2 : Situation de découvert\n\ndouble\n\nsoldeInitial\n\n100\n\ndouble\n\ndepots\n\n{};\n\ndouble\n\nretraits\n\n100\n\nSolde\n\nfinal\n\ndevrait\n\nêtre\n\nnégatif\n\navec\n\nfrais\n\nTest 3 : Projection d’épargne\n\ndouble\n\nsoldeFutur\n\nprojeterEpargne\n\n1000\n\n200\n\nSystem\n\nout\n\nprintln\n\n\"Après 12 mois : \"\n\nsoldeFutur\n\n\"€\"\n\nTest 4 : Tests des types de compte\n\nSystem\n\nout\n\nprintln\n\n\"Solde 1500€ → \"\n\ndeterminerTypeCompte\n\n1500\n\n));\n\nSystem\n\nout\n\nprintln\n\n\"Solde 3000€ → \"\n\ndeterminerTypeCompte\n\n3000\n\n));\n\nSystem\n\nout\n\nprintln\n\n\"Solde 6000€ → \"\n\ndeterminerTypeCompte\n\n6000\n\n));\n\n✅ Critères de validation\n\nLes dépôts et retraits valident correctement les montants\n\nLe découvert est bien géré (pas de dépassement)\n\nLes intérêts sont calculés uniquement sur solde positif\n\nLes frais de découvert s’appliquent correctement\n\nLa classification des comptes fonctionne\n\nLes frais de gestion sont calculés selon les bonnes règles",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/exo_revisions/index.html",
+      "title": "Exercices de révision :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "Les frais de découvert s’appliquent correctement\n\nLa classification des comptes fonctionne\n\nLes frais de gestion sont calculés selon les bonnes règles\n\nLa projection d’épargne inclut les intérêts composés\n\nTous les montants sont affichés avec 2 décimales\n\n💡 Conseils\n\nUtilisez\n\nSystem.out.printf(\"%.2f€%n\", montant)\n\npour formater\n\nTestez d’abord chaque méthode individuellement\n\nVérifiez les cas limites (solde à 0, découvert au maximum, etc.)\n\nAjoutez des messages clairs pour suivre les opérations\n\n🎁 Extensions possibles\n\nAjouter un historique des transactions (tableau ou ArrayList)\n\nCréer une méthode pour générer un relevé PDF\n\nImplémenter des virements entre comptes\n\nAjouter des notifications de seuil de solde\n\nCréer un système de budget mensuel avec alertes\n\n🎯 Projet 6 : Analyseur de Texte\n\n📋 Contexte\n\nCréez un outil d’analyse textuelle complet qui peut compter les mots, analyser la structure, calculer des statistiques et transformer le texte.\n\n🎯 Objectifs pédagogiques\n\nManipulation de chaînes de caractères (String)\n\nMéthodes de String (split, substring, charAt, length, etc.)\n\nBoucles sur les caractères\n\nConditions pour classification\n\n📝 Instructions détaillées\n\nCréez une classe\n\nAnalyseurTexte\n\navec les méthodes suivantes :\n\n1. Méthode\n\ncompterMots\n\nBut :\n\nCompter le nombre de mots dans un texte.\n\nParamètres :\n\ntexte",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/exo_revisions/index.html",
+      "title": "Exercices de révision :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "e classe\n\nAnalyseurTexte\n\navec les méthodes suivantes :\n\n1. Méthode\n\ncompterMots\n\nBut :\n\nCompter le nombre de mots dans un texte.\n\nParamètres :\n\ntexte\n\n: texte à analyser (\n\nString\n\nRetour :\n\nNombre de mots (\n\nint\n\nDéfinition d’un mot :\n\nSéquence de caractères séparée par des espaces\n\nAlgorithme :\n\n1. Supprimer les espaces au début et à la fin : texte.trim()\n\n2. Si le texte est vide : retourner 0\n\n3. Découper le texte en mots : String[] mots = texte.split(\"\\\\s+\")\n\n(\\\\s+ signifie : un ou plusieurs espaces)\n\n4. Retourner la longueur du tableau de mots\n\nExemples :\n\n“Bonjour le monde” → 3 mots\n\n“Java est génial” → 3 mots (espaces multiples)\n\n\"\" → 0 mots\n\n\" \" → 0 mots\n\n2. Méthode\n\ncompterPhrases\n\nBut :\n\nCompter le nombre de phrases dans un texte.\n\nParamètres :\n\ntexte\n\n: texte à analyser (\n\nString\n\nRetour :\n\nNombre de phrases (\n\nint\n\nDéfinition :\n\nUne phrase se termine par\n\nAlgorithme :\n\ncompteur = 0\n\nPour chaque caractère c du texte :\n\nSi c == '.' ou c == '!' ou c == '?' :\n\ncompteur++\n\nRetourner compteur\n\nAlternative avec méthode String :\n\nint\n\ncompteur\n\nfor\n\nint\n\ntexte\n\nlength\n\n();\n\nchar\n\ntexte\n\ncharAt\n\n'.'\n\n'!'\n\n'?'\n\ncompteur\n\nreturn\n\ncompteur\n\n3. Méthode\n\ncompterVoyelles\n\nBut :\n\nCompter le nombre de voyelles dans un texte.\n\nParamètres :\n\ntexte\n\n: texte à analyser (\n\nString\n\nRetour :\n\nNombre de voyelles (\n\nint\n\nVoyelles :",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/exo_revisions/index.html",
+      "title": "Exercices de révision :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "ut :\n\nCompter le nombre de voyelles dans un texte.\n\nParamètres :\n\ntexte\n\n: texte à analyser (\n\nString\n\nRetour :\n\nNombre de voyelles (\n\nint\n\nVoyelles :\n\na, e, i, o, u, y (et leurs majuscules)\n\nAlgorithme :\n\n1. Convertir le texte en minuscules : texte.toLowerCase()\n\n2. Initialiser compteur = 0\n\n3. Pour chaque caractère c :\n\nSi c est dans \"aeiouy\" :\n\ncompteur++\n\n4. Retourner compteur\n\nMéthode pour vérifier si c’est une voyelle :\n\nboolean\n\nestVoyelle\n\nchar\n\nCharacter\n\ntoLowerCase\n\nreturn\n\n'a'\n\n'e'\n\n'i'\n\n'o'\n\n'u'\n\n'y'\n\n4. Méthode\n\ncompterConsonnes\n\nBut :\n\nCompter le nombre de consonnes (lettres qui ne sont pas des voyelles).\n\nParamètres :\n\ntexte\n\n: texte à analyser (\n\nString\n\nRetour :\n\nNombre de consonnes (\n\nint\n\nAlgorithme :\n\ncompteur = 0\n\nPour chaque caractère c :\n\nSi c est une lettre ET ce n'est pas une voyelle :\n\ncompteur++\n\nRetourner compteur\n\nVérifier si c’est une lettre :\n\nCharacter\n\nisLetter\n\n5. Méthode\n\nlongueurMoyenneMots\n\nBut :\n\nCalculer la longueur moyenne des mots.\n\nParamètres :\n\ntexte\n\n: texte à analyser (\n\nString\n\nRetour :\n\nLongueur moyenne (\n\ndouble\n\nAlgorithme :\n\n1. Découper le texte en mots\n\n2. Si aucun mot : retourner 0.0\n\n3. Initialiser somme = 0\n\n4. Pour chaque mot :\n\nsomme += longueur du mot (mot.length())\n\n5. Retourner somme / nombre de mots\n\nExemple :\n\n“Bonjour le monde” → (7 + 2 + 5) / 3 = 4.67\n\n6. Méthode",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/exo_revisions/index.html",
+      "title": "Exercices de révision :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "ot :\n\nsomme += longueur du mot (mot.length())\n\n5. Retourner somme / nombre de mots\n\nExemple :\n\n“Bonjour le monde” → (7 + 2 + 5) / 3 = 4.67\n\n6. Méthode\n\nmotLePlusLong\n\nBut :\n\nTrouver le mot le plus long dans le texte.\n\nParamètres :\n\ntexte\n\n: texte à analyser (\n\nString\n\nRetour :\n\nLe mot le plus long (\n\nString\n\nAlgorithme :\n\n1. Découper le texte en mots\n\n2. Si aucun mot : retourner \"\"\n\n3. Initialiser :\n\nmotMax = premier mot\n\nlongueurMax = longueur du premier mot\n\n4. Pour chaque mot suivant :\n\nSi longueur du mot > longueurMax :\n\nmotMax = ce mot\n\nlongueurMax = longueur de ce mot\n\n5. Retourner motMax\n\nEn cas d’égalité :\n\nRetourner le premier trouvé\n\n7. Méthode\n\ncompterOccurrences\n\nBut :\n\nCompter combien de fois un mot spécifique apparaît (insensible à la casse).\n\nParamètres :\n\ntexte\n\n: texte à analyser (\n\nString\n\nmotCherche\n\n: mot à chercher (\n\nString\n\nRetour :\n\nNombre d’occurrences (\n\nint\n\nRègles :\n\nInsensible à la casse (“Java” = “java” = “JAVA”)\n\nMot entier seulement (“le” ne doit pas compter dans “Manuel”)\n\nAlgorithme :\n\n1. Convertir texte et motCherche en minuscules\n\n2. Découper le texte en mots\n\n3. Initialiser compteur = 0\n\n4. Pour chaque mot :\n\nSi mot (en minuscules) == motCherche (en minuscules) :\n\ncompteur++\n\n5. Retourner compteur\n\n8. Méthode\n\ncalculerLisibilite\n\nBut :\n\nCalculer un indice de lisibilité du texte.\n\nParamètres :",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/exo_revisions/index.html",
+      "title": "Exercices de révision :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "(en minuscules) :\n\ncompteur++\n\n5. Retourner compteur\n\n8. Méthode\n\ncalculerLisibilite\n\nBut :\n\nCalculer un indice de lisibilité du texte.\n\nParamètres :\n\ntexte\n\n: texte à analyser (\n\nString\n\nRetour :\n\nScore de lisibilité (0-100, plus élevé = plus facile) (\n\ndouble\n\nFormule simplifiée (inspirée de Flesch) :\n\n206.835 - (1.015 × mots par phrase) - (84.6 × syllabes par mot)\n\nPour simplifier :\n\nEstimez le nombre de syllabes en comptant les voyelles\n\nAlgorithme :\n\n1. Compter le nombre de mots (W)\n\n2. Compter le nombre de phrases (S)\n\n3. Compter le nombre de voyelles (V) comme approximation des syllabes\n\n4. Si S == 0, retourner 0 (éviter division par zéro)\n\n5. motsParPhrase = W / S\n\n6. syllabesParMot = V / W\n\n7. score = 206.835 - (1.015 × motsParPhrase) - (84.6 × syllabesParMot)\n\n8. Limiter le score entre 0 et 100 :\n\nSi score > 100 : score = 100\n\nSi score < 0 : score = 0\n\n9. Retourner score\n\n9. Méthode\n\ndeterminerNiveauComplexite\n\nBut :\n\nDéterminer le niveau de complexité selon l’indice de lisibilité.\n\nParamètres :\n\nindiceLisibilite\n\n: score calculé (\n\ndouble\n\nRetour :\n\nNiveau de complexité (\n\nString\n\nClassification :\n\n= 90 : “Très facile”\n\n= 70 : “Facile”\n\n= 50 : “Moyen”\n\n= 30 : “Difficile”\n\n< 30 : “Très difficile”\n\n10. Méthode\n\ninverserTexte\n\nBut :\n\nInverser l’ordre des mots dans le texte.\n\nParamètres :\n\ntexte\n\n: texte à inverser (",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/exo_revisions/index.html",
+      "title": "Exercices de révision :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "cile”\n\n< 30 : “Très difficile”\n\n10. Méthode\n\ninverserTexte\n\nBut :\n\nInverser l’ordre des mots dans le texte.\n\nParamètres :\n\ntexte\n\n: texte à inverser (\n\nString\n\nRetour :\n\nTexte avec mots dans l’ordre inverse (\n\nString\n\nExemple :\n\n“Bonjour le monde” → “monde le Bonjour”\n\nAlgorithme :\n\n1. Découper le texte en mots\n\n2. Créer un nouveau String vide (résultat)\n\n3. Parcourir le tableau de mots de la fin au début :\n\nPour i de (longueur-1) à 0 (décroissant) :\n\nAjouter mots[i] au résultat\n\nAjouter un espace (sauf pour le dernier)\n\n4. Retourner résultat\n\n11. Méthode\n\nfiltrerMotsCourts\n\nBut :\n\nSupprimer tous les mots plus courts qu’une longueur donnée.\n\nParamètres :\n\ntexte\n\n: texte à filtrer (\n\nString\n\nlongueurMin\n\n: longueur minimale (\n\nint\n\nRetour :\n\nTexte filtré (\n\nString\n\nAlgorithme :\n\n1. Découper le texte en mots\n\n2. Créer un String vide pour le résultat\n\n3. Pour chaque mot :\n\nSi longueur du mot >= longueurMin :\n\nAjouter le mot au résultat\n\nAjouter un espace\n\n4. Retirer l'espace final (trim)\n\n5. Retourner résultat\n\nExemple :\n\nTexte : “Je suis un développeur Java”\n\nLongueur min : 4\n\nRésultat : “suis développeur Java”\n\n12. Méthode\n\ngenererRapport\n\nBut :\n\nGénérer et afficher un rapport complet d’analyse.\n\nParamètres :\n\ntexte\n\n: texte à analyser (\n\nString\n\nRetour :\n\nvoid\n\nInformations à afficher :\n\n╔════════════════════════════════════╗",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/exo_revisions/index.html",
+      "title": "Exercices de révision :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "mplet d’analyse.\n\nParamètres :\n\ntexte\n\n: texte à analyser (\n\nString\n\nRetour :\n\nvoid\n\nInformations à afficher :\n\n╔════════════════════════════════════╗\n\n║      ANALYSE DE TEXTE COMPLÈTE    ║\n\n╚════════════════════════════════════╝\n\nTEXTE ANALYSÉ :\n\n[Afficher le texte]\n\n--- STATISTIQUES GÉNÉRALES ---\n\nNombre de caractères (avec espaces) : X\n\nNombre de caractères (sans espaces) : Y\n\nNombre de mots : Z\n\nNombre de phrases : N\n\nNombre de voyelles : V\n\nNombre de consonnes : C\n\n--- ANALYSE DES MOTS ---\n\nLongueur moyenne des mots : X.XX caractères\n\nMot le plus long : \"XXXXXXXXX\" (X lettres)\n\nMots par phrase (moyenne) : X.XX\n\n--- LISIBILITÉ ---\n\nIndice de lisibilité : XX.XX\n\nNiveau de complexité : XXXXXX\n\n--- COMPOSITION ---\n\nVoyelles : XX% du texte\n\nConsonnes : XX% du texte\n\nAlgorithme détaillé :\n\n1. Afficher l'en-tête\n\n2. Afficher le texte\n\n3. Calculer et afficher :\n\n- Longueur avec espaces : texte.length()\n\n- Longueur sans espaces : texte.replace(\" \", \"\").length()\n\n- Appeler compterMots(texte)\n\n- Appeler compterPhrases(texte)\n\n- Appeler compterVoyelles(texte)\n\n- Appeler compterConsonnes(texte)\n\n4. Calculer et afficher :\n\n- Appeler longueurMoyenneMots(texte)\n\n- Appeler motLePlusLong(texte)\n\n- Mots par phrase : compterMots / compterPhrases\n\n5. Calculer et afficher :\n\n- Appeler calculerLisibilite(texte)",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/exo_revisions/index.html",
+      "title": "Exercices de révision :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "xte)\n\n- Appeler motLePlusLong(texte)\n\n- Mots par phrase : compterMots / compterPhrases\n\n5. Calculer et afficher :\n\n- Appeler calculerLisibilite(texte)\n\n- Appeler determinerNiveauComplexite(indice)\n\n6. Calculer les pourcentages :\n\n- % voyelles : (voyelles / longueurSansEspaces) × 100\n\n- % consonnes : (consonnes / longueurSansEspaces) × 100\n\n13. Méthode\n\nmain\n\nBut :\n\nTester toutes les fonctionnalités.\n\nTests à effectuer :\n\nTest 1 : Texte exemple\n\nString\n\ntexte\n\n\"Java est un langage de programmation orienté objet. \"\n\n\"Il est largement utilisé pour développer des applications. \"\n\n\"Ce langage offre une grande portabilité et robustesse.\"\n\ngenererRapport\n\ntexte\n\nTest 2 : Transformations\n\nSystem\n\nout\n\nprintln\n\n--- TRANSFORMATIONS ---\"\n\nSystem\n\nout\n\nprintln\n\n\"Texte inversé : \"\n\ninverserTexte\n\ntexte\n\n));\n\nSystem\n\nout\n\nprintln\n\n\"Sans mots courts (<4) : \"\n\nfiltrerMotsCourts\n\ntexte\n\n));\n\nTest 3 : Occurrences\n\nSystem\n\nout\n\nprintln\n\n--- RECHERCHE ---\"\n\nSystem\n\nout\n\nprintln\n\n\"Occurrences de 'Java' : \"\n\ncompterOccurrences\n\ntexte\n\n\"Java\"\n\n));\n\nSystem\n\nout\n\nprintln\n\n\"Occurrences de 'est' : \"\n\ncompterOccurrences\n\ntexte\n\n\"est\"\n\n));\n\nTest 4 : Cas limites\n\nString\n\ntexteVide\n\nString\n\ntexteUnMot\n\n\"Bonjour\"\n\nString\n\ntexteEspaces\n\n\"   Multiple    espaces   \"\n\nTester\n\navec\n\nces\n\ncas\n\n✅ Critères de validation\n\nLe comptage de mots gère les espaces multiples",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/exo_revisions/index.html",
+      "title": "Exercices de révision :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "\"\n\nString\n\ntexteEspaces\n\n\"   Multiple    espaces   \"\n\nTester\n\navec\n\nces\n\ncas\n\n✅ Critères de validation\n\nLe comptage de mots gère les espaces multiples\n\nLes voyelles incluent y et sont insensibles à la casse\n\nLes consonnes n’incluent que les lettres\n\nLa recherche d’occurrences est insensible à la casse\n\nL’inversion de texte préserve l’ordre dans chaque mot\n\nLe filtrage conserve les espaces correctement\n\nLe rapport affiche toutes les informations demandées\n\nLes pourcentages sont calculés correctement\n\n💡 Conseils\n\nUtilisez String.split(\"\\s+\") pour gérer les espaces multiples\n\nCharacter.isLetter(c) est utile pour identifier les lettres\n\nTestez avec des textes en majuscules, minuscules et mixtes\n\nGérez les cas où le texte est vide ou null\n\n🎁 Extensions possibles\n\nAjouter la détection de mots-clés (programmation, Java, etc.)\n\nCréer un correcteur orthographique basique\n\nAnalyser la ponctuation utilisée\n\nDétecter les mots répétés consécutifs\n\nGénérer un nuage de mots (afficher les mots les plus fréquents)\n\n🎰 Projet 7 : Machine à Sous (Slot Machine)\n\n📋 Contexte\n\nCréez un jeu de machine à sous complet avec rouleaux, symboles, calcul de gains, système de crédits et statistiques de session.\n\n🎯 Objectifs pédagogiques\n\nGénération de nombres aléatoires\n\nLogique de jeu et conditions complexes\n\nGestion d’état (crédits, tours)",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/exo_revisions/index.html",
+      "title": "Exercices de révision :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "iques de session.\n\n🎯 Objectifs pédagogiques\n\nGénération de nombres aléatoires\n\nLogique de jeu et conditions complexes\n\nGestion d’état (crédits, tours)\n\nInteraction utilisateur avec Scanner\n\nCalculs de probabilités et gains\n\n📝 Instructions détaillées\n\nCréez une classe\n\nMachineASous\n\navec les méthodes suivantes :\n\n1. Méthode\n\ngenererSymbole\n\nBut :\n\nGénérer aléatoirement un symbole de rouleau.\n\nParamètres :\n\nAucun\n\nRetour :\n\nUn symbole (\n\nString\n\nSymboles disponibles :\n\n🍒 Cerise\n\n🍋 Citron\n\n🍊 Orange\n\n🔔 Cloche\n\n⭐ Étoile\n\n💎 Diamant\n\n7 Sept\n\nAlgorithme :\n\n1. Créer un tableau : String[] symboles = {\"🍒\", \"🍋\", \"🍊\", \"🔔\", \"⭐\", \"💎\", \"7\"}\n\n2. Générer un index aléatoire entre 0 et 6 :\n\nRandom random = new Random();\n\nint index = random.nextInt(7);\n\n3. Retourner symboles[index]\n\nNote :\n\nTous les symboles ont la même probabilité (1/7).\n\n2. Méthode\n\nlancerRouleaux\n\nBut :\n\nLancer les trois rouleaux et retourner les symboles.\n\nParamètres :\n\nAucun\n\nRetour :\n\nTableau de 3 symboles (\n\nString[]\n\nAlgorithme :\n\n1. Créer un tableau de taille 3 : String[] rouleaux = new String[3]\n\n2. Pour i de 0 à 2 :\n\nrouleaux[i] = genererSymbole()\n\n3. Retourner rouleaux\n\n3. Méthode\n\nafficherRouleaux\n\nBut :\n\nAfficher les rouleaux de manière visuelle et attractive.\n\nParamètres :\n\nrouleaux\n\n: tableau de 3 symboles (\n\nString[]\n\nRetour :\n\nvoid\n\nFormat d’affichage :",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/exo_revisions/index.html",
+      "title": "Exercices de révision :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "her les rouleaux de manière visuelle et attractive.\n\nParamètres :\n\nrouleaux\n\n: tableau de 3 symboles (\n\nString[]\n\nRetour :\n\nvoid\n\nFormat d’affichage :\n\n╔════════════════════╗\n\n║   🍒 │ 🍋 │ 🍊   ║\n\n╚════════════════════╝\n\nAlgorithme :\n\nSystem\n\nout\n\nprintln\n\n\"╔════════════════════╗\"\n\nSystem\n\nout\n\nprintln\n\n\"║   \"\n\nrouleaux\n\n\" │ \"\n\nrouleaux\n\n\" │ \"\n\nrouleaux\n\n\"   ║\"\n\nSystem\n\nout\n\nprintln\n\n\"╚════════════════════╝\"\n\n4. Méthode\n\ntroisSymbolesIdentiques\n\nBut :\n\nVérifier si les trois symboles sont identiques.\n\nParamètres :\n\nrouleaux\n\n: tableau de 3 symboles (\n\nString[]\n\nRetour :\n\ntrue\n\nsi les 3 sont identiques,\n\nfalse\n\nsinon (\n\nboolean\n\nAlgorithme :\n\nRetourner rouleaux[0].equals(rouleaux[1]) && rouleaux[1].equals(rouleaux[2])\n\nNote :\n\nUtiliser\n\n.equals()\n\net non\n\npour comparer des String\n\n5. Méthode\n\ndeuxSymbolesIdentiques\n\nBut :\n\nVérifier si exactement 2 symboles sur 3 sont identiques.\n\nParamètres :\n\nrouleaux\n\n: tableau de 3 symboles (\n\nString[]\n\nRetour :\n\ntrue\n\nsi 2 sont identiques,\n\nfalse\n\nsinon (\n\nboolean\n\nAlgorithme :\n\nSi les 3 sont identiques : retourner false\n\nSi rouleaux[0] == rouleaux[1] : retourner true\n\nSi rouleaux[0] == rouleaux[2] : retourner true\n\nSi rouleaux[1] == rouleaux[2] : retourner true\n\nSinon : retourner false\n\n6. Méthode\n\nobtenirMultiplicateur\n\nBut :\n\nRetourner le multiplicateur de gain selon le symbole.\n\nParamètres :",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/exo_revisions/index.html",
+      "title": "Exercices de révision :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "retourner true\n\nSinon : retourner false\n\n6. Méthode\n\nobtenirMultiplicateur\n\nBut :\n\nRetourner le multiplicateur de gain selon le symbole.\n\nParamètres :\n\nsymbole\n\n: le symbole (\n\nString\n\nRetour :\n\nMultiplicateur (\n\nint\n\nTable des multiplicateurs :\n\n🍒 (Cerise) : ×2\n\n🍋 (Citron) : ×3\n\n🍊 (Orange) : ×4\n\n🔔 (Cloche) : ×5\n\n⭐ (Étoile) : ×10\n\n💎 (Diamant) : ×20\n\n7 (Sept) : ×50 (JACKPOT!)\n\nAlgorithme avec switch :\n\nswitch\n\nsymbole\n\ncase\n\n\"🍒\"\n\nreturn\n\ncase\n\n\"🍋\"\n\nreturn\n\ncase\n\n\"🍊\"\n\nreturn\n\ncase\n\n\"🔔\"\n\nreturn\n\ncase\n\n\"⭐\"\n\nreturn\n\ncase\n\n\"💎\"\n\nreturn\n\ncase\n\n\"7\"\n\nreturn\n\ndefault\n\nreturn\n\n7. Méthode\n\ncalculerGains\n\nBut :\n\nCalculer les gains d’un tour selon les rouleaux et la mise.\n\nParamètres :\n\nrouleaux\n\n: tableau de 3 symboles (\n\nString[]\n\nmise\n\n: montant misé (\n\ndouble\n\nRetour :\n\nMontant gagné (\n\ndouble\n\nRègles de gains :\n\n3 symboles identiques :\n\nmise × multiplicateur du symbole\n\n2 symboles identiques :\n\nmise × 1.5\n\nAucune correspondance :\n\nAlgorithme :\n\nSi troisSymbolesIdentiques(rouleaux) :\n\nsymbole = rouleaux[0]\n\nmultiplicateur = obtenirMultiplicateur(symbole)\n\ngains = mise × multiplicateur\n\nretourner gains\n\nSinon si deuxSymbolesIdentiques(rouleaux) :\n\ngains = mise × 1.5\n\nretourner gains\n\nSinon :\n\nretourner 0.0\n\nExemples :\n\n🍒 🍒 🍒 avec mise de 5€ → 5 × 2 = 10€\n\n💎 💎 💎 avec mise de 10€ → 10 × 20 = 200€\n\n🍋 🍋 🍊 avec mise de 5€ → 5 × 1.5 = 7.50€",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/exo_revisions/index.html",
+      "title": "Exercices de révision :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "on :\n\nretourner 0.0\n\nExemples :\n\n🍒 🍒 🍒 avec mise de 5€ → 5 × 2 = 10€\n\n💎 💎 💎 avec mise de 10€ → 10 × 20 = 200€\n\n🍋 🍋 🍊 avec mise de 5€ → 5 × 1.5 = 7.50€\n\n🍒 🍋 🍊 avec mise de 5€ → 0€\n\n8. Méthode\n\nafficherResultat\n\nBut :\n\nAfficher un message selon les gains.\n\nParamètres :\n\ngains\n\n: montant gagné (\n\ndouble\n\nmise\n\n: montant misé (\n\ndouble\n\nRetour :\n\nvoid\n\nMessages selon les gains :\n\ngains == 0 : “❌ Perdu ! Vous perdez X€”\n\ngains == mise : “🤝 Remboursé ! Vous récupérez votre mise”\n\ngains < mise × 5 : “💰 Petit gain ! Vous gagnez X€”\n\ngains < mise × 20 : “🎉 Beau gain ! Vous gagnez X€”\n\ngains >= mise × 20 : “🎊 JACKPOT ! Vous gagnez X€ !!!”\n\nAlgorithme :\n\ngains\n\nSystem\n\nout\n\nprintf\n\n\"❌ Perdu ! Vous perdez %.2f€%n\"\n\nmise\n\nelse\n\ngains\n\nmise\n\nSystem\n\nout\n\nprintln\n\n\"🤝 Remboursé ! Vous récupérez votre mise\"\n\nelse\n\ngains\n\nmise\n\nSystem\n\nout\n\nprintf\n\n\"💰 Petit gain ! Vous gagnez %.2f€%n\"\n\ngains\n\nelse\n\ngains\n\nmise\n\nSystem\n\nout\n\nprintf\n\n\"🎉 Beau gain ! Vous gagnez %.2f€%n\"\n\ngains\n\nelse\n\nSystem\n\nout\n\nprintf\n\n\"🎊 JACKPOT ! Vous gagnez %.2f€ !!!%n\"\n\ngains\n\n9. Méthode\n\nafficherStatistiques\n\nBut :\n\nAfficher les statistiques de la session de jeu.\n\nParamètres :\n\ntoursJoues\n\n: nombre de tours joués (\n\nint\n\ntoursGagnes\n\n: nombre de tours avec gains (\n\nint\n\ncreditsInitiaux\n\n: crédits au début (\n\ndouble\n\ncreditsFinaux\n\n: crédits à la fin (\n\ndouble\n\nRetour :\n\nvoid",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/exo_revisions/index.html",
+      "title": "Exercices de révision :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "agnes\n\n: nombre de tours avec gains (\n\nint\n\ncreditsInitiaux\n\n: crédits au début (\n\ndouble\n\ncreditsFinaux\n\n: crédits à la fin (\n\ndouble\n\nRetour :\n\nvoid\n\nFormat d’affichage :\n\n╔══════════════════════════════╗\n\n║   STATISTIQUES DE SESSION    ║\n\n╚══════════════════════════════╝\n\nTours joués : X\n\nTours gagnés : Y\n\nTaux de réussite : Z.Z%\n\nCrédits de départ : XX.XX€\n\nCrédits finaux : YY.YY€\n\n[Bénéfice/Perte] : ±ZZ.ZZ€\n\nAlgorithme :\n\n1. Afficher l'en-tête\n\n2. Afficher tours joués et tours gagnés\n\n3. Si toursJoues > 0 :\n\ntauxReussite = (toursGagnes / toursJoues) × 100\n\nAfficher le taux\n\n4. Afficher crédits initiaux et finaux\n\n5. Calculer la différence :\n\ndifference = creditsFinaux - creditsInitiaux\n\n6. Si différence > 0 :\n\nAfficher \"✅ Bénéfice : +X€\"\n\nSi différence < 0 :\n\nAfficher \"❌ Perte : X€\" (valeur absolue)\n\nSinon :\n\nAfficher \"🤝 À l'équilibre\"\n\n10. Méthode\n\njouerTour\n\nBut :\n\nJouer un tour complet de machine à sous.\n\nParamètres :\n\ncredits\n\n: crédits disponibles (\n\ndouble\n\nmise\n\n: montant de la mise (\n\ndouble\n\nRetour :\n\nNouveaux crédits après le tour (\n\ndouble\n\nAlgorithme détaillé :\n\n1. Vérifier si la mise est possible :\n\nSi mise > credits :\n\nAfficher \"❌ Crédits insuffisants !\"\n\nRetourner credits (inchangés)\n\n2. Déduire la mise :\n\ncredits = credits - mise\n\n3. Afficher l'animation :\n\nSystem.out.println(\"\n\n🎰 Les rouleaux tournent...\")",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/exo_revisions/index.html",
+      "title": "Exercices de révision :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "ner credits (inchangés)\n\n2. Déduire la mise :\n\ncredits = credits - mise\n\n3. Afficher l'animation :\n\nSystem.out.println(\"\n\n🎰 Les rouleaux tournent...\")\n\n(Optionnel : ajouter une pause)\n\n4. Lancer les rouleaux :\n\nrouleaux = lancerRouleaux()\n\n5. Afficher les rouleaux :\n\nafficherRouleaux(rouleaux)\n\n6. Calculer les gains :\n\ngains = calculerGains(rouleaux, mise)\n\n7. Afficher le résultat :\n\nafficherResultat(gains, mise)\n\n8. Ajouter les gains aux crédits :\n\ncredits = credits + gains\n\n9. Afficher le nouveau solde :\n\nSystem.out.printf(\"Nouveau solde : %.2f€%n\", credits)\n\n10. Retourner credits\n\n11. Méthode\n\njouer\n\n(jeu principal)\n\nBut :\n\nGérer le jeu complet avec boucle de jeu et menu.\n\nParamètres :\n\nAucun\n\nRetour :\n\nvoid\n\nAlgorithme complet :\n\n1. Initialiser :\n\nScanner scanner = new Scanner(System.in);\n\ndouble credits = 100.0;  // Crédits de départ\n\ndouble creditsInitiaux = credits;\n\nint toursJoues = 0;\n\nint toursGagnes = 0;\n\n2. Afficher l'écran de bienvenue :\n\n╔══════════════════════════════╗\n\n║    MACHINE À SOUS 🎰         ║\n\n╚══════════════════════════════╝\n\nCrédits de départ : 100.00€\n\nTABLE DES GAINS :\n\n🍒 🍒 🍒 : ×2\n\n🍋 🍋 🍋 : ×3\n\n🍊 🍊 🍊 : ×4\n\n🔔 🔔 🔔 : ×5\n\n⭐ ⭐ ⭐ : ×10\n\n💎 💎 💎 : ×20\n\n7  7  7  : ×50 JACKPOT!\n\n2 symboles identiques : ×1.5\n\n3. Boucle de jeu (tant que credits >= 1) :\n\na. Afficher le menu :\n\n\"\\n💰 Crédits : X.XX€\"",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/exo_revisions/index.html",
+      "title": "Exercices de révision :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": ": ×20\n\n7  7  7  : ×50 JACKPOT!\n\n2 symboles identiques : ×1.5\n\n3. Boucle de jeu (tant que credits >= 1) :\n\na. Afficher le menu :\n\n\"\\n💰 Crédits : X.XX€\"\n\n\"Choisissez votre mise :\"\n\n\"1. 1€\"\n\n\"2. 2€\"\n\n\"3. 5€\"\n\n\"4. 10€ (max)\"\n\n\"0. Quitter\"\n\n\"Votre choix : \"\n\nb. Lire le choix du joueur\n\nc. Selon le choix :\n\n- 0 : sortir de la boucle\n\n- 1 : mise = 1\n\n- 2 : mise = 2\n\n- 3 : mise = 5\n\n- 4 : mise = 10\n\n- Autre : afficher \"Choix invalide\", continuer\n\nd. Vérifier que la mise <= credits\n\nSinon : afficher erreur, continuer\n\ne. Jouer le tour :\n\ncreditsAvant = credits\n\ncredits = jouerTour(credits, mise)\n\ntoursJoues++\n\nf. Si credits > creditsAvant :\n\ntoursGagnes++\n\ng. Attendre avant le prochain tour (optionnel) :\n\nSystem.out.println(\"\n\nAppuyez sur Entrée pour continuer...\");\n\nscanner.nextLine();\n\n4. Fin du jeu :\n\nSi credits < 1 :\n\nAfficher \"\n\n💔 Vous n'avez plus de crédits !\"\n\nSinon :\n\nAfficher \"\n\n👋 Merci d'avoir joué !\"\n\n5. Afficher les statistiques finales :\n\nafficherStatistiques(toursJoues, toursGagnes, creditsInitiaux, credits);\n\n6. Fermer le scanner :\n\nscanner.close();\n\n12. Méthode\n\nmain\n\nBut :\n\nLancer le jeu.\n\nCode :\n\npublic\n\nstatic\n\nvoid\n\nmain\n\nString\n\nargs\n\njouer\n\n();\n\n✅ Critères de validation\n\nLes symboles sont générés aléatoirement\n\nLes trois rouleaux sont indépendants\n\nLe calcul des gains suit les règles exactes",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/exo_revisions/index.html",
+      "title": "Exercices de révision :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "✅ Critères de validation\n\nLes symboles sont générés aléatoirement\n\nLes trois rouleaux sont indépendants\n\nLe calcul des gains suit les règles exactes\n\nLes crédits sont correctement mis à jour\n\nLe jeu s’arrête quand crédits < 1\n\nLes statistiques sont calculées correctement\n\nLe taux de réussite est un pourcentage entre 0 et 100\n\nL’affichage est clair et attractif\n\n💡 Conseils\n\nTestez d’abord avec des symboles fixes pour vérifier la logique\n\nUtilisez\n\nSystem.out.printf(\"%.2f€\", montant)\n\npour formater l’argent\n\nAjoutez des\n\nThread.sleep(1000)\n\npour des pauses dramatiques (importer java.lang.Thread)\n\nVérifiez tous les cas : 3 identiques, 2 identiques, aucun\n\nTestez les cas limites : crédits à 0, mise maximale, etc.\n\n🎁 Extensions possibles\n\nAjouter des symboles spéciaux (Wild, Scatter)\n\nImplémenter des tours gratuits (free spins)\n\nCréer des niveaux de difficulté (probabilités différentes)\n\nAjouter un système de jackpot progressif\n\nSauvegarder les meilleurs scores\n\nCréer un système de multiplicateurs en cascade\n\nAjouter des sons (avec des caractères BEEP)\n\n📊 Grille d’évaluation générale\n\nPour chaque projet, voici comment vous serez évalué :\n\nFonctionnalité (50 points)\n\nToutes les méthodes demandées sont implémentées (20 pts)\n\nLes méthodes fonctionnent correctement (20 pts)\n\nLes calculs sont exacts (10 pts)\n\nQualité du code (30 points)",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/exo_revisions/index.html",
+      "title": "Exercices de révision :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "s demandées sont implémentées (20 pts)\n\nLes méthodes fonctionnent correctement (20 pts)\n\nLes calculs sont exacts (10 pts)\n\nQualité du code (30 points)\n\nNoms de variables et méthodes clairs (10 pts)\n\nCode bien indenté et lisible (10 pts)\n\nCommentaires pertinents (10 pts)\n\nRobustesse (20 points)\n\nValidation des entrées utilisateur (10 pts)\n\nGestion des cas limites (5 pts)\n\nPas d’erreurs à l’exécution (5 pts)\n\nTotal : 100 points par projet\n\n💡 Conseils généraux pour tous les projets\n\n1. Méthodologie de développement\n\nLire\n\nentièrement les instructions\n\nPlanifier\n\n: liste des méthodes à créer\n\nDévelopper\n\nméthode par méthode (commencer par les plus simples)\n\nTester\n\nchaque méthode individuellement\n\nIntégrer\n\nprogressivement\n\nDéboguer\n\nen cas de problème\n\nAméliorer\n\nle code (refactoring)\n\n2. Techniques de débogage\n\nUtiliser\n\nSystem.out.println()\n\npour afficher les valeurs\n\nTester avec des valeurs simples et connues\n\nIsoler le problème (quelle méthode ne fonctionne pas ?)\n\nVérifier les types de données (int vs double)\n\nAttention aux divisions par zéro\n\n3. Bonnes pratiques Java\n\n// ✅ Bon\n\npublic\n\nstatic\n\ndouble\n\ncalculerMoyenne\n\ndouble\n\nnotes\n\nnotes\n\nnull\n\nnotes\n\nlength\n\nreturn\n\ndouble\n\nsomme\n\nfor\n\ndouble\n\nnote\n\nnotes\n\nsomme\n\nnote\n\nreturn\n\nsomme\n\nnotes\n\nlength\n\n// ❌ Mauvais\n\npublic\n\nstatic\n\ndouble\n\ncalcul\n\ndouble\n\ndouble\n\nfor\n\nint",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/exo_revisions/index.html",
+      "title": "Exercices de révision :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "le\n\nsomme\n\nfor\n\ndouble\n\nnote\n\nnotes\n\nsomme\n\nnote\n\nreturn\n\nsomme\n\nnotes\n\nlength\n\n// ❌ Mauvais\n\npublic\n\nstatic\n\ndouble\n\ncalcul\n\ndouble\n\ndouble\n\nfor\n\nint\n\nlength\n\nreturn\n\nlength\n\n// Erreur possible si n.length == 0\n\n4. Checklist avant de soumettre\n\nLe code compile sans erreur\n\nToutes les méthodes demandées sont présentes\n\nLes tests dans\n\nmain\n\nfonctionnent\n\nLe code est indenté correctement\n\nLes noms de variables sont explicites\n\nLes cas limites sont gérés\n\nDes commentaires expliquent la logique complexe\n\n🚀 Ordre recommandé des projets\n\nPour débutants :\n\nProjet 1 (Gestion de Notes) - Le plus simple\n\nProjet 4 (Calculateur de Dates) - Logique pure\n\nProjet 6 (Analyseur de Texte) - Manipulation de String\n\nPour intermédiaires :\n\n4. Projet 5 (Compte Bancaire) - Plus de logique\n\n5. Projet 2 (Calculateur de Salaire) - Calculs complexes\n\nPour avancés :\n\n6. Projet 3 (Jeu de Devinette) - Interaction utilisateur\n\n7. Projet 7 (Machine à Sous) - Le plus complet\n\n📚 Ressources Java utiles\n\nMéthodes String importantes\n\nlength()\n\n: longueur de la chaîne\n\ncharAt(index)\n\n: caractère à la position\n\nsubstring(debut, fin)\n\n: sous-chaîne\n\nsplit(regex)\n\n: découper en tableau\n\ntrim()\n\n: supprimer espaces début/fin\n\ntoLowerCase()\n\ntoUpperCase()\n\nequals(autre)\n\n: comparer deux String\n\nreplace(ancien, nouveau)\n\n: remplacer\n\nMéthodes de tableaux\n\narray.length",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/exo_revisions/index.html",
+      "title": "Exercices de révision :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "ut/fin\n\ntoLowerCase()\n\ntoUpperCase()\n\nequals(autre)\n\n: comparer deux String\n\nreplace(ancien, nouveau)\n\n: remplacer\n\nMéthodes de tableaux\n\narray.length\n\n: taille du tableau\n\nArrays.toString(array)\n\n: afficher un tableau\n\nClasse Math\n\nMath.abs(x)\n\n: valeur absolue\n\nMath.max(a, b)\n\n: maximum\n\nMath.min(a, b)\n\n: minimum\n\nMath.pow(x, y)\n\n: puissance\n\nMath.round(x)\n\n: arrondir\n\nClasse Random\n\nRandom\n\nrandom\n\nnew\n\nRandom\n\n();\n\nint\n\nnombre\n\nrandom\n\nnextInt\n\n100\n\n// 0-99\n\nint\n\nnombreDe\n\nrandom\n\nnextInt\n\nScanner\n\nScanner\n\nscanner\n\nnew\n\nScanner\n\nSystem\n\nint\n\nnombre\n\nscanner\n\nnextInt\n\n();\n\ndouble\n\ndecimal\n\nscanner\n\nnextDouble\n\n();\n\nString\n\ntexte\n\nscanner\n\nnextLine\n\n();\n\nscanner\n\nclose\n\n();\n\nImportant",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/exo_revisions/index.html",
+      "title": "Exercices de révision :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  }
+]

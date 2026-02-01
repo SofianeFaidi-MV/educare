@@ -1,0 +1,1307 @@
+[
+  {
+    "text": "Java\n\nIntroduction\n\nC’est quoi un language de programmation?\n\nJava est l’un des langages les plus populaires en 2025 selon TIOBE\n\nhttps://www.tiobe.com/tiobe-index/\n\nJava fonctionne sur plusieurs systèmes d’exploitation (Windows, Mac, Linux, Raspberry Pi, etc.)\n\nJava est assez facile à apprendre, surtout pour les débutants, et il est agréable à utiliser.\n\nSi vous connaissez déjà un peu C++ ou C#, passer à Java est simple, et l’inverse aussi. Il facilite donc la transition pour les développeurs entre ces langages\n\nComme Java est un langage orienté objet, il permet d’écrire du code bien organisé et réutilisable, ce qui facilite la création de programmes.\n\nIl peut être utilisé pour:\n\ncréer des applications mobiles, surtout sur les téléphones Android ;\n\ndévelopper des logiciels pour ordinateur (Windows, Mac, etc.) ;\n\nconcevoir des applications web, comme les sites internet interactifs ;",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/1-intro/java/index.html",
+      "title": "Java :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "biles, surtout sur les téléphones Android ;\n\ndévelopper des logiciels pour ordinateur (Windows, Mac, etc.) ;\n\nconcevoir des applications web, comme les sites internet interactifs ;\n\nmettre en place des serveurs web et des serveurs d’applications ;\n\nprogrammer des jeux vidéo ;\n\nse connecter à des bases de données pour lire ou sauvegarder des informations ;\n\net bien d’autres choses encore !\n\nQu’est-ce que Java ?\n\nJava\n\nest un langage de programmation\n\norienté objet\n\nindépendant de la plateforme\n\n, ce qui signifie que vous pouvez écrire du code Java sur un système d’exploitation (par exemple Windows) et l’exécuter sur n’importe quel autre système (par exemple Linux, Mac) sans modification. Java suit le principe du\n\n“write once, run anywhere”\n\nIntroduction_à_l’environnement_Java\n\nPOUR LINUX\n\nwget https://www.oracle.com/java/technologies/downloads/?er=221886\n\nsudo dpkg -i Downloads/jdk-23_linux-x64_bin.deb\n\nsudo apt update\n\nsudo apt install openjdk-11-jdk\n\nPOUR WINDOWS\n\nAller sur le site officiel de\n\noracle\n\nNotepad++",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/1-intro/java/index.html",
+      "title": "Java :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "nloads/?er=221886\n\nsudo dpkg -i Downloads/jdk-23_linux-x64_bin.deb\n\nsudo apt update\n\nsudo apt install openjdk-11-jdk\n\nPOUR WINDOWS\n\nAller sur le site officiel de\n\noracle\n\nNotepad++\n\nJusqu’à nouvel ordre vous ne pourrez coder exclusivement qu’avec Notepad++ dans mon cours.\n\nVous pouvez changer les couleurs. Je suggère\n\nDansLeRush-Dark\n\n, mais vous pouvez le personnaliser comme vous voulez.",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/1-intro/java/index.html",
+      "title": "Java :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "Affichage console\n\n☕ Créer son tout premier programme en Java\n\nAvant de plonger dans le code, il est important de savoir qu’en Java, tout le code source doit être enregistré dans un fichier avec l’extension\n\n.java\n\nEN ligne\n\nSi java n’est malheureusement pas installé sur votre ordinateur et que vous ne pouvez pas le faire, vous pouvez tout de même\n\nprogrammer directement sur le web\n\nici\n\n🔧 Étapes :\n\nCrée un nouveau fichier et nomme-le\n\nMain.java\n\nTape (de préférence manuellement) le code suivant dans ce fichier :\n\npublic\n\nclass\n\nMain\n\npublic\n\nstatic\n\nvoid\n\nmain\n\nString\n\nargs\n\nSystem\n\nout\n\nprintln\n\n\"Hello World\"\n\nAstuce : Prends le temps de taper le code au lieu de simplement le copier-coller. Cela t’aidera à bien comprendre chaque ligne.\n\n🧩 Comprendre la notion de classe\n\nEn Java, tout le code exécutable doit être contenu dans une\n\nclasse",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/1-intro/affichage-console/index.html",
+      "title": "Affichage console :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "de simplement le copier-coller. Cela t’aidera à bien comprendre chaque ligne.\n\n🧩 Comprendre la notion de classe\n\nEn Java, tout le code exécutable doit être contenu dans une\n\nclasse\n\nCe concept sera expliqué en détail plus tard, mais retiens pour l’instant qu’une classe est\n\nindispensable\n\nDans notre exemple, cela correspond à la ligne\n\npublic class Main\n\nPar convention, le\n\nnom d’une classe commence par une majuscule\n\n(ce n’est pas obligatoire, mais recommandé).\n\nLe nom du\n\nfichier doit être identique au nom de la classe\n\n, suivi de l’extension\n\n.java\n\n. Ici, la classe s’appelle\n\nMain\n\n, donc le fichier s’appelle\n\nMain.java\n\nLe mot-clé\n\npublic\n\nest un\n\nmodificateur d’accès\n\nindiquant que cette classe est accessible depuis d’autres classes (nous y reviendrons plus tard).\n\n🏁 La méthode\n\nmain()\n\nLa méthode\n\nmain()\n\nest\n\nle point d’entrée\n\nde tout programme Java.\n\nTout le code à l’intérieur de cette méthode sera exécuté au lancement du programme.\n\nNe t’inquiète pas pour le moment des autres mots-clés comme\n\nstatic\n\nvoid\n\n. Tu les comprendras avec le temps.",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/1-intro/affichage-console/index.html",
+      "title": "Affichage console :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "l’intérieur de cette méthode sera exécuté au lancement du programme.\n\nNe t’inquiète pas pour le moment des autres mots-clés comme\n\nstatic\n\nvoid\n\n. Tu les comprendras avec le temps.\n\n🔄 Résumé ligne par ligne\n\nLigne de code\n\nExplication\n\npublic class Main\n\nDéclare une classe publique appelée\n\nMain\n\npublic static void main(String[] args)\n\nDéclare la méthode principale qui sera exécutée au démarrage du programme.\n\nSystem.out.println(\"Hello World\");\n\nAffiche le message\n\n\"Hello World\"\n\ndans la console.\n\n🧪 Compilation et exécution d’un programme Java\n\nD’abord, tu dois t’assurer que Java est bien installé sur ton ordinateur\n\nOuvre une invite de commandes (cmd) sous Windows (Terminal sous Mac/Linux).\n\nTape la commande\n\njava -version\n\n. Cette commande devrait vous dire la version de Java qui est installé sur votre ordinateur.\n\nTape aussi la commande\n\njavac -version\n\n. Cette commande devrait te dire la version du compilateur de Java installé sur ton ordinateur",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/1-intro/affichage-console/index.html",
+      "title": "Affichage console :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "Java qui est installé sur votre ordinateur.\n\nTape aussi la commande\n\njavac -version\n\n. Cette commande devrait te dire la version du compilateur de Java installé sur ton ordinateur\n\nNote: Ces commandes fonctionnent seulement si Java et le compilateur de Java sont installés et que le chemin où le répertoire de Java se trouve est mis dans le\n\nPATH\n\ndes variables d’environnement (À expliquer en classe pour que ce soit plus clair)\n\nExécution du code dans le fichier Main.java\n\nOuvre une invite de commandes (cmd) sous Windows (Terminal sous Mac/Linux).\n\nNavigue vers le dossier où se trouve votre fichier Main.java\n\nExécute la commande\n\njava Main.java\n\n. Tu devrais voir le message\n\nHello World\n\ndans l’invite de commandes.\n\nTraditionnellement, Java fonctionne en deux étapes :\n\nCompilation\n\n: Le code source (\n\n.java\n\n) est transformé en bytecode (\n\n.class\n\n) grâce à la commande :\n\njavac Main.java\n\nExécution\n\n: Le bytecode est ensuite exécuté avec la commande :\n\njava Main",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/1-intro/affichage-console/index.html",
+      "title": "Affichage console :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "e code source (\n\n.java\n\n) est transformé en bytecode (\n\n.class\n\n) grâce à la commande :\n\njavac Main.java\n\nExécution\n\n: Le bytecode est ensuite exécuté avec la commande :\n\njava Main\n\nAstuce : Depuis une version relativement récente de Java, il est aussi possible d’exécuter directement un fichier\n\n.java\n\nsans passer explicitement par l’étape de compilation (\n\njavac\n\njava Main.java\n\nCela permet d’exécuter rapidement un programme, mais à noter :\n\nLe fichier\n\n.class\n\nest\n\ngénéré temporairement\n\nIl est ensuite\n\nsupprimé automatiquement\n\naprès l’exécution.\n\n📝 Cette méthode est pratique pour tester du code rapidement, mais dans un projet structuré, on utilise généralement\n\njavac\n\nsuivi de\n\njava\n\n🖨️ Affichage avec\n\nSystem.out.print\n\nSystem.out.println\n\nDans la méthode\n\nmain()\n\n, tu peux utiliser :\n\nSystem.out.println()\n\n: pour afficher une ligne de texte suivie d’un\n\nretour à la ligne\n\nSystem.out.print()\n\n: pour afficher du texte\n\nsans retour à la ligne\n\n✏️ Pour l’instant, retiens que tu dois utiliser\n\nSystem.out.println(\"ton message\");\n\npour afficher du texte à l’écran.",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/1-intro/affichage-console/index.html",
+      "title": "Affichage console :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "ut.print()\n\n: pour afficher du texte\n\nsans retour à la ligne\n\n✏️ Pour l’instant, retiens que tu dois utiliser\n\nSystem.out.println(\"ton message\");\n\npour afficher du texte à l’écran.\n\n📌 Détail sur\n\nSystem.out\n\nÉlément\n\nRôle\n\nSystem\n\nClasse prédéfinie dans\n\njava.lang\n\nout\n\nReprésente le\n\nflux de sortie standard\n\nSystem.out\n\nUtilisé pour\n\nécrire dans la console\n\n🧩 Différence entre\n\nprint()\n\nprintln()\n\nMéthode\n\nEffet\n\nprint()\n\nAffiche le texte\n\nsur la même ligne\n\nprintln()\n\nAffiche le texte\n\npuis passe à la ligne suivante\n\nExemple 1 : sans retour à la ligne\n\nSystem\n\nout\n\nprint\n\n\"Bonjour \"\n\nSystem\n\nout\n\nprint\n\n\"tout le monde !\"\n\nRésultat :\n\nBonjour tout le monde !\n\nExemple 2 : avec retour à la ligne\n\nSystem\n\nout\n\nprintln\n\n\"Bonjour\"\n\nSystem\n\nout\n\nprintln\n\n\"tout le monde !\"\n\nRésultat :\n\nBonjour\n\ntout le monde !\n\nExemple 3 : retour à la ligne manuel\n\nSystem\n\nout\n\nprint\n\n\"Ligne 1\\nLigne 2\"\n\nRésultat :\n\nLigne 1\n\nLigne 2\n\n✅ En résumé :\n\nprint()\n\n: n’ajoute pas de retour à la ligne.\n\nprintln()\n\n: ajoute un retour à la ligne automatiquement.",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/1-intro/affichage-console/index.html",
+      "title": "Affichage console :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "ut\n\nprint\n\n\"Ligne 1\\nLigne 2\"\n\nRésultat :\n\nLigne 1\n\nLigne 2\n\n✅ En résumé :\n\nprint()\n\n: n’ajoute pas de retour à la ligne.\n\nprintln()\n\n: ajoute un retour à la ligne automatiquement.\n\nCes méthodes sont très utilisées pour afficher des messages ou pour déboguer.\n\nLe caractère d’échappement\n\npermet d’insérer des caractères spéciaux dans une chaîne.\n\nSéquence\n\nRésultat\n\nExemple\n\nRésultat Console\n\nSaut de ligne\n\n\"Bonjour\\nSalut\"\n\nBonjour\n\nSalut\n\nTabulation\n\n\"Nom\\tAge\"\n\nNom  Age\n\nGuillemets doubles\n\n\"Il a dit : \\\"ok\\\"\"\n\nIl a dit : “ok”\n\nBackslash\n\n\"C:\\\\Users\\\\Nom\"\n\nC:\\Users\\Nom\n\nApostrophe\n\n'\\'\n\nSystem.out.printf()\n\n– Affichage formaté\n\nTu peux fixer la\n\nlargeur de colonnes\n\navec :\n\nSystem\n\nout\n\nprintf\n\n\"%-15s : %s\\n\"\n\n\"Nom\"\n\n\"Alice\"\n\nSystem\n\nout\n\nprintf\n\n\"%-15s : %d\\n\"\n\n\"Âge\"\n\n%–15s\n\n→ champ texte\n\naligné à gauche\n\nsur\n\n15 caractères\n\n✅ À retenir\n\nCommande\n\nUtilité principale\n\nprint()\n\nAffiche sur la même ligne.\n\nprintln()\n\nAffiche puis saute une ligne.\n\nCaractère d’échappement pour mise en forme.\n\nprintf()\n\nAffichage\n\nstructuré et aligné\n\n🛠️ Astuce pro : format avancé",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/1-intro/affichage-console/index.html",
+      "title": "Affichage console :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "e sur la même ligne.\n\nprintln()\n\nAffiche puis saute une ligne.\n\nCaractère d’échappement pour mise en forme.\n\nprintf()\n\nAffichage\n\nstructuré et aligné\n\n🛠️ Astuce pro : format avancé\n\nSystem\n\nout\n\nprintf\n\n\"\"\"\n\nNom complet  : Julie MARTIN\n\nÂge          : 28\n\nVille        : %s\n\n\"\"\"\n\n\"Paris\"\n\n🖥️ Résultat console\n\nNom complet  : Julie MARTIN\n\nÂge          : 28\n\nVille        : Paris\n\n✅ Explication ligne par ligne\n\nÉlément\n\nRôle\n\n\"\"\"\n\n(Text block)\n\nPermet un texte\n\nmultiligne\n\npropre (Java 15+).\n\nPlaceholder pour une\n\nvaleur chaîne\n\n(String ou objet).",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/1-intro/affichage-console/index.html",
+      "title": "Affichage console :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "Règles/conventions\n\n🟨 Règles de base en Java\n\nSensibilité à la casse\n\n→ Java distingue\n\nmajuscules et minuscules\n\nnom\n\nNom\n\nNOM\n\nDélimitation des blocs\n\n→ Tout bloc de code (classe, méthode, boucle, condition, etc.) est entouré par\n\naccolades\n\nFin des instructions\n\n→ Chaque ligne d’instruction se termine par un\n\npoint-virgule\n\nCommentaires dans le code :\n\nType\n\nSyntaxe\n\nUsage\n\nCommentaire une ligne\n\nPour un commentaire bref\n\nCommentaire multi-ligne\n\n/* ... */\n\nPour expliquer un bloc de code\n\n// Ceci est un commentaire simple\n\n/* Ceci est\n\nun commentaire\n\nsur plusieurs lignes */\n\n🟦 Nomenclature Java\n\n✅ Une\n\nfonction dans une classe\n\n= une\n\nméthode\n\nElle appartient à\n\nla classe dans laquelle elle est définie\n\n🟩 Conventions de nommage (cours)\n\nÉlément\n\nConvention\n\nExemple\n\nTechnique utilisée\n\nClasse\n\nMajuscule initiale\n\nAnimal\n\nVoitureBleue\n\nPascalCase\n\nMéthode\n\nMinuscule initiale",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/1-intro/regles/index.html",
+      "title": "Règles/conventions :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "finie\n\n🟩 Conventions de nommage (cours)\n\nÉlément\n\nConvention\n\nExemple\n\nTechnique utilisée\n\nClasse\n\nMajuscule initiale\n\nAnimal\n\nVoitureBleue\n\nPascalCase\n\nMéthode\n\nMinuscule initiale\n\nafficherNom()\n\ncamelCase\n\nVariable\n\nMinuscule initiale\n\nnomClient\n\nageMoyen\n\ncamelCase\n\nConstante\n\nMAJUSCULE +\n\nTAUX_DE_TAXE\n\nSNAKE_CASE\n\nVariable locale simple\n\nLettre courte\n\n(dans les boucles)\n\nLes variables à une seule lettre sont permises uniquement pour un usage local (dans une boucle for, par exemple) par exemple i ou j. Toutes les autres variables doivent avoir un nom significatif. Les tableau doivent avoir un nom qui sous-entend la pluralité.\n\n🟧 Indentation et lisibilité\n\n✏️ L’indentation ne change pas le comportement du code, mais elle :\n\nrend le code\n\nplus lisible\n\nmontre la\n\nstructure logique\n\ndu programme.\n\n📌 Règles :\n\nIndentation = tabulation\n\n(ou 4 espaces selon le style).\n\nChaque bloc (\n\naugmente\n\nle niveau d’indentation.\n\nRespecter la\n\ncohérence\n\n: ne pas mélanger tabulations et espaces.\n\nBien\n\naligner les blocs imbriqués\n\n: boucles, conditions, classes, etc.",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/1-intro/regles/index.html",
+      "title": "Règles/conventions :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "c (\n\naugmente\n\nle niveau d’indentation.\n\nRespecter la\n\ncohérence\n\n: ne pas mélanger tabulations et espaces.\n\nBien\n\naligner les blocs imbriqués\n\n: boucles, conditions, classes, etc.\n\nExemple :\n\npublic\n\nclass\n\nExemple\n\npublic\n\nstatic\n\nvoid\n\nmain\n\nString\n\nargs\n\nint\n\nage\n\nage\n\nSystem\n\nout\n\nprintln\n\n\"Majeur\"\n\nelse\n\nSystem\n\nout\n\nprintln\n\n\"Mineur\"\n\n✅ Résumé\n\nÉlément\n\nExemple\n\nRappel\n\nClasse\n\nMaClasse\n\nPascalCase\n\nMéthode\n\nafficherProfil()\n\ncamelCase\n\nVariable\n\nageUtilisateur\n\ncamelCase\n\nConstante\n\nTAUX_DE_TVA\n\nMAJUSCULES +\n\nCommentaire\n\n/* ... */\n\npour documenter\n\nBloc de code\n\n{ ... }\n\navec indentation\n\nFin d’instruction\n\nobligatoire\n\n🟨 Conventions d’espacement en Java\n\nLes\n\nespaces\n\nsont essentiels pour la\n\nlisibilité du code\n\n, mais doivent être utilisés de manière\n\ncohérente\n\n📌 1. Autour des opérateurs\n\n✅ Toujours mettre\n\nun espace\n\navant et après\n\nles opérateurs :\n\nint\n\ntotal\n\n🚫 Mauvais :\n\nint\n\ntotal\n\n📌 2. Après les virgules\n\n✅ Un espace\n\naprès chaque virgule\n\n, pas avant :\n\nSystem\n\nout\n\nprintln\n\nnom\n\nage\n\nville\n\n🚫 Mauvais :\n\nSystem\n\nout\n\nprintln\n\nnom\n\nage\n\nville",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/1-intro/regles/index.html",
+      "title": "Règles/conventions :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": ":\n\nint\n\ntotal\n\n📌 2. Après les virgules\n\n✅ Un espace\n\naprès chaque virgule\n\n, pas avant :\n\nSystem\n\nout\n\nprintln\n\nnom\n\nage\n\nville\n\n🚫 Mauvais :\n\nSystem\n\nout\n\nprintln\n\nnom\n\nage\n\nville\n\n📌 3. Après les mots-clés (\n\nfor\n\nwhile\n\n, etc.)\n\n✅ Mettre\n\nun espace\n\nentre le mot-clé et la parenthèse ouvrante :\n\nage\n\nSystem\n\nout\n\nprintln\n\n\"Majeur\"\n\n🚫 Mauvais :\n\nage\n\n📌 4. Entre les parenthèses et le contenu\n\nAucun espace\n\njuste après\n\nou juste avant\n\nSystem\n\nout\n\nprintln\n\nnom\n\n🚫 Mauvais :\n\nSystem\n\nout\n\nprintln\n\nnom\n\n📌 5. Autour des accolades\n\n{ }\n\n✅ L’accolade ouvrante est généralement\n\nplacée à la fin de la ligne de déclaration\n\n, puis le bloc est indenté :\n\npublic\n\nclass\n\nExemple\n\npublic\n\nstatic\n\nvoid\n\nmain\n\nString\n\nargs\n\nSystem\n\nout\n\nprintln\n\n\"Positif\"\n\n🚫 Mauvais :\n\npublic\n\nclass\n\nExemple\n\npublic\n\nstatic\n\nvoid\n\nmain\n\nString\n\nargs\n\nSystem\n\nout\n\nprintln\n\n\"Positif\"\n\nNote : Certaines équipes préfèrent les accolades sur une ligne séparée, mais\n\nl’important est d’être cohérent dans tout le projet\n\n📌 6. Pas d’espace avant un point",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/1-intro/regles/index.html",
+      "title": "Règles/conventions :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "ntln\n\n\"Positif\"\n\nNote : Certaines équipes préfèrent les accolades sur une ligne séparée, mais\n\nl’important est d’être cohérent dans tout le projet\n\n📌 6. Pas d’espace avant un point\n\n✅ Éviter tout espace avant ou après un point utilisé pour accéder aux membres :\n\nutilisateur\n\ngetNom\n\n();\n\n🚫 Mauvais :\n\nutilisateur\n\ngetNom\n\n();\n\n✅ Résumé des règles d’espacement\n\nCas\n\nBonne pratique\n\nOpérateurs\n\na + b\n\nx == y\n\n, etc.\n\nAprès une virgule\n\nf(x, y)\n\nMots-clés (\n\nfor\n\n, etc.)\n\nif (\n\net non\n\nif(\n\nParenthèses\n\n(x + 1)\n\net non\n\n( x + 1 )\n\nAccès à un membre (\n\nobjet.methode()\n\nAccolade ouvrante\n\nSur la\n\nmême ligne",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/1-intro/regles/index.html",
+      "title": "Règles/conventions :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "Commentaires\n\n🧠 Qu’est-ce qu’un commentaire ?\n\ncommentaire\n\nest une partie du code\n\nignorée par le compilateur Java\n\nIl sert à :\n\nExpliquer le code aux humains (programmeurs).\n\nDocumenter le fonctionnement des classes, des méthodes, etc.\n\nFaciliter la relecture et la maintenance du programme.\n\n✍️ 1. Commentaire sur une ligne (\n\n🔹 Syntaxe :\n\n// Ceci est un commentaire sur une ligne\n\nint\n\nage\n\nStocke\n\nâge\n\n✅ Utilisation :\n\nExpliquer une ligne de code.\n\nAjouter une remarque rapide.\n\n🧾2. Commentaire sur plusieurs lignes (/* … */)\n\n🔹 Syntaxe :\n\nCeci est un commentaire\n\nsur plusieurs lignes.\n\nIl peut couvrir un bloc de texte.\n\n✅ Utilisation :\n\nFournir une explication plus longue.\n\nDésactiver temporairement un bloc de code.\n\nAvancé\n\nNous verrons peut être cette théorie plus tard\n\n📚 3. Commentaire de documentation (/** … */)\n\n🔹 Syntaxe :\n\n/**\n\n* Cette méthode affiche un message de bienvenue.",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/1-intro/commentaires/index.html",
+      "title": "Commentaires :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "c de code.\n\nAvancé\n\nNous verrons peut être cette théorie plus tard\n\n📚 3. Commentaire de documentation (/** … */)\n\n🔹 Syntaxe :\n\n/**\n\n* Cette méthode affiche un message de bienvenue.\n\n* @param nom Le nom de l’utilisateur.\n\npublic\n\nvoid\n\ndireBonjour\n\nString\n\nnom\n\nSystem\n\nout\n\nprintln\n\n\"Bonjour \"\n\nnom\n\n✅ Utilisation :\n\nGénérer une documentation HTML avec\n\nJavadoc\n\nDocumenter les\n\nclasses\n\nméthodes\n\nconstructeurs\n\n, etc.",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/1-intro/commentaires/index.html",
+      "title": "Commentaires :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "VSCode\n\nInstallation\n\nLien d’instalation\n\nInstallation des extensions**\n\nOuvrez la barre latérale de gauche dans VSCode.\n\nCliquez sur l’icône des extensions\n\nou utilisez le raccourci clavier\n\nCtrl + Shift + X\n\nRecherchez\n\nLanguage Support for Java(TM) by Red Hat\n\net installez l’extension.\n\nRecherchez\n\nDebugger for Java\n\net installez l’extension.\n\nRacourci clavier utilie\n\nJe n’ai pas testé la version Mac.\n\nRaccourcis de base\n\nAction\n\nWindows/Linux\n\nMac\n\nCopier\n\nCtrl + C\n\nCmd (⌘) + C\n\nColler\n\nCtrl + V\n\nCmd (⌘) + V\n\nAnnuler (Undo)\n\nCtrl + Z\n\nCmd (⌘) + Z\n\nÉdition avancée\n\nAction\n\nWindows/Linux\n\nMac\n\nSélectionner prochaine occurrence\n\nCtrl + D\n\nCmd (⌘) + D\n\nAjouter plusieurs curseurs (haut/bas)\n\nCtrl + Alt + ↑ / ↓\n\nOption (⌥) + Cmd (⌘) + ↑ / ↓\n\nCopier ligne vers le haut ou le bas\n\nShift + Alt + ↑ / ↓\n\nShift + Option (⌥) + ↑ / ↓\n\nCommenter rapidement des lignes\n\nctrl + é",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/2-vscode/index.html",
+      "title": "VSCode :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": ")\n\nCtrl + Alt + ↑ / ↓\n\nOption (⌥) + Cmd (⌘) + ↑ / ↓\n\nCopier ligne vers le haut ou le bas\n\nShift + Alt + ↑ / ↓\n\nShift + Option (⌥) + ↑ / ↓\n\nCommenter rapidement des lignes\n\nctrl + é\n\nSurligner un String dont on oublié les\n\n, faites le\n\net il s’ajoutera des deux côtés.",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/2-vscode/index.html",
+      "title": "VSCode :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "Variables\n\nUne\n\nvariable\n\n, c’est comme une boîte dans laquelle on range une valeur. Elle a toujours\n\ntrois éléments essentiels\n\ntype nom = valeur;\n\nPar exemple :\n\nint\n\nvar1\n\nIci :\n\nint\n\n→ le type de la variable (entier)\n\nvar1\n\n→ le nom de la variable\n\n→ la valeur qu’elle contient\n\n📢 Afficher une variable\n\nTu peux afficher une variable comme tu afficherais n’importe quelle valeur :\n\nint\n\nvar1\n\nSystem\n\nout\n\nprintln\n\nvar1\n\naffiche\n\n🛠️ Déclaration & Initialisation\n\nQuand on écrit\n\nint var1 = 42;\n\n, on fait deux choses :\n\nDéclaration\n\n(on dit que\n\nvar1\n\nexiste et qu’elle est de type\n\nint\n\nInitialisation\n\n(on lui donne la valeur\n\n) -> L’initialisation c’est la\n\npremière\n\nattribution d’une valeur à une variable. C’est ce qui rend une variable déclarée utilisable.\n\nMais on peut aussi\n\ndéclarer d’abord\n\n, et\n\ninitialiser plus tard\n\n//Déclaration\n\nint\n\nvar1\n\n//initialisation\n\nvar1\n\nSystem\n\nout",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/3-variables-types/variables/index.html",
+      "title": "Variables :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "’est ce qui rend une variable déclarée utilisable.\n\nMais on peut aussi\n\ndéclarer d’abord\n\n, et\n\ninitialiser plus tard\n\n//Déclaration\n\nint\n\nvar1\n\n//initialisation\n\nvar1\n\nSystem\n\nout\n\nprintln\n\nvar1\n\naffiche\n\n⚠️ Attention à l’utilisation avant l’initialisation\n\nSi tu déclares une variable mais que tu essaies de l’utiliser\n\nsans lui avoir donné de valeur\n\n, Java ne sera pas content :\n\nint\n\nvar1\n\nSystem\n\nout\n\nprintln\n\nvar1\n\n🔴 Résultat :\n\nerror: variable var1 might not have been initialized\n\nSystem.out.println(var1);\n\n1 error\n\nJava exige que chaque variable soit initialisée\n\navant\n\nson utilisation. Sinon, il refusera de compiler le programme.\n\n🎯 Exercice 1\n\nConsigne\n\nDéclare trois variables\n\nentières\n\nage\n\ntaille\n\nanneeNaissance\n\nInitialise-les avec\n\n170\n\n2008\n\nrespectivement.\n\nAffiche chaque variable avec\n\nSystem.out.println\n\nExemple attendu à l’écran\n\n170\n\n2008\n\nRéponse\n\nint\n\nage\n\nint\n\ntaille\n\n170\n\nint\n\nanneeNaissance\n\n2008\n\nSystem\n\nout\n\nprintln\n\nage\n\nSystem\n\nout\n\nprintln\n\ntaille\n\nSystem\n\nout\n\nprintln\n\nanneeNaissance",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/3-variables-types/variables/index.html",
+      "title": "Variables :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "Constantes\n\nEn Java, une\n\nconstante\n\nest une variable dont la valeur\n\nne peut plus être modifiée\n\naprès son initialisation.\n\nElles sont utilisées pour représenter des\n\nvaleurs fixes\n\n(comme un taux de taxe, un seuil, une unité de mesure, etc.) qui\n\nne doivent pas changer\n\npendant l’exécution du programme.\n\n✅ Comment déclarer une constante ?\n\nPour déclarer une constante, on utilise le mot-clé\n\nfinal\n\n. Cela indique que la valeur ne pourra être assignée\n\nqu’une seule fois\n\npublic\n\nclass\n\nExempleConstantes\n\npublic\n\nstatic\n\nvoid\n\nmain\n\nString\n\nargs\n\n// Déclaration d'une constante locale\n\nfinal\n\ndouble\n\nTAUX_TPS\n\nSystem\n\nout\n\nprintln\n\nTAUX_TPS\n\n// Affiche : 0.20\n\n📝 Remarque : Par convention, on écrit les noms de constantes en\n\nmajuscules\n\n, avec des underscores\n\npour séparer les mots.\n\n❓ Pourquoi utiliser des constantes ?\n\nUtiliser des constantes a plusieurs avantages :\n\n💡 Cela rend le code",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/3-variables-types/variables/constantes/index.html",
+      "title": "Constantes :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "onstantes en\n\nmajuscules\n\n, avec des underscores\n\npour séparer les mots.\n\n❓ Pourquoi utiliser des constantes ?\n\nUtiliser des constantes a plusieurs avantages :\n\n💡 Cela rend le code\n\nplus clair\n\n: on comprend que la valeur ne changera pas.\n\n✅ Cela\n\névite les erreurs\n\ninvolontaires en empêchant toute modification de la valeur.\n\n📚 C’est aussi une\n\nbonne pratique\n\npour centraliser et réutiliser des valeurs fixes.\n\n⚠️ Que se passe-t-il si on essaie de modifier une constante ?\n\nLe compilateur Java lève une\n\nerreur\n\nsi on tente de modifier une constante après son initialisation :\n\npublic\n\nclass\n\nExempleConstantes\n\npublic\n\nstatic\n\nvoid\n\nmain\n\nString\n\nargs\n\nfinal\n\ndouble\n\nTAUX_TPS\n\n// ❌ Erreur de compilation : impossible de modifier une constante\n\nTAUX_TPS\n\nSystem\n\nout\n\nprintln\n\nTAUX_TPS\n\n🎯 Exercice 1\n\nConsigne\n\nDéclare une constante nommée\n\nde type\n\ndouble\n\navec la valeur\n\n3.1416\n\nAffiche la valeur de cette constante avec\n\nSystem.out.println\n\nEnsuite,\n\nessaie\n\nde modifier la valeur de\n\n3.14\n\npour voir ce que Java affiche.\n\nExemple attendu à l’écran",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/3-variables-types/variables/constantes/index.html",
+      "title": "Constantes :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "3.1416\n\nAffiche la valeur de cette constante avec\n\nSystem.out.println\n\nEnsuite,\n\nessaie\n\nde modifier la valeur de\n\n3.14\n\npour voir ce que Java affiche.\n\nExemple attendu à l’écran\n\nsi on ne modifie pas la constante :\n\n3.1416\n\n🔍 Tu devrais aussi voir une\n\nerreur de compilation\n\nsi tu essaies de modifier la constante.\n\nRéponse\n\npublic\n\nclass\n\nExempleConstante\n\npublic\n\nstatic\n\nvoid\n\nmain\n\nString\n\nargs\n\nfinal\n\ndouble\n\n1416\n\nSystem\n\nout\n\nprintln\n\n// PI = 3.14; // ❌ Erreur : impossible de modifier une constante",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/3-variables-types/variables/constantes/index.html",
+      "title": "Constantes :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "Locale/Instance/Classe\n\nEn Java, il existe\n\ntrois grands types de variables\n\nqu’on peut rencontrer dans une classe :\n\nLes\n\nvariables d’instance\n\nLes\n\nvariables de classe\n\nLes\n\nvariables locales\n\n(dans les méthodes)\n\n👤 Variables d’instance(Sera vue dans le cours de programmation orientée objet)\n\nVoir la théorie quand même\n\nUne\n\nvariable d’instance\n\nest propre à\n\nchaque objet\n\ncréé à partir d’une classe.\n\nElle est déclarée\n\ndans la classe\n\n, mais\n\nen dehors des méthodes\n\npublic\n\nclass\n\nVoiture\n\nint\n\nvitesse\n\n// Variable d’instance\n\n➕ Caractéristiques :\n\nChaque objet a sa\n\npropre copie\n\nSert à stocker des\n\ncaractéristiques propres à un objet\n\nAccessible dans la classe avec\n\nthis.vitesse\n\n🏛️ Variables de classe\n\nUne\n\nvariable de classe\n\nest partagée par\n\ntous les objets\n\nd’une classe.\n\nElle est déclarée avec le mot-clé\n\nstatic\n\npublic\n\nclass\n\nVoiture\n\nstatic\n\nint\n\nnombreDeVoitures",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/3-variables-types/variables/locale-instance-classe/index.html",
+      "title": "Locale/Instance/Classe :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "classe\n\nUne\n\nvariable de classe\n\nest partagée par\n\ntous les objets\n\nd’une classe.\n\nElle est déclarée avec le mot-clé\n\nstatic\n\npublic\n\nclass\n\nVoiture\n\nstatic\n\nint\n\nnombreDeVoitures\n\n// Variable de classe\n\n➕ Caractéristiques :\n\nUne seule copie partagée entre tous les objets.\n\nSert à des\n\nvaleurs communes\n\nà toute la classe.\n\nAccessible avec\n\nNomDeLaClasse.nomDeLaVariable\n\n🧪 Variables locales (dans une méthode)\n\nUne\n\nvariable locale\n\nest déclarée\n\nà l’intérieur d’une méthode\n\nElle\n\nn’existe que pendant l’exécution\n\nde cette méthode.\n\npublic\n\nclass\n\nExemple\n\npublic\n\nstatic\n\nvoid\n\nmain\n\nString\n\nargs\n\nint\n\n// Variable locale\n\nSystem\n\nout\n\nprintln\n\n➕ Caractéristiques :\n\nElle\n\nn’est accessible que dans la méthode\n\noù elle est déclarée.\n\nElle\n\nn’est pas connue\n\ndu reste de la classe.\n\nElle est\n\ncréée\n\nquand la méthode s’exécute, puis\n\nsupprimée\n\nà la fin.\n\n🔍 Comparatif complet\n\nType de variable\n\nOù ?\n\nMots-clés\n\nAccessible par\n\nDurée de vie\n\nInstance\n\nDans la classe\n\n(aucun)\n\nl’objet\n\nTant que l’objet existe\n\nClasse\n\nDans la classe\n\nstatic\n\nla classe",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/3-variables-types/variables/locale-instance-classe/index.html",
+      "title": "Locale/Instance/Classe :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "let\n\nType de variable\n\nOù ?\n\nMots-clés\n\nAccessible par\n\nDurée de vie\n\nInstance\n\nDans la classe\n\n(aucun)\n\nl’objet\n\nTant que l’objet existe\n\nClasse\n\nDans la classe\n\nstatic\n\nla classe\n\nTant que le programme tourne\n\nLocale (méthode)\n\nDans une méthode\n\n(aucun)\n\nla méthode\n\nPendant l’exécution de la méthode\n\n🎯 Exercice 1\n\nConsigne\n\nCrée une classe\n\nCompteur\n\nAjoute une\n\nvariable de classe\n\ntotal\n\nde type\n\nint\n\nDans\n\nmain\n\nDéclare une\n\nvariable locale\n\ntotal\n\net donne-lui la valeur\n\nAffiche cette variable locale,\n\nPuis affiche la\n\nvariable de classe\n\nen utilisant\n\nCompteur.total\n\nExemple attendu à l’écran\n\nRéponse\n\npublic\n\nclass\n\nCompteur\n\nstatic\n\nint\n\ntotal\n\n// variable de classe\n\npublic\n\nstatic\n\nvoid\n\nmain\n\nString\n\nargs\n\nint\n\ntotal\n\n// variable locale\n\nSystem\n\nout\n\nprintln\n\ntotal\n\n// locale\n\nSystem\n\nout\n\nprintln\n\nCompteur\n\ntotal\n\n// de classe\n\n🎯 Exercice 2\n\nConsigne\n\nCrée une classe\n\nCompteur\n\nAjoute une\n\nvariable de classe\n\nnombreAppels\n\nde type\n\nint\n\nÉcris une méthode\n\ncompter()\n\nqui :\n\ndéclare une\n\nvariable locale\n\nappel\n\nde type\n\nint\n\net l’initialise à\n\nincrémente",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/3-variables-types/variables/locale-instance-classe/index.html",
+      "title": "Locale/Instance/Classe :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "r\n\nAjoute une\n\nvariable de classe\n\nnombreAppels\n\nde type\n\nint\n\nÉcris une méthode\n\ncompter()\n\nqui :\n\ndéclare une\n\nvariable locale\n\nappel\n\nde type\n\nint\n\net l’initialise à\n\nincrémente\n\nappel\n\nnombreAppels\n\naffiche les deux variables.\n\nAppelle\n\ncompter()\n\ndeux fois depuis\n\nmain\n\nExemple attendu à l’écran\n\nappel = 1\n\nnombreAppels = 1\n\nappel = 1\n\nnombreAppels = 2\n\nRéponse\n\npublic\n\nclass\n\nCompteur\n\nstatic\n\nint\n\nnombreAppels\n\n// variable de classe\n\npublic\n\nstatic\n\nvoid\n\ncompter\n\nint\n\nappel\n\n// variable locale : recréée à chaque appel\n\nappel\n\nnombreAppels\n\nSystem\n\nout\n\nprintln\n\n\"appel = \"\n\nappel\n\nSystem\n\nout\n\nprintln\n\n\"nombreAppels = \"\n\nnombreAppels\n\npublic\n\nstatic\n\nvoid\n\nmain\n\nString\n\nargs\n\ncompter\n\n();\n\ncompter\n\n();\n\n---\n\n🎯 Exercice 3\n\nConsigne\n\nCrée une classe\n\nScore\n\nDéclare une\n\nvariable de classe\n\npoints\n\nde type\n\nint\n\n, initialisée à\n\nDans\n\nmain\n\n, déclare une\n\nvariable locale\n\nqui porte le\n\nmême nom\n\npoints\n\n, et initialise-la à\n\nAffiche d’abord la variable locale, puis la variable de classe.\n\nExemple attendu à l’écran\n\nRéponse\n\npublic\n\nclass\n\nScore\n\nstatic\n\nint",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/3-variables-types/variables/locale-instance-classe/index.html",
+      "title": "Locale/Instance/Classe :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "e le\n\nmême nom\n\npoints\n\n, et initialise-la à\n\nAffiche d’abord la variable locale, puis la variable de classe.\n\nExemple attendu à l’écran\n\nRéponse\n\npublic\n\nclass\n\nScore\n\nstatic\n\nint\n\npoints\n\n// variable de classe\n\npublic\n\nstatic\n\nvoid\n\nmain\n\nString\n\nargs\n\nint\n\npoints\n\n// variable locale qui masque celle de classe\n\nSystem\n\nout\n\nprintln\n\npoints\n\n// affiche 50 (locale)\n\nSystem\n\nout\n\nprintln\n\nScore\n\npoints\n\n// affiche 10 (de classe)\n\nÀ retenir\n\n: Quand une variable locale a le\n\nmême nom\n\nqu’une variable de classe, elle\n\nla masque\n\ndans le bloc où elle est déclarée. Pour accéder à la variable de classe malgré tout, on doit utiliser le nom de la classe (\n\nScore.points\n\nici).\n\nExercice 1 : Utilitaire\n\nstatic\n\npour afficher un tableau\n\nCrée une méthode\n\nstatic\n\nqui prend un tableau d’entiers en paramètre et l’affiche ligne par ligne.\n\npublic\n\nclass\n\nExo1\n\npublic\n\nstatic\n\nvoid\n\nmain\n\nString\n\nargs\n\nint\n\nvaleurs\n\n256\n\n796\n\nafficherTableau\n\nvaleurs\n\n✅ Objectif\n\nComprendre comment appeler une méthode\n\nstatic\n\nsans créer d’objet.\n\nUtiliser une boucle\n\nfor\n\n🎯 Sortie attendue\n\n256",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/3-variables-types/variables/locale-instance-classe/index.html",
+      "title": "Locale/Instance/Classe :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "int\n\nvaleurs\n\n256\n\n796\n\nafficherTableau\n\nvaleurs\n\n✅ Objectif\n\nComprendre comment appeler une méthode\n\nstatic\n\nsans créer d’objet.\n\nUtiliser une boucle\n\nfor\n\n🎯 Sortie attendue\n\n256\n\n796\n\n🧪 Exercice 1 (nouveau) : Variable\n\nstatic\n\net calcul de moyenne\n\nCrée une classe avec :\n\nUne variable de classe\n\nstatic int total\n\ninitialisée à 0,\n\nUne variable de classe\n\nstatic int compte\n\ninitialisée à 0,\n\nUne méthode\n\nstatic\n\najouterNote(int note)\n\nqui ajoute la note à\n\ntotal\n\n, incrémente\n\ncompte\n\nUne méthode\n\nstatic\n\nafficherMoyenne()\n\nqui calcule la moyenne (total / compte) et l’affiche avec deux décimales.\n\npublic\n\nclass\n\nExercice1\n\n// Déclare total et compte ici\n\npublic\n\nstatic\n\nvoid\n\najouterNote\n\nint\n\nnote\n\n// Ajoute note à total, incrémente compte\n\npublic\n\nstatic\n\nvoid\n\nafficherMoyenne\n\n// Calcule et affiche la moyenne avec deux décimales\n\npublic\n\nstatic\n\nvoid\n\nmain\n\nString\n\nargs\n\najouterNote\n\najouterNote\n\najouterNote\n\nafficherMoyenne\n\n();\n\n// Affiche : Moyenne : 15.00\n\n🧪 Exercice 2 (nouveau) : Variable locale dans une méthode\n\nstatic\n\n— calcul de la puissance",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/3-variables-types/variables/locale-instance-classe/index.html",
+      "title": "Locale/Instance/Classe :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "outerNote\n\najouterNote\n\najouterNote\n\nafficherMoyenne\n\n();\n\n// Affiche : Moyenne : 15.00\n\n🧪 Exercice 2 (nouveau) : Variable locale dans une méthode\n\nstatic\n\n— calcul de la puissance\n\nComplète la méthode\n\nstatic\n\ncalculerPuissance(int base, int exposant)\n\nqui calcule la puissance en utilisant une variable locale\n\nresultat\n\ninitialisée à 1, et une boucle\n\nfor\n\npublic\n\nclass\n\nExercice2\n\npublic\n\nstatic\n\nvoid\n\ncalculerPuissance\n\nint\n\nbase\n\nint\n\nexposant\n\n// Déclare resultat = 1\n\n// Utilise une boucle for pour multiplier resultat par base exposant fois\n\n// Affiche le résultat\n\npublic\n\nstatic\n\nvoid\n\nmain\n\nString\n\nargs\n\ncalculerPuissance\n\n// Affiche : 8\n\ncalculerPuissance\n\n// Affiche : 625\n\n🧪 Exercice 3 : Variable\n\nstatic\n\npour stocker un compteur d’appels\n\nDans cette classe, crée une variable\n\nstatic\n\nqui compte le nombre de fois où la méthode\n\ndireBonjour\n\nest appelée.\n\nLa méthode\n\ndireBonjour\n\naffiche\n\n\"Bonjour !\"\n\npuis affiche le nombre d’appels effectués.\n\npublic\n\nclass\n\nExercice3\n\n// Déclare la variable compteur ici\n\npublic\n\nstatic\n\nvoid\n\ndireBonjour",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/3-variables-types/variables/locale-instance-classe/index.html",
+      "title": "Locale/Instance/Classe :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "ode\n\ndireBonjour\n\naffiche\n\n\"Bonjour !\"\n\npuis affiche le nombre d’appels effectués.\n\npublic\n\nclass\n\nExercice3\n\n// Déclare la variable compteur ici\n\npublic\n\nstatic\n\nvoid\n\ndireBonjour\n\n// Incrémente compteur, affiche \"Bonjour !\" et le nombre d'appels\n\npublic\n\nstatic\n\nvoid\n\nmain\n\nString\n\nargs\n\ndireBonjour\n\n();\n\n// Affiche Bonjour ! Nombre d’appels : 1\n\ndireBonjour\n\n();\n\n// Affiche Bonjour ! Nombre d’appels : 2\n\ndireBonjour\n\n();\n\n// Affiche Bonjour ! Nombre d’appels : 3",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/3-variables-types/variables/locale-instance-classe/index.html",
+      "title": "Locale/Instance/Classe :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "Types Primitifs\n\nEn Java, les types de données sont divisés en deux grandes familles :\n\nLes types primitifs\n\n(8 types)\n\nLes types références\n\n(classes comme\n\nString\n\nScanner\n\n, etc.)\n\nLes types\n\nprimitifs\n\nsont les\n\nbriques de base\n\nde tout programme Java. Ils permettent de représenter les informations simples :\n\nnombres, caractères, booléens\n\n🎁 Pourquoi différents types de “boîtes” ?\n\nEn Java (et dans la plupart des langages), il existe plusieurs types de variables — ou “boîtes” — pour\n\ndeux raisons principales\n\n🧬 1. L’encodage est différent selon le contenu\n\nnombre entier\n\nint\n\nlong\n\n, etc.) et un\n\nnombre à virgule\n\nfloat\n\ndouble\n\n) sont encodés\n\ndifféremment en mémoire\n\nPar exemple, un\n\nint\n\nne peut pas stocker de virgule\n\n, car son encodage ne prévoit que des nombres entiers.\n\nfloat\n\nou un\n\ndouble\n\n, eux, utilisent un encodage spécial (norme IEEE 754) pour",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/3-variables-types/types-primitifs/index.html",
+      "title": "Types Primitifs :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "e, un\n\nint\n\nne peut pas stocker de virgule\n\n, car son encodage ne prévoit que des nombres entiers.\n\nfloat\n\nou un\n\ndouble\n\n, eux, utilisent un encodage spécial (norme IEEE 754) pour\n\nstocker les parties entière et décimale\n\n👉 Tu ne peux donc pas mettre un\n\nnombre à virgule\n\ndans une boîte faite pour des\n\nentiers\n\n— ça reviendrait à mettre de la soupe dans une boîte avec des trous : ça ne marche pas 😄.\n\n📦 2. La taille de la boîte varie selon les besoins\n\nChaque type occupe une\n\ntaille différente en mémoire\n\n(1, 2, 4 ou 8 octets). C’est important car :\n\nPlus la boîte est\n\ngrosse\n\n, plus elle prend de place 🏋️‍♂️\n\nPlus elle est\n\npetite\n\n, plus tu peux en stocker dans la mémoire 🪶\n\n💡 Un exemple simple\n\nImaginons que tu disposes de\n\n128 bits de mémoire\n\nVoici quelques façons de les remplir :\n\nCombinaison\n\nTotal utilisé\n\nlong\n\n(2 × 64 bits)\n\n128 bits\n\nlong\n\n(64) + 2\n\nint\n\n(2 × 32)\n\n128 bits\n\nint\n\n(3 × 32) + 1\n\nshort\n\n(16) + 16\n\nboolean\n\n(16 × 1)\n\n128 bits\n\nTu choisis donc le type selon :\n\n🧠 Ce que tu veux\n\nreprésenter\n\n💾 Et\n\nl’espace mémoire\n\nque tu veux ou peux utiliser",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/3-variables-types/types-primitifs/index.html",
+      "title": "Types Primitifs :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "t\n\n(3 × 32) + 1\n\nshort\n\n(16) + 16\n\nboolean\n\n(16 × 1)\n\n128 bits\n\nTu choisis donc le type selon :\n\n🧠 Ce que tu veux\n\nreprésenter\n\n💾 Et\n\nl’espace mémoire\n\nque tu veux ou peux utiliser\n\nNombres entiers\n\nbyte\n\nshort\n\nint\n\nlong\n\nNombres à virgule flottante\n\n(Des approximations des Réels ou chiffres à virgules) :\n\nfloat\n\ndouble\n\nCaractères\n\nchar\n\n(représente un caractère Unicode sur 16 bits)\n\nBooléens\n\nboolean\n\n(valeurs\n\ntrue\n\nfalse\n\n🧮 1. Les nombres entiers\n\nIls servent à stocker des\n\nvaleurs sans virgule\n\n, positives ou négatives. Chaque type utilise un certain nombre d’octets et a une plage de valeurs définie :\n\nType\n\nTaille (bits / octets)\n\nValeur minimale\n\nValeur maximale\n\nExemple\n\nbyte\n\n8 bits (1 octet)\n\n-128\n\n127\n\nbyte b = 10;\n\nshort\n\n16 bits (2 octets)\n\n-32 768\n\n32 767\n\nshort s = 1000;\n\nint\n\n32 bits (4 octets)\n\n-2 147 483 648\n\n2 147 483 647\n\nint i = 42;\n\nlong\n\n64 bits (8 octets)\n\n-9 223 372 036 854 775 808\n\n9 223 372 036 854 775 807\n\nlong l = 100L;\n\n🧠 Il existe des\n\nconstantes\n\nutiles comme\n\nInteger.MAX_VALUE\n\nLong.MIN_VALUE",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/3-variables-types/types-primitifs/index.html",
+      "title": "Types Primitifs :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "= 42;\n\nlong\n\n64 bits (8 octets)\n\n-9 223 372 036 854 775 808\n\n9 223 372 036 854 775 807\n\nlong l = 100L;\n\n🧠 Il existe des\n\nconstantes\n\nutiles comme\n\nInteger.MAX_VALUE\n\nLong.MIN_VALUE\n\npour obtenir ces limites sans les retenir.\n\n➕ Exemples de codage (positifs) :\n\nDécimal\n\nBinaire (16 bits)\n\nHexadécimal\n\n00000000 00000001\n\n0001\n\n00000000 00000010\n\n0002\n\n127\n\n00000000 01111111\n\n007F\n\n255\n\n00000000 11111111\n\n00FF\n\n🌊 2. Les nombres à virgule (flottants)\n\nIls permettent de représenter des\n\nvaleurs décimales\n\n(≈ des réels), avec une approximation en base 2.\n\nType\n\nTaille (bits / octets)\n\nPrécision\n\nValeur min / max\n\nExemple\n\nfloat\n\n32 bits (4 octets)\n\n~7 chiffres significatifs\n\n±1.4×10⁻⁴⁵ → ±3.4×10³⁸\n\nfloat f = 3.14f;\n\ndouble\n\n64 bits (8 octets)\n\n~15-16 chiffres significatifs\n\n±4.9×10⁻³²⁴ → ±1.8×10³⁰⁸\n\ndouble d = 2.718;\n\n💡 En Java,\n\nles littéraux décimaux sont des\n\ndouble\n\npar défaut\n\n. Pour un\n\nfloat\n\n, on ajoute un\n\nà la fin.\n\n🔤 3. Le caractère\n\nLe type\n\nchar\n\nreprésente\n\nun seul caractère Unicode\n\n(lettre, symbole, emoji, etc.) :\n\nType\n\nTaille (bits)\n\nPlage Unicode",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/3-variables-types/types-primitifs/index.html",
+      "title": "Types Primitifs :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "un\n\nfloat\n\n, on ajoute un\n\nà la fin.\n\n🔤 3. Le caractère\n\nLe type\n\nchar\n\nreprésente\n\nun seul caractère Unicode\n\n(lettre, symbole, emoji, etc.) :\n\nType\n\nTaille (bits)\n\nPlage Unicode\n\nExemple\n\nchar\n\n16 bits\n\n0 à 65 535 (U+0000 à U+FFFF)\n\nchar c = 'A';\n\n🎨 Les caractères sont entourés de\n\nquotes simples\n\n'A'\n\n) et peuvent contenir aussi des caractères spéciaux ou emojis :\n\nchar\n\nemoji\n\n'💡'\n\nchar\n\nlettre\n\n'f'\n\n🔘 4. Le booléen\n\nboolean\n\nest un type logique qui représente\n\nvrai ou faux\n\n, souvent utilisé dans les conditions :\n\nType\n\nValeurs possibles\n\nExemple\n\nboolean\n\ntrue\n\nfalse\n\nboolean actif = false;\n\n💬 Très utile pour représenter des états binaires : activé/désactivé, visible/caché, connecté/non connecté…\n\nboolean\n\nestPret\n\ntrue\n\nboolean\n\nestFini\n\nfalse\n\n✨ Récap visuel\n\nCatégorie\n\nTypes\n\nRôle principal\n\n🧮 Entiers\n\nbyte\n\nshort\n\nint\n\nlong\n\nStocker des nombres sans virgule\n\n🌊 Flottants\n\nfloat\n\ndouble\n\nReprésenter des valeurs décimales\n\n🔤 Caractères\n\nchar\n\nReprésenter un caractère Unicode\n\n🔘 Booléens\n\nboolean\n\nReprésenter une valeur vraie ou fausse\n\n🎯 Exercice 1",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/3-variables-types/types-primitifs/index.html",
+      "title": "Types Primitifs :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "s\n\nfloat\n\ndouble\n\nReprésenter des valeurs décimales\n\n🔤 Caractères\n\nchar\n\nReprésenter un caractère Unicode\n\n🔘 Booléens\n\nboolean\n\nReprésenter une valeur vraie ou fausse\n\n🎯 Exercice 1\n\nConsigne\n\nCréer et afficher les variables avec le meilleur type possible\n\nVariable contenant l’âge d’une personne (moins de 123)\n\nPopulation du cégep Marie-Victorin (Environ 7 500)\n\nVariable comptant la population au Qc (Environ 9 millions)\n\nVariable pour calculer le revenu d’un individu normal\n\nNombre de gouttes d’eau dans une piscine (environ 960 000 000 gouttes).\n\nUne variable qui se rappelle si le prof était bon ou pas (true?)\n\nNote en lettre qu’un étudiant obtient au cours (A)\n\nExemple attendu à l’écran\n\n7512\n\n8905430\n\n45000.25\n\n960540388\n\ntrue\n\nRéponse\n\nbyte\n\nage\n\nshort\n\npopulationMV\n\n7512\n\nint\n\npopulationQC\n\n8_905_430\n\nfloat\n\nrevenu\n\n45000\n\n25f\n\nint\n\nnbGoutteEau\n\n960_540_388\n\nargument\n\npourrait\n\nêtre\n\nfait\n\npour\n\nutiliser\n\nlong\n\nsuggérant\n\nque\n\npiscine\n\npourrait\n\npossiblement\n\nêtre\n\nbeaucoup\n\nplus\n\ngrande\n\nlong\n\npourrait\n\nêtre\n\nplus\n\nsécuritaire\n\nboolean\n\nleProfEstBon\n\ntrue",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/3-variables-types/types-primitifs/index.html",
+      "title": "Types Primitifs :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "tre\n\nfait\n\npour\n\nutiliser\n\nlong\n\nsuggérant\n\nque\n\npiscine\n\npourrait\n\npossiblement\n\nêtre\n\nbeaucoup\n\nplus\n\ngrande\n\nlong\n\npourrait\n\nêtre\n\nplus\n\nsécuritaire\n\nboolean\n\nleProfEstBon\n\ntrue\n\nchar\n\nnoteEleve\n\n'A'\n\n🎯 Exercice 2\n\nConsigne\n\nCréer et afficher les variables avec le\n\nmeilleur type possible\n\nÂge d’un chat domestique (environ 8 ans)\n\nNombre d’étudiants dans une petite école secondaire (environ 420)\n\nNombre d’habitants à Montréal (environ 1.7 million)\n\nSalaire annuel d’un développeur junior (~52 000.75 $)\n\nNombre de grains de sable dans un seau (~25 000 000)\n\nUne variable indiquant si une lumière est allumée (\n\nfalse\n\nLa lettre de la section d’un cours (par exemple\n\nExemple attendu à l’écran\n\n420\n\n1700000\n\n52000.75\n\n25000000\n\nfalse\n\nRéponse\n\nbyte\n\nageChat\n\nshort\n\nnbElevesEcole\n\n420\n\nint\n\npopulationMontreal\n\n1_700_000\n\nfloat\n\nsalaireAnnuel\n\n52000\n\n75f\n\nint\n\nnbGrainsSable\n\n25_000_000\n\nboolean\n\nlumiereAllumee\n\nfalse\n\nchar\n\nsectionCours\n\n'B'\n\n🎯 Exercice 3\n\nConsigne\n\nCréer et afficher les variables avec le\n\nmeilleur type primitif possible\n\n, dans l’ordre ci-dessous :",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/3-variables-types/types-primitifs/index.html",
+      "title": "Types Primitifs :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "olean\n\nlumiereAllumee\n\nfalse\n\nchar\n\nsectionCours\n\n'B'\n\n🎯 Exercice 3\n\nConsigne\n\nCréer et afficher les variables avec le\n\nmeilleur type primitif possible\n\n, dans l’ordre ci-dessous :\n\nUne lettre qui représente une réponse à un quiz (par exemple\n\nEst-ce que l’alarme est activée (\n\ntrue\n\n) ?\n\nLe nombre d’habitants dans un petit village (environ 1 200)\n\nÂge d’un enfant (environ 5 ans)\n\nLe revenu annuel d’un dentiste (~98 500.95 $)\n\nLe nombre d’étoiles visibles à l’œil nu (~6 000)\n\nEstimation du nombre de cellules dans un corps humain (environ 37 000 000 000 000)\n\nExemple attendu à l’écran\n\ntrue\n\n1200\n\n98500.95\n\n6000\n\n37000000000000\n\nRéponse\n\nchar\n\nreponseQuiz\n\n'C'\n\nboolean\n\nalarmeActivee\n\ntrue\n\nshort\n\npopulationVillage\n\n1200\n\nbyte\n\nageEnfant\n\nfloat\n\nrevenuDentiste\n\n98500\n\n95f\n\nshort\n\nnbEtoilesVisibles\n\n6000\n\nlong\n\nnbCellulesHumain\n\n37_000_000_000_000L",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/3-variables-types/types-primitifs/index.html",
+      "title": "Types Primitifs :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "String\n\nLes chaînes de caractères\n\nLien vers la classe String de l’API Java\n\nLes Strings c’est quoi?\n\nEn Java, une\n\nchaîne de caractères\n\n(ou\n\nString\n\n) est un objet qui représente une\n\nséquence de caractères\n\nContrairement à certains langages où les chaînes sont simplement des tableaux de caractères (\n\nchar[]\n\n), en Java, elles sont des\n\nobjets\n\nde la classe\n\nString\n\nExemple :\n\nString\n\nmessage\n\n\"Bonjour !\"\n\nUtilisation simple\n\nCréer une chaîne :\n\nString\n\nnom\n\n\"Alice\"\n\n//Afficher une chaîne :\n\nSystem\n\nout\n\nprintln\n\nnom\n\nConnaître la longueur :\n\nint\n\nlongueur\n\nnom\n\nlength\n\n();\n\nrenvoie\n\nConcaténation\n\nconcaténation\n\npermet de\n\ncombiner plusieurs chaînes\n\nen une seule.\n\nUtilisation de l’opérateur\n\nString\n\nprenom\n\n\"Alice\"\n\nString\n\nmessage\n\n\"Bonjour, \"\n\nprenom\n\n\" !\"\n\nSystem\n\nout\n\nprintln\n\nmessage\n\nBonjour\n\nAlice\n\nConcaténation avec des nombres :\n\nint\n\nage\n\nString\n\ninfo\n\n\"Elle a \"\n\nage",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/4-string/index.html",
+      "title": "String :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "prenom\n\n\"Alice\"\n\nString\n\nmessage\n\n\"Bonjour, \"\n\nprenom\n\n\" !\"\n\nSystem\n\nout\n\nprintln\n\nmessage\n\nBonjour\n\nAlice\n\nConcaténation avec des nombres :\n\nint\n\nage\n\nString\n\ninfo\n\n\"Elle a \"\n\nage\n\n\" ans.\"\n\nSystem\n\nout\n\nprintln\n\ninfo\n\nElle\n\nans\n\nVoici un exercice adapté à ton cours sur les chaînes de caractères en Java :\n\nExercice – Manipulation de chaînes de caractères\n\n🎯 Objectif :\n\nUtiliser les notions de création de chaînes, longueur, concaténation, et affichage en Java.\n\n📝 Consigne :\n\nÉcris un programme Java qui fait les étapes suivantes :\n\nCrée deux variables\n\nString\n\n: une pour un prénom et une pour un nom de famille (par exemple :\n\n\"Alice\"\n\n\"Durand\"\n\nConcatène ces deux chaînes pour former le\n\nnom complet\n\n, séparé par un espace.\n\nAffiche le message :\n\n\"Bonjour, [nom complet] !\"\n\nen utilisant la concaténation.\n\nAffiche ensuite la\n\nlongueur du nom complet\n\n(en incluant l’espace).\n\nAffiche enfin cette phrase :\n\n\"Votre nom complet contient [X] caractères.\"\n\n(où\n\nest le nombre de caractères).\n\n🧪 Exemple attendu (si\n\nprenom = \"Alice\"\n\nnom = \"Durand\"\n\n) :",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/4-string/index.html",
+      "title": "String :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "pace).\n\nAffiche enfin cette phrase :\n\n\"Votre nom complet contient [X] caractères.\"\n\n(où\n\nest le nombre de caractères).\n\n🧪 Exemple attendu (si\n\nprenom = \"Alice\"\n\nnom = \"Durand\"\n\n) :\n\nBonjour, Alice Durand !\n\nVotre nom complet contient 12 caractères.\n\n🧩 Astuces :\n\nUtilise\n\npour concaténer.\n\nLa méthode\n\n.length()\n\nfonctionne sur les objets de type\n\nString\n\n🔎 À quoi sert\n\nString.format()\n\nString.format()\n\npermet de\n\nformater des chaînes de caractères de façon précise\n\n, en insérant des variables dans un modèle (\n\ntemplate\n\n) à l’aide de\n\nspécificateurs\n\n, etc.).\n\nC’est très utile pour :\n\néviter les concaténations multiples avec\n\ngénérer du texte\n\nproprement aligné\n\nformater des nombres\n\n(arrondis, alignements, unités)\n\n✍️ Syntaxe de base\n\nString\n\nprenom\n\n\"Mathieu\"\n\nint\n\npoints\n\nString\n\nmessage\n\nString\n\nformat\n\n\"Joueur : %s | Score : %d\"\n\nprenom\n\npoints\n\nSystem\n\nout\n\nprintln\n\nmessage\n\nAffiche\n\nJoueur\n\nMathieu\n\nScore\n\n📚 Spécificateurs de format les plus utilisés\n\nSpécificateur\n\nSignification\n\nExemple\n\nChaîne de caractères\n\n\"Nom : %s\"\n\nEntier\n\n\"Score : %d\"",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/4-string/index.html",
+      "title": "String :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "essage\n\nAffiche\n\nJoueur\n\nMathieu\n\nScore\n\n📚 Spécificateurs de format les plus utilisés\n\nSpécificateur\n\nSignification\n\nExemple\n\nChaîne de caractères\n\n\"Nom : %s\"\n\nEntier\n\n\"Score : %d\"\n\nNombre décimal\n\n\"Poids : %.2f kg\"\n\nPourcentage littéral\n\n\"Progression : 100%%\"\n\n🔧 Formatage avancé\n\n📌 Arrondir un\n\ndouble\n\nà 2 décimales\n\ndouble\n\nnote\n\n6789\n\nString\n\nresultat\n\nString\n\nformat\n\n\"Note finale : %.2f / 20\"\n\nnote\n\nSystem\n\nout\n\nprintln\n\nresultat\n\nNote\n\nfinale\n\n📌 Aligner proprement des colonnes (facture ou tableau)\n\nString\n\nligne\n\nString\n\nformat\n\n\"%-12s %5d %10.2f\"\n\n\"Stylo\"\n\nSystem\n\nout\n\nprintln\n\nligne\n\nStylo\n\n🧩 Explications :\n\n%-12s\n\n: chaîne alignée à gauche sur 12 caractères\n\n%5d\n\n: entier aligné à droite sur 5 caractères\n\n%10.2f\n\n: nombre flottant avec 2 décimales sur 10 caractères (à droite)\n\nExercice – Formatage de profil utilisateur\n\n🎯 Objectif :\n\nUtiliser\n\nString.format()\n\npour construire une sortie propre et lisible à partir de plusieurs données.\n\n📝 Consignes :\n\nCrée les variables suivantes :\n\nString\n\nnom\n\n\"Julie\"\n\nString\n\nville\n\n\"Toulouse\"\n\nint\n\nage\n\ndouble\n\ntaille",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/4-string/index.html",
+      "title": "String :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "ne sortie propre et lisible à partir de plusieurs données.\n\n📝 Consignes :\n\nCrée les variables suivantes :\n\nString\n\nnom\n\n\"Julie\"\n\nString\n\nville\n\n\"Toulouse\"\n\nint\n\nage\n\ndouble\n\ntaille\n\nAffiche ce message formaté :\n\nNom    : Julie\n\nVille  : Toulouse\n\nÂge    : 27 ans\n\nTaille : 1.72 m\n\nUtilise\n\nString.format()\n\npour aligner les libellés (colonne de gauche) et les valeurs.\n\n🧩 Astuces :\n\npour les chaînes\n\npour les entiers\n\n%.2f\n\npour un\n\ndouble\n\navec deux décimales\n\n%-7s\n\npour aligner les libellés proprement à gauche",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/4-string/index.html",
+      "title": "String :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "Méthodes de String\n\nLien vers la classe String de l’API Java\n\nMéthodes Statistiques de la classe\n\nString\n\nLes méthodes\n\nstatiques\n\nde la classe\n\nString\n\nne nécessitent pas de créer une instance de\n\nString\n\npour les utiliser. Vous les appelez directement sur la classe elle-même. Voici quelques exemples de méthodes statiques courantes :\n\nExemple 1 :\n\nString.format()\n\nCette méthode statique permet de formater une chaîne de caractères en utilisant des espaces réservés (placeholders).\n\npublic\n\nclass\n\nExempleStringStatic\n\npublic\n\nstatic\n\nvoid\n\nmain\n\nString\n\nargs\n\nString\n\nname\n\n\"Alice\"\n\nint\n\nage\n\nString\n\nformattedString\n\nString\n\nformat\n\n\"Nom : %s, Âge : %d\"\n\nname\n\nage\n\nSystem\n\nout\n\nprintln\n\nformattedString\n\nSortie attendue\n\nNom : Alice, Âge : 30\n\nMéthodes Non Statiques de la classe\n\nString\n\nLes méthodes\n\nnon-statiques\n\nnécessitent une instance de la classe\n\nString",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/4-string/methodestring/index.html",
+      "title": "Méthodes de String :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "ln\n\nformattedString\n\nSortie attendue\n\nNom : Alice, Âge : 30\n\nMéthodes Non Statiques de la classe\n\nString\n\nLes méthodes\n\nnon-statiques\n\nnécessitent une instance de la classe\n\nString\n\npour être utilisées. Vous devez créer un objet\n\nString\n\npour appeler ces méthodes. Voici quelques exemples :\n\nExemple 1 :\n\nlength()\n\nCette méthode retourne la longueur (nombre de caractères) de la chaîne de caractères.\n\npublic\n\nclass\n\nExempleStringNonStatic\n\npublic\n\nstatic\n\nvoid\n\nmain\n\nString\n\nargs\n\nString\n\nmessage\n\n\"Bonjour\"\n\nint\n\nlength\n\nmessage\n\nlength\n\n();\n\n// Appel de la méthode non statique\n\nSystem\n\nout\n\nprintln\n\n\"La longueur de la chaîne est : \"\n\nlength\n\nSortie attendue\n\nLa longueur de la chaîne est : 7\n\nExemple 2 :\n\ncharAt()\n\nCette méthode retourne le caractère situé à une position spécifiée dans la chaîne.\n\npublic\n\nclass\n\nExempleStringNonStatic\n\npublic\n\nstatic\n\nvoid\n\nmain\n\nString\n\nargs\n\nString\n\nmessage\n\n\"Java\"\n\nchar\n\ncharacter\n\nmessage\n\ncharAt\n\n// Récupère le caractère à l'indice 2\n\nSystem\n\nout\n\nprintln\n\n\"Le caractère à l'indice 2 est : \"\n\ncharacter\n\nSortie attendue",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/4-string/methodestring/index.html",
+      "title": "Méthodes de String :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "ring\n\nmessage\n\n\"Java\"\n\nchar\n\ncharacter\n\nmessage\n\ncharAt\n\n// Récupère le caractère à l'indice 2\n\nSystem\n\nout\n\nprintln\n\n\"Le caractère à l'indice 2 est : \"\n\ncharacter\n\nSortie attendue\n\nLe caractère à l'indice 2 est : v\n\nExemple 3 :\n\nsubstring()\n\nCette méthode retourne une sous-chaîne de la chaîne principale en fonction des indices donnés.\n\npublic\n\nclass\n\nExempleStringNonStatic\n\npublic\n\nstatic\n\nvoid\n\nmain\n\nString\n\nargs\n\nString\n\nmessage\n\n\"Bienvenue\"\n\nString\n\nsubstring\n\nmessage\n\nsubstring\n\n// Extrait de l'indice 3 à 6\n\nSystem\n\nout\n\nprintln\n\n\"Sous-chaîne : \"\n\nsubstring\n\nSortie attendue\n\nSous-chaîne : nven\n\nExemple 4 :\n\ntoLowerCase()\n\ntoUpperCase()\n\nCes méthodes convertissent tous les caractères de la chaîne en minuscules ou en majuscules.\n\npublic\n\nclass\n\nExempleStringNonStatic\n\npublic\n\nstatic\n\nvoid\n\nmain\n\nString\n\nargs\n\nString\n\nmessage\n\n\"Java Programming\"\n\nString\n\nlower\n\nmessage\n\ntoLowerCase\n\n();\n\n// Convertir en minuscules\n\nString\n\nupper\n\nmessage\n\ntoUpperCase\n\n();\n\n// Convertir en majuscules\n\nSystem\n\nout\n\nprintln\n\n\"En minuscules : \"\n\nlower\n\nSystem\n\nout\n\nprintln",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/4-string/methodestring/index.html",
+      "title": "Méthodes de String :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "erCase\n\n();\n\n// Convertir en minuscules\n\nString\n\nupper\n\nmessage\n\ntoUpperCase\n\n();\n\n// Convertir en majuscules\n\nSystem\n\nout\n\nprintln\n\n\"En minuscules : \"\n\nlower\n\nSystem\n\nout\n\nprintln\n\n\"En majuscules : \"\n\nupper\n\nSortie attendue\n\nEn minuscules : java programming\n\nEn majuscules : JAVA PROGRAMMING\n\nExemple 5 :\n\ncontains()\n\nCette méthode permet de vérifier si une chaîne contient une sous-chaîne spécifiée.\n\npublic\n\nclass\n\nExempleStringNonStatic\n\npublic\n\nstatic\n\nvoid\n\nmain\n\nString\n\nargs\n\nString\n\nmessage\n\n\"Java est génial!\"\n\nboolean\n\ncontains\n\nmessage\n\ncontains\n\n\"génial\"\n\n// Vérifie si \"génial\" est dans la chaîne\n\nSystem\n\nout\n\nprintln\n\n\"La chaîne contient 'génial' ? \"\n\ncontains\n\nSortie attendue\n\nLa chaîne contient 'génial' ? true\n\nRésumé des différences entre les méthodes statiques et non-statiques :\n\nMéthodes statiques\n\nAppelées sur la classe elle-même,\n\npas besoin d’instance\n\nExemples :\n\nString.valueOf()\n\nString.format()\n\nString.join()\n\nMéthodes non-statiques\n\nAppelées sur une instance de la classe\n\nString\n\nExemples :\n\nlength()\n\ncharAt()\n\nsubstring()\n\ntoLowerCase()",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/4-string/methodestring/index.html",
+      "title": "Méthodes de String :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "🧮 Les opérateurs arithmétiques en Java\n\nLes\n\nopérateurs arithmétiques\n\npermettent d’effectuer des\n\ncalculs mathématiques\n\nde base sur des\n\nvaleurs numériques\n\nint\n\ndouble\n\n, etc.).\n\nIls sont très souvent utilisés pour manipuler les\n\nnombres entiers ou à virgule\n\n, que ce soit pour additionner des scores, calculer des moyennes, ajuster des quantités, etc.\n\n✋ Les opérateurs de base\n\nVoici les\n\n5 opérateurs arithmétiques principaux\n\nOpérateur\n\nNom\n\nExemple\n\nRésultat (si\n\na = 10\n\nb = 3\n\nAddition\n\na + b\n\nSoustraction\n\na - b\n\nMultiplication\n\na * b\n\nDivision\n\na / b\n\nentier !\n\nModulo\n\na % b\n\n(reste de la division)\n\n💡 En Java :\n\nSi les deux opérandes sont des\n\nentiers\n\n, la division (\n\nretourne un entier\n\nPour avoir un résultat\n\ndécimal\n\nau moins un des deux nombres doit être un\n\nfloat\n\nou un\n\ndouble\n\nint\n\nint\n\nSystem\n\nout\n\nprintln\n\n// 3\n\ndouble\n\ndouble\n\nSystem\n\nout\n\nprintln\n\n333333\n\n...",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/5-operateurs/arithmetique/index.html",
+      "title": "🧮 Les opérateurs arithmétiques en Java :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "avoir un résultat\n\ndécimal\n\nau moins un des deux nombres doit être un\n\nfloat\n\nou un\n\ndouble\n\nint\n\nint\n\nSystem\n\nout\n\nprintln\n\n// 3\n\ndouble\n\ndouble\n\nSystem\n\nout\n\nprintln\n\n333333\n\n...\n\n⛏️ Modulo : C’est quoi ce truc\n\nL’opérateur\n\nmodulo\n\ndonne le\n\nreste\n\nd’une division.\n\nint\n\nreste\n\nTrès utile pour :\n\nVérifier si un nombre est\n\npair\n\nimpair\n\nn % 2 == 0\n\nCréer des cycles (\n\ni % 5\n\nretourne un nombre de 0 à 4)\n\n🔄 Raccourcis utiles\n\nTu peux combiner une opération avec une\n\naffectation\n\ngrâce à ces raccourcis :\n\nOpération normale\n\nVersion raccourcie\n\nx = x + 1;\n\nx += 1;\n\nx = x - 5;\n\nx -= 5;\n\nx = x * 3;\n\nx *= 3;\n\nx = x / 2;\n\nx /= 2;\n\nx = x % 4;\n\nx %= 4;\n\n💡 Ces raccourcis rendent le code plus compact et plus clair.\n\n🔁 Incrémentation et décrémentation\n\nJava propose aussi deux\n\nopérateurs spéciaux\n\npour\n\najouter ou soustraire 1\n\nOpérateur\n\nNom\n\nExemple\n\nEffet\n\nIncrémentation\n\nx++\n\n++x\n\nAjoute 1 à\n\nDécrémentation\n\nx--\n\n--x\n\nSoustrait 1 à\n\n⚠️ La différence entre\n\nx++\n\n++x\n\nest subtile et ne compte qu’en contexte d’expression :\n\nint\n\nint\n\n// y = 5, x devient 6\n\nint\n\nint",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/5-operateurs/arithmetique/index.html",
+      "title": "🧮 Les opérateurs arithmétiques en Java :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "te 1 à\n\nDécrémentation\n\nx--\n\n--x\n\nSoustrait 1 à\n\n⚠️ La différence entre\n\nx++\n\n++x\n\nest subtile et ne compte qu’en contexte d’expression :\n\nint\n\nint\n\n// y = 5, x devient 6\n\nint\n\nint\n\ndevient\n\n🧪 Exemples simples\n\nint\n\nint\n\nint\n\nsomme\n\n// 13\n\nint\n\nproduit\n\n// 40\n\nint\n\nquotient\n\n// 1 (car division entière)\n\nint\n\nreste\n\n🔥 À retenir\n\nfait une\n\ndivision entière\n\nsi les deux opérandes sont entiers.\n\ndonne le\n\nreste\n\nde la division.\n\nLes raccourcis\n\n, etc., simplifient l’écriture du code.\n\nPour des calculs précis avec des\n\nnombres décimaux\n\n, utilise\n\ndouble\n\nfloat\n\nExercice – Calculette Java\n\n🎯 Objectif :\n\nS’entraîner à utiliser les opérateurs arithmétiques, le modulo, les raccourcis et l’incrémentation.\n\n📝 Consignes :\n\nÉcris un programme Java qui fait les étapes suivantes :\n\n🧩 Partie 1 : Opérations de base\n\nCrée deux entiers\n\na = 17\n\nb = 4\n\nCalcule et affiche :\n\nsomme\n\ndifférence\n\nproduit\n\nquotient entier\n\nreste (modulo)\n\n🧩 Partie 2 : Utilisation des raccourcis\n\nDéclare une variable\n\nx = 10\n\nApplique successivement :\n\nx += 5;\n\nx *= 2;\n\nx %= 7;\n\nAffiche",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/5-operateurs/arithmetique/index.html",
+      "title": "🧮 Les opérateurs arithmétiques en Java :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "ence\n\nproduit\n\nquotient entier\n\nreste (modulo)\n\n🧩 Partie 2 : Utilisation des raccourcis\n\nDéclare une variable\n\nx = 10\n\nApplique successivement :\n\nx += 5;\n\nx *= 2;\n\nx %= 7;\n\nAffiche\n\naprès chaque étape.\n\n🧩 Partie 3 : Incrémentation et décrémentation\n\nCrée une variable\n\nint n = 5;\n\nApplique et affiche les résultats :\n\nint a = n++;\n\nint b = ++n;\n\nAffiche les valeurs de\n\n🧪 Exemple de sortie attendue (abrégée) :\n\nSomme : 21\n\nDifférence : 13\n\nProduit : 68\n\nQuotient entier : 4\n\nReste : 1\n\nx après += 5 : 15\n\nx après *= 2 : 30\n\nx après %= 7 : 2\n\na = 5\n\nb = 7\n\nn = 7",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/5-operateurs/arithmetique/index.html",
+      "title": "🧮 Les opérateurs arithmétiques en Java :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "⛏️ Le modulo `%` : Le reste utile\n\nL’opérateur\n\nmodulo\n\n) calcule le\n\nreste\n\nd’une division entière.\n\nint\n\nreste\n\nRésultat\n\nPourquoi ?\n\n👉 Parce que\n\n10 ÷ 3 = 3\n\n, reste\n\nLe modulo, c’est donc ce qui\n\nreste après la division entière\n\n📘 Comment il faut le lire\n\nint\n\nvar\n\nCela renvoie le\n\nreste\n\nde la division de\n\npar\n\n🔍 Le modulo côté mathématique\n\n📐 1. Définition formelle\n\nEn mathématiques, pour deux entiers\n\n(le dividende) et\n\nb ≠ 0\n\n(le diviseur), on peut écrire la\n\ndivision euclidienne\n\nainsi :\n\na = b \\times q + r\n\noù :\n\nest le\n\nquotient entier\n\nde la division (\n\na / b\n\nest le\n\nreste\n\n, c’est ce que\n\na % b\n\nretourne\n\navec la contrainte :\n\n0 \\le r < |b|\n\nDonc le\n\nmodulo\n\nest ce\n\nreste r\n\naprès avoir enlevé autant de fois que possible des multiples de\n\n🧮 2. Exemples concrets\n\nExemple 1 :\n\n17 % 5\n\nOn cherche combien de fois on peut mettre\n\ndans\n\n, sans dépasser.\n\n17 = 5 \\times 3 + 2",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/5-operateurs/arithmetique/modulo/index.html",
+      "title": "⛏️ Le modulo `%` : Le reste utile :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "vé autant de fois que possible des multiples de\n\n🧮 2. Exemples concrets\n\nExemple 1 :\n\n17 % 5\n\nOn cherche combien de fois on peut mettre\n\ndans\n\n, sans dépasser.\n\n17 = 5 \\times 3 + 2\n\nDonc :\n\nQuotient\n\nq = 3\n\nReste\n\nr = 2\n\n17 % 5 = 2\n\nExemple 2 :\n\n-13 % 4\n\nJava retourne un\n\nreste qui a le même signe que le numérateur\n\n(ici\n\n-13\n\n), donc :\n\n-13 = 4 \\times (-4) + 3 \\Rightarrow \\text{mais Java dira} \\quad -13 % 4 = -1\n\nCar :\n\n-13 = 4 \\times (-3) + (-1)\n\nJava choisit\n\nq = -3\n\nr = -1\n\n🧠 Pourquoi c’est utile ?\n\nLe concept de modulo est\n\nfondamental en arithmétique\n\n, mais il est aussi omniprésent en informatique :\n\nDomaine\n\nExemple d’usage\n\nHorloges\n\nHeure actuelle :\n\n(heure + durée) % 24\n\nCouleurs\n\nAlterner 3 couleurs :\n\nindex % 3\n\nCryptographie\n\nChiffrement modulaire (\n\na^b mod n\n\nMaths discrètes\n\nNombres premiers, congruences, théorèmes\n\nProgrammation\n\nBoucles cycliques, alternance, etc.\n\n📌 Résumé mathématique\n\nTerme\n\nSignification\n\nDivision\n\nTrouver combien de fois\n\nentre dans\n\nQuotient\n\nPartie entière de la division\n\nReste\n\nCe qu’il reste après avoir soustrait\n\nq × b",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/5-operateurs/arithmetique/modulo/index.html",
+      "title": "⛏️ Le modulo `%` : Le reste utile :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "ésumé mathématique\n\nTerme\n\nSignification\n\nDivision\n\nTrouver combien de fois\n\nentre dans\n\nQuotient\n\nPartie entière de la division\n\nReste\n\nCe qu’il reste après avoir soustrait\n\nq × b\n\nModulo\n\nLe reste\n\n→ toujours entre\n\nb - 1\n\nen math (Java va donner négatif ou 0 si a est négatif)\n\n🎯 Cas concrets d’utilisation\n\nLe modulo peut paraître mystérieux au début, mais il est\n\nsuper utile\n\ndans beaucoup de cas pratiques :\n\n✅ 1. Savoir si un nombre est\n\npair ou impair\n\nnombre pair\n\ndonne un reste de\n\nlorsqu’il est divisé par 2.\n\nint\n\nSystem\n\nout\n\nprintln\n\n\"Nombre pair\"\n\nelse\n\nSystem\n\nout\n\nprintln\n\n\"Nombre impair\"\n\n🔁 2. Créer des\n\ncycles / boucles périodiques\n\nLe modulo est parfait pour\n\nrevenir à 0 après un certain nombre\n\nExemple : afficher les jours de la semaine (\n\n) en boucle :\n\nint\n\nfor\n\nint\n\ntour\n\ntour\n\ntour\n\nSystem\n\nout\n\nprintln\n\n\"Jour : \"\n\n));\n\n➡️ Affiche :\n\n0, 1, 2, 3, 4, 5, 6, 0, 1, 2\n\n🧮 3. Découper en\n\ngroupes\n\ncolonnes\n\nExemple : afficher les éléments d’un tableau\n\n3 par 3\n\nsur chaque ligne :\n\nfor\n\nint\n\nSystem\n\nout\n\nprint\n\n\" \"\n\nSystem\n\nout\n\nprintln\n\n();",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/5-operateurs/arithmetique/modulo/index.html",
+      "title": "⛏️ Le modulo `%` : Le reste utile :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": ", 1, 2\n\n🧮 3. Découper en\n\ngroupes\n\ncolonnes\n\nExemple : afficher les éléments d’un tableau\n\n3 par 3\n\nsur chaque ligne :\n\nfor\n\nint\n\nSystem\n\nout\n\nprint\n\n\" \"\n\nSystem\n\nout\n\nprintln\n\n();\n\n// sauter à la ligne\n\n➡️ Affiche :\n\n0 1 2\n\n3 4 5\n\n6 7 8\n\n🧩 4. Alterner une action un coup sur deux\n\nfor\n\nint\n\nSystem\n\nout\n\nprintln\n\n\" → visible\"\n\nelse\n\nSystem\n\nout\n\nprintln\n\n\" → caché\"\n\n❗ À savoir : Modulo avec nombres négatifs\n\nEn Java, le\n\nsigne du résultat\n\ndu modulo suit le\n\npremier opérande\n\n(le numérateur).\n\nSystem\n\nout\n\nprintln\n\n// 1\n\nSystem\n\nout\n\nprintln\n\n// -1\n\nSystem\n\nout\n\nprintln\n\n// 1\n\nSystem\n\nout\n\nprintln\n\n👉 Cela peut avoir un impact si tu utilises\n\npour des positions dans un tableau ou des cycles — il faut parfois\n\najuster\n\nint\n\nmod\n\nrenvoie\n\nlieu\n\n🧪 Exemples à tester\n\nSystem\n\nout\n\nprintln\n\n// 3\n\nSystem\n\nout\n\nprintln\n\n// 0\n\nSystem\n\nout\n\nprintln\n\nExercices\n\nQuelle est la solution à ce calcul :\n\n45 % 12\n\nQuelle est la solution à ce calcul :\n\n234 % 33\n\nQuelle est la solution à ce calcul :\n\n2345765432 % 3242\n\nMentalement, faites le calcul suivant :",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/5-operateurs/arithmetique/modulo/index.html",
+      "title": "⛏️ Le modulo `%` : Le reste utile :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "la solution à ce calcul :\n\n45 % 12\n\nQuelle est la solution à ce calcul :\n\n234 % 33\n\nQuelle est la solution à ce calcul :\n\n2345765432 % 3242\n\nMentalement, faites le calcul suivant :\n\n1234123536432435646734235523532 % 2\n\nRéaliser un programme qui écrit tous les chiffres non divisible par 6 entre 1 et 100",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/5-operateurs/arithmetique/modulo/index.html",
+      "title": "⛏️ Le modulo `%` : Le reste utile :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "🍯 Les opérateurs de comparaison en Java\n\nLes\n\nopérateurs de comparaison\n\npermettent de\n\ncomparer deux valeurs\n\npour savoir si elles sont\n\négales\n\ndifférentes\n\nplus grandes\n\n, etc.\n\n🎯 Ils sont\n\nessentiels dans les conditions\n\nwhile\n\n, etc.) car ils renvoient toujours un\n\nrésultat de type\n\nboolean\n\ntrue\n\nfalse\n\n🧪 Les 6 opérateurs de comparaison de base\n\nOpérateur\n\nSignification\n\nExemple (\n\na = 5\n\nb = 8\n\nRésultat\n\nÉgal à\n\na == b\n\nfalse\n\nDifférent de\n\na != b\n\ntrue\n\nInférieur à\n\na < b\n\ntrue\n\nSupérieur à\n\na > b\n\nfalse\n\nInférieur ou égal à\n\na <= b\n\ntrue\n\nSupérieur ou égal à\n\na >= b\n\nfalse\n\n🧠 Important à retenir\n\nne signifie\n\npas\n\n“affecter une valeur”, mais\n\n“comparer l’égalité”\n\nNe confonds pas\n\n(affectation) et\n\n(comparaison).\n\nint\n\n// OK : on donne la valeur 10 à x\n\n// OK : on teste si x est égal à 10\n\nSystem\n\nout\n\nprintln\n\n\"x vaut 10 !\"\n\n🧠 Comparaison entre différents types",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/5-operateurs/comparaison/index.html",
+      "title": "🍯 Les opérateurs de comparaison en Java :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "ectation) et\n\n(comparaison).\n\nint\n\n// OK : on donne la valeur 10 à x\n\n// OK : on teste si x est égal à 10\n\nSystem\n\nout\n\nprintln\n\n\"x vaut 10 !\"\n\n🧠 Comparaison entre différents types\n\nTu peux comparer :\n\nDeux\n\nint\n\ndouble\n\nchar\n\n, etc.\n\nint\n\navec un\n\ndouble\n\n→ Java fait une\n\nconversion automatique\n\nint\n\ndouble\n\nSystem\n\nout\n\nprintln\n\ntrue\n\n💡 Comparaison de\n\nchar\n\nLes\n\nchar\n\npeuvent aussi être comparés : en fait, ils sont traités comme des\n\nnombres Unicode\n\nchar\n\n'A'\n\nchar\n\n'B'\n\nSystem\n\nout\n\nprintln\n\ntrue\n\ncar\n\n'A'\n\n'B'\n\n🚫 Comparer des objets (comme\n\nString\n\n) avec\n\n⚠️ En Java,\n\ncompare les adresses mémoire\n\npour les objets. Il ne faut\n\njamais\n\nl’utiliser pour comparer des\n\nchaînes de caractères (\n\nString\n\nUtilise plutôt\n\n.equals()\n\nString\n\nnom\n\n\"Java\"\n\nSystem\n\nout\n\nprintln\n\nnom\n\n\"Java\"\n\n// ⚠️ parfois true, parfois false\n\nSystem\n\nout\n\nprintln\n\nnom\n\nequals\n\n\"Java\"\n\n));\n\ntoujours\n\ntrue\n\nles\n\ntextes\n\nsont\n\négaux\n\n🧪 Exemples concrets\n\nint\n\nage\n\nage\n\nSystem\n\nout\n\nprintln\n\n\"Tu peux voter !\"\n\nelse\n\nSystem\n\nout\n\nprintln\n\n\"Trop jeune 😅\"\n\nint\n\nint\n\nboolean\n\ntest1\n\n// true",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/5-operateurs/comparaison/index.html",
+      "title": "🍯 Les opérateurs de comparaison en Java :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "les\n\ntextes\n\nsont\n\négaux\n\n🧪 Exemples concrets\n\nint\n\nage\n\nage\n\nSystem\n\nout\n\nprintln\n\n\"Tu peux voter !\"\n\nelse\n\nSystem\n\nout\n\nprintln\n\n\"Trop jeune 😅\"\n\nint\n\nint\n\nboolean\n\ntest1\n\n// true\n\nboolean\n\ntest2\n\n// true\n\nboolean\n\ntest3\n\nfalse\n\n🔍 Résumé visuel\n\nSymbole\n\nTeste si…\n\nRésultat\n\nboolean\n\nDeux valeurs sont égales\n\ntrue\n\nfalse\n\nDifférentes\n\ntrue\n\nfalse\n\nInférieure\n\ntrue\n\nfalse\n\nSupérieure\n\ntrue\n\nfalse\n\nInférieure ou égale\n\ntrue\n\nfalse\n\nSupérieure ou égale\n\ntrue\n\nfalse\n\n🎯 Astuce\n\n💡 En Java, toute comparaison renvoie un\n\nboolean\n\n, ce qui permet de l’utiliser directement dans une condition :\n\nscore\n\nSystem\n\nout\n\nprintln\n\n\"Réussi !\"\n\nExercices – Les opérateurs de comparaison en Java\n\n📘 Partie 1 : Théorie – Vrai ou Faux ?\n\nConsigne\n\n: Indique si chaque expression retourne\n\ntrue\n\nfalse\n\nen Java.\n\n7 == 7\n\n→ ❓\n\n5 != 10\n\n→ ❓\n\n4 > 9\n\n→ ❓\n\n12 <= 12\n\n→ ❓\n\n3.0 == 3\n\n→ ❓\n\n'A' < 'Z'\n\n→ ❓\n\n'a' == 'A'\n\n→ ❓\n\n🧠 Partie 2 : Lecture de code\n\nConsigne\n\n: Que va afficher ce programme ?\n\nchar\n\n'B'\n\nchar\n\n'b'\n\nSystem\n\nout\n\nprintln",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/5-operateurs/comparaison/index.html",
+      "title": "🍯 Les opérateurs de comparaison en Java :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "⚙️ Les opérateurs logiques en Java\n\nLes\n\nopérateurs logiques\n\npermettent de\n\ncombiner des conditions\n\n. Ils sont essentiels pour construire des expressions\n\ncomplexes\n\ndans les structures comme\n\nwhile\n\n, etc.\n\nIls s’appliquent\n\nsur des booléens\n\ntrue\n\nfalse\n\n) et\n\nrenvoient eux-mêmes un booléen\n\n🧪 Les 3 opérateurs logiques principaux\n\nOpérateur\n\nNom\n\nFonction principale\n\nExemple\n\nRésultat\n\nET logique\n\nVrai\n\nseulement si les deux conditions sont vraies\n\ntrue && true\n\ntrue\n\nOU logique\n\nVrai\n\nsi au moins une condition est vraie\n\ntrue || false\n\ntrue\n\nNON logique\n\nInverse\n\nla valeur (vrai devient faux, et vice-versa)\n\n!true\n\nfalse\n\n🧠 Tableau de vérité\n\n(ET logique)\n\nA && B\n\ntrue\n\ntrue\n\ntrue\n\ntrue\n\nfalse\n\nfalse\n\nfalse\n\ntrue\n\nfalse\n\nfalse\n\nfalse\n\nfalse\n\n(OU logique)\n\nA || B\n\ntrue\n\ntrue\n\ntrue\n\ntrue\n\nfalse\n\ntrue\n\nfalse\n\ntrue\n\ntrue\n\nfalse\n\nfalse\n\nfalse\n\n(NON logique)\n\ntrue\n\nfalse\n\nfalse\n\ntrue",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/5-operateurs/logique/index.html",
+      "title": "⚙️ Les opérateurs logiques en Java :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "false\n\ntrue\n\nfalse\n\nfalse\n\nfalse\n\nfalse\n\n(OU logique)\n\nA || B\n\ntrue\n\ntrue\n\ntrue\n\ntrue\n\nfalse\n\ntrue\n\nfalse\n\ntrue\n\ntrue\n\nfalse\n\nfalse\n\nfalse\n\n(NON logique)\n\ntrue\n\nfalse\n\nfalse\n\ntrue\n\n💬 Exemples simples\n\nint\n\nage\n\nboolean\n\ncitoyen\n\ntrue\n\n// Vrai seulement si les deux conditions sont vraies\n\nage\n\ncitoyen\n\nSystem\n\nout\n\nprintln\n\n\"Tu peux voter !\"\n\nboolean\n\nilPleut\n\ntrue\n\nboolean\n\naParapluie\n\nfalse\n\nilPleut\n\naParapluie\n\nSystem\n\nout\n\nprintln\n\n\"Tu vas être mouillé !\"\n\n⚠️ Attention à la priorité des opérateurs\n\nPriorité (ordre d’évaluation)\n\nOpérateur\n\nHaute\n\nMoyenne\n\nBasse\n\nTu peux utiliser des\n\nparenthèses\n\npour forcer l’ordre :\n\nage\n\ncitoyen\n\nmalade\n\n// ...\n\n📦 Utilisation typique : combiner plusieurs conditions\n\nExemple :\n\nint\n\nnote\n\nnote\n\nnote\n\n100\n\nSystem\n\nout\n\nprintln\n\n\"Réussi !\"\n\n🔍 Résumé visuel\n\nSymbole\n\nNom\n\nUtilité principale\n\nToutes les conditions doivent être vraies\n\nUne seule condition doit être vraie\n\nNON\n\nInverse une condition\n\n🎯 Astuce logique\n\nTu peux\n\ncombiner plusieurs opérateurs\n\nage\n\ncitoyen\n\nestMajeurEmancipe\n\nSystem\n\nout\n\nprintln",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/5-operateurs/logique/index.html",
+      "title": "⚙️ Les opérateurs logiques en Java :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "es\n\nUne seule condition doit être vraie\n\nNON\n\nInverse une condition\n\n🎯 Astuce logique\n\nTu peux\n\ncombiner plusieurs opérateurs\n\nage\n\ncitoyen\n\nestMajeurEmancipe\n\nSystem\n\nout\n\nprintln\n\n\"Tu es légalement un adulte.\"\n\n🧪 Mini quiz (mental)\n\nboolean\n\ntrue\n\nboolean\n\nfalse\n\nSystem\n\nout\n\nprintln\n\n// ?\n\nSystem\n\nout\n\nprintln\n\n// ?\n\nSystem\n\nout\n\nprintln\n\nRéponses\n\nfalse\n\ntrue\n\nfalse\n\nExercice 1 – Vrai ou faux ? (Quiz rapide)\n\nboolean\n\ntrue\n\nboolean\n\nfalse\n\nSystem\n\nout\n\nprintln\n\n// ?\n\nSystem\n\nout\n\nprintln\n\n// ?\n\nSystem\n\nout\n\nprintln\n\n// ?\n\nSystem\n\nout\n\nprintln\n\n));\n\nQuestion :\n\nIndique ce qui s’affiche à chaque ligne.\n\nExercice 2 – Peut-il conduire ?\n\nÉcris une comparaison qui vérifie si une personne peut conduire en fonction de son age et si elle a le permis.\n\nCritères pour pouvoir conduire:\n\nElle a 18 ans ou plus\n\nelle possède un permis.\n\nint\n\nage\n\nboolean\n\naLePermis\n\ntrue\n\nComplète\n\nici\n\n💡 Astuce : Utilise\n\npour combiner les deux conditions.\n\nExercice 3 – Accès restreint\n\nOn veut donner accès à un site\n\nseulement\n\nsi l’utilisateur est :\n\nMembre\n\nadmin,\n\npas banni\n\nComplète :",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/5-operateurs/logique/index.html",
+      "title": "⚙️ Les opérateurs logiques en Java :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "Utilise\n\npour combiner les deux conditions.\n\nExercice 3 – Accès restreint\n\nOn veut donner accès à un site\n\nseulement\n\nsi l’utilisateur est :\n\nMembre\n\nadmin,\n\npas banni\n\nComplète :\n\nboolean\n\nestMembre\n\ntrue\n\nboolean\n\nestAdmin\n\nfalse\n\nboolean\n\nestBanni\n\nfalse\n\n💡 Tu devras utiliser\n\nExercice 4 – Pluie et parapluie\n\nÉcris un programme qui affiche true si tu es mouillé:\n\nboolean\n\nilPleut\n\ntrue\n\nboolean\n\naParapluie\n\nfalse\n\nComplète\n\nici",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/5-operateurs/logique/index.html",
+      "title": "⚙️ Les opérateurs logiques en Java :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "🧭 Ordre de priorité des opérations en Java\n\nEn Java, comme en mathématiques, certaines opérations sont effectuées\n\navant d’autres\n\n. C’est ce qu’on appelle la\n\npriorité des opérateurs\n\n🪜 Diagramme de priorité (du plus fort au plus faible)\n\n╔════════════════════════════════════╗\n\n║ ()                                 ║ ➤ Parenthèses : forcent la priorité\n\n╠════════════════════════════════════╣\n\n║ ++  --  !                          ║ ➤ Incrément, décrément, NON logique\n\n╠════════════════════════════════════╣\n\n║ *   /   %                          ║ ➤ Multiplication, division, modulo\n\n╠════════════════════════════════════╣\n\n║ +   -                              ║ ➤ Addition, soustraction\n\n╠════════════════════════════════════╣\n\n║ <   <=  >   >=                     ║ ➤ Comparaisons\n\n╠════════════════════════════════════╣\n\n║ ==  !=                             ║ ➤ Égalité / inégalité",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/5-operateurs/ordre-priorite/index.html",
+      "title": "🧭 Ordre de priorité des opérations en Java :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "══════════════════════╣\n\n║ <   <=  >   >=                     ║ ➤ Comparaisons\n\n╠════════════════════════════════════╣\n\n║ ==  !=                             ║ ➤ Égalité / inégalité\n\n╠════════════════════════════════════╣\n\n║ &&                                 ║ ➤ ET logique (et court-circuité)\n\n╠════════════════════════════════════╣\n\n║ ||                                 ║ ➤ OU logique (et court-circuité)\n\n╠════════════════════════════════════╣\n\n║ =  +=  -=  *=  /=  %=              ║ ➤ Affectations simples et composées\n\n╚════════════════════════════════════╝\n\n🎓 Exemple d’analyse : sans parenthèses\n\nboolean\n\nresultat\n\nfalse\n\n🔍 Étapes d’évaluation :\n\nboolean\n\nresultat\n\nfalse\n\nresultat\n\ntrue\n\nresultat\n\ntrue\n\nresultat\n\ntrue\n\nresultat\n\nfalse\n\ntrue\n\nresultat\n\ntrue\n\n✅ Résultat final :\n\ntrue\n\n🧪 À retenir\n\nJava suit\n\nun ordre strict de priorité\n\n, mais\n\nne lit pas toujours de gauche à droite\n\nLes opérateurs comme\n\nsont\n\névalués avant\n\nles\n\nLes opérateurs logiques\n\n\\|\\|\n\nviennent\n\naprès\n\nles comparateurs (\n\n, etc.).\n\nL’opérateur\n\n(NON logique) a\n\nune priorité très élevée",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/5-operateurs/ordre-priorite/index.html",
+      "title": "🧭 Ordre de priorité des opérations en Java :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "Les opérateurs comme\n\nsont\n\névalués avant\n\nles\n\nLes opérateurs logiques\n\n\\|\\|\n\nviennent\n\naprès\n\nles comparateurs (\n\n, etc.).\n\nL’opérateur\n\n(NON logique) a\n\nune priorité très élevée\n\n, il est évalué rapidement.\n\nLes\n\naffectations\n\n, etc.) sont\n\ntoujours faites en dernier\n\n🧩 Exemple 1 : Opérations arithmétiques + comparaisons + logique\n\nboolean\n\nres1\n\nfalse\n\n✳️ Étapes d’évaluation :\n\nboolean\n\nres1\n\nfalse\n\nres1\n\nfalse\n\nres1\n\nfalse\n\nres1\n\ntrue\n\nfalse\n\nres1\n\ntrue\n\nres1\n\ntrue\n\nres1\n\ntrue\n\nres1\n\ntrue\n\ntrue\n\nres1\n\ntrue\n\n✅ Résultat final :\n\nres1\n\ntrue\n\n🧠 Exemple 2 : Avec modulos, NON logique, ET / OU\n\nboolean\n\nres2\n\ntrue\n\n✳️ Étapes d’évaluation :\n\nboolean\n\nres2\n\ntrue\n\nres2\n\ntrue\n\nres2\n\ntrue\n\ntrue\n\nres2\n\nfalse\n\ntrue\n\nres2\n\nfalse\n\ntrue\n\nres2\n\nfalse\n\ntrue\n\nres2\n\nfalse\n\ntrue\n\ntrue\n\nres2\n\nfalse\n\ntrue\n\nres2\n\ntrue\n\n✅ Résultat final :\n\nres2\n\ntrue\n\n💡 Astuce\n\nMême si Java respecte cet ordre, écrire avec\n\ndes parenthèses explicites\n\naméliore grandement la\n\nlisibilité\n\nréduit les erreurs\n\nboolean\n\nres2\n\ntrue\n\nExercice 1 – Simple priorité arithmétique + logique\n\nboolean\n\nex1\n\nfalse",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/5-operateurs/ordre-priorite/index.html",
+      "title": "🧭 Ordre de priorité des opérations en Java :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "c\n\ndes parenthèses explicites\n\naméliore grandement la\n\nlisibilité\n\nréduit les erreurs\n\nboolean\n\nres2\n\ntrue\n\nExercice 1 – Simple priorité arithmétique + logique\n\nboolean\n\nex1\n\nfalse\n\nQuestion\n\n: Que vaut\n\nex1\n\nExplique étape par étape comme dans les exemples.\n\nExercice 2 – Parenthèses et inversion logique\n\nboolean\n\nex2\n\nfalse\n\nExercice 3 – Comparaisons croisées et OU logique\n\nboolean\n\nex3\n\ntrue\n\n✏️ Attention : l’opérateur\n\nest plus prioritaire que\n\n. Analyse bien.\n\nExercice 4 – Plusieurs niveaux de priorité + modulo\n\nboolean\n\nex4\n\n🔍 À toi de jouer ! Résous-le à la main (ou à tête).\n\nExercice 5 – Affectation + expressions mixtes\n\nboolean\n\nex5\n\nex5\n\nfalse\n\n🔍 À toi de jouer ! Résous-le à la main (ou à tête).\n\nExercice 6\n\nboolean\n\nmystere\n\nfalse\n\n🔍 À toi de jouer ! Résous-le à la main (ou à tête).",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/5-operateurs/ordre-priorite/index.html",
+      "title": "🧭 Ordre de priorité des opérations en Java :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "Chapter 6\n\nConversions De Types\n\n🔄 Conversion implicite vs explicite en Java\n\nLa conversion permet de changer le type d’une donnée pour l’adapter à une autre variable ou expression.\n\n1. Conversion implicite (promotion automatique)\n\nJava effectue\n\nautomatiquement\n\nla conversion quand il n’y a\n\npas de risque de perte de données\n\nSe produit souvent quand on passe d’un type\n\nplus petit\n\nà un type\n\nplus grand\n\nExemples classiques :\n\nVers\n\nExemple\n\nint\n\ndouble\n\ndouble d = 5;\n\nbyte\n\nint\n\nint x = 10;\n\nint\n\ndouble\n\nConversion\n\nimplicite\n\n2. Conversion explicite (casting)\n\nNécessaire quand il y a un\n\nrisque de perte de données\n\nincompatibilité\n\nLe programmeur doit forcer la conversion avec un\n\ncast\n\n(type)\n\nExemples classiques :\n\nVers\n\nExemple\n\ndouble\n\nint\n\nint x = (int) 9.99;\n\nlong\n\nint\n\nint y = (int) 100000L;\n\ndouble\n\nint\n\nint\n\nConversion\n\nexplicite\n\ndécimale\n\nperdue\n\n3. Différences clés",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/6-conversions-de-types/index.html",
+      "title": "Conversions De Types :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "les classiques :\n\nVers\n\nExemple\n\ndouble\n\nint\n\nint x = (int) 9.99;\n\nlong\n\nint\n\nint y = (int) 100000L;\n\ndouble\n\nint\n\nint\n\nConversion\n\nexplicite\n\ndécimale\n\nperdue\n\n3. Différences clés\n\nAspect\n\nConversion implicite\n\nConversion explicite\n\nNécessite une action ?\n\nNon, automatique\n\nOui, cast obligatoire\n\n(type)\n\nRisque de perte\n\nNon\n\nOui\n\nSens\n\nDu plus petit au plus grand\n\nDu plus grand au plus petit\n\nExemples\n\nint\n\ndouble\n\ndouble\n\nint\n\n4. En résumé\n\nConversion implicite\n\n= sûre, automatique, du type petit vers grand.\n\nConversion explicite\n\n= risquée, forcée, du type grand vers petit.\n\nUtilise toujours le casting explicite pour éviter les erreurs de compilation.\n\n🧠 À retenir\n\nJava convertit\n\ntout seul\n\nquand c’est sûr.\n\nPour tout ce qui peut perdre des infos, il faut\n\ncaster\n\nmanuellement.\n\nSois vigilant avec les conversions explicites, elles peuvent tronquer ou modifier la valeur.\n\nConversion_des_types\n\nLe terme le plus utilisé pour la technique de conversion est « Casting ».\n\nCas 1\n\nConversion 1 : String vers les numériques",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/6-conversions-de-types/index.html",
+      "title": "Conversions De Types :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "t tronquer ou modifier la valeur.\n\nConversion_des_types\n\nLe terme le plus utilisé pour la technique de conversion est « Casting ».\n\nCas 1\n\nConversion 1 : String vers les numériques\n\nConversion 2 : Les numériques vers une String en utilisant la méthode valueOf()\n\nConversion 3 : Les numériques vers une String en utilisant la méthode toString()\n\nConversion 4 : String vers les primitifs\n\nConversion 5 : Primitifs vers String\n\nConversion 6 : Les primitifs vers une String en utilisant la méthode valueOf()\n\nAutomatique vs manuelle\n\nConversion automatique : il s’agit d’une conversion d’un type plus petit en un type plus grand\n\nbyte -> short -> char -> int -> long -> float -> double\n\nCas 2\n\nConversion manuelle :\n\nil s’agit de la conversion d’un type plus grand en un type de taille plus petite. Il suffit de rajouter le casting du type voulu à droite.\n\ndouble -> float -> long -> int -> char -> short -> byte\n\ndouble d = 2000.23;\n\nfloat f = (float)d;\n\nlong l = (long) f;\n\nQuand on diminue la taille il y a parfois une perte d’information comme si l’on passe de float à int:\n\nfloat",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/6-conversions-de-types/index.html",
+      "title": "Conversions De Types :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "-> byte\n\ndouble d = 2000.23;\n\nfloat f = (float)d;\n\nlong l = (long) f;\n\nQuand on diminue la taille il y a parfois une perte d’information comme si l’on passe de float à int:\n\nfloat\n\n53F\n\nSystem\n\nout\n\nprintln\n\nint\n\nPour résumer :\n\nDans le cas d’une conversion de petit vers grand ➔ on ne fait rien.\n\nDans le cas d’une conversion d’un grand vers un petit ➔ il faut « Caster » la partie droite en type du petit.\n\nExercice 1 : Fusion de types\n\nObjectif :\n\nComprendre la promotion automatique des types.\n\nConsignes :\n\nCrée une variable\n\nbyte\n\navec une valeur (ex.\n\nbyte b = 10;\n\nCrée une variable\n\nint\n\net affecte-lui la valeur de\n\n(sans cast)\n\nAffiche la valeur de l’int\n\nExplique dans un commentaire pourquoi ça fonctionne sans cast\n\n🔧 Concepts : conversion\n\nimplicite\n\nbyte → int\n\nExercice 2 : Tronquage d’un flottant\n\nObjectif :\n\nObserver la perte de données lors d’un cast.\n\nConsignes :\n\nDéclare une variable\n\ndouble\n\navec une valeur décimale (ex.\n\ndouble d = 123.456;\n\nCaste-la en\n\nint\n\net stocke le résultat dans une nouvelle variable\n\nAffiche les deux valeurs",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/6-conversions-de-types/index.html",
+      "title": "Conversions De Types :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "es :\n\nDéclare une variable\n\ndouble\n\navec une valeur décimale (ex.\n\ndouble d = 123.456;\n\nCaste-la en\n\nint\n\net stocke le résultat dans une nouvelle variable\n\nAffiche les deux valeurs\n\nConstate la perte des décimales\n\n🔧 Concepts : conversion\n\nexplicite\n\ndouble → int\n\nExercice 3 : Enchaînement de cast\n\nObjectif :\n\nAppliquer plusieurs conversions manuelles successives.\n\nConsignes :\n\nDéclare une variable\n\ndouble\n\navec une valeur (ex.\n\ndouble x = 1000.99;\n\nConvertis-la en\n\nfloat\n\n, puis en\n\nlong\n\n, puis en\n\nint\n\nAffiche chaque étape\n\nObserve l’évolution de la donnée à chaque cast\n\n🔧 Concepts : conversion\n\nexplicite\n\nen chaîne :\n\ndouble → float → long → int\n\n📥 Passage d’arguments par la ligne de commande en Java\n\n1. 🔍 Qu’est-ce que c’est ?\n\nEn Java, on peut passer des\n\nvaleurs à un programme\n\nau moment de son\n\nexécution\n\n, directement\n\ndepuis la ligne de commande\n\nCes valeurs sont appelées\n\narguments\n\net sont transmis au programme via le\n\ntableau\n\nString[] args\n\nde la méthode\n\nmain\n\n2. 📌 Syntaxe\n\n✅ Déclaration classique\n\npublic\n\nclass\n\nMonProgramme\n\npublic\n\nstatic\n\nvoid",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/6-conversions-de-types/index.html",
+      "title": "Conversions De Types :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "guments\n\net sont transmis au programme via le\n\ntableau\n\nString[] args\n\nde la méthode\n\nmain\n\n2. 📌 Syntaxe\n\n✅ Déclaration classique\n\npublic\n\nclass\n\nMonProgramme\n\npublic\n\nstatic\n\nvoid\n\nmain\n\nString\n\nargs\n\n// args est un tableau de chaînes\n\n✅ Exécution (en ligne de commande)\n\njava MonProgramme argument1 argument2 argument3\n\nCes\n\nargument1\n\nargument2\n\n, etc. seront accessibles dans le tableau\n\nargs\n\n3. 🧪 Exemple simple\n\npublic\n\nclass\n\nExempleArgs\n\npublic\n\nstatic\n\nvoid\n\nmain\n\nString\n\nargs\n\nSystem\n\nout\n\nprintln\n\n\"Premier argument : \"\n\nargs\n\nSystem\n\nout\n\nprintln\n\n\"Deuxième argument : \"\n\nargs\n\n⚠️ Important\n\nargs[0]\n\n= premier argument\n\nargs[1]\n\n= deuxième argument\n\nargs.length\n\n= nombre total d’arguments\n\n4. 🛑 Gestion des erreurs\n\nIl faut\n\ntoujours vérifier la taille du tableau\n\nargs\n\npour éviter les erreurs :\n\nargs\n\nlength\n\nSystem\n\nout\n\nprintln\n\n\"Erreur : il faut au moins 2 arguments.\"\n\nreturn\n\n5. 🔄 Conversion de type\n\nLes arguments sont des\n\nchaînes de caractères (\n\nString\n\npar défaut. Pour utiliser des nombres :\n\nint\n\nage\n\nInteger\n\nparseInt\n\nargs\n\n// Convertit en int",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/6-conversions-de-types/index.html",
+      "title": "Conversions De Types :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "n\n\n5. 🔄 Conversion de type\n\nLes arguments sont des\n\nchaînes de caractères (\n\nString\n\npar défaut. Pour utiliser des nombres :\n\nint\n\nage\n\nInteger\n\nparseInt\n\nargs\n\n// Convertit en int\n\ndouble\n\ntaille\n\nDouble\n\nparseDouble\n\nargs\n\nConvertit\n\ndouble\n\n⚠️ Attention aux erreurs si l’utilisateur entre des valeurs non numériques.\n\n6. 🎯 Utilisation typique\n\nFournir des\n\nparamètres\n\n(nom, âge, etc.) à un programme.\n\nContrôler le\n\ncomportement\n\ndu programme (mode test, options, etc.).\n\nÉviter de coder en dur des valeurs.\n\n7. 📦 Exemple complet\n\npublic\n\nclass\n\nBonjourNom\n\npublic\n\nstatic\n\nvoid\n\nmain\n\nString\n\nargs\n\nargs\n\nlength\n\nSystem\n\nout\n\nprintln\n\n\"Usage : java BonjourNom <nom>\"\n\nreturn\n\nSystem\n\nout\n\nprintln\n\n\"Bonjour \"\n\nargs\n\n\" !\"\n\n🧠 À retenir\n\nÉlément\n\nDétail\n\nString[] args\n\nTableau contenant les arguments\n\nargs.length\n\nNombre d’arguments passés\n\nargs[i]\n\niᵉ argument (indexé à partir de 0)\n\nConversion\n\nUtiliser\n\nInteger.parseInt()\n\nDouble.parseDouble()\n\n, etc.\n\nBonne pratique\n\nVérifier la longueur du tableau avant d’accéder aux éléments",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/6-conversions-de-types/index.html",
+      "title": "Conversions De Types :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "rgument (indexé à partir de 0)\n\nConversion\n\nUtiliser\n\nInteger.parseInt()\n\nDouble.parseDouble()\n\n, etc.\n\nBonne pratique\n\nVérifier la longueur du tableau avant d’accéder aux éléments\n\nExercice 1 : Convertisseur Celsius → Fahrenheit\n\n🎯 Objectif :\n\nLire une température en degrés Celsius en argument, et afficher sa conversion en Fahrenheit.\n\n🔧 Consigne :\n\nLe programme prend\n\nun seul argument numérique\n\nIl affiche :\n\n<valeur>°C équivaut à <valeur_fahrenheit>°F\n\nUtilise la formule :\n\nF = C × 9/5 + 32\n\n📝 Exemple attendu :\n\njava Convertisseur\n\n25°C équivaut à 77.0°F\n\n🛑 Ajoute une vérification si aucun argument n’est donné ou si l’entrée n’est pas un nombre.\n\nExercice 2 : Nombre pair ou impair\n\n🎯 Objectif :\n\nVérifier si un nombre entier donné en argument est pair ou impair.\n\n🔧 Consigne :\n\nLe programme prend\n\nun entier\n\nen argument.\n\nIl affiche si le nombre est pair ou non\n\n📝 Exemple attendu :\n\njava Parite\n\nLe nombre est pair? : false",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/6-conversions-de-types/index.html",
+      "title": "Conversions De Types :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "Chapter 7\n\nTableaux\n\n📦 Les tableaux 1D en Java\n\ntableau (array)\n\npermet de\n\nstocker plusieurs valeurs\n\ndans une\n\nmême variable\n\n, toutes du\n\nmême type\n\n(int, double, etc.).\n\nLes\n\ntableaux à une dimension (1D)\n\nsont comme une\n\nliste ordonnée\n\nde valeurs, accessibles grâce à leur\n\nindice\n\n🏗️ Déclaration et création\n\n✏️ Déclarer un tableau\n\nint\n\nnotes\n\ndéclaration\n\n🛠️ Créer un tableau\n\nnotes\n\nnew\n\nint\n\ntableau\n\nentiers\n\ntous\n\nOu, préférablement, tout en une ligne :\n\nint\n\nnotes\n\nnew\n\nint\n\n💡 Tous les éléments sont\n\nautomatiquement initialisés\n\nType\n\nValeur par défaut\n\nint\n\ndouble\n\n0.0\n\nboolean\n\nfalse\n\nString\n\nnull\n\n🧊 Accès aux éléments\n\nUn tableau utilise\n\ndes indices\n\nqui commencent à\n\nnotes\n\n// affecte 17 au premier élément\n\nSystem\n\nout\n\nprintln\n\nnotes\n\naffiche\n\n💥 Accéder à un\n\nindice hors-limites\n\nprovoque une\n\nerreur\n\nnotes\n\nErreur\n\nIndexOutOfBoundsException\n\n🪞 Initialisation rapide",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/7-tableaux/index.html",
+      "title": "Tableaux :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "premier élément\n\nSystem\n\nout\n\nprintln\n\nnotes\n\naffiche\n\n💥 Accéder à un\n\nindice hors-limites\n\nprovoque une\n\nerreur\n\nnotes\n\nErreur\n\nIndexOutOfBoundsException\n\n🪞 Initialisation rapide\n\nOn peut directement donner des valeurs au moment de la création :\n\nint\n\njours\n\n📏 La propriété\n\n.length\n\nChaque tableau possède une propriété spéciale :\n\nint\n\ntaille\n\nnotes\n\nlength\n\nici\n\n❗ Ce n’est\n\npas une méthode\n\n(pas de parenthèses !)\n\n🧪 Exemples simples\n\nint\n\nvaleurs\n\nSystem\n\nout\n\nprintln\n\nvaleurs\n\n// 20\n\nSystem\n\nout\n\nprintln\n\nvaleurs\n\nlength\n\n// 3\n\nvaleurs\n\nSystem\n\nout\n\nprintln\n\nvaleurs\n\n🧠 À retenir\n\nUn tableau\n\nstocke plusieurs valeurs\n\ndu même type.\n\nLes\n\nindices commencent à 0\n\n.length\n\ndonne le\n\nnombre d’éléments\n\ndu tableau.\n\nNe jamais dépasser les\n\nbornes\n\ndu tableau !\n\nTrès bien ! Voici une nouvelle version des\n\n3 exercices\n\nsur les\n\ntableaux 1D en Java\n\n, cette fois avec\n\ndifférents types de données\n\nint\n\ndouble\n\nString\n\nboolean\n\n) comme dans la matière vue.\n\nExercice 1 : Tableaux de\n\ndouble\n\nCrée un tableau\n\ntemperatures",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/7-tableaux/index.html",
+      "title": "Tableaux :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "en Java\n\n, cette fois avec\n\ndifférents types de données\n\nint\n\ndouble\n\nString\n\nboolean\n\n) comme dans la matière vue.\n\nExercice 1 : Tableaux de\n\ndouble\n\nCrée un tableau\n\ntemperatures\n\nqui contient 4 températures mesurées : 22.5, 19.8, 21.0, 23.3\n\nPuis affiche la première et la dernière température.\n\npublic\n\nclass\n\nExo1\n\npublic\n\nstatic\n\nvoid\n\nmain\n\nString\n\nargs\n\n// Création avec initialisation directe\n\n// Affichage\n\nSortie attendue\n\nPremière : 22.5\n\nDernière : 23.3\n\nExercice 2 : Tableaux de\n\nString\n\nDéclare un tableau\n\njours\n\nde 7 chaînes (\n\nString\n\n) pour stocker les jours de la semaine.\n\nAffecte les valeurs manuellement, puis affiche l’avant dernier jour : (\n\nsamedi\n\npublic\n\nclass\n\nExo2\n\npublic\n\nstatic\n\nvoid\n\nmain\n\nString\n\nargs\n\n// Déclaration et initialisation\n\n// Affectation manuelle\n\n// Affichage du jour du week-end\n\nSortie attendue\n\nAvant dernier jours : samedi\n\nExercice 3 : Tableau de\n\nboolean\n\n.length\n\nUn tableau\n\nreponses\n\ncontient les réponses à un QCM (true si bonne réponse, false sinon).\n\nInitialise un tableau de 3 réponses :\n\ntrue, false, true",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/7-tableaux/index.html",
+      "title": "Tableaux :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": ": Tableau de\n\nboolean\n\n.length\n\nUn tableau\n\nreponses\n\ncontient les réponses à un QCM (true si bonne réponse, false sinon).\n\nInitialise un tableau de 3 réponses :\n\ntrue, false, true\n\nAffiche le nombre total de réponses et la 2e réponse.\n\npublic\n\nclass\n\nExo3\n\npublic\n\nstatic\n\nvoid\n\nmain\n\nString\n\nargs\n\nboolean\n\nreponses\n\n_______________________________________\n\nSystem\n\nout\n\nprintln\n\n\"Nombre de réponses : \"\n\n___________________\n\nSystem\n\nout\n\nprintln\n\n\"Deuxième réponse : \"\n\n______________________",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/7-tableaux/index.html",
+      "title": "Tableaux :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "Tableaux 2D\n\n🧮 Les tableaux 2D en Java\n\ntableau 2D\n\npermet de stocker des\n\nvaleurs dans un tableau de tableaux\n\n— comme un\n\ntableau à double entrée\n\n, ou\n\nmatrice\n\nC’est très utile pour représenter des\n\ngrilles\n\ntableaux de données\n\nplateaux de jeu\n\n, etc.\n\n🏗️ Déclaration et création\n\n✏️ Déclarer un tableau 2D\n\nint\n\n[][]\n\nmatrice\n\n🛠️ Créer un tableau 2D\n\nmatrice\n\nnew\n\nint\n\nlignes\n\ncolonnes\n\nOu tout en une ligne :\n\nint\n\n[][]\n\nmatrice\n\nnew\n\nint\n\n💡 Tous les éléments sont initialisés à 0 (ou à la valeur par défaut du type).\n\n🧊 Accès aux éléments\n\nOn accède à un élément avec\n\n2 indices\n\n[ligne][colonne]\n\nmatrice\n\n// Affecte 7 à la ligne 0, colonne 2\n\nSystem\n\nout\n\nprintln\n\nmatrice\n\nAffiche\n\n❌ Hors limites ? →\n\nArrayIndexOutOfBoundsException\n\n🪞 Initialisation rapide\n\nOn peut remplir un tableau 2D directement :\n\nint\n\n[][]\n\nmatrice\n\n📏 Taille d’un tableau 2D\n\nExpression\n\nSignification",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/7-tableaux/tableaux2d/index.html",
+      "title": "Tableaux 2D :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "s ? →\n\nArrayIndexOutOfBoundsException\n\n🪞 Initialisation rapide\n\nOn peut remplir un tableau 2D directement :\n\nint\n\n[][]\n\nmatrice\n\n📏 Taille d’un tableau 2D\n\nExpression\n\nSignification\n\nmatrice.length\n\nNombre de\n\nlignes\n\nmatrice[0].length\n\nNombre de\n\ncolonnes\n\n(ligne 0)\n\n⚠️ Les tableaux 2D peuvent être\n\nirréguliers\n\n(pas le même nombre de colonnes partout).\n\n🧪 Exemples simples\n\nint\n\n[][]\n\ngrille\n\nnew\n\nint\n\ngrille\n\ngrille\n\nSystem\n\nout\n\nprintln\n\ngrille\n\n// 9\n\nSystem\n\nout\n\nprintln\n\ngrille\n\nlength\n\n// 2 lignes\n\nSystem\n\nout\n\nprintln\n\ngrille\n\nlength\n\ncolonnes\n\n🔥 À retenir\n\nUn tableau 2D est un\n\ntableau de tableaux\n\nOn accède à une case avec\n\n[ligne][colonne]\n\n.length\n\nfonctionne à chaque niveau (\n\nmatrice.length\n\nmatrice[i].length\n\nAttention aux\n\nindices hors limites\n\net aux\n\nlignes irrégulières\n\nExercice 1 : Matrice de\n\nint\n\nCrée un tableau 2D\n\nmatrice\n\nde 2 lignes et 3 colonnes, et affecte les valeurs suivantes :\n\n1  2  3\n\n4  5  6\n\nPuis affiche l’élément qui contient un 5.\n\npublic\n\nclass\n\nExo1\n\npublic\n\nstatic\n\nvoid\n\nmain\n\nString\n\nargs\n\n// Déclaration et création",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/7-tableaux/tableaux2d/index.html",
+      "title": "Tableaux 2D :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "ecte les valeurs suivantes :\n\n1  2  3\n\n4  5  6\n\nPuis affiche l’élément qui contient un 5.\n\npublic\n\nclass\n\nExo1\n\npublic\n\nstatic\n\nvoid\n\nmain\n\nString\n\nargs\n\n// Déclaration et création\n\n// Affectation manuelle\n\n// Affichage d’un élément\n\nSortie attendue\n\nÉlément : 5\n\nExercice 2 : Grille de\n\nString\n\nInitialise directement un tableau 2D\n\nmots\n\navec les valeurs suivantes :\n\n\"Bonjour\"  \"le\"\n\n\"monde\"    \"!\"\n\nPuis affiche le mot\n\n“monde”\n\nà l’aide de ses indices.\n\npublic\n\nclass\n\nExo2\n\npublic\n\nstatic\n\nvoid\n\nmain\n\nString\n\nargs\n\n// Initialisation rapide\n\n// Affichage du mot \"monde\"\n\nSortie attendue\n\nMot : monde\n\nExercice 3 : Tableau 2D de\n\nboolean\n\n.length\n\nUn tableau\n\ncases\n\nindique si certaines cases d’un jeu sont accessibles (\n\ntrue\n\n) ou bloquées (\n\nfalse\n\nInitialise le tableau suivant :\n\ntrue\n\nfalse\n\ntrue\n\ntrue\n\ntrue\n\nfalse\n\nPuis affiche :\n\nnombre de lignes\n\nnombre de colonnes\n\nde la première ligne\n\nL’état de la dernière case de la premier ligne\n\npublic\n\nclass\n\nExo3\n\npublic\n\nstatic\n\nvoid\n\nmain\n\nString\n\nargs\n\n// Initialisation du tableau\n\n// Affichage des informations",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/7-tableaux/tableaux2d/index.html",
+      "title": "Tableaux 2D :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "re ligne\n\nL’état de la dernière case de la premier ligne\n\npublic\n\nclass\n\nExo3\n\npublic\n\nstatic\n\nvoid\n\nmain\n\nString\n\nargs\n\n// Initialisation du tableau\n\n// Affichage des informations\n\nSortie attendue\n\nLignes : 2\n\nColonnes : 3\n\nDernière case de la première ligne accessible ? true",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/7-tableaux/tableaux2d/index.html",
+      "title": "Tableaux 2D :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "If Else\n\n🧩 Les conditions\n\nelse if\n\nelse\n\nen Java\n\nLes structures conditionnelles permettent de\n\nprendre des décisions dans le programme\n\n: on peut\n\nexécuter certains blocs de code uniquement si une condition est vraie\n\nC’est fondamental pour écrire des programmes intelligents, interactifs et dynamiques !\n\n❓ La structure\n\nLa condition\n\npermet de\n\ntester si l’expression qui est entre parenthèse est vraie (\n\ntrue\n\n. Si c’est le cas,\n\nle bloc de code associé est exécuté\n\nâge\n\nSystem\n\nout\n\nprintln\n\n\"Majeur\"\n\n📌 Si la condition est\n\nfausse (\n\nfalse\n\n, le code dans les\n\nest\n\nignoré\n\n🔀 Ajouter une alternative :\n\nelse\n\nOn peut ajouter un\n\nelse\n\npour\n\nexécuter un autre bloc si la condition est fausse\n\nnote\n\nSystem\n\nout\n\nprintln\n\n\"Réussi\"\n\nelse\n\nSystem\n\nout\n\nprintln\n\n\"Échoué\"\n\n🔁 Plusieurs cas :\n\nelse if\n\nQuand on veut\n\ntester plusieurs conditions différentes\n\n, on utilise\n\nelse if\n\nnote\n\nSystem",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/8-structures-de-controles/conditionnelles/if-else/index.html",
+      "title": "If Else :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "ut\n\nprintln\n\n\"Réussi\"\n\nelse\n\nSystem\n\nout\n\nprintln\n\n\"Échoué\"\n\n🔁 Plusieurs cas :\n\nelse if\n\nQuand on veut\n\ntester plusieurs conditions différentes\n\n, on utilise\n\nelse if\n\nnote\n\nSystem\n\nout\n\nprintln\n\n\"Excellent\"\n\nelse\n\nnote\n\nSystem\n\nout\n\nprintln\n\n\"Très bien\"\n\nelse\n\nnote\n\nSystem\n\nout\n\nprintln\n\n\"Passable\"\n\nelse\n\nSystem\n\nout\n\nprintln\n\n\"Échec\"\n\n💡 Le programme s’arrête dès qu’une condition est vraie. Les blocs suivants ne sont\n\npas évalués\n\n⚠️ Syntaxe à respecter\n\ncondition\n\n// Bloc 1\n\nelse\n\nautreCondition\n\n// Bloc 2\n\nelse\n\n// Bloc 3\n\n✅ Toujours :\n\nDes\n\nparenthèses\n\nautour de la condition.\n\nDes\n\naccolades\n\nautour du bloc de code (même si une seule ligne, c’est plus clair et plus sûr !).\n\n🧠 Exemples simples\n\nint\n\nage\n\nage\n\nSystem\n\nout\n\nprintln\n\n\"Adulte\"\n\nelse\n\nSystem\n\nout\n\nprintln\n\n\"Mineur\"\n\nint\n\nscore\n\nscore\n\nSystem\n\nout\n\nprintln\n\n\"A\"\n\nelse\n\nscore\n\nSystem\n\nout\n\nprintln\n\n\"B\"\n\nelse\n\nscore\n\nSystem\n\nout\n\nprintln\n\n\"C\"\n\nelse\n\nSystem\n\nout\n\nprintln\n\n\"Échec\"\n\n🔥 À retenir\n\nteste une condition : si elle est\n\nvraie\n\n, le bloc est exécuté.\n\nelse",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/8-structures-de-controles/conditionnelles/if-else/index.html",
+      "title": "If Else :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "out\n\nprintln\n\n\"B\"\n\nelse\n\nscore\n\nSystem\n\nout\n\nprintln\n\n\"C\"\n\nelse\n\nSystem\n\nout\n\nprintln\n\n\"Échec\"\n\n🔥 À retenir\n\nteste une condition : si elle est\n\nvraie\n\n, le bloc est exécuté.\n\nelse\n\npermet d’exécuter un bloc si la condition est\n\nfausse\n\nelse if\n\npermet d’enchaîner plusieurs\n\ncas différents\n\nUne seule\n\nbranche est exécutée\n\n, même si plusieurs conditions sont vraies.\n\nN’oublie pas les\n\naccolades\n\net les\n\nparenthèses\n\nExercice 1 : Majeur ou mineur\n\nCrée une variable\n\nage\n\n, puis affiche\n\n\"Majeur\"\n\nsi la personne a\n\n18 ans ou plus\n\n, sinon affiche\n\n\"Mineur\"\n\npublic\n\nclass\n\nExo1\n\npublic\n\nstatic\n\nvoid\n\nmain\n\nString\n\nargs\n\n// Déclaration de l’âge\n\n// Vérification de la majorité\n\nSortie attendue (si\n\nage = 17\n\nMineur\n\nExercice 2 : Résultat d’un examen\n\nCrée une variable\n\nnote\n\n, puis affiche :\n\n\"Excellent\"\n\nsi la note ≥ 90\n\n\"Très bien\"\n\nsi la note ≥ 75\n\n\"Passable\"\n\nsi la note ≥ 60\n\n\"Échec\"\n\nsinon\n\npublic\n\nclass\n\nExo2\n\npublic\n\nstatic\n\nvoid\n\nmain\n\nString\n\nargs\n\n// Déclaration de la note\n\n// Conditions selon la note\n\nSortie attendue (si\n\nnote = 78\n\nTrès bien",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/8-structures-de-controles/conditionnelles/if-else/index.html",
+      "title": "If Else :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "60\n\n\"Échec\"\n\nsinon\n\npublic\n\nclass\n\nExo2\n\npublic\n\nstatic\n\nvoid\n\nmain\n\nString\n\nargs\n\n// Déclaration de la note\n\n// Conditions selon la note\n\nSortie attendue (si\n\nnote = 78\n\nTrès bien\n\nExercice 3 : Type de personnage\n\nCrée une variable\n\nniveau\n\n, puis affiche :\n\n\"Débutant\"\n\nsi le niveau < 10\n\n\"Intermédiaire\"\n\nsi le niveau est entre 10 et 19\n\n\"Avancé\"\n\nsi le niveau est entre 20 et 29\n\n\"Maître\"\n\nà partir de 30\n\npublic\n\nclass\n\nExo3\n\npublic\n\nstatic\n\nvoid\n\nmain\n\nString\n\nargs\n\n// Déclaration du niveau\n\n// Classification du personnage\n\nSortie attendue (si\n\nniveau = 25\n\nAvancé",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/8-structures-de-controles/conditionnelles/if-else/index.html",
+      "title": "If Else :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "Ternaire\n\n❓ L’opérateur ternaire en Java\n\nL’opérateur\n\nternaire\n\nest une\n\nforme abrégée du\n\nif...else\n\n, qui permet d’\n\nécrire des conditions simples en une seule ligne\n\nIl est souvent utilisé pour\n\nrendre le code plus concis\n\n, surtout lorsqu’on veut\n\naffecter une valeur selon une condition\n\n🧰 Syntaxe de base\n\ncondition\n\nvaleurSiVrai\n\nvaleurSiFaux\n\nC’est comme dire :\n\n“Si la condition est vraie, retourne ceci ; sinon, retourne cela.”\n\n📦 Exemple simple\n\nint\n\nâge\n\nString\n\nstatut\n\nâge\n\n\"Majeur\"\n\n\"Mineur\"\n\nSystem\n\nout\n\nprintln\n\nstatut\n\nAffiche\n\nMajeur\n\n✳️ C’est équivalent à :\n\nString\n\nstatut\n\nâge\n\nstatut\n\n\"Majeur\"\n\nelse\n\nstatut\n\n\"Mineur\"\n\n⚙️ Utilisation typique\n\nL’opérateur ternaire est\n\ntrès utilisé pour affecter une valeur\n\nselon une condition :\n\ndouble\n\nnote\n\nString\n\nrésultat\n\nnote\n\n\"Réussi\"\n\n\"Échoué\"\n\nOn peut aussi l’utiliser directement dans un\n\nSystem.out.println()\n\nSystem\n\nout",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/8-structures-de-controles/conditionnelles/ternaire/index.html",
+      "title": "Ternaire :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "ffecter une valeur\n\nselon une condition :\n\ndouble\n\nnote\n\nString\n\nrésultat\n\nnote\n\n\"Réussi\"\n\n\"Échoué\"\n\nOn peut aussi l’utiliser directement dans un\n\nSystem.out.println()\n\nSystem\n\nout\n\nprintln\n\nnote\n\n\"Excellent\"\n\n\"À améliorer\"\n\n🛑 À éviter pour les cas complexes\n\nMême si l’opérateur ternaire est pratique, il\n\ndevient illisible si la condition ou les valeurs sont longues\n\n// Trop compliqué !\n\nString\n\ngrade\n\nscore\n\n\"A\"\n\nscore\n\n\"B\"\n\n\"C\"\n\nDifficile\n\nlire\n\nmaintenir\n\n➡️ Dans ces cas-là, préfère une structure\n\nif...else\n\nclassique.\n\n🔥 À retenir\n\nL’opérateur ternaire est une\n\nforme courte de\n\nif...else\n\nIl s’écrit :\n\n(condition) ? valeurSiVrai : valeurSiFaux;\n\nTrès utile pour\n\ninitialiser une variable\n\nselon une condition.\n\néviter\n\nsi la logique devient trop complexe ou trop imbriquée.\n\nRends le code\n\nplus compact\n\n, mais pas toujours plus clair.\n\nExercice 1 : Adulte ou non\n\nCrée une variable\n\nint age\n\net utilise l’opérateur ternaire pour initialiser une variable\n\nString statut\n\n\"Majeur\"\n\nsi l’âge est supérieur ou égal à 18\n\n\"Mineur\"\n\nsinon\n\nPuis affiche la variable\n\nstatut",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/8-structures-de-controles/conditionnelles/ternaire/index.html",
+      "title": "Ternaire :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "age\n\net utilise l’opérateur ternaire pour initialiser une variable\n\nString statut\n\n\"Majeur\"\n\nsi l’âge est supérieur ou égal à 18\n\n\"Mineur\"\n\nsinon\n\nPuis affiche la variable\n\nstatut\n\npublic\n\nclass\n\nExo1\n\npublic\n\nstatic\n\nvoid\n\nmain\n\nString\n\nargs\n\n// Déclaration de l’âge\n\n// Utilisation du ternaire pour déterminer le statut\n\n// Affichage\n\nSortie attendue (si\n\nage = 15\n\nMineur\n\nExercice 2 : Résultat de l’élève\n\nCrée une variable\n\nint note\n\n, et utilise un opérateur ternaire pour afficher :\n\n\"Réussi\"\n\nsi la note est supérieure ou égale à 60\n\n\"Échoué\"\n\nsinon\n\nAstuce\n\n: Tu peux afficher directement dans le\n\nSystem.out.println()\n\npublic\n\nclass\n\nExo2\n\npublic\n\nstatic\n\nvoid\n\nmain\n\nString\n\nargs\n\n// Déclaration de la note\n\n// Affichage immédiat avec ternaire\n\nSortie attendue (si\n\nnote = 72\n\nRéussi\n\nExercice 3 : Nombre pair ou impair\n\nCrée une variable\n\nint nombre\n\n, puis utilise un ternaire pour afficher :\n\n\"Pair\"\n\nsi le nombre est divisible par 2\n\n\"Impair\"\n\nsinon\n\npublic\n\nclass\n\nExo3\n\npublic\n\nstatic\n\nvoid\n\nmain\n\nString\n\nargs\n\n// Déclaration du nombre",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/8-structures-de-controles/conditionnelles/ternaire/index.html",
+      "title": "Ternaire :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "lise un ternaire pour afficher :\n\n\"Pair\"\n\nsi le nombre est divisible par 2\n\n\"Impair\"\n\nsinon\n\npublic\n\nclass\n\nExo3\n\npublic\n\nstatic\n\nvoid\n\nmain\n\nString\n\nargs\n\n// Déclaration du nombre\n\n// Affichage avec ternaire\n\nSortie attendue (si\n\nnombre = 7\n\nImpair",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/8-structures-de-controles/conditionnelles/ternaire/index.html",
+      "title": "Ternaire :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "Switch\n\n🎛️ Les instructions\n\nswitch\n\nen Java\n\nL’instruction\n\nswitch\n\npermet de\n\ntester la valeur d’une variable\n\net d’exécuter\n\ndifférents blocs de code\n\nselon son\n\ncontenu exact\n\nC’est une\n\nalternative plus claire aux chaînes de\n\nif...else if\n\nquand on compare\n\nune même variable\n\nplusieurs valeurs possibles\n\n🧰 Syntaxe de base\n\nswitch\n\nvariable\n\ncase\n\nvaleur1\n\n// Code si variable == valeur1\n\nbreak\n\ncase\n\nvaleur2\n\n// Code si variable == valeur2\n\nbreak\n\ndefault\n\n// Code si aucune des valeurs ne correspond\n\n🧱 Éléments clés :\n\nMot-clé\n\nRôle\n\ncase\n\nSpécifie une\n\nvaleur à tester\n\nbreak\n\nTermine le\n\nswitch\n\n, évite les “chutes”\n\ndefault\n\n(optionnel) Bloc exécuté\n\npar défaut\n\n📦 Exemple simple\n\nint\n\njour\n\nswitch\n\njour\n\ncase\n\nSystem\n\nout\n\nprintln\n\n\"Lundi\"\n\nbreak\n\ncase\n\nSystem\n\nout\n\nprintln\n\n\"Mardi\"\n\nbreak\n\ncase\n\nSystem\n\nout\n\nprintln\n\n\"Mercredi\"\n\nbreak\n\ndefault\n\nSystem\n\nout\n\nprintln",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/8-structures-de-controles/conditionnelles/switch/index.html",
+      "title": "Switch :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "switch\n\njour\n\ncase\n\nSystem\n\nout\n\nprintln\n\n\"Lundi\"\n\nbreak\n\ncase\n\nSystem\n\nout\n\nprintln\n\n\"Mardi\"\n\nbreak\n\ncase\n\nSystem\n\nout\n\nprintln\n\n\"Mercredi\"\n\nbreak\n\ndefault\n\nSystem\n\nout\n\nprintln\n\n\"Jour inconnu\"\n\n➡️ Affichera :\n\nMercredi\n\n⚠️ Le\n\nbreak\n\nest important !\n\nSans le\n\nbreak\n\n, le programme\n\ncontinue dans les cases suivantes\n\n, même si elles ne correspondent pas :\n\nint\n\nswitch\n\ncase\n\nSystem\n\nout\n\nprintln\n\n\"Un\"\n\ncase\n\nSystem\n\nout\n\nprintln\n\n\"Deux\"\n\ncase\n\nSystem\n\nout\n\nprintln\n\n\"Trois\"\n\n➡️ Affichera :\n\nDeux\n\nTrois\n\n🧠 Le bloc\n\ndefault\n\nLe mot-clé\n\ndefault\n\npermet de\n\ngérer les cas non prévus\n\nchar\n\nlettre\n\n'z'\n\nswitch\n\nlettre\n\ncase\n\n'a'\n\nSystem\n\nout\n\nprintln\n\n\"Voyelle A\"\n\nbreak\n\ncase\n\n'e'\n\nSystem\n\nout\n\nprintln\n\n\"Voyelle E\"\n\nbreak\n\ndefault\n\nSystem\n\nout\n\nprintln\n\n\"Autre lettre\"\n\n🔁 Compatibilité du\n\nswitch\n\nEn Java, tu peux utiliser\n\nswitch\n\navec les types suivants :\n\nType autorisé\n\nExemples\n\nint\n\nshort\n\nbyte\n\nchar\n\nswitch (entier)\n\nString\n\n(depuis Java 7)\n\nswitch (nom)\n\nenum\n\nswitch (couleur)\n\n❌ Pas compatible avec\n\nfloat\n\ndouble\n\nboolean\n\n, ni avec des expressions complexes.",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/8-structures-de-controles/conditionnelles/switch/index.html",
+      "title": "Switch :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "ort\n\nbyte\n\nchar\n\nswitch (entier)\n\nString\n\n(depuis Java 7)\n\nswitch (nom)\n\nenum\n\nswitch (couleur)\n\n❌ Pas compatible avec\n\nfloat\n\ndouble\n\nboolean\n\n, ni avec des expressions complexes.\n\n🔥 À retenir\n\nswitch\n\nest pratique pour\n\ntester des cas précis\n\nUtilise\n\nbreak\n\npour\n\néviter les exécutions non désirées\n\nLe bloc\n\ndefault\n\nest\n\noptionnel\n\nmais utile.\n\nCompatible avec\n\nint\n\nchar\n\nString\n\nenum\n\n, etc.\n\nPlus lisible que plusieurs\n\nelse if\n\nquand on compare\n\nla même variable\n\nExercice 1 : Jour de la semaine\n\nCrée une variable\n\nint jour\n\n, puis utilise une instruction\n\nswitch\n\npour afficher le nom du jour correspondant :\n\n\"Lundi\"\n\n\"Mardi\"\n\n\"Mercredi\"\n\nAutre →\n\n\"Jour inconnu\"\n\npublic\n\nclass\n\nExo1\n\npublic\n\nstatic\n\nvoid\n\nmain\n\nString\n\nargs\n\n// Déclaration du jour\n\n// Switch selon le jour\n\nSortie attendue (si\n\njour = 2\n\nMardi\n\nExercice 2 : Type de boisson\n\nCrée une variable\n\nString choix\n\n, qui peut valoir\n\n\"café\"\n\n\"thé\"\n\n\"jus\"\n\nUtilise\n\nswitch\n\npour afficher :\n\n\"Vous avez choisi du café\"\n\n\"Vous avez choisi du thé\"\n\n\"Vous avez choisi du jus\"\n\nSinon :\n\n\"Boisson inconnue\"",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/8-structures-de-controles/conditionnelles/switch/index.html",
+      "title": "Switch :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "i peut valoir\n\n\"café\"\n\n\"thé\"\n\n\"jus\"\n\nUtilise\n\nswitch\n\npour afficher :\n\n\"Vous avez choisi du café\"\n\n\"Vous avez choisi du thé\"\n\n\"Vous avez choisi du jus\"\n\nSinon :\n\n\"Boisson inconnue\"\n\npublic\n\nclass\n\nExo2\n\npublic\n\nstatic\n\nvoid\n\nmain\n\nString\n\nargs\n\n// Déclaration de la boisson\n\n// Switch sur le choix\n\nSortie attendue (si\n\nchoix = \"thé\"\n\nVous avez choisi du thé\n\nExercice 3 : Note en lettre\n\nCrée une variable\n\nchar note\n\nqui peut être\n\n'A'\n\n'B'\n\n'C'\n\nou une autre lettre.\n\nUtilise\n\nswitch\n\npour afficher :\n\n'A'\n\n\"Excellent\"\n\n'B'\n\n\"Très bien\"\n\n'C'\n\n\"Bien\"\n\nAutre →\n\n\"Note invalide\"\n\npublic\n\nclass\n\nExo3\n\npublic\n\nstatic\n\nvoid\n\nmain\n\nString\n\nargs\n\n// Déclaration de la note\n\n// Switch sur la note\n\nSortie attendue (si\n\nnote = 'B'\n\nTrès bien",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/8-structures-de-controles/conditionnelles/switch/index.html",
+      "title": "Switch :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "Do While\n\n🔁 La boucle\n\ndo-while\n\nen Java\n\nLa boucle\n\ndo-while\n\npermet de\n\nrépéter une série d’instructions au moins une fois\n\n, puis\n\ntant qu’une condition est vraie\n\nC’est la\n\nseule boucle en Java\n\noù la condition est testée\n\naprès\n\nl’exécution du bloc.\n\n🧱 Structure d’une boucle\n\ndo-while\n\n// instructions à exécuter\n\nwhile\n\ncondition\n\nÉlément\n\nRôle\n\nbloc de code\n\nS’exécute\n\nau moins une fois\n\n, puis à chaque tour\n\ncondition\n\nEst\n\ntestée après\n\nchaque itération\n\n🔂 Exemple simple\n\nint\n\nSystem\n\nout\n\nprintln\n\n\"i vaut : \"\n\nwhile\n\n🔎 Ce code va afficher :\n\ni vaut : 0\n\ni vaut : 1\n\ni vaut : 2\n\ni vaut : 3\n\ni vaut : 4\n\n💡 Même si la condition est fausse dès le départ,\n\nle bloc s’exécute au moins une fois\n\nint\n\nSystem\n\nout\n\nprintln\n\n\"Exécuté !\"\n\nwhile\n\n➡️ Résultat :\n\nExécuté !\n\n🎯 Quand utiliser\n\ndo-while\n\nUtilise\n\ndo-while\n\nquand :\n\nTu veux\n\nforcer au moins une exécution\n\nTu veux",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/8-structures-de-controles/boucles/3-do-while/index.html",
+      "title": "Do While :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "is\n\nint\n\nSystem\n\nout\n\nprintln\n\n\"Exécuté !\"\n\nwhile\n\n➡️ Résultat :\n\nExécuté !\n\n🎯 Quand utiliser\n\ndo-while\n\nUtilise\n\ndo-while\n\nquand :\n\nTu veux\n\nforcer au moins une exécution\n\nTu veux\n\ndemander une action\n\n, puis\n\nvérifier si elle doit être répétée\n\nC’est utile pour les\n\nmenus\n\nsaisies utilisateur\n\n, etc.\n\n🔁 Exemple pratique : demander un mot de passe\n\nScanner\n\nscanner\n\nnew\n\nScanner\n\nSystem\n\nString\n\nmotDePasse\n\nSystem\n\nout\n\nprint\n\n\"Entrez le mot de passe : \"\n\nmotDePasse\n\nscanner\n\nnextLine\n\n();\n\nwhile\n\nmotDePasse\n\nequals\n\n\"secret123\"\n\n));\n\n⚠️ Attention\n\nComme dans\n\nwhile\n\nsi la condition reste vraie\n\n, la boucle\n\nne s’arrête jamais\n\nBien penser à\n\nmodifier les variables\n\nqui influencent la condition.\n\n🧠 À retenir\n\nLa boucle\n\ndo-while\n\ns’exécute toujours au moins une fois\n\nElle teste la condition\n\naprès\n\nchaque tour.\n\nIdéale pour les\n\nsaisies utilisateur\n\n, les\n\nmenus interactifs\n\n, etc.\n\nExercice 1 : Afficher les nombres de 1 à 5\n\nUtilise une boucle\n\ndo-while\n\npour afficher les nombres de\n\n1 à 5\n\npublic\n\nclass\n\nExo1\n\npublic\n\nstatic\n\nvoid\n\nmain\n\nString\n\nargs",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/8-structures-de-controles/boucles/3-do-while/index.html",
+      "title": "Do While :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": ", etc.\n\nExercice 1 : Afficher les nombres de 1 à 5\n\nUtilise une boucle\n\ndo-while\n\npour afficher les nombres de\n\n1 à 5\n\npublic\n\nclass\n\nExo1\n\npublic\n\nstatic\n\nvoid\n\nmain\n\nString\n\nargs\n\n// Initialisation de la variable\n\n// Boucle do-while de 1 à 5\n\nSortie attendue\n\nExercice 2 : Compte à rebours\n\nUtilise une boucle\n\ndo-while\n\npour afficher un\n\ncompte à rebours de 5 à 1\n\n, puis affiche\n\n\"Go !\"\n\npublic\n\nclass\n\nExo2\n\npublic\n\nstatic\n\nvoid\n\nmain\n\nString\n\nargs\n\n// Initialisation de la variable\n\n// Boucle do-while de décompte\n\n// Affichage final \"Go !\"\n\nSortie attendue\n\nGo !\n\nExercice 3 : Somme croissante\n\nUtilise une boucle\n\ndo-while\n\npour additionner des valeurs de 2 en 2, en partant de 0,\n\net affiche la somme à chaque étape, tant que la somme est\n\ninférieure ou égale à 10\n\npublic\n\nclass\n\nExo3\n\npublic\n\nstatic\n\nvoid\n\nmain\n\nString\n\nargs\n\n// Initialisation de la somme\n\n// Boucle do-while d’addition\n\nSortie attendue\n\nSomme : 2\n\nSomme : 4\n\nSomme : 6\n\nSomme : 8\n\nSomme : 10",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/8-structures-de-controles/boucles/3-do-while/index.html",
+      "title": "Do While :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "For Each\n\n🔁 La boucle\n\nfor-each\n\nen Java\n\nLa boucle\n\nfor-each\n\n(ou\n\nboucle améliorée\n\nfor\n\n) permet de\n\nparcourir facilement les éléments d’un tableau ou d’une collection\n\nsans se soucier des indices\n\nElle est plus\n\nlisible\n\nplus sûre\n\nque la boucle\n\nfor\n\nclassique quand tu n’as pas besoin de manipuler les indices manuellement.\n\n🧱 Structure d’une boucle\n\nfor-each\n\nfor\n\nType\n\nelement\n\ncollection\n\n// instructions à exécuter pour chaque élément\n\nÉlément\n\nRôle\n\nType\n\nLe type des éléments (ex :\n\nint\n\nString\n\nelement\n\nUne variable temporaire pour chaque valeur\n\ncollection\n\nUn tableau (\n\narray\n\n) ou une collection (\n\nList\n\n, etc.)\n\n🔂 Exemple simple avec un tableau\n\nint\n\nnotes\n\nfor\n\nint\n\nnote\n\nnotes\n\nSystem\n\nout\n\nprintln\n\n\"Note : \"\n\nnote\n\n🔎 Ce code affiche :\n\nNote : 12\n\nNote : 15\n\nNote : 8\n\nNote : 17\n\n💡 À chaque tour, la variable\n\nnote\n\nprend la\n\nvaleur d’un élément du tableau\n\n, dans l’ordre.",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/8-structures-de-controles/boucles/4-for-each/index.html",
+      "title": "For Each :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "ntln\n\n\"Note : \"\n\nnote\n\n🔎 Ce code affiche :\n\nNote : 12\n\nNote : 15\n\nNote : 8\n\nNote : 17\n\n💡 À chaque tour, la variable\n\nnote\n\nprend la\n\nvaleur d’un élément du tableau\n\n, dans l’ordre.\n\n🧑‍🏫 Exemple avec des chaînes de caractères\n\nString\n\nprenoms\n\n\"Alice\"\n\n\"Bob\"\n\n\"Claire\"\n\nfor\n\nString\n\nnom\n\nprenoms\n\nSystem\n\nout\n\nprintln\n\n\"Bonjour \"\n\nnom\n\n\" !\"\n\n🎯 Quand utiliser\n\nfor-each\n\nUtilise\n\nfor-each\n\nquand :\n\nTu veux\n\nparcourir tous les éléments d’un tableau ou d’une liste\n\nn’as pas besoin de connaître l’indice\n\nactuel\n\nTu veux du code\n\nplus clair\n\nmoins sujet aux erreurs\n\n⚠️ Limitations\n\nne peux pas modifier les éléments d’un tableau\n\ndirectement avec\n\nfor-each\n\nn’as pas accès à l’indice\n\n) de l’élément courant.\n\nPas adapté si tu as besoin de\n\nparcourir partiellement\n\nune structure ou de\n\nsauter des éléments\n\n🔁 Comparaison avec la boucle\n\nfor\n\nclassique\n\n// Boucle for classique\n\nfor\n\nint\n\nnotes\n\nlength\n\nSystem\n\nout\n\nprintln\n\nnotes\n\n// Boucle for-each\n\nfor\n\nint\n\nnote\n\nnotes\n\nSystem\n\nout\n\nprintln\n\nnote\n\n✅ Même résultat, mais\n\ncode plus lisible avec for-each",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/8-structures-de-controles/boucles/4-for-each/index.html",
+      "title": "For Each :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "for\n\nint\n\nnotes\n\nlength\n\nSystem\n\nout\n\nprintln\n\nnotes\n\n// Boucle for-each\n\nfor\n\nint\n\nnote\n\nnotes\n\nSystem\n\nout\n\nprintln\n\nnote\n\n✅ Même résultat, mais\n\ncode plus lisible avec for-each\n\n(s’il n’y a pas besoin de\n\n🧠 À retenir\n\nLa boucle\n\nfor-each\n\nest\n\nidéale pour lire\n\nles éléments d’un tableau ou d’une collection.\n\nElle est\n\nplus concise et plus sûre\n\nqu’une boucle\n\nfor\n\nclassique.\n\nÀ éviter si tu as besoin de\n\nl’indice\n\nou de\n\nmodifier\n\nles éléments.\n\nExercice 1 : Afficher les éléments d’un tableau\n\nDéclare un tableau\n\nfruits\n\ncontenant les éléments suivants :\n\n\"Pomme\"\n\n\"Banane\"\n\n\"Cerise\"\n\n\"Date\"\n\nUtilise une boucle\n\nfor-each\n\npour afficher chaque fruit.\n\npublic\n\nclass\n\nExo1\n\npublic\n\nstatic\n\nvoid\n\nmain\n\nString\n\nargs\n\n// Déclaration et initialisation du tableau\n\n// Parcours avec for-each et affichage\n\nSortie attendue\n\nPomme\n\nBanane\n\nCerise\n\nDate\n\nExercice 2 : Somme des valeurs d’un tableau\n\nDéclare un tableau\n\nnombres\n\navec les valeurs :\n\n5, 8, 12, 20\n\nCalcule la somme des éléments en utilisant une boucle\n\nfor-each\n\npuis affiche le résultat.\n\npublic\n\nclass\n\nExo2",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/8-structures-de-controles/boucles/4-for-each/index.html",
+      "title": "For Each :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "leau\n\nDéclare un tableau\n\nnombres\n\navec les valeurs :\n\n5, 8, 12, 20\n\nCalcule la somme des éléments en utilisant une boucle\n\nfor-each\n\npuis affiche le résultat.\n\npublic\n\nclass\n\nExo2\n\npublic\n\nstatic\n\nvoid\n\nmain\n\nString\n\nargs\n\n// Initialisation du tableau\n\n// Calcul de la somme avec for-each\n\n// Affichage de la somme\n\nSortie attendue\n\nSomme : 45\n\nExercice 3 : Compter les mots\n\nDéclare un tableau\n\nmots\n\ncontenant :\n\n\"chat\"\n\n\"chien\"\n\n\"oiseau\"\n\n\"poisson\"\n\n\"chat\"\n\nUtilise une boucle\n\nfor-each\n\npour compter le nombre de fois que le mot\n\n\"chat\"\n\napparaît, puis affiche ce nombre.\n\npublic\n\nclass\n\nExo3\n\npublic\n\nstatic\n\nvoid\n\nmain\n\nString\n\nargs\n\n// Initialisation du tableau\n\n// Compteur et boucle for-each pour compter \"chat\"\n\n// Affichage du résultat\n\nSortie attendue\n\nLe mot \"chat\" apparaît 2 fois.\n\nExercice 4 : Afficher un tableau\n\nUtilise une boucle\n\nfor-each\n\npour afficher le tableau suivant : {43,256,3,796,35,67}\n\npublic\n\nclass\n\nExo3\n\npublic\n\nstatic\n\nvoid\n\nmain\n\nString\n\nargs\n\n// Compte à rebours\n\nSortie attendue\n\n256\n\n796\n\nExercice 5 : Afficher un tableau sexy",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/8-structures-de-controles/boucles/4-for-each/index.html",
+      "title": "For Each :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "suivant : {43,256,3,796,35,67}\n\npublic\n\nclass\n\nExo3\n\npublic\n\nstatic\n\nvoid\n\nmain\n\nString\n\nargs\n\n// Compte à rebours\n\nSortie attendue\n\n256\n\n796\n\nExercice 5 : Afficher un tableau sexy\n\nUtilise une boucle\n\nfor-each\n\npour afficher le tableau suivant : {43,256,3,796,35,67}\n\npublic\n\nclass\n\nExo3\n\npublic\n\nstatic\n\nvoid\n\nmain\n\nString\n\nargs\n\n// Compte à rebours\n\nSortie attendue\n\n[43,256,3,796,35,67]",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/8-structures-de-controles/boucles/4-for-each/index.html",
+      "title": "For Each :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "Boucles Imbriquees\n\n🔁🔁 Les boucles\n\nimbriquées\n\nen Java\n\nUne\n\nboucle imbriquée\n\n(ou\n\nboucle dans une boucle\n\n) permet de\n\nrépéter un ensemble d’instructions à l’intérieur d’une autre boucle\n\n. C’est très utile pour travailler avec des\n\ntableaux à plusieurs dimensions\n\nafficher des grilles\n\n, ou\n\nrépéter des structures complexes\n\n🧱 Structure d’une boucle imbriquée\n\nfor\n\nint\n\nfor\n\nint\n\n// Instructions exécutées à chaque combinaison de i et j\n\n💡 Ici, pour\n\nchaque valeur de\n\n, la boucle\n\ns’exécute complètement\n\n🔂 Exemple : afficher une grille\n\nfor\n\nint\n\nligne\n\nligne\n\nligne\n\nfor\n\nint\n\ncol\n\ncol\n\ncol\n\nSystem\n\nout\n\nprint\n\n\"* \"\n\nSystem\n\nout\n\nprintln\n\n();\n\n// retour à la ligne\n\n🔎 Résultat :\n\n* * * * *\n\n* * * * *\n\n* * * * *\n\n💡 Comment ça marche ?\n\nligne\n\ncol\n\nAffichage\n\n0→4\n\n* * * * *\n\n0→4\n\n* * * * *\n\n0→4\n\n* * * * *\n\n👉 La\n\nboucle intérieure\n\nse termine\n\nà chaque tour\n\nde la boucle extérieure.",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/8-structures-de-controles/boucles/5-boucles-imbriquees/index.html",
+      "title": "Boucles Imbriquees :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "* * * *\n\n💡 Comment ça marche ?\n\nligne\n\ncol\n\nAffichage\n\n0→4\n\n* * * * *\n\n0→4\n\n* * * * *\n\n0→4\n\n* * * * *\n\n👉 La\n\nboucle intérieure\n\nse termine\n\nà chaque tour\n\nde la boucle extérieure.\n\n🎯 Quand utiliser des boucles imbriquées ?\n\nUtilise-les pour :\n\nParcourir des\n\ntableaux à deux dimensions\n\nCréer des\n\nformes\n\ngrilles\n\ntableaux\n\nEffectuer des\n\ncomparaisons multiples\n\nou des\n\ncomptages croisés\n\n🔁 Exemple : tableau à 2 dimensions\n\nint\n\n[][]\n\nmatrice\n\nfor\n\nint\n\nmatrice\n\nlength\n\nfor\n\nint\n\nmatrice\n\nlength\n\nSystem\n\nout\n\nprint\n\nmatrice\n\n\" \"\n\nSystem\n\nout\n\nprintln\n\n();\n\n🔎 Affiche :\n\n1 2 3\n\n4 5 6\n\n⚠️ Attention\n\nLes boucles imbriquées\n\npeuvent être coûteuses\n\nen performance si trop profondes (ex : triple ou quadruple boucle).\n\nToujours bien\n\nnommer tes variables\n\n, etc.) pour garder ton code lisible.\n\nNe pas oublier les\n\nretours à la ligne\n\nSystem.out.println()\n\n) si tu fais de l’affichage.\n\n🧠 À retenir\n\nUne\n\nboucle imbriquée\n\nest une boucle\n\ndans une autre boucle\n\nLa boucle\n\nintérieure s’exécute entièrement à chaque tour de la boucle extérieure\n\nTrès utile pour les\n\ngrilles",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/8-structures-de-controles/boucles/5-boucles-imbriquees/index.html",
+      "title": "Boucles Imbriquees :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "tenir\n\nUne\n\nboucle imbriquée\n\nest une boucle\n\ndans une autre boucle\n\nLa boucle\n\nintérieure s’exécute entièrement à chaque tour de la boucle extérieure\n\nTrès utile pour les\n\ngrilles\n\nmatrices\n\n, et\n\nstructures répétitives\n\nExercice 1 : Grille de\n\navec deux\n\nfor\n\nUtilise\n\ndeux boucles\n\nfor\n\nimbriquées\n\npour afficher une grille de 4 lignes et 6 colonnes remplie de\n\npublic\n\nclass\n\nExo1\n\npublic\n\nstatic\n\nvoid\n\nmain\n\nString\n\nargs\n\n// Boucle extérieure : lignes\n\nfor\n\nint\n\n// Boucle intérieure : colonnes\n\nfor\n\nint\n\nSystem\n\nout\n\nprint\n\n\"* \"\n\nSystem\n\nout\n\nprintln\n\n();\n\n// Retour à la ligne\n\nSortie attendue\n\n* * * * * *\n\n* * * * * *\n\n* * * * * *\n\n* * * * * *\n\nExercice 2 : Afficher une matrice de nombres\n\nCrée une\n\nmatrice 2D d’entiers\n\net affiche son contenu ligne par ligne avec deux boucles imbriquées.\n\npublic\n\nclass\n\nExo2\n\npublic\n\nstatic\n\nvoid\n\nmain\n\nString\n\nargs\n\nint\n\n[][]\n\nmatrice\n\n// Parcours de la matrice\n\nfor\n\nint\n\nmatrice\n\nlength\n\nfor\n\nint\n\nmatrice\n\nlength\n\nSystem\n\nout\n\nprint\n\nmatrice\n\n\" \"\n\nSystem\n\nout\n\nprintln\n\n();\n\nSortie attendue\n\n10 20\n\n30 40\n\n50 60",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/8-structures-de-controles/boucles/5-boucles-imbriquees/index.html",
+      "title": "Boucles Imbriquees :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "// Parcours de la matrice\n\nfor\n\nint\n\nmatrice\n\nlength\n\nfor\n\nint\n\nmatrice\n\nlength\n\nSystem\n\nout\n\nprint\n\nmatrice\n\n\" \"\n\nSystem\n\nout\n\nprintln\n\n();\n\nSortie attendue\n\n10 20\n\n30 40\n\n50 60\n\nExercice 3 : Triangle d’étoiles croissant\n\nUtilise des boucles imbriquées pour afficher un\n\ntriangle d’étoiles\n\n. La première ligne contient 1 étoile, la deuxième 2, etc.\n\npublic\n\nclass\n\nExo3\n\npublic\n\nstatic\n\nvoid\n\nmain\n\nString\n\nargs\n\nfor\n\nint\n\nfor\n\nint\n\nSystem\n\nout\n\nprint\n\n\"*\"\n\nSystem\n\nout\n\nprintln\n\n();\n\nSortie attendue\n\n***\n\n****\n\n*****\n\nDéfi visuel : Dessiner un damier\n\nAffiche un\n\ndamier de 6 lignes par 6 colonnes\n\n, avec des\n\nen alternance (comme un échiquier).\n\npublic\n\nclass\n\nDefiDamier\n\npublic\n\nstatic\n\nvoid\n\nmain\n\nString\n\nargs\n\nfor\n\nint\n\nligne\n\nligne\n\nligne\n\nfor\n\nint\n\ncol\n\ncol\n\ncol\n\nligne\n\ncol\n\nSystem\n\nout\n\nprint\n\n\"# \"\n\nelse\n\nSystem\n\nout\n\nprint\n\n\". \"\n\nSystem\n\nout\n\nprintln\n\n();\n\n// Retour à la ligne\n\nSortie attendue\n\n# . # . # .\n\n. # . # . #\n\n# . # . # .\n\n. # . # . #\n\n# . # . # .\n\n. # . # . #\n\n🎯 Objectif\n\nUtiliser\n\ndeux boucles imbriquées\n\nAlterner les symboles selon la",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/8-structures-de-controles/boucles/5-boucles-imbriquees/index.html",
+      "title": "Boucles Imbriquees :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "ligne\n\nSortie attendue\n\n# . # . # .\n\n. # . # . #\n\n# . # . # .\n\n. # . # . #\n\n# . # . # .\n\n. # . # . #\n\n🎯 Objectif\n\nUtiliser\n\ndeux boucles imbriquées\n\nAlterner les symboles selon la\n\nposition dans la grille\n\nS’appuyer sur l’expression\n\n(ligne + col) % 2\n\npour alterner",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/8-structures-de-controles/boucles/5-boucles-imbriquees/index.html",
+      "title": "Boucles Imbriquees :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "Break Continue\n\nbreak\n\ncontinue\n\nen Java\n\nLes instructions\n\nbreak\n\ncontinue\n\npermettent de\n\ncontrôler le déroulement des boucles\n\nfor\n\nwhile\n\n, etc.).\n\nElles sont très utiles pour\n\ninterrompre une boucle plus tôt\n\nsauter certaines itérations\n\nbreak\n\n: sortir d’une boucle immédiatement\n\nL’instruction\n\nbreak\n\npermet de\n\nquitter immédiatement\n\nla boucle en cours,\n\nmême si la condition est encore vraie\n\n🔂 Exemple simple avec\n\nbreak\n\nfor\n\nint\n\nbreak\n\nSystem\n\nout\n\nprintln\n\n\"i = \"\n\n🔎 Résultat :\n\ni = 0\n\ni = 1\n\ni = 2\n\ni = 3\n\ni = 4\n\n💡 Dès que\n\ni == 5\n\n, la boucle est\n\ninterrompue\n\n🎯 Quand utiliser\n\nbreak\n\nUtilise\n\nbreak\n\nquand :\n\nTu veux\n\narrêter une boucle prématurément\n\nTu as\n\ntrouvé ce que tu cherches\n\ndans un tableau\n\nTu veux\n\néchapper à une boucle infinie\n\ndans certaines conditions\n\ncontinue\n\n: passer à l’itération suivante\n\nL’instruction\n\ncontinue\n\npermet de\n\nsauter le reste du code",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/8-structures-de-controles/break-continue/index.html",
+      "title": "Break Continue :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "n tableau\n\nTu veux\n\néchapper à une boucle infinie\n\ndans certaines conditions\n\ncontinue\n\n: passer à l’itération suivante\n\nL’instruction\n\ncontinue\n\npermet de\n\nsauter le reste du code\n\ndans la boucle\n\net passer directement à l’itération suivante\n\n🔂 Exemple simple avec\n\ncontinue\n\nfor\n\nint\n\ncontinue\n\nSystem\n\nout\n\nprintln\n\n\"i = \"\n\n🔎 Résultat :\n\ni = 0\n\ni = 1\n\ni = 3\n\ni = 4\n\n💡 L’itération où\n\ni == 2\n\nest\n\nignorée\n\n🎯 Quand utiliser\n\ncontinue\n\nUtilise\n\ncontinue\n\nquand :\n\nTu veux\n\nignorer certaines valeurs\n\nTu veux\n\npasser un tour\n\ndans une boucle\n\nTu veux\n\nfiltrer des cas particuliers\n\n🔁 Exemple combiné\n\nfor\n\nint\n\ncontinue\n\n// ignore les nombres impairs\n\nbreak\n\n// arrête dès que i > 6\n\nSystem\n\nout\n\nprintln\n\n🔎 Résultat :\n\n⚠️ Attention\n\nbreak\n\nsort\n\nentièrement\n\nde la boucle.\n\ncontinue\n\nne fait que\n\npasser à l’itération suivante\n\nNe pas en abuser : un excès de\n\nbreak\n\ncontinue\n\npeut\n\nrendre ton code difficile à lire\n\n🧠 À retenir\n\nMot-clé\n\nEffet\n\nbreak\n\nQuitte complètement\n\nla boucle\n\ncontinue\n\nIgnore le reste du tour\n\net continue\n\nCes instructions rendent tes boucles",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/8-structures-de-controles/break-continue/index.html",
+      "title": "Break Continue :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "ton code difficile à lire\n\n🧠 À retenir\n\nMot-clé\n\nEffet\n\nbreak\n\nQuitte complètement\n\nla boucle\n\ncontinue\n\nIgnore le reste du tour\n\net continue\n\nCes instructions rendent tes boucles\n\nplus souples et plus efficaces\n\n, à condition d’être bien utilisées.\n\nExercice 1 : Arrêt à une valeur précise\n\nParcours les nombres de 1 à 10 avec une boucle\n\nfor\n\nDès que tu atteins le nombre 6,\n\narrête la boucle avec\n\nbreak\n\npublic\n\nclass\n\nExo1\n\npublic\n\nstatic\n\nvoid\n\nmain\n\nString\n\nargs\n\n// Boucle for de 1 à 10\n\n// Interrompre si i == 6\n\nSortie attendue\n\nExercice 2 : Ignorer les multiples de 3\n\nUtilise une boucle\n\nfor\n\nde 1 à 10.\n\nAffiche tous les nombres\n\nsauf ceux divisibles par 3\n\n, en utilisant\n\ncontinue\n\npublic\n\nclass\n\nExo2\n\npublic\n\nstatic\n\nvoid\n\nmain\n\nString\n\nargs\n\n// Boucle for de 1 à 10\n\n// Utiliser continue pour ignorer les multiples de 3\n\nSortie attendue\n\nExercice 3 : Parcours d’un tableau et arrêt à un mot\n\nDéclare un tableau\n\nanimaux\n\ncontenant :\n\n\"chat\", \"chien\", \"souris\", \"lion\", \"tigre\"\n\nUtilise une boucle\n\nfor-each\n\npour parcourir ce tableau,",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/8-structures-de-controles/break-continue/index.html",
+      "title": "Break Continue :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "cours d’un tableau et arrêt à un mot\n\nDéclare un tableau\n\nanimaux\n\ncontenant :\n\n\"chat\", \"chien\", \"souris\", \"lion\", \"tigre\"\n\nUtilise une boucle\n\nfor-each\n\npour parcourir ce tableau,\n\narrête la boucle dès que tu rencontres\n\n\"lion\"\n\npublic\n\nclass\n\nExo3\n\npublic\n\nstatic\n\nvoid\n\nmain\n\nString\n\nargs\n\n// Déclaration du tableau\n\n// Boucle for-each avec break quand \"lion\"\n\nSortie attendue\n\nchat\n\nchien\n\nsouris",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/8-structures-de-controles/break-continue/index.html",
+      "title": "Break Continue :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "Debug\n\n🐞 Utiliser le\n\ndébogueur Java\n\ndans\n\nVSCode\n\ndébogueur\n\nest un outil\n\nessentiel pour comprendre ce que fait ton programme\n\n, repérer des erreurs et analyser le\n\ncomportement du code pas à pas\n\nDans\n\nVisual Studio Code\n\n, tu peux facilement\n\ndéboguer du Java\n\navec l’extension adéquate.\n\n🧰 Prérequis\n\nAvant de commencer :\n\n✔️ Avoir\n\nJava installé\n\n(JDK 11+ recommandé)\n\n✔️ Avoir\n\nVSCode\n\ninstallé\n\n✔️ Avoir installé l’extension\n\nJava Extension Pack\n\nou au minimum :\n\nDebugger for Java\n\nLanguage Support for Java\n\n🛠️ Démarrer une session de débogage\n\nOuvre ton fichier\n\n.java\n\nPlace un\n\npoint d’arrêt\n\n(🔴) en cliquant à gauche d’une ligne de code\n\nClique sur ▶️\n\n“Run and Debug”\n\ndans la barre latérale (ou\n\nVSCode\n\nexécute ton programme\n\ns’arrête au point d’arrêt\n\n📍 Point d’arrêt : c’est quoi ?\n\npoint d’arrêt\n\nbreakpoint\n\n) permet de\n\nstopper l’exécution\n\nà une ligne précise.",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/9-debug/index.html",
+      "title": "Debug :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "ale (ou\n\nVSCode\n\nexécute ton programme\n\ns’arrête au point d’arrêt\n\n📍 Point d’arrêt : c’est quoi ?\n\npoint d’arrêt\n\nbreakpoint\n\n) permet de\n\nstopper l’exécution\n\nà une ligne précise.\n\nTu peux ensuite\n\nanalyser les variables\n\nexécuter ligne par ligne\n\n, etc.\n\n🎛️ Outils de contrôle\n\nUne fois arrêté sur un point d’arrêt, tu as accès à :\n\nIcône\n\nNom\n\nFonction\n\nContinue\n\nContinue l’exécution jusqu’au prochain arrêt\n\nStep Over\n\nExécute\n\nla ligne en cours\n\n, sans entrer dans les méthodes\n\nStep Into\n\nEntre dans la méthode appelée à cette ligne\n\nStep Out\n\nTermine la méthode actuelle et revient à l’appelant\n\nStop\n\nArrête complètement le programme\n\n🔍 Visualiser les variables\n\nPendant le débogage, tu peux voir :\n\n✅ Les\n\nvaleurs des variables\n\n✅ Le\n\ncontenu des tableaux / objets\n\n✅ Le\n\ncall stack\n\n(pile des appels de fonctions)\n\nTu peux aussi\n\nsurvoler une variable\n\navec la souris pour voir sa valeur.\n\n✍️ Exemple d’utilisation\n\npublic\n\nclass\n\nExemple\n\npublic\n\nstatic\n\nvoid\n\nmain\n\nString\n\nargs\n\nint\n\nint\n\nint\n\nresultat\n\ndivision\n\nSystem\n\nout\n\nprintln\n\n\"Résultat : \"\n\nresultat",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/9-debug/index.html",
+      "title": "Debug :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "aleur.\n\n✍️ Exemple d’utilisation\n\npublic\n\nclass\n\nExemple\n\npublic\n\nstatic\n\nvoid\n\nmain\n\nString\n\nargs\n\nint\n\nint\n\nint\n\nresultat\n\ndivision\n\nSystem\n\nout\n\nprintln\n\n\"Résultat : \"\n\nresultat\n\npublic\n\nstatic\n\nint\n\ndivision\n\nint\n\nint\n\nreturn\n\n💥 Ce programme va provoquer une\n\nerreur (division par zéro)\n\nAvec le\n\ndébogueur\n\n, tu peux\n\nvoir les valeurs de\n\navant le crash\n\n🔧 Astuce : Modifier des valeurs pendant le débogage\n\nTu peux parfois\n\nchanger la valeur d’une variable\n\nen cours d’exécution directement depuis l’onglet “Variables” → clic droit →\n\nSet Value\n\n🔁 Recommandation : fichier\n\nlaunch.json\n\n(optionnel)\n\nPour des projets plus complexes, tu peux créer un fichier\n\n.vscode/launch.json\n\npour configurer le comportement du débogueur (fichier à lancer, arguments, etc.).\n\n🧠 À retenir\n\ndébogueur\n\npermet de\n\ncomprendre ton programme pas à pas\n\nTu peux :\n\nPlacer des\n\npoints d’arrêt\n\nSuivre l’exécution\n\nligne par ligne\n\nVoir et modifier\n\nles variables en temps réel\n\nC’est un outil\n\npuissant pour apprendre, tester et corriger ton code\n\nExercice 1 : Observer les variables",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/9-debug/index.html",
+      "title": "Debug :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "exécution\n\nligne par ligne\n\nVoir et modifier\n\nles variables en temps réel\n\nC’est un outil\n\npuissant pour apprendre, tester et corriger ton code\n\nExercice 1 : Observer les variables\n\nCrée un programme avec 3 variables entières. Calcule leur somme dans une 4e variable.\n\nAjoute un\n\npoint d’arrêt\n\nsur la ligne du calcul pour observer les valeurs.\n\npublic\n\nclass\n\nExo1\n\npublic\n\nstatic\n\nvoid\n\nmain\n\nString\n\nargs\n\nint\n\nint\n\nint\n\nint\n\nsomme\n\n// ← Place ton point d’arrêt ici\n\nSystem\n\nout\n\nprintln\n\n\"Somme : \"\n\nsomme\n\n🎯 Objectif\n\nLancer le\n\ndébogueur\n\nVérifier les valeurs de\n\nsomme\n\ndans l’onglet\n\nVariables\n\nExercice 2 : Suivre une boucle pas à pas\n\nUtilise une\n\nboucle\n\nfor\n\npour additionner des nombres.\n\nObserve à chaque tour comment la variable\n\ntotal\n\névolue.\n\npublic\n\nclass\n\nExo2\n\npublic\n\nstatic\n\nvoid\n\nmain\n\nString\n\nargs\n\nint\n\ntotal\n\nfor\n\nint\n\ntotal\n\n// ← Mets un point d’arrêt ici\n\nSystem\n\nout\n\nprintln\n\n\"Résultat final : \"\n\ntotal\n\n🎯 Objectif\n\nUtiliser\n\nStep Over\n\n(⏭️) pour avancer ligne par ligne\n\nObserver\n\nl’évolution de\n\ntotal\n\ndans le\n\ndebug panel",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/9-debug/index.html",
+      "title": "Debug :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "rêt ici\n\nSystem\n\nout\n\nprintln\n\n\"Résultat final : \"\n\ntotal\n\n🎯 Objectif\n\nUtiliser\n\nStep Over\n\n(⏭️) pour avancer ligne par ligne\n\nObserver\n\nl’évolution de\n\ntotal\n\ndans le\n\ndebug panel\n\nExercice 3 : Comprendre une erreur\n\nCe programme va planter à l’exécution. Utilise le débogueur pour comprendre pourquoi.\n\npublic\n\nclass\n\nExo3\n\npublic\n\nstatic\n\nvoid\n\nmain\n\nString\n\nargs\n\nint\n\nnombres\n\nfor\n\nint\n\nSystem\n\nout\n\nprintln\n\nnombres\n\n// ← Mets un point d’arrêt ici\n\n🎯 Objectif\n\nRepérer\n\nla cause de l’erreur\n\nUtiliser le débogueur pour voir\n\nla valeur de\n\nau moment du crash\n\nCorriger l’erreur (indice : attention à l’indice",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/9-debug/index.html",
+      "title": "Debug :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "Fonctions\n\n🧩 Les\n\nfonctions\n\n(ou\n\nméthodes\n\n) en Java\n\nUne\n\nfonction\n\n(appelée\n\nméthode\n\nen Java) est un\n\nbloc de code réutilisable\n\nqui\n\neffectue une tâche\n\nprécise.\n\nElles permettent de\n\nstructurer ton programme\n\n, d’\n\néviter la répétition\n\n, et de\n\nmieux organiser le code\n\n🧱 Structure d’une méthode\n\ntypeRetour\n\nnomDeLaMéthode\n\nparamètres\n\n// instructions\n\nreturn\n\nvaleur\n\nÉlément\n\nDescription\n\ntypeRetour\n\ntype de la valeur\n\nrenvoyée (\n\nint\n\nString\n\n, etc.)\n\nnomDeLaMéthode\n\nnom\n\nde la méthode (en camelCase)\n\nparamètres\n\nDonnées reçues en\n\nentrée\n\n(optionnel)\n\nreturn\n\nPermet de\n\nrenvoyer un résultat\n\n(optionnel si\n\nvoid\n\n✋ Exemple simple\n\npublic\n\nstatic\n\nint\n\naddition\n\nint\n\nint\n\nreturn\n\n💡 Cette méthode\n\nprend deux entiers\n\nrenvoie leur somme\n\n🧪 Utilisation d’une méthode\n\nint\n\nresultat\n\naddition\n\nSystem\n\nout\n\nprintln\n\n\"Résultat : \"\n\nresultat\n\nRésultat\n\n🔄 Méthode sans retour (\n\nvoid",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/10-fonctions/index.html",
+      "title": "Fonctions :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "prend deux entiers\n\nrenvoie leur somme\n\n🧪 Utilisation d’une méthode\n\nint\n\nresultat\n\naddition\n\nSystem\n\nout\n\nprintln\n\n\"Résultat : \"\n\nresultat\n\nRésultat\n\n🔄 Méthode sans retour (\n\nvoid\n\npublic\n\nstatic\n\nvoid\n\ndireBonjour\n\nString\n\nnom\n\nSystem\n\nout\n\nprintln\n\n\"Bonjour \"\n\nnom\n\n\" !\"\n\n➡️ Ici, la méthode\n\nn’a pas de retour\n\n(elle affiche juste un message).\n\n🎯 Pourquoi utiliser des méthodes ?\n\n✅ Pour\n\néviter de dupliquer du code\n\n✅ Pour\n\norganiser son programme\n\nen petits blocs logiques\n\n✅ Pour\n\nfaciliter les tests, le débogage et la maintenance\n\n🧑‍🔬 Paramètres multiples\n\npublic\n\nstatic\n\ndouble\n\nmoyenne\n\ndouble\n\ndouble\n\ndouble\n\nreturn\n\n📌 Tu peux passer\n\nautant de paramètres que nécessaire\n\n, séparés par des virgules.\n\n🔁 Méthodes appelant d’autres méthodes\n\npublic\n\nstatic\n\ndouble\n\ncarre\n\ndouble\n\nreturn\n\npublic\n\nstatic\n\ndouble\n\nsurfaceCercle\n\ndouble\n\nrayon\n\nreturn\n\nMath\n\ncarre\n\nrayon\n\n💡 Tu peux\n\nréutiliser des méthodes\n\ndans d’autres méthodes !\n\n🛠️ Portée et\n\nstatic\n\nLe mot-clé\n\nstatic\n\nsignifie que la méthode appartient à la\n\nclasse\n\n(pas à un objet)\n\nDans la méthode\n\nmain",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/10-fonctions/index.html",
+      "title": "Fonctions :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "éutiliser des méthodes\n\ndans d’autres méthodes !\n\n🛠️ Portée et\n\nstatic\n\nLe mot-clé\n\nstatic\n\nsignifie que la méthode appartient à la\n\nclasse\n\n(pas à un objet)\n\nDans la méthode\n\nmain\n\n, tu ne peux appeler que des\n\nméthodes\n\nstatic\n\nsans créer d’objet\n\n🧠 À retenir\n\nUne méthode est une\n\nfonction réutilisable\n\nqui peut\n\nprendre des paramètres\n\nrenvoyer une valeur\n\nLe mot-clé\n\nvoid\n\nsignifie que la méthode\n\nne renvoie rien\n\nTu peux appeler une méthode\n\nplusieurs fois avec des valeurs différentes\n\nLes méthodes rendent ton code\n\nplus clair, plus court et plus facile à maintenir\n\n🧮 Exercice 1 — Doubler un nombre entier\n\n👉 Écris une méthode\n\ndoubler\n\nqui prend un entier en paramètre et retourne sa valeur multipliée par 2.\n\n🔹 Exemple attendu :\n\nint\n\ndoubler\n\nSystem\n\nout\n\nprintln\n\n\"Résultat : \"\n\nRésultat\n\n🎵 Exercice 2 — Chanter une ligne\n\n👉 Crée une méthode\n\nchanterRefrain\n\nqui prend un mot (\n\nString\n\n) et affiche :\n\n[mot], [mot], toujours [mot] !\n\n🔹 Exemple attendu :\n\nchanterRefrain\n\n\"Java\"\n\nJava\n\nJava\n\ntoujours\n\nJava\n\n📐 Exercice 3 — Calculer l’aire d’un triangle",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/10-fonctions/index.html",
+      "title": "Fonctions :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "mot (\n\nString\n\n) et affiche :\n\n[mot], [mot], toujours [mot] !\n\n🔹 Exemple attendu :\n\nchanterRefrain\n\n\"Java\"\n\nJava\n\nJava\n\ntoujours\n\nJava\n\n📐 Exercice 3 — Calculer l’aire d’un triangle\n\n👉 Écris une méthode\n\naireTriangle\n\nqui prend deux\n\ndouble\n\n(base et hauteur), et retourne l’aire du triangle (base × hauteur ÷ 2).\n\n🔹 Exemple attendu :\n\ndouble\n\naireTriangle\n\nSystem\n\nout\n\nprintln\n\n\"Aire : \"\n\nAire",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/10-fonctions/index.html",
+      "title": "Fonctions :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "Parametres\n\n📦 Les\n\nparamètres\n\n& le passage\n\npar valeur\n\npar référence\n\nen Java\n\nQuand tu appelles une\n\nméthode\n\n, tu peux lui\n\ntransmettre des informations\n\n: ce sont les\n\nparamètres\n\nMais comment sont-ils transmis ? Est-ce que la méthode peut\n\nmodifier les variables d’origine\n\n? C’est là qu’interviennent les notions de\n\npassage par valeur\n\npassage par référence\n\n🎁 Définir et utiliser des paramètres\n\nUne méthode peut recevoir\n\nun ou plusieurs paramètres\n\npublic\n\nstatic\n\nvoid\n\ndireBonjour\n\nString\n\nnom\n\nSystem\n\nout\n\nprintln\n\n\"Bonjour, \"\n\nnom\n\n\" !\"\n\n🧪 Utilisation :\n\ndireBonjour\n\n\"Alice\"\n\nBonjour\n\nAlice\n\n🔁 Passage de paramètres :\n\npar valeur\n\nJava\n\n, les\n\nparamètres sont toujours passés par valeur\n\nMais attention : cela ne signifie\n\npas toujours\n\nla même chose selon le\n\ntype\n\nde la donnée.\n\n1. 📌 Types\n\nprimitifs\n\n(int, double, boolean, etc.)\n\n✅ Le\n\ncontenu\n\nde la variable est copié.",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/10-fonctions/parametres/index.html",
+      "title": "Parametres :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "tention : cela ne signifie\n\npas toujours\n\nla même chose selon le\n\ntype\n\nde la donnée.\n\n1. 📌 Types\n\nprimitifs\n\n(int, double, boolean, etc.)\n\n✅ Le\n\ncontenu\n\nde la variable est copié.\n\n⛔ La méthode ne peut\n\npas modifier la variable d’origine\n\npublic\n\nstatic\n\nvoid\n\ndoubler\n\nint\n\nint\n\ndoubler\n\nSystem\n\nout\n\nprintln\n\nAffiche\n\npas\n\nest une\n\ncopie\n\n. Modifier\n\nn’affecte pas\n\n2. 📦 Objets (tableaux, String[], ArrayList, classes…)\n\n✅ La\n\nréférence vers l’objet\n\nest copiée.\n\n⚠️ Donc la méthode peut\n\nmodifier le contenu de l’objet\n\n, mais pas\n\nchanger l’objet lui-même\n\npublic\n\nstatic\n\nvoid\n\nchangerPremier\n\nint\n\nint\n\ntableau\n\nchangerPremier\n\ntableau\n\nSystem\n\nout\n\nprintln\n\ntableau\n\nAffiche\n\n➡️ On a\n\nmodifié l’objet pointé\n\n, mais pas remplacé\n\ntableau\n\n❌ Remplacer un objet (impossible)\n\npublic\n\nstatic\n\nvoid\n\nremplacer\n\nint\n\nnew\n\nint\n\nint\n\nmonTab\n\nremplacer\n\nmonTab\n\nSystem\n\nout\n\nprintln\n\nmonTab\n\nToujours\n\nreçoit une\n\nnouvelle référence\n\n, mais\n\nmonTab ne change pas\n\n🧠 Résumé : valeur ou référence ?\n\nType\n\nPassage par…\n\nPeut modifier l’original ?\n\nint\n\ndouble\n\nValeur\n\n❌ Non",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/10-fonctions/parametres/index.html",
+      "title": "Parametres :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "Toujours\n\nreçoit une\n\nnouvelle référence\n\n, mais\n\nmonTab ne change pas\n\n🧠 Résumé : valeur ou référence ?\n\nType\n\nPassage par…\n\nPeut modifier l’original ?\n\nint\n\ndouble\n\nValeur\n\n❌ Non\n\nString[]\n\nint[]\n\nList\n\nRéférence (copiée)\n\n✅ Oui (contenu), ❌ Non (référence)\n\n💬 Astuce avec\n\nString\n\nMême si\n\nString\n\nest un\n\nobjet\n\n, il est\n\nimmuable (immutable)\n\nTu ne peux\n\npas le modifier\n\n, seulement\n\nle remplacer\n\npublic\n\nstatic\n\nvoid\n\nmodifier\n\nString\n\n\" modifié\"\n\nString\n\ntexte\n\n\"Bonjour\"\n\nmodifier\n\ntexte\n\nSystem\n\nout\n\nprintln\n\ntexte\n\nAffiche\n\n\"Bonjour\"\n\nest une copie de la référence. Le contenu n’est\n\npas modifié\n\ndans l’objet d’origine.\n\n🔥 À retenir\n\nEn Java,\n\ntout est passé par valeur\n\n(même les objets).\n\nPour les types primitifs :\n\nla valeur est copiée\n\n→ aucun effet sur l’original.\n\nPour les objets :\n\nla référence est copiée\n\n→ on peut modifier le\n\ncontenu\n\n, mais pas la\n\nréférence\n\nExemple 1 : Type primitif (\n\nint\n\n) – aucun changement\n\npublic\n\nclass\n\nExemple1\n\npublic\n\nstatic\n\nvoid\n\najouterUn\n\nint\n\nSystem\n\nout\n\nprintln\n\n\"Dans la méthode : \"\n\n// Affiche 6\n\npublic\n\nstatic",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/10-fonctions/parametres/index.html",
+      "title": "Parametres :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "Type primitif (\n\nint\n\n) – aucun changement\n\npublic\n\nclass\n\nExemple1\n\npublic\n\nstatic\n\nvoid\n\najouterUn\n\nint\n\nSystem\n\nout\n\nprintln\n\n\"Dans la méthode : \"\n\n// Affiche 6\n\npublic\n\nstatic\n\nvoid\n\nmain\n\nString\n\nargs\n\nint\n\najouterUn\n\nSystem\n\nout\n\nprintln\n\n\"Après la méthode : \"\n\n// Affiche 5\n\nAnalyse\n\nest une\n\ncopie\n\n. Modifier\n\nne change\n\npas\n\nExemple 2 : Tableau (\n\nint[]\n\n) – contenu modifiable\n\npublic\n\nclass\n\nExemple2\n\npublic\n\nstatic\n\nvoid\n\nmettreZero\n\nint\n\ntab\n\ntab\n\npublic\n\nstatic\n\nvoid\n\nmain\n\nString\n\nargs\n\nint\n\nvaleurs\n\nmettreZero\n\nvaleurs\n\nSystem\n\nout\n\nprintln\n\nvaleurs\n\n// Affiche 0\n\nAnalyse\n\n: la\n\nréférence\n\nau tableau est copiée, donc on peut\n\nmodifier le contenu\n\ndu tableau d’origine.\n\nExemple 3 : Tableau – tentative de remplacement (échoue)\n\npublic\n\nclass\n\nExemple3\n\npublic\n\nstatic\n\nvoid\n\nchangerTableau\n\nint\n\ntab\n\ntab\n\nnew\n\nint\n\npublic\n\nstatic\n\nvoid\n\nmain\n\nString\n\nargs\n\nint\n\ndonnees\n\nchangerTableau\n\ndonnees\n\nSystem\n\nout\n\nprintln\n\ndonnees\n\n// Affiche 1\n\nAnalyse\n\n: ici, on change\n\nla référence locale\n\ntab\n\n, mais cela\n\nn’affecte pas\n\nla variable\n\ndonnees\n\ndans\n\nmain",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/10-fonctions/parametres/index.html",
+      "title": "Parametres :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "ngerTableau\n\ndonnees\n\nSystem\n\nout\n\nprintln\n\ndonnees\n\n// Affiche 1\n\nAnalyse\n\n: ici, on change\n\nla référence locale\n\ntab\n\n, mais cela\n\nn’affecte pas\n\nla variable\n\ndonnees\n\ndans\n\nmain\n\nExemple 4 :\n\nString\n\n– pas modifié car immuable\n\npublic\n\nclass\n\nExemple4\n\npublic\n\nstatic\n\nvoid\n\najouterSuffixe\n\nString\n\ntexte\n\ntexte\n\ntexte\n\n\" ajouté\"\n\npublic\n\nstatic\n\nvoid\n\nmain\n\nString\n\nargs\n\nString\n\nmessage\n\n\"Bonjour\"\n\najouterSuffixe\n\nmessage\n\nSystem\n\nout\n\nprintln\n\nmessage\n\n// Affiche \"Bonjour\"\n\nAnalyse\n\nString\n\nest un objet\n\nimmuable\n\n. La méthode modifie une\n\ncopie de la référence\n\n, mais pas le contenu.\n\nExemple 5 :\n\nString[]\n\n– modifiable car tableau\n\npublic\n\nclass\n\nExemple5\n\npublic\n\nstatic\n\nvoid\n\nmodifier\n\nString\n\nmots\n\nmots\n\n\"Salut\"\n\npublic\n\nstatic\n\nvoid\n\nmain\n\nString\n\nargs\n\nString\n\nphrases\n\n\"Bonjour\"\n\n\"tout le monde\"\n\nmodifier\n\nphrases\n\nSystem\n\nout\n\nprintln\n\nphrases\n\n// Affiche \"Salut\"\n\nAnalyse\n\n: Comme avec les tableaux\n\nint[]\n\n, le\n\ncontenu\n\ndu tableau\n\nString[]\n\npeut être modifié, car on passe une\n\ncopie de la référence",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/10-fonctions/parametres/index.html",
+      "title": "Parametres :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "return\n\n🔙 Le mot-clé\n\nreturn\n\nen Java\n\nLe mot-clé\n\nreturn\n\npermet à une méthode de\n\nrenvoyer une valeur\n\nà l’endroit où elle a été appelée.\n\nIl est\n\nessentiel\n\ndans les fonctions qui\n\ncalculent un résultat\n\ntransmettent une information\n\n🧱 Syntaxe de base\n\ntypeRetour\n\nnomDeLaMéthode\n\n(...)\n\n// instructions\n\nreturn\n\nvaleur\n\n💡 Le\n\ntype de la valeur renvoyée\n\ndoit\n\ncorrespondre\n\nà celui indiqué dans la déclaration de la méthode.\n\n✋ Exemple simple\n\npublic\n\nstatic\n\nint\n\ncarre\n\nint\n\nreturn\n\nIci, la méthode\n\ncarre()\n\nrenvoie un\n\nint\n\n(le carré du nombre passé en paramètre).\n\n🧪 Utilisation\n\nint\n\nresultat\n\ncarre\n\nSystem\n\nout\n\nprintln\n\nresultat\n\nAffiche\n\n➡️ Le mot-clé\n\nreturn\n\npermet de\n\n“sortir” le résultat de la méthode\n\npour l’utiliser ailleurs.\n\n❌ Si on ne veut rien renvoyer ?\n\nOn utilise le mot-clé\n\nvoid\n\npour indiquer que la méthode\n\nne retourne rien\n\npublic\n\nstatic\n\nvoid\n\ndireBonjour",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/10-fonctions/return/index.html",
+      "title": "return :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "méthode\n\npour l’utiliser ailleurs.\n\n❌ Si on ne veut rien renvoyer ?\n\nOn utilise le mot-clé\n\nvoid\n\npour indiquer que la méthode\n\nne retourne rien\n\npublic\n\nstatic\n\nvoid\n\ndireBonjour\n\nSystem\n\nout\n\nprintln\n\n\"Bonjour !\"\n\n⚠️ Une méthode\n\nvoid\n\nne peut pas contenir\n\nreturn\n\navec une valeur.\n\nreturn\n\ntermine la méthode\n\nLe mot-clé\n\nreturn\n\ninterrompt immédiatement l’exécution\n\nde la méthode.\n\npublic\n\nstatic\n\nvoid\n\ntest\n\nSystem\n\nout\n\nprintln\n\n\"Début\"\n\nreturn\n\n// Cette ligne ne sera jamais exécutée :\n\nSystem\n\nout\n\nprintln\n\n\"Fin\"\n\n🎯 Règles importantes\n\n✅ Le\n\ntype retourné\n\ndoit correspondre au\n\ntype indiqué dans la déclaration\n\n✅ Une méthode\n\nnon-\n\nvoid\n\ndoit obligatoirement contenir au moins un\n\nreturn\n\n✅ On peut utiliser plusieurs\n\nreturn\n\ndans une méthode, selon des conditions\n\n🔁 Exemple avec condition\n\npublic\n\nstatic\n\nboolean\n\nestPair\n\nint\n\nreturn\n\ntrue\n\nreturn\n\nfalse\n\nIci,\n\nreturn\n\npermet de\n\nrenvoyer des résultats différents\n\nselon la logique du programme.\n\n🔥 À retenir\n\nreturn\n\nsert à\n\nrenvoyer une valeur\n\ndepuis une méthode\n\nmet fin immédiatement à la méthode",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/10-fonctions/return/index.html",
+      "title": "return :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "rmet de\n\nrenvoyer des résultats différents\n\nselon la logique du programme.\n\n🔥 À retenir\n\nreturn\n\nsert à\n\nrenvoyer une valeur\n\ndepuis une méthode\n\nmet fin immédiatement à la méthode\n\ntype de retour\n\ndoit\n\ncorrespondre\n\nà ce qui est attendu\n\nLes méthodes\n\nvoid\n\nn’ont pas de valeur de retour\n\n🔍 Rechercher une valeur dans un tableau\n\nalgorithme de recherche\n\npermet de\n\nvérifier si une valeur est présente\n\ndans un tableau.\n\nrecherche linéaire\n\n(ou\n\nséquentielle\n\n) est la plus simple : on\n\nparcourt chaque élément\n\ndu tableau\n\njusqu’à trouver ce qu’on cherche\n\n🧱 Méthode de recherche simple\n\npublic\n\nstatic\n\nboolean\n\ncontient\n\nint\n\ntableau\n\nint\n\nvaleur\n\nfor\n\nint\n\nelement\n\ntableau\n\nelement\n\nvaleur\n\nreturn\n\ntrue\n\n// Trouvé !\n\nreturn\n\nfalse\n\n// Pas trouvé après avoir tout parcouru\n\n🔎 Exemple d’utilisation\n\nint\n\nnotes\n\nSystem\n\nout\n\nprintln\n\ncontient\n\nnotes\n\n));\n\n// true\n\nSystem\n\nout\n\nprintln\n\ncontient\n\nnotes\n\n));\n\nfalse\n\n💡 Comment ça marche ?\n\nparcourt chaque élément\n\ndu tableau avec une boucle\n\nfor-each\n\nSi on trouve la valeur recherchée →\n\nreturn true",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/10-fonctions/return/index.html",
+      "title": "return :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "m\n\nout\n\nprintln\n\ncontient\n\nnotes\n\n));\n\nfalse\n\n💡 Comment ça marche ?\n\nparcourt chaque élément\n\ndu tableau avec une boucle\n\nfor-each\n\nSi on trouve la valeur recherchée →\n\nreturn true\n\nSinon, une fois la boucle terminée →\n\nreturn false\n\n🎯 Pourquoi\n\nreturn\n\nest utile ici ?\n\n✅ Il permet de\n\nsortir directement\n\nde la méthode dès qu’on trouve ce qu’on cherche\n\n✅ Il rend le code\n\nplus lisible\n\nplus efficace\n\n✏️ Exercice – Retrouver une note\n\n👉 Complète cette méthode pour dire si une\n\nnote est présente\n\ndans un tableau :\n\npublic\n\nstatic\n\nboolean\n\ncontientNote\n\nint\n\nnotes\n\nint\n\nnoteRecherchee\n\n// Parcourir le tableau\n\n// Retourner true si trouvée, sinon false\n\n🔹 Exemple :\n\nint\n\nnotes\n\nSystem\n\nout\n\nprintln\n\ncontientNote\n\nnotes\n\n));\n\n// true\n\nSystem\n\nout\n\nprintln\n\ncontientNote\n\nnotes\n\n));\n\nfalse",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/10-fonctions/return/index.html",
+      "title": "return :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "Scanner\n\nLien vers la classe Scanner de l’API Java\n\n📥 Lire des données avec\n\nScanner\n\nen Java\n\nLa classe\n\nScanner\n\npermet de\n\nlire des données\n\nsaisies par l’utilisateur dans la\n\nconsole\n\n(ou d’autres sources).\n\nTrès utile pour créer des programmes\n\ninteractifs\n\n, qui\n\nposent des questions\n\nà l’utilisateur !\n\n📦 Importer\n\nScanner\n\nAvant d’utiliser\n\nScanner\n\n, tu dois l’\n\nimporter\n\nimport\n\njava.util.Scanner\n\n🧱 Créer un objet\n\nScanner\n\nScanner\n\nnew\n\nScanner\n\nSystem\n\nSystem.in\n\nsignifie : lire depuis la\n\nconsole (clavier)\n\n🔍 Lire différents types de données\n\nMéthode\n\nLit…\n\nExemple de saisie\n\nnextLine()\n\nune\n\nligne\n\ncomplète (String)\n\nBonjour le monde\n\nnext()\n\nmot\n\n(jusqu’au 1er espace)\n\nBonjour\n\nnextInt()\n\nentier\n\nint\n\nnextDouble()\n\ndécimal\n\ndouble\n\n3.14\n\nnextBoolean()\n\nbooléen\n\ntrue/false\n\ntrue\n\n🧪 Exemple simple\n\nimport\n\njava.util.Scanner\n\npublic\n\nclass\n\nExemple\n\npublic\n\nstatic\n\nvoid",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/11-scanner/index.html",
+      "title": "Scanner :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "ntier\n\nint\n\nnextDouble()\n\ndécimal\n\ndouble\n\n3.14\n\nnextBoolean()\n\nbooléen\n\ntrue/false\n\ntrue\n\n🧪 Exemple simple\n\nimport\n\njava.util.Scanner\n\npublic\n\nclass\n\nExemple\n\npublic\n\nstatic\n\nvoid\n\nmain\n\nString\n\nargs\n\nScanner\n\nnew\n\nScanner\n\nSystem\n\nSystem\n\nout\n\nprint\n\n\"Quel est ton nom ? \"\n\nString\n\nnom\n\nnextLine\n\n();\n\nSystem\n\nout\n\nprint\n\n\"Quel âge as-tu ? \"\n\nint\n\nage\n\nnextInt\n\n();\n\nSystem\n\nout\n\nprintln\n\n\"Bonjour \"\n\nnom\n\n\", tu as \"\n\nage\n\n\" ans !\"\n\n⚠️ Attention : mélange\n\nnextLine()\n\nnextInt()\n\n💥 Si tu utilises\n\nnextInt()\n\npuis\n\nnextLine()\n\n, il peut y avoir un\n\nbug de saut de ligne\n\nint\n\nage\n\nnextInt\n\n();\n\nnextLine\n\n();\n\n// vide le saut de ligne restant\n\nString\n\nnom\n\nnextLine\n\n();\n\nfonctionne\n\nmaintenant\n\n🧼 Fermer le scanner\n\nUne fois terminé,\n\nferme le scanner\n\npour libérer les ressources :\n\nclose\n\n();\n\n🧠 À retenir\n\nScanner\n\npermet de\n\nlire des entrées clavier\n\nIl faut\n\nimporter\n\njava.util.Scanner\n\nUtilise des méthodes comme\n\nnextInt()\n\nnextLine()\n\n, etc.\n\n⚠️ Fais attention aux\n\nsauts de ligne\n\naprès\n\nnextInt()\n\nN’oublie pas de\n\nfermer\n\nton scanner avec\n\nclose()",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/11-scanner/index.html",
+      "title": "Scanner :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "util.Scanner\n\nUtilise des méthodes comme\n\nnextInt()\n\nnextLine()\n\n, etc.\n\n⚠️ Fais attention aux\n\nsauts de ligne\n\naprès\n\nnextInt()\n\nN’oublie pas de\n\nfermer\n\nton scanner avec\n\nclose()\n\n🎯 Exercice 1 : Mot secret\n\nObjectif :\n\nVérifie si l’utilisateur a saisi le bon mot secret.\n\nConsignes :\n\nDemande un mot à l’utilisateur avec\n\nnext()\n\nSi le mot est\n\n\"java\"\n\n, affiche\n\n\"Accès autorisé\"\n\nSinon, affiche\n\n\"Mot incorrect\"\n\n🔧 Méthode :\n\nnext()\n\nExercice 2 (corrigé) : Multiplication surprise\n\nObjectif :\n\nLire un entier, le multiplier par un nombre fixe, et afficher le résultat.\n\nConsignes :\n\nDemande à l’utilisateur un nombre entier avec\n\nnextInt()\n\nMultiplie ce nombre par\n\nAffiche le résultat dans une phrase\n\nExemple :\n\nTape un nombre : 4\n\nRésultat : 28\n\n🔧 Méthode :\n\nnextInt()\n\n✅ Exercice 3 : Confirmation de participation\n\nObjectif :\n\nLire un booléen (\n\ntrue\n\nfalse\n\n) et réagir.\n\nConsignes :\n\nDemande : “Participes-tu à l’événement ? (true/false)”\n\ntrue\n\n, affiche : “À bientôt !”\n\nfalse\n\n, affiche : “Dommage, une prochaine fois.”\n\n🔧 Méthode :\n\nnextBoolean()",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/11-scanner/index.html",
+      "title": "Scanner :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "Gestion des Entrées\n\nQuand tu lis des données avec\n\nScanner\n\n, l’utilisateur peut\n\ntaper n’importe quoi\n\n→ Tu dois donc\n\nvérifier le type de donnée\n\navant de la lire.\n\nC’est ici que les méthodes\n\nhasNext...()\n\nentrent en jeu.\n\n🕵️ Les méthodes de vérification\n\nMéthode\n\nVérifie si…\n\nExemple de lecture\n\nhasNextInt()\n\nla prochaine donnée est un\n\nint\n\nhasNextDouble()\n\nla prochaine donnée est un\n\ndouble\n\n3.14\n\nhasNextBoolean()\n\nla prochaine donnée est un\n\nbooléen\n\ntrue\n\nfalse\n\nhasNext()\n\nil reste\n\ndu texte\n\nà lire ?\n\nn’importe quoi\n\n⚡ Exemple : validation d’un entier\n\nVoici un exemple de programme qui\n\ndemande un entier\n\nvérifie la saisie\n\nimport\n\njava.util.Scanner\n\npublic\n\nclass\n\nLectureSecurisee\n\npublic\n\nstatic\n\nvoid\n\nmain\n\nString\n\nargs\n\nScanner\n\nnew\n\nScanner\n\nSystem\n\nSystem\n\nout\n\nprint\n\n\"Entre un nombre entier : \"\n\nwhile\n\nhasNextInt\n\n())\n\nSystem\n\nout\n\nprintln\n\n\"❌ Ce n’est pas un entier !\"",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/11-scanner/hasnext/index.html",
+      "title": "Gestion des Entrées :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "void\n\nmain\n\nString\n\nargs\n\nScanner\n\nnew\n\nScanner\n\nSystem\n\nSystem\n\nout\n\nprint\n\n\"Entre un nombre entier : \"\n\nwhile\n\nhasNextInt\n\n())\n\nSystem\n\nout\n\nprintln\n\n\"❌ Ce n’est pas un entier !\"\n\nSystem\n\nout\n\nprint\n\n\"Essaie encore : \"\n\nnextLine\n\n();\n\n// on ignore la mauvaise entrée\n\nint\n\nnombre\n\nnextInt\n\n();\n\nSystem\n\nout\n\nprintln\n\n\"✅ Merci ! Tu as entré : \"\n\nnombre\n\nclose\n\n();\n\nExplication :\n\nhasNextInt()\n\nvérifie la prochaine donnée\n\nTant que ce n’est\n\npas\n\nun entier → on affiche un message d’erreur\n\nsc.nextLine()\n\nsert à\n\nvider\n\nl’entrée incorrecte avant de recommencer\n\n🧮 Exemple avec un double\n\nSystem\n\nout\n\nprint\n\n\"Entre un nombre décimal : \"\n\nwhile\n\nhasNextDouble\n\n())\n\nSystem\n\nout\n\nprintln\n\n\"❌ Ce n’est pas un nombre décimal !\"\n\nSystem\n\nout\n\nprint\n\n\"Essaie encore : \"\n\nnextLine\n\n();\n\ndouble\n\nvaleur\n\nnextDouble\n\n();\n\nSystem\n\nout\n\nprintln\n\n\"✅ Tu as entré : \"\n\nvaleur\n\n🧠 Astuce : regrouper la validation dans une fonction\n\nPour éviter de répéter le même code, tu peux créer une\n\nméthode utilitaire\n\npublic\n\nstatic\n\nint\n\nlireEntier\n\nScanner\n\nwhile\n\nhasNextInt\n\n())\n\nSystem\n\nout",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/11-scanner/hasnext/index.html",
+      "title": "Gestion des Entrées :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "idation dans une fonction\n\nPour éviter de répéter le même code, tu peux créer une\n\nméthode utilitaire\n\npublic\n\nstatic\n\nint\n\nlireEntier\n\nScanner\n\nwhile\n\nhasNextInt\n\n())\n\nSystem\n\nout\n\nprintln\n\n\"❌ Erreur : entre un entier valide !\"\n\nnextLine\n\n();\n\nreturn\n\nnextInt\n\n();\n\nEt l’utiliser simplement :\n\nSystem\n\nout\n\nprint\n\n\"Âge : \"\n\nint\n\nage\n\nlireEntier\n\n🧪 Exercice 1 : âge valide\n\nObjectif :\n\nLire un âge (entier positif).\n\nConsignes :\n\nUtilise\n\nhasNextInt()\n\npour t’assurer que c’est un entier.\n\nSi ce n’est pas un entier, redemande.\n\nSi l’âge est négatif, redemande aussi.\n\nAffiche :\n\n\"Tu as X ans.\"\n\n🎯 Exercice 2 : note sur 100\n\nObjectif :\n\nLire une note décimale entre 0 et 100.\n\nConsignes :\n\nUtilise\n\nhasNextDouble()\n\nVérifie que la note est entre 0 et 100\n\nSi la saisie est invalide, redemande\n\n📦 À retenir\n\nhasNext...()\n\npermet de\n\nvérifier le type de la donnée suivante\n\nToujours\n\nvider\n\nl’entrée incorrecte avec\n\nnext()\n\nCombine avec une\n\nboucle\n\nwhile\n\npour redemander une saisie valide\n\n🔒 Rend ton programme\n\nplus robuste\n\nplus convivial",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/11-scanner/hasnext/index.html",
+      "title": "Gestion des Entrées :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "Lecture\n\n📂 Lire un fichier texte avec\n\nScanner\n\nen Java\n\nLa classe\n\nScanner\n\npermet aussi de\n\nlire le contenu d’un fichier texte\n\ntrès facilement, ligne par ligne.\n\n🧱 Importer les classes nécessaires\n\nimport\n\njava.io.File\n\nimport\n\njava.io.FileNotFoundException\n\nimport\n\njava.util.Scanner\n\n```\n\nhugo\n\nserve\n\ndisableFastRender\n\nignoreCache\n\n---\n\nExemple\n\nsimple\n\nlecture\n\nfichier\n\n```\n\njava\n\npublic\n\nclass\n\nLectureFichier\n\npublic\n\nstatic\n\nvoid\n\nmain\n\nString\n\nargs\n\ntry\n\nFile\n\nfichier\n\nnew\n\nFile\n\n\"donnees.txt\"\n\nScanner\n\nnew\n\nScanner\n\nfichier\n\nwhile\n\nhasNextLine\n\n())\n\nString\n\nligne\n\nnextLine\n\n();\n\nSystem\n\nout\n\nprintln\n\nligne\n\nclose\n\n();\n\ncatch\n\nFileNotFoundException\n\nSystem\n\nout\n\nprintln\n\n\"Fichier introuvable !\"\n\n🔍 Explications\n\nInstruction\n\nRôle\n\nFile fichier = new File(\"donnees.txt\");\n\nCrée une référence vers le fichier\n\nScanner sc = new Scanner(fichier);\n\nOuvre le fichier pour lecture",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/12-fichier/lecture/index.html",
+      "title": "Lecture :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "\"\n\n🔍 Explications\n\nInstruction\n\nRôle\n\nFile fichier = new File(\"donnees.txt\");\n\nCrée une référence vers le fichier\n\nScanner sc = new Scanner(fichier);\n\nOuvre le fichier pour lecture\n\nsc.hasNextLine()\n\nVérifie s’il reste une ligne\n\nsc.nextLine()\n\nLit la ligne suivante\n\nsc.close()\n\nFerme le scanner (libère ressources)\n\ncatch (FileNotFoundException e)\n\nGère le cas où le fichier est absent\n\n⚠️ Points importants\n\nToujours gérer l’exception\n\nFileNotFoundException\n\nquand tu ouvres un fichier.\n\nPense à fermer\n\nle scanner avec\n\nsc.close()\n\npour libérer les ressources.\n\nLa méthode\n\nnextLine()\n\nlit une\n\nligne complète\n\ndu fichier.\n\n🧠 À retenir\n\nScanner\n\nest simple à utiliser pour lire un fichier texte.\n\nUtilise une boucle\n\nwhile (sc.hasNextLine())\n\npour lire toutes les lignes.\n\nGère toujours les erreurs avec un\n\ntry-catch\n\nFerme le scanner après utilisation.\n\nExercice 1 : Compter les lignes d’un fichier\n\n🎯 Objectif :\n\nLire un fichier texte et compter combien de lignes il contient.\n\n🔧 Consigne :\n\nLe programme prend le\n\nnom du fichier\n\nà lire via\n\nnew File(...)\n\nIl affiche :",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/12-fichier/lecture/index.html",
+      "title": "Lecture :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "fichier\n\n🎯 Objectif :\n\nLire un fichier texte et compter combien de lignes il contient.\n\n🔧 Consigne :\n\nLe programme prend le\n\nnom du fichier\n\nà lire via\n\nnew File(...)\n\nIl affiche :\n\nLe fichier contient X lignes.\n\nBonus\n\n: Affiche un message d’erreur si le fichier est introuvable.\n\nExercice 2 : Afficher uniquement les lignes non vides\n\n🎯 Objectif :\n\nLire un fichier texte et afficher\n\nseulement les lignes qui ne sont pas vides\n\n🔧 Consigne :\n\nParcours le fichier ligne par ligne avec\n\nScanner\n\nAffiche uniquement les lignes dont le contenu n’est\n\npas vide\n\n!ligne.trim().isEmpty()\n\nExemple attendu (pour un fichier contenant des lignes vides) :\n\nBonjour\n\nCette ligne est utile\n\nFin\n\nExercice 3 : Recherche d’un mot-clé dans un fichier\n\n🎯 Objectif :\n\nAfficher uniquement les lignes contenant un\n\nmot-clé spécifique\n\n🔧 Consigne :\n\nLe mot-clé est\n\ndéfini dans le code\n\n(ex.\n\n\"important\"\n\nSi une ligne du fichier contient ce mot, elle est affichée.\n\nTu peux utiliser :\n\nligne.contains(\"important\")\n\nBonus\n\n: Rends le mot-clé\n\ninsensible à la casse\n\ntoLowerCase()",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/12-fichier/lecture/index.html",
+      "title": "Lecture :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "Écriture\n\n📤 Écrire dans un fichier en Java\n\nPour\n\nécrire du texte dans un fichier\n\n, Java propose plusieurs classes. Ici, on va utiliser la classe\n\nPrintWriter\n\n, simple et pratique pour écrire du texte.\n\n🧱 Importer les classes nécessaires\n\nimport\n\njava.io.File\n\nimport\n\njava.io.FileNotFoundException\n\nimport\n\njava.io.PrintWriter\n\n📄 Exemple simple d’écriture dans un fichier\n\npublic\n\nclass\n\nEcritureFichier\n\npublic\n\nstatic\n\nvoid\n\nmain\n\nString\n\nargs\n\ntry\n\nPrintWriter\n\nnew\n\nPrintWriter\n\nnew\n\nFile\n\n\"sortie.txt\"\n\n));\n\nprintln\n\n\"Bonjour le monde !\"\n\nprintln\n\n\"Voici une deuxième ligne.\"\n\nclose\n\n();\n\n// Important : ferme et écrit dans le fichier\n\ncatch\n\nFileNotFoundException\n\nSystem\n\nout\n\nprintln\n\n\"Impossible de créer ou ouvrir le fichier.\"\n\n🔍 Explications\n\nInstruction\n\nRôle\n\nnew PrintWriter(new File(\"sortie.txt\"))\n\nCrée (ou écrase) le fichier\n\nsortie.txt\n\npw.println(\"...\")",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/12-fichier/ecriture/index.html",
+      "title": "Écriture :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "\"Impossible de créer ou ouvrir le fichier.\"\n\n🔍 Explications\n\nInstruction\n\nRôle\n\nnew PrintWriter(new File(\"sortie.txt\"))\n\nCrée (ou écrase) le fichier\n\nsortie.txt\n\npw.println(\"...\")\n\nÉcrit une ligne dans le fichier\n\npw.close()\n\nFerme le fichier et termine l’écriture\n\ncatch (FileNotFoundException e)\n\nGère le cas où le fichier ne peut pas être créé\n\n⚠️ Points importants\n\nLe fichier est créé s’il n’existe pas\n\nSi le fichier existe,\n\nson contenu est écrasé\n\n(attention !).\n\nPour\n\najouter du texte sans écraser\n\n, il faut utiliser d’autres classes (ex :\n\nFileWriter\n\nen mode append).\n\nToujours fermer\n\nPrintWriter\n\navec\n\nclose()\n\npour que tout soit bien sauvegardé.\n\n🧠 À retenir\n\nPrintWriter\n\nest simple pour écrire du texte dans un fichier.\n\nUtilise\n\nprintln()\n\npour écrire des lignes.\n\nGère l’exception\n\nFileNotFoundException\n\nFerme toujours le writer avec\n\nclose()\n\n🧪 Exercice 1 : Écrire un message personnalisé\n\nObjectif :\n\nÉcrire dans un fichier un message composé de plusieurs lignes.\n\nConsigne :\n\nCrée un fichier nommé\n\nmessage.txt",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/12-fichier/ecriture/index.html",
+      "title": "Écriture :: Introduction à la programmation",
+      "type": "web"
+    }
+  },
+  {
+    "text": "close()\n\n🧪 Exercice 1 : Écrire un message personnalisé\n\nObjectif :\n\nÉcrire dans un fichier un message composé de plusieurs lignes.\n\nConsigne :\n\nCrée un fichier nommé\n\nmessage.txt\n\nÉcris 3 lignes contenant un message personnalisé (exemple : ta présentation, ta ville, ton hobby).\n\nFerme le fichier correctement.\n\nGère l’exception si le fichier ne peut pas être créé.\n\n📝 Exercice 2 : Copier une chaîne de caractères ligne par ligne\n\nObjectif :\n\nÉcrire chaque mot d’une phrase donnée dans un fichier,\n\nun mot par ligne\n\nConsigne :\n\nLa phrase à écrire est codée en dur dans le programme (ex :\n\n\"Java est fun à apprendre\"\n\nOuvre un fichier\n\nmots.txt\n\nÉcris chaque mot de la phrase sur une ligne séparée.\n\nFerme le fichier correctement.\n\n🔄 Exercice 3 : Écrire des nombres pairs de 2 à 20\n\nObjectif :\n\nÉcrire dans un fichier la liste des nombres pairs de 2 à 20 inclus.\n\nConsigne :\n\nOuvre un fichier\n\nnombres_pairs.txt\n\nÉcris chaque nombre pair (2,4,6,…) sur une ligne différente.\n\nFerme le fichier.\n\nGère les exceptions.",
+    "metadata": {
+      "module": "420-111",
+      "source": "https://cegepmv.github.io/420-111/12-fichier/ecriture/index.html",
+      "title": "Écriture :: Introduction à la programmation",
+      "type": "web"
+    }
+  }
+]

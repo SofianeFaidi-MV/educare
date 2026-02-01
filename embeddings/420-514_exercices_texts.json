@@ -1,0 +1,592 @@
+[
+  {
+    "text": "🧪 Laboratoire : Commencer avec Node.js et Express.js\n\n1. Installer Node.js\n\nAssurez-vous que Node.js est installé sur votre machine. Vous pouvez le télécharger depuis\n\nle site officiel de Node.js\n\nVérifier l’installation :\n\nnode -v\n\nnpm -v\n\nExécuter un script :\n\n// hello.js\n\nconsole\n\nlog\n\n\"Hello Node.js 🚀\"\n\nPuis :\n\nnode hello.js\n\n2. Initialiser un nouveau projet Node.js\n\nOuvrez votre terminal et créez un nouveau dossier pour votre projet. Accédez à ce dossier, puis exécutez la commande suivante pour initialiser un nouveau projet Node.js :\n\nmkdir mon-projet-express\n\ncd mon-projet-express\n\nnpm init -y\n\nLe drapeau\n\naccepte les valeurs par défaut pour toutes les options, créant ainsi un fichier\n\npackage.json\n\nde base.\n\n3. Installer Express.js\n\nInstallez Express.js en tant que dépendance dans votre projet :\n\nnpm install express --save\n\nExpress facilite la gestion des routes et des réponses.\n\n4. Configurer le serveur Express\n\nCréez un fichier\n\nindex.js\n\ndans le dossier racine de votre projet, puis ajoutez-y le code suivant pour configurer un serveur de base avec Express.js :\n\nconst\n\nexpress\n\nrequire\n\n'express'\n\nconst\n\napp\n\nexpress\n\n();\n\nconst\n\nport\n\n3000\n\napp\n\nget\n\n'/'\n\n, (\n\nreq\n\nres",
+    "metadata": {
+      "module": "420-514",
+      "source": "https://cegepmv.github.io/420-514/nodejsframeworkexpress/lab/index.html",
+      "title": "🧪 Laboratoire : Commencer avec Node.js et Express.js :: Collecte et interprétation de données",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "er un serveur de base avec Express.js :\n\nconst\n\nexpress\n\nrequire\n\n'express'\n\nconst\n\napp\n\nexpress\n\n();\n\nconst\n\nport\n\n3000\n\napp\n\nget\n\n'/'\n\n, (\n\nreq\n\nres\n\n) => {\n\nres\n\nsend\n\n'Hello, World!'\n\n});\n\napp\n\nlisten\n\nport\n\n, () => {\n\nconsole\n\nlog\n\n`Serveur en écoute sur <http://localhost>:\n\nport\n\n});\n\n5. Démarrer le serveur\n\nVous pouvez maintenant démarrer votre serveur en exécutant la commande suivante dans votre terminal :\n\nnode index.js\n\nCela démarrera le serveur et affichera\n\nServeur en écoute sur http://localhost:3000\n\n. Vous pouvez accéder à cette URL via votre navigateur pour voir le message “Hello, World!”.\n\n6. Installer nodemon pour un développement plus efficace\n\nPour un développement plus pratique, vous pouvez installer\n\nnodemon\n\n. Cet outil redémarre automatiquement le serveur à chaque fois que vous modifiez le code :\n\nnpm install -g nodemon\n\nEnsuite, au lieu de lancer votre serveur avec\n\nnode index.js\n\n, utilisez :\n\nnodemon index.js\n\nSi vous rencontrez cette erreur sur Windows :\n\nVous pouvez la restriction de la politique de sécurité avec la commande suivante :\n\nSet-ExecutionPolicy RemoteSigned -Scope CurrentUser\n\nOn peut aussi démarrer le serveur node en mode\n\nwatch-path\n\npour une mise à jour immédiate à chaque fois un fichier dans le dossier racine change. Il faut donc déplacer votre fichier dans un dossier\n\nsrc",
+    "metadata": {
+      "module": "420-514",
+      "source": "https://cegepmv.github.io/420-514/nodejsframeworkexpress/lab/index.html",
+      "title": "🧪 Laboratoire : Commencer avec Node.js et Express.js :: Collecte et interprétation de données",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "-path\n\npour une mise à jour immédiate à chaque fois un fichier dans le dossier racine change. Il faut donc déplacer votre fichier dans un dossier\n\nsrc\n\nnode --watch-path=./src .\\src\\index.js\n\n7. Structurer votre projet\n\nIl est recommandé de structurer votre projet de manière à ce qu’il soit facilement maintenable :\n\nindex.js\n\n: Point d’entrée de l’application.\n\nroutes/\n\n: Contient les fichiers de routage.\n\ncontrollers/\n\n: Logique métier.\n\nmodels/\n\n: Modèles de données si vous utilisez une base de données.\n\npublic/\n\n: Contient les fichiers statiques comme les CSS, images, etc.\n\nviews/\n\n: Si vous utilisez un moteur de template comme EJS ou Pug.\n\n8. Ajouter des middlewares\n\nVous pouvez ajouter des middlewares pour gérer les requêtes, comme le parsing des corps de requêtes JSON :\n\napp\n\nuse\n\nexpress\n\njson\n\n());\n\napp\n\nuse\n\nexpress\n\nurlencoded\n\nextended\n\ntrue\n\n}));\n\n9. Ajouter des routes supplémentaires\n\nCommençons par ajouter des routes supplémentaires dans votre application. Pour une meilleure organisation, nous allons créer un dossier\n\nroutes/\n\noù nous stockerons les différents fichiers de routes.\n\nconst\n\nexpress\n\nrequire\n\n'express'\n\nconst\n\napp\n\nexpress\n\n();\n\nconst\n\nport\n\n3000\n\n// Route de base qui renvoie un message de bienvenue\n\napp\n\nget\n\n'/'\n\n, (\n\nreq\n\nres\n\n) => {\n\nres\n\nsend\n\n'Bienvenue sur mon serveur Express!'\n\n});",
+    "metadata": {
+      "module": "420-514",
+      "source": "https://cegepmv.github.io/420-514/nodejsframeworkexpress/lab/index.html",
+      "title": "🧪 Laboratoire : Commencer avec Node.js et Express.js :: Collecte et interprétation de données",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "3000\n\n// Route de base qui renvoie un message de bienvenue\n\napp\n\nget\n\n'/'\n\n, (\n\nreq\n\nres\n\n) => {\n\nres\n\nsend\n\n'Bienvenue sur mon serveur Express!'\n\n});\n\n// Route pour afficher un message personnalisé\n\napp\n\nget\n\n'/hello/:name'\n\n, (\n\nreq\n\nres\n\n) => {\n\nconst\n\nname\n\nreq\n\nparams\n\nname\n\nres\n\nsend\n\n`Bonjour,\n\nname\n\n});\n\n// Route qui renvoie les informations sur le serveur\n\napp\n\nget\n\n'/info'\n\n, (\n\nreq\n\nres\n\n) => {\n\nres\n\njson\n\nversion\n\n'1.0.0'\n\ndescription\n\n'Ceci est un serveur simple utilisant Express.js'\n\n});\n\n});\n\n// Démarrer le serveur\n\napp\n\nlisten\n\nport\n\n, () => {\n\nconsole\n\nlog\n\n`Serveur en écoute sur <http://localhost>:\n\nport\n\n});\n\n9.1 Créer un fichier de routes\n\nCréez un fichier\n\nroutes/users.js\n\nconst\n\nexpress\n\nrequire\n\n'express'\n\nconst\n\nrouter\n\nexpress\n\nRouter\n\n();\n\n// Route pour récupérer tous les utilisateurs\n\nrouter\n\nget\n\n'/'\n\n, (\n\nreq\n\nres\n\n) => {\n\nres\n\nsend\n\n'Liste des utilisateurs'\n\n});\n\n// Route pour récupérer un utilisateur par ID\n\nrouter\n\nget\n\n'/:id'\n\n, (\n\nreq\n\nres\n\n) => {\n\nres\n\nsend\n\n`Utilisateur avec ID\n\nreq\n\nparams\n\n});\n\nmodule\n\nexports\n\nrouter\n\n9.2 Utiliser les routes dans l’application principale\n\nModifiez votre fichier\n\nindex.js\n\npour inclure ces nouvelles routes :\n\nconst\n\nexpress\n\nrequire\n\n'express'\n\nconst\n\napp\n\nexpress\n\n();\n\nconst\n\nport\n\n3000\n\nconst\n\nuserRoutes\n\nrequire\n\n'./routes/users'\n\napp\n\nuse\n\nexpress\n\njson",
+    "metadata": {
+      "module": "420-514",
+      "source": "https://cegepmv.github.io/420-514/nodejsframeworkexpress/lab/index.html",
+      "title": "🧪 Laboratoire : Commencer avec Node.js et Express.js :: Collecte et interprétation de données",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "const\n\nexpress\n\nrequire\n\n'express'\n\nconst\n\napp\n\nexpress\n\n();\n\nconst\n\nport\n\n3000\n\nconst\n\nuserRoutes\n\nrequire\n\n'./routes/users'\n\napp\n\nuse\n\nexpress\n\njson\n\n());\n\napp\n\nuse\n\nexpress\n\nurlencoded\n\nextended\n\ntrue\n\n}));\n\n// Route de base\n\napp\n\nget\n\n'/'\n\n, (\n\nreq\n\nres\n\n) => {\n\nres\n\nsend\n\n'Hello, World!'\n\n});\n\n// Utiliser les routes définies dans le fichier users.js\n\napp\n\nuse\n\n'/users'\n\nuserRoutes\n\napp\n\nlisten\n\nport\n\n, () => {\n\nconsole\n\nlog\n\n`Serveur en écoute sur <http://localhost>:\n\nport\n\n});\n\n10. Accès aux fichiers\n\nconst\n\nrequire\n\n'fs'\n\n// Écriture\n\nwriteFileSync\n\n'data.txt'\n\n'Hello Node!'\n\n// Lecture\n\nconst\n\ndata\n\nreadFileSync\n\n'data.txt'\n\n'utf8'\n\nconsole\n\nlog\n\ndata\n\n11. Asynchrone et promises\n\nconst\n\nrequire\n\n'fs'\n\npromises\n\nasync\n\nfunction\n\nreadFile\n\n() {\n\ntry\n\nconst\n\ndata\n\nawait\n\nreadFile\n\n'data.txt'\n\n'utf8'\n\nconsole\n\nlog\n\ndata\n\ncatch\n\nerr\n\n) {\n\nconsole\n\nerror\n\nerr\n\nreadFile\n\n();",
+    "metadata": {
+      "module": "420-514",
+      "source": "https://cegepmv.github.io/420-514/nodejsframeworkexpress/lab/index.html",
+      "title": "🧪 Laboratoire : Commencer avec Node.js et Express.js :: Collecte et interprétation de données",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "🧪 Laboratoire : Gestion des Erreurs et Logging\n\nPartie 1 : Ajouter des middlewares pour la gestion des erreurs et le logging\n\nAjouter un middleware de logging\n\nCréez un middleware qui enregistre chaque requête reçue par le serveur.\n\nImplémentez le code suivant au début de votre fichier\n\nindex.js\n\nconst\n\nexpress\n\nrequire\n\n'express'\n\nconst\n\napp\n\nexpress\n\n();\n\nconst\n\nport\n\n3000\n\n// Middleware de logging\n\napp\n\nuse\n\nreq\n\nres\n\nnext\n\n) => {\n\nconsole\n\nlog\n\nreq\n\nmethod\n\nreq\n\nurl\n\nnext\n\n();\n\n});\n\nAjouter un middleware de gestion des erreurs\n\nCréez un middleware pour intercepter les erreurs et envoyer une réponse appropriée.\n\nPlacez ce middleware à la fin de toutes vos routes dans\n\nindex.js\n\n// Middleware de gestion des erreurs\n\napp\n\nuse\n\nerr\n\nreq\n\nres\n\nnext\n\n) => {\n\nconsole\n\nerror\n\nerr\n\nstack\n\nres\n\nstatus\n\n500\n\nsend\n\n'Une erreur est survenue!'\n\n});\n\nPartie 2 : Servir des fichiers statiques\n\nCréer un Dossier\n\npublic\n\nCréez un dossier\n\npublic\n\nà la racine de votre projet avec la commande suivante :\n\nmkdir public\n\nAjouter un fichier HTML dans le dossier\n\npublic\n\nCréez un fichier\n\nindex.html\n\ndans le dossier\n\npublic\n\navec le contenu suivant :\n\n<!DOCTYPE html>\n\nhtml\n\nlang\n\n\"fr\"\n\nhead\n\nmeta",
+    "metadata": {
+      "module": "420-514",
+      "source": "https://cegepmv.github.io/420-514/nodejsframeworkexpress/lab2/index.html",
+      "title": "🧪 Laboratoire : Gestion des Erreurs et Logging :: Collecte et interprétation de données",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "ns le dossier\n\npublic\n\nCréez un fichier\n\nindex.html\n\ndans le dossier\n\npublic\n\navec le contenu suivant :\n\n<!DOCTYPE html>\n\nhtml\n\nlang\n\n\"fr\"\n\nhead\n\nmeta\n\ncharset\n\n\"UTF-8\"\n\nmeta\n\nname\n\n\"viewport\"\n\ncontent\n\n\"width=device-width, initial-scale=1.0\"\n\ntitle\n\n>Page d'accueil</\n\ntitle\n\nhead\n\nbody\n\n>Bienvenue sur mon site!</\n\n>Ceci est une page HTML servie par Express.</\n\nbody\n\nhtml\n\nConfigurer Express pour servir les fichiers statiques\n\nAjoutez le code suivant dans votre fichier\n\nindex.js\n\npour permettre à Express de servir les fichiers du dossier\n\npublic\n\n// Servir des fichiers statiques\n\napp\n\nuse\n\nexpress\n\nstatic\n\n'public'\n\n));\n\nPartie 3 : Utiliser la librairie de journalisation\n\nWinston\n\nInstaller Winston\n\nInstallez la librairie Winston en exécutant la commande suivante dans votre terminal :\n\nnpm install winston\n\nConfigurer Winston\n\nAjoutez le code suivant dans votre fichier\n\nindex.js\n\npour configurer Winston et l’intégrer avec Express pour gérer les logs :\n\nconst\n\nwinston\n\nrequire\n\n'winston'\n\n// Configuration du logger avec Winston\n\nconst\n\nlogger\n\nwinston\n\ncreateLogger\n\nlevel\n\n'info'\n\nformat\n\nwinston\n\nformat\n\ncombine\n\nwinston\n\nformat\n\ntimestamp\n\n(),\n\nwinston\n\nformat\n\njson\n\ntransports\n\nnew\n\nwinston\n\ntransports\n\nConsole\n\n(),\n\nnew\n\nwinston\n\ntransports\n\nFile\n\nfilename\n\n'logs/app.log'\n\n});\n\n// Middleware de logging utilisant Winston\n\napp",
+    "metadata": {
+      "module": "420-514",
+      "source": "https://cegepmv.github.io/420-514/nodejsframeworkexpress/lab2/index.html",
+      "title": "🧪 Laboratoire : Gestion des Erreurs et Logging :: Collecte et interprétation de données",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "new\n\nwinston\n\ntransports\n\nConsole\n\n(),\n\nnew\n\nwinston\n\ntransports\n\nFile\n\nfilename\n\n'logs/app.log'\n\n});\n\n// Middleware de logging utilisant Winston\n\napp\n\nuse\n\nreq\n\nres\n\nnext\n\n) => {\n\nlogger\n\ninfo\n\nreq\n\nmethod\n\nreq\n\nurl\n\nnext\n\n();\n\n});\n\nPartie 4 : Tester les améliorations\n\nTest du middleware de logging\n\nLancez votre serveur avec\n\nnode index.js\n\nAccédez à différentes routes (par exemple,\n\n/info\n\n) et vérifiez que les requêtes sont enregistrées dans le terminal et dans le fichier\n\nlogs/app.log\n\nTest du Middleware de Gestion des Erreurs\n\nCréez une route qui lève une exception pour simuler une erreur :\n\napp\n\nget\n\n'/cause-error'\n\n, (\n\nreq\n\nres\n\n) => {\n\nthrow\n\nnew\n\nError(\n\n'Erreur simulée!'\n\n});\n\nAccédez à cette route via\n\nGET <http://localhost:3000/cause-error\n\n> et observez le message d’erreur personnalisé.\n\nTest de la Servitude des Fichiers Statiques\n\nAccédez à\n\nhttp://localhost:3000/\n\ndans votre navigateur pour voir la page HTML servie par Express.\n\nPartie 5 : Fichier\n\nindex.js\n\ncomplet\n\nVoici un exemple complet après l’ajout des middlewares et Winston :\n\nconst\n\nexpress\n\nrequire\n\n'express'\n\nconst\n\nwinston\n\nrequire\n\n'winston'\n\nconst\n\napp\n\nexpress\n\n();\n\nconst\n\nport\n\n3000\n\n// Configuration du logger avec Winston\n\nconst\n\nlogger\n\nwinston\n\ncreateLogger\n\nlevel\n\n'info'\n\nformat\n\nwinston\n\nformat\n\ncombine\n\nwinston\n\nformat\n\ntimestamp\n\n(),",
+    "metadata": {
+      "module": "420-514",
+      "source": "https://cegepmv.github.io/420-514/nodejsframeworkexpress/lab2/index.html",
+      "title": "🧪 Laboratoire : Gestion des Erreurs et Logging :: Collecte et interprétation de données",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "uration du logger avec Winston\n\nconst\n\nlogger\n\nwinston\n\ncreateLogger\n\nlevel\n\n'info'\n\nformat\n\nwinston\n\nformat\n\ncombine\n\nwinston\n\nformat\n\ntimestamp\n\n(),\n\nwinston\n\nformat\n\njson\n\ntransports\n\nnew\n\nwinston\n\ntransports\n\nConsole\n\n(),\n\nnew\n\nwinston\n\ntransports\n\nFile\n\nfilename\n\n'logs/app.log'\n\n});\n\n// Middleware de logging utilisant Winston\n\napp\n\nuse\n\nreq\n\nres\n\nnext\n\n) => {\n\nlogger\n\ninfo\n\nreq\n\nmethod\n\nreq\n\nurl\n\nnext\n\n();\n\n});\n\n// Servir des fichiers statiques\n\napp\n\nuse\n\nexpress\n\nstatic\n\n'public'\n\n));\n\n// Route de base\n\napp\n\nget\n\n'/'\n\n, (\n\nreq\n\nres\n\n) => {\n\nres\n\nsend\n\n'Bienvenue sur mon serveur Express!'\n\n});\n\n// Route pour afficher un message personnalisé\n\napp\n\nget\n\n'/hello/:name'\n\n, (\n\nreq\n\nres\n\n) => {\n\nconst\n\nname\n\nreq\n\nparams\n\nname\n\nres\n\nsend\n\n`Bonjour,\n\nname\n\n});\n\n// Route qui renvoie les informations sur le serveur\n\napp\n\nget\n\n'/info'\n\n, (\n\nreq\n\nres\n\n) => {\n\nres\n\njson\n\nversion\n\n'1.0.0'\n\ndescription\n\n'Ceci est un serveur simple utilisant Express.js'\n\n});\n\n});\n\n// Route pour simuler une erreur\n\napp\n\nget\n\n'/cause-error'\n\n, (\n\nreq\n\nres\n\n) => {\n\nthrow\n\nnew\n\nError(\n\n'Erreur simulée!'\n\n});\n\n// Middleware de gestion des erreurs\n\napp\n\nuse\n\nerr\n\nreq\n\nres\n\nnext\n\n) => {\n\nlogger\n\nerror\n\nerr\n\nstack\n\nres\n\nstatus\n\n500\n\nsend\n\n'Une erreur est survenue!'\n\n});\n\n// Démarrer le serveur\n\napp\n\nlisten\n\nport\n\n, () => {\n\nconsole\n\nlog",
+    "metadata": {
+      "module": "420-514",
+      "source": "https://cegepmv.github.io/420-514/nodejsframeworkexpress/lab2/index.html",
+      "title": "🧪 Laboratoire : Gestion des Erreurs et Logging :: Collecte et interprétation de données",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "logger\n\nerror\n\nerr\n\nstack\n\nres\n\nstatus\n\n500\n\nsend\n\n'Une erreur est survenue!'\n\n});\n\n// Démarrer le serveur\n\napp\n\nlisten\n\nport\n\n, () => {\n\nconsole\n\nlog\n\n`Serveur en écoute sur <http://localhost>:\n\nport\n\n});\n\nRésultats attendus\n\nLogging\n\n: Toutes les requêtes HTTP seront enregistrées dans la console et dans le fichier\n\nlogs/app.log\n\nGestion des erreurs\n\n: En cas d’erreur, un message d’erreur approprié sera affiché, et les détails seront enregistrés dans les logs.\n\nServitude de fichiers statiques\n\n: La page HTML située dans le dossier\n\npublic\n\nsera servie par Express lorsque l’on accède à l’URL racine du serveur.",
+    "metadata": {
+      "module": "420-514",
+      "source": "https://cegepmv.github.io/420-514/nodejsframeworkexpress/lab2/index.html",
+      "title": "🧪 Laboratoire : Gestion des Erreurs et Logging :: Collecte et interprétation de données",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "🧪 Laboratoire : Requêtes HTTP & échanges de données avec Node.js/Express\n\nPrérequis & mise en place\n\nmkdir http-lab\n\ncd http-lab\n\nnpm init -y\n\nnpm i express\n\nCrée\n\nserver.js\n\n// server.js\n\nconst\n\nexpress\n\nrequire\n\n'express'\n\nconst\n\napp\n\nexpress\n\n();\n\napp\n\nuse\n\nexpress\n\njson\n\n());\n\n// ===== Middleware de log (ligne de requête) =====\n\napp\n\nuse\n\nreq\n\nres\n\nnext\n\n) => {\n\nconsole\n\nlog\n\nreq\n\nmethod\n\nreq\n\nurl\n\nnext\n\n();\n\n});\n\n// ===== Mock \"DB\" en mémoire =====\n\nlet\n\nnextId\n\nlet\n\nusers\n\nname\n\n'Alice'\n\nemail\n\n'alice@example.com'\n\nrole\n\n'student'\n\nname\n\n'Bob'\n\nemail\n\n'bob@example.com'\n\nrole\n\n'student'\n\n// ===== Middlewares utilitaires =====\n\nfunction\n\nfindUser\n\nreq\n\nres\n\nnext\n\n) {\n\nconst\n\nNumber(\n\nreq\n\nparams\n\nconst\n\nuser\n\nusers\n\nfind\n\n===\n\nuser\n\nreturn\n\nres\n\nstatus\n\n404\n\njson\n\nerror\n\n'Utilisateur non trouvé'\n\n});\n\nreq\n\nuser\n\nuser\n\nnext\n\n();\n\nfunction\n\nvalidateUserPayload\n\nreq\n\nres\n\nnext\n\n) {\n\nconst\n\nname\n\nemail\n\nrole\n\nreq\n\nbody\n\n{};\n\nname\n\nemail\n\nreturn\n\nres\n\nstatus\n\n400\n\njson\n\nerror\n\n'name et email sont requis'\n\n});\n\nrole\n\n'student'\n\n'admin'\n\n'teacher'\n\nincludes\n\nrole\n\n)) {\n\nreturn\n\nres\n\nstatus\n\n400\n\njson\n\nerror\n\n\"role doit être 'student' | 'admin' | 'teacher'\"\n\n});\n\nnext\n\n();",
+    "metadata": {
+      "module": "420-514",
+      "source": "https://cegepmv.github.io/420-514/httprequestdataformat/lab1/index.html",
+      "title": "🧪 Laboratoire : Requêtes HTTP & échanges de données avec Node.js/Express :: Collecte et interprétation de données",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "nt'\n\n'admin'\n\n'teacher'\n\nincludes\n\nrole\n\n)) {\n\nreturn\n\nres\n\nstatus\n\n400\n\njson\n\nerror\n\n\"role doit être 'student' | 'admin' | 'teacher'\"\n\n});\n\nnext\n\n();\n\n// ===== Routes de démonstration HTTP =====\n\n// GET simple\n\napp\n\nget\n\n'/'\n\n, (\n\nreq\n\nres\n\n) => {\n\nres\n\nstatus\n\n200\n\nsend\n\n'Bienvenue!'\n\n});\n\n// GET simple + en-tête custom\n\napp\n\nget\n\n'/hello'\n\n, (\n\nreq\n\nres\n\n) => {\n\nres\n\nset\n\n'X-Server'\n\n'MV-Express'\n\n// en-tête réponse\n\nres\n\nstatus\n\n200\n\nsend\n\n'Bonjour!'\n\n});\n\n// HEAD : renvoie seulement les en-têtes\n\napp\n\nhead\n\n'/ping'\n\n, (\n\nreq\n\nres\n\n) =>\n\nres\n\nstatus\n\n200\n\nend\n\n());\n\n// Codes de statut à la demande (ex: /status/404)\n\napp\n\nget\n\n'/status/:code'\n\n, (\n\nreq\n\nres\n\n) =>\n\nres\n\nsendStatus\n\n(Number(\n\nreq\n\nparams\n\ncode\n\n)));\n\n// ===== Ressource /users (CRUD) =====\n\n// Liste + filtre ?q=\n\napp\n\nget\n\n'/users'\n\n, (\n\nreq\n\nres\n\n) => {\n\nconst\n\nreq\n\nquery\n\ntoLowerCase\n\n();\n\nconst\n\nresult\n\nusers\n\nfilter\n\n=> [\n\nname\n\nemail\n\nrole\n\nsome\n\n=> String(\n\ntoLowerCase\n\n().\n\nincludes\n\n)))\n\nusers\n\nres\n\nstatus\n\n200\n\njson\n\ncount\n\nresult\n\nlength\n\ndata\n\nresult\n\n});\n\n});\n\n// Lire par id\n\napp\n\nget\n\n'/users/:id'\n\nfindUser\n\n, (\n\nreq\n\nres\n\n) =>\n\nres\n\nstatus\n\n200\n\njson\n\nreq\n\nuser\n\n));\n\n// Créer\n\napp\n\npost\n\n'/users'\n\nvalidateUserPayload\n\n, (\n\nreq\n\nres\n\n) => {\n\nconst\n\nname\n\nemail\n\nrole\n\n'student'\n\nreq\n\nbody\n\nusers\n\nsome\n\nemail\n\ntoLowerCase\n\n===\n\nemail\n\ntoLowerCase",
+    "metadata": {
+      "module": "420-514",
+      "source": "https://cegepmv.github.io/420-514/httprequestdataformat/lab1/index.html",
+      "title": "🧪 Laboratoire : Requêtes HTTP & échanges de données avec Node.js/Express :: Collecte et interprétation de données",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "validateUserPayload\n\n, (\n\nreq\n\nres\n\n) => {\n\nconst\n\nname\n\nemail\n\nrole\n\n'student'\n\nreq\n\nbody\n\nusers\n\nsome\n\nemail\n\ntoLowerCase\n\n===\n\nemail\n\ntoLowerCase\n\n())) {\n\nreturn\n\nres\n\nstatus\n\n409\n\njson\n\nerror\n\n'Email déjà utilisé'\n\n});\n\nconst\n\nuser\n\nnextId\n\nname\n\nemail\n\nrole\n\nusers\n\npush\n\nuser\n\nres\n\nstatus\n\n201\n\nlocation\n\n`/users/\n\nuser\n\njson\n\nuser\n\n});\n\n// Remplacer (PUT)\n\napp\n\nput\n\n'/users/:id'\n\nfindUser\n\nvalidateUserPayload\n\n, (\n\nreq\n\nres\n\n) => {\n\nconst\n\nname\n\nemail\n\nrole\n\n'student'\n\nreq\n\nbody\n\nusers\n\nsome\n\nemail\n\ntoLowerCase\n\n===\n\nemail\n\ntoLowerCase\n\n!==\n\nreq\n\nuser\n\n)) {\n\nreturn\n\nres\n\nstatus\n\n409\n\njson\n\nerror\n\n'Email déjà utilisé'\n\n});\n\nObject.\n\nassign\n\nreq\n\nuser\n\n, {\n\nname\n\nemail\n\nrole\n\n});\n\nres\n\nstatus\n\n200\n\njson\n\nreq\n\nuser\n\n});\n\n// Modifier partiel (PATCH)\n\napp\n\npatch\n\n'/users/:id'\n\nfindUser\n\n, (\n\nreq\n\nres\n\n) => {\n\nconst\n\nallowed\n\n'name'\n\n'email'\n\n'role'\n\nconst\n\npayload\n\nObject.\n\nfromEntries\n\nObject.\n\nentries\n\nreq\n\nbody\n\n{}).\n\nfilter\n\n(([\n\n]) =>\n\nallowed\n\nincludes\n\n'role'\n\npayload\n\n'student'\n\n'admin'\n\n'teacher'\n\nincludes\n\npayload\n\nrole\n\n)) {\n\nreturn\n\nres\n\nstatus\n\n400\n\njson\n\nerror\n\n\"role doit être 'student' | 'admin' | 'teacher'\"\n\n});\n\n'email'\n\npayload\n\nusers\n\nsome\n\nemail\n\ntoLowerCase\n\n===\n\npayload\n\nemail\n\ntoLowerCase\n\n!==\n\nreq\n\nuser\n\n)) {\n\nreturn\n\nres\n\nstatus\n\n409\n\njson\n\nerror\n\n'Email déjà utilisé'\n\n});\n\nObject.\n\nassign\n\nreq\n\nuser",
+    "metadata": {
+      "module": "420-514",
+      "source": "https://cegepmv.github.io/420-514/httprequestdataformat/lab1/index.html",
+      "title": "🧪 Laboratoire : Requêtes HTTP & échanges de données avec Node.js/Express :: Collecte et interprétation de données",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "===\n\npayload\n\nemail\n\ntoLowerCase\n\n!==\n\nreq\n\nuser\n\n)) {\n\nreturn\n\nres\n\nstatus\n\n409\n\njson\n\nerror\n\n'Email déjà utilisé'\n\n});\n\nObject.\n\nassign\n\nreq\n\nuser\n\npayload\n\nres\n\nstatus\n\n200\n\njson\n\nreq\n\nuser\n\n});\n\n// Supprimer\n\napp\n\ndelete\n\n'/users/:id'\n\nfindUser\n\n, (\n\nreq\n\nres\n\n) => {\n\nusers\n\nusers\n\nfilter\n\n!==\n\nreq\n\nuser\n\nres\n\nstatus\n\n204\n\nsend\n\n();\n\n});\n\n// Erreur volontaire\n\napp\n\nget\n\n'/boom'\n\n, (\n\nreq\n\nres\n\n) => {\n\nthrow\n\nnew\n\nError(\n\n'Oups 💥'\n\n); });\n\n// Handler d’erreurs (toujours à la fin)\n\napp\n\nuse\n\nerr\n\nreq\n\nres\n\nnext\n\n) => {\n\nconsole\n\nerror\n\nerr\n\nstack\n\nres\n\nstatus\n\n500\n\njson\n\nerror\n\n'Erreur interne'\n\ndetail\n\nerr\n\nmessage\n\n});\n\n});\n\napp\n\nlisten\n\n3000\n\n, () =>\n\nconsole\n\nlog\n\n'Serveur prêt : http://localhost:3000'\n\n));\n\nLancer :\n\nnode server.js\n\n🧭 Partie A — Explorer avec\n\ncurl\n\nAstuce : ajoute\n\npour voir les\n\nen-têtes\n\nde réponse,\n\npour silencieux, et\n\n| jq\n\npour formater le JSON.\n\nCommande\n\nMéthode\n\nUsage\n\ncurl http://.../users\n\nGET\n\nRécupérer tous les utilisateurs\n\ncurl \"http://.../users?q=nom\"\n\nGET\n\nRecherche par query string\n\ncurl -X POST -d ...\n\nPOST\n\nCréer un utilisateur\n\ncurl http://.../users/1\n\nGET\n\nLire un utilisateur\n\ncurl -X PUT -d ...\n\nPUT\n\nRemplacer entièrement un utilisateur\n\ncurl -X PATCH -d ...\n\nPATCH\n\nModifier partiellement\n\ncurl -X DELETE ...\n\nDELETE\n\nSupprimer un utilisateur\n\ncurl -i -X POST ... (conflit)\n\nPOST",
+    "metadata": {
+      "module": "420-514",
+      "source": "https://cegepmv.github.io/420-514/httprequestdataformat/lab1/index.html",
+      "title": "🧪 Laboratoire : Requêtes HTTP & échanges de données avec Node.js/Express :: Collecte et interprétation de données",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "sateur\n\ncurl -X PATCH -d ...\n\nPATCH\n\nModifier partiellement\n\ncurl -X DELETE ...\n\nDELETE\n\nSupprimer un utilisateur\n\ncurl -i -X POST ... (conflit)\n\nPOST\n\nDémontrer les erreurs et codes 400/409\n\nGET\n\n/hello\n\ncurl -i http://localhost:3000/hello\n\n→ Observe statut\n\n200\n\n, en-tête custom\n\nX-Server\n\n, corps texte.\n\nHEAD\n\n/ping\n\ncurl -I http://localhost:3000/ping\n\n→ En-têtes seulement (pas de corps).\n\nGET\n\n/users\n\n(liste)\n\ncurl -s http://localhost:3000/users | jq\n\nGET\n\n/users?q=alice\n\n(filtre)\n\ncurl -s\n\n\"http://localhost:3000/users?q=alice\"\n\n| jq\n\nAssurez-vous que\n\nest déjà installé :\n\nSur Windows\n\nwinget install jq\n\nPOST\n\n/users\n\n(création)\n\ncurl -i -H\n\n\"Content-Type: application/json\"\n\n'{\"name\":\"Chloe\",\"email\":\"chloe@example.com\",\"role\":\"teacher\"}'\n\nhttp://localhost:3000/users\n\n→ Attends\n\n201 Created\n\n+ en-tête\n\nLocation\n\nGET\n\n/users/1\n\n(lecture)\n\ncurl -s http://localhost:3000/users/1 | jq\n\nPUT\n\n/users/1\n\n(remplacement)\n\ncurl -s -X PUT -H\n\n\"Content-Type: application/json\"\n\n'{\"name\":\"Alice Doe\",\"email\":\"alice.d@example.com\",\"role\":\"student\"}'\n\nhttp://localhost:3000/users/1 | jq\n\nPATCH\n\n/users/1\n\n(modif partielle)\n\ncurl -s -X PATCH -H\n\n\"Content-Type: application/json\"\n\n'{\"role\":\"admin\"}'\n\nhttp://localhost:3000/users/1 | jq\n\nDELETE\n\n/users/1\n\ncurl -i -X DELETE http://localhost:3000/users/1\n\n→ Attends\n\n204 No Content\n\nErreurs & statuts",
+    "metadata": {
+      "module": "420-514",
+      "source": "https://cegepmv.github.io/420-514/httprequestdataformat/lab1/index.html",
+      "title": "🧪 Laboratoire : Requêtes HTTP & échanges de données avec Node.js/Express :: Collecte et interprétation de données",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "'\n\nhttp://localhost:3000/users/1 | jq\n\nDELETE\n\n/users/1\n\ncurl -i -X DELETE http://localhost:3000/users/1\n\n→ Attends\n\n204 No Content\n\nErreurs & statuts\n\ncurl -i http://localhost:3000/status/404\n\ncurl -i http://localhost:3000/boom\n\ncurl -i -X POST -H\n\n\"Content-Type: application/json\"\n\n'{\"name\":\"Dup\",\"email\":\"alice@example.com\"}'\n\nhttp://localhost:3000/users\n\n→ Observe\n\n404\n\n500\n\n409\n\nRésumé des résultats :\n\nCommande\n\ncurl\n\nCode HTTP attendu\n\nRéponse JSON (ou texte) observée\n\ncurl -i http://localhost:3000/hello\n\n200 OK\n\nCorps texte :\n\nBonjour 👋\n\n+ en-tête\n\nX-Server\n\ncurl -I http://localhost:3000/ping\n\n200 OK\n\nAucun corps, uniquement les en-têtes\n\n`curl -s\n\nhttp://localhost:3000/users\n\njq`\n\n200 OK\n\nListe complète des utilisateurs (\n\ncount\n\ndata: [...]\n\n`curl -s “\n\nhttp://localhost:3000/users?q=alice\n\njq`\n\n200 OK\n\nRésultat filtré par le paramètre\n\ncurl -i -H \"Content-Type: application/json\" -d '{\"name\":\"Chloe\",\"email\":\"chloe@example.com\"}' http://localhost:3000/users\n\n201 Created\n\nObjet utilisateur créé + en-tête\n\nLocation\n\n`curl -s\n\nhttp://localhost:3000/users/1\n\njq`\n\n200 OK\n\nDétails de l’utilisateur avec\n\nid=1\n\n`curl -s -X PUT -H “Content-Type: application/json” -d ‘{“name”:“Alice Doe”,“email”:\"\n\nalice.d@example.com\n\n\"}’\n\nhttp://localhost:3000/users/1\n\njq`\n\n200 OK\n\nUtilisateur remplacé par les nouvelles données",
+    "metadata": {
+      "module": "420-514",
+      "source": "https://cegepmv.github.io/420-514/httprequestdataformat/lab1/index.html",
+      "title": "🧪 Laboratoire : Requêtes HTTP & échanges de données avec Node.js/Express :: Collecte et interprétation de données",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "d ‘{“name”:“Alice Doe”,“email”:\"\n\nalice.d@example.com\n\n\"}’\n\nhttp://localhost:3000/users/1\n\njq`\n\n200 OK\n\nUtilisateur remplacé par les nouvelles données\n\n`curl -s -X PATCH -H “Content-Type: application/json” -d ‘{“role”:“admin”}’\n\nhttp://localhost:3000/users/1\n\njq`\n\n200 OK\n\nChamp\n\nrole\n\nmodifié\n\ncurl -i -X DELETE http://localhost:3000/users/1\n\n204 No Content\n\nAucun corps dans la réponse\n\ncurl -i http://localhost:3000/status/404\n\n404 Not Found\n\nJSON ou message d’erreur\n\ncurl -i http://localhost:3000/boom\n\n500 Server Error\n\nJSON\n\n{ \"error\": \"Erreur interne\", ... }\n\ncurl -i -X POST -H \"Content-Type: application/json\" -d '{\"name\":\"Dup\",\"email\":\"alice@example.com\"}' http://localhost:3000/users\n\n409 Conflict\n\nJSON\n\n{ \"error\": \"Email déjà utilisé\" }\n\n🧭 Partie B — Scénario\n\nPostman\n\nEnvironnement\n\nbaseUrl = http://localhost:3000\n\nCollection\n\n« Users API (Local) » avec ces requêtes :\n\nGET {{baseUrl}}/users\n\n— tests : 200, JSON,\n\n{count,data}\n\nPOST {{baseUrl}}/users\n\n— Body JSON ;\n\nPre-request\n\npm.variables.set(\"rand\", Date.now())\n\n; email\n\nchloe{{rand}}@example.com\n\n; tests :\n\n201\n\nLocation\n\n, sauvegarde\n\nuserId\n\nGET {{baseUrl}}/users/{{userId}}\n\n— tests : 200, id égal.\n\nPUT {{baseUrl}}/users/{{userId}}\n\n— Body avec nom/email/role ; tests : 200, nom mis à jour.\n\nPATCH {{baseUrl}}/users/{{userId}}\n\n— Body\n\n{ \"role\": \"admin\" }",
+    "metadata": {
+      "module": "420-514",
+      "source": "https://cegepmv.github.io/420-514/httprequestdataformat/lab1/index.html",
+      "title": "🧪 Laboratoire : Requêtes HTTP & échanges de données avec Node.js/Express :: Collecte et interprétation de données",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "baseUrl}}/users/{{userId}}\n\n— Body avec nom/email/role ; tests : 200, nom mis à jour.\n\nPATCH {{baseUrl}}/users/{{userId}}\n\n— Body\n\n{ \"role\": \"admin\" }\n\n; tests : 200, rôle = admin.\n\nDELETE {{baseUrl}}/users/{{userId}}\n\n— tests :\n\n204\n\n(Optionnel)\n\nGET {{baseUrl}}/users/{{userId}}\n\n— test\n\n404\n\naprès suppression.\n\nRunner\n\n: exécuter la collection (POST → GET id → PUT → PATCH → DELETE).\n\nData-driven\n\n: CSV\n\nname,email,role\n\net utiliser\n\n{{name}}\n\n{{email}}\n\n{{role}}\n\ndans le Body du POST.\n\nExemple :\n\nname,email,role\n\nAlice,alice@example.com,student\n\nBob,bob@example.com,teacher\n\nChloe,chloe@example.com,admin\n\nRequête POST dans Postman :\n\nURL :\n\nPOST {{baseUrl}}/api/posts\n\nHeaders :\n\nContent-Type: application/json\n\nBody (raw/JSON) :\n\n\"name\"\n\n\"{{name}}\"\n\n\"email\"\n\n\"{{email}}\"\n\n\"role\"\n\n\"{{role}}\"\n\nIci, {{name}}, {{email}} et {{role}} sont des variables de Postman qui seront remplacées par les valeurs du CSV.\n\nSnippets tests utiles :\n\ntest\n\n\"200 OK\"\n\n, () =>\n\nresponse\n\ncode\n\n===\n\n200\n\ntest\n\n\"JSON\"\n\n, () =>\n\nresponse\n\nheaders\n\nget\n\n\"Content-Type\"\n\nincludes\n\n\"application/json\"\n\n));\n\nenvironment\n\nset\n\n\"userId\"\n\nresponse\n\njson\n\n().\n\n📋 À produire\n\nTableau\n\n“requête → réponse” pour 6 routes (méthode, chemin,\n\ncode\n\n, en-têtes clés, corps).\n\n3 captures\n\nonglet\n\nNetwork\n\n(annotation : ligne de requête, en-têtes, corps).\n\n3 commandes curl",
+    "metadata": {
+      "module": "420-514",
+      "source": "https://cegepmv.github.io/420-514/httprequestdataformat/lab1/index.html",
+      "title": "🧪 Laboratoire : Requêtes HTTP & échanges de données avec Node.js/Express :: Collecte et interprétation de données",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "es (méthode, chemin,\n\ncode\n\n, en-têtes clés, corps).\n\n3 captures\n\nonglet\n\nNetwork\n\n(annotation : ligne de requête, en-têtes, corps).\n\n3 commandes curl\n\n+ sorties.\n\nExport Postman\n\n(collection JSON) ou capture du\n\nRunner\n\nqui passe vert.\n\n⭐ Extra\n\nnpm i cors\n\npuis\n\napp.use(require('cors')());\n\n— tester les en-têtes CORS.\n\nPagination (\n\nGET /users?page=1&limit=5\n\n) et tri.\n\nDocumentation de curl",
+    "metadata": {
+      "module": "420-514",
+      "source": "https://cegepmv.github.io/420-514/httprequestdataformat/lab1/index.html",
+      "title": "🧪 Laboratoire : Requêtes HTTP & échanges de données avec Node.js/Express :: Collecte et interprétation de données",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "🧪 Laboratoire : Intégrer TypeScript avec Express\n\nLa librairie\n\ntype-express\n\n(ou parfois appelée\n\n@types/express\n\n) est une collection de définitions de types TypeScript pour la bibliothèque\n\nExpress.js\n\n. Elle permet d’utiliser\n\nExpress.js\n\navec TypeScript tout en bénéficiant de l’intelligence du compilateur TypeScript pour la vérification des types, l’autocomplétion, et la documentation inline.\n\nPour lancer un projet Node.js avec Express en utilisant TypeScript, voici les étapes à suivre :\n\n1. Initialiser le projet\n\nTout d’abord, assurez-vous d’avoir Node.js installé. Ensuite, initialisez un projet Node.js.\n\nmkdir mon-projet-express-typescript\n\ncd mon-projet-express-typescript\n\nnpm init -y\n\n2. Installer les dépendances\n\nInstallez les dépendances pour Express et TypeScript, ainsi que les types pour ces bibliothèques.\n\nnpm install express\n\nnpm install typescript ts-node-dev @types/node @types/express --save-dev\n\ntypescript\n\n: pour utiliser TypeScript.\n\nts-node-dev\n\n: pour lancer le serveur avec TypeScript et avoir le rechargement automatique (hot-reloading).\n\n@types/node\n\n@types/express\n\n: types pour Node.js et Express.\n\n3. Configurer TypeScript",
+    "metadata": {
+      "module": "420-514",
+      "source": "https://cegepmv.github.io/420-514/usets/lab_ts/index.html",
+      "title": "🧪 Laboratoire : Intégrer TypeScript avec Express :: Collecte et interprétation de données",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "eScript et avoir le rechargement automatique (hot-reloading).\n\n@types/node\n\n@types/express\n\n: types pour Node.js et Express.\n\n3. Configurer TypeScript\n\nInitialisez un fichier de configuration TypeScript (\n\ntsconfig.json\n\nnpx tsc --init\n\nModifiez\n\ntsconfig.json\n\npour activer les options nécessaires :\n\n\"compilerOptions\"\n\n: {\n\n\"target\"\n\n\"ES2020\"\n\n\"module\"\n\n\"commonjs\"\n\n\"outDir\"\n\n\"./dist\"\n\n\"rootDir\"\n\n\"./src\"\n\n\"strict\"\n\ntrue\n\n\"esModuleInterop\"\n\ntrue\n\n\"include\"\n\n: [\n\n\"src/**/*\"\n\n\"exclude\"\n\n: [\n\n\"node_modules\"\n\n\"dist\"\n\n// Exclure ces répertoires\n\n4. Créer la structure du projet\n\nCréez la structure du projet et les fichiers nécessaires.\n\nmkdir src\n\ntouch src/index.ts\n\n5. Écrire le code Express en TypeScript\n\nUne fois les types installés, vous pouvez les utiliser directement dans votre code TypeScript en important\n\nexpress\n\nDans\n\nsrc/index.ts\n\n, ajoutez le code suivant pour démarrer un serveur Express simple en TypeScript avec les types intégrés ::\n\nimport\n\nexpress\n\n, {\n\nRequest\n\nResponse\n\nfrom\n\n'express'\n\nconst\n\napp\n\nexpress\n\n();\n\nconst\n\nport\n\n3000\n\n// Middleware de parsing du JSON\n\napp\n\nuse\n\nexpress\n\njson\n\n());\n\n// Route de base\n\napp\n\nget\n\n'/'\n\n, (\n\nreq\n\nRequest\n\nres\n\nResponse\n\nres\n\nsend\n\n'Hello, TypeScript with Express!'\n\n});\n\n// Démarrage du serveur\n\napp\n\nlisten\n\nport\n\n, ()\n\nconsole\n\nlog\n\n`Serveur en écoute sur <http://localhost>:",
+    "metadata": {
+      "module": "420-514",
+      "source": "https://cegepmv.github.io/420-514/usets/lab_ts/index.html",
+      "title": "🧪 Laboratoire : Intégrer TypeScript avec Express :: Collecte et interprétation de données",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "nd\n\n'Hello, TypeScript with Express!'\n\n});\n\n// Démarrage du serveur\n\napp\n\nlisten\n\nport\n\n, ()\n\nconsole\n\nlog\n\n`Serveur en écoute sur <http://localhost>:\n\nport\n\n});\n\nexpress\n\nest importé pour utiliser les fonctionnalités d’Express.js.\n\nRequest\n\nResponse\n\nsont importés depuis\n\n@types/express\n\npour annoter les types des objets de requête et de réponse. Cela permet à TypeScript de savoir quelles propriétés et méthodes sont disponibles sur ces objets.\n\nVous pouvez utiliser les middlewares et les routes d’\n\nexpress\n\ntout en bénéficiant de la vérification des types. Par exemple, si vous essayez d’accéder à une propriété qui n’existe pas sur\n\nRequest\n\nResponse\n\n, TypeScript vous avertira avec une erreur de compilation.\n\n6. Mettre à jour les scripts dans\n\npackage.json\n\nAjoutez un script pour démarrer le serveur avec\n\nts-node-dev\n\npour le rechargement automatique lors des modifications du code.\n\n\"scripts\"\n\n: {\n\n\"start\"\n\n\"ts-node-dev --respawn src/index.ts\"\n\n7. Lancer le projet\n\nEnfin, lancez le projet avec la commande suivante :\n\nnpm run start\n\nLe serveur Express devrait être accessible sur\n\nhttp://localhost:3000\n\net répondre avec “Hello World!” lorsqu’il est visité.\n\nPourquoi d’Utiliser\n\n@types/express\n\nVérification des Types",
+    "metadata": {
+      "module": "420-514",
+      "source": "https://cegepmv.github.io/420-514/usets/lab_ts/index.html",
+      "title": "🧪 Laboratoire : Intégrer TypeScript avec Express :: Collecte et interprétation de données",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "essible sur\n\nhttp://localhost:3000\n\net répondre avec “Hello World!” lorsqu’il est visité.\n\nPourquoi d’Utiliser\n\n@types/express\n\nVérification des Types\n\n: Assure que les données passées entre les fonctions respectent les types définis, ce qui réduit les erreurs de runtime.\n\nAutocomplétion\n\n: L’environnement de développement (comme VSCode) propose l’autocomplétion pour les méthodes et propriétés des objets\n\nRequest\n\nResponse\n\n, et autres objets d’Express.\n\nDocumentation Inline\n\n: Les types ajoutent de la clarté au code, permettant une meilleure compréhension des méthodes et propriétés disponibles, facilitant ainsi la maintenance.\n\nMiddleware avec des Types\n\nVous pouvez créer des middlewares typés pour assurer que les types sont correctement vérifiés tout au long de la chaîne de traitement.\n\nconst\n\nlogMiddleware\n\nreq\n\nRequest\n\nres\n\nResponse\n\nnext\n\nFunction\n\nconsole\n\nlog\n\nreq\n\nmethod\n\nreq\n\nurl\n\nnext\n\n();\n\napp\n\nuse\n\nlogMiddleware\n\nUtilisation des Interfaces pour Structurer les Données\n\nEn combinant TypeScript avec Express, vous pouvez définir des interfaces pour structurer vos données.\n\nimport\n\nexpress\n\n, {\n\nRequest\n\nResponse\n\nfrom\n\n'express'\n\nconst\n\napp\n\nexpress\n\n();\n\nconst\n\nport\n\n3000\n\ninterface\n\nUser\n\nnumber\n\nname\n\nstring\n\nemail\n\nstring\n\nconst\n\nusers\n\nUser\n\nname\n\n'John Doe'\n\nemail\n\n'john.doe@example.com'\n\nname\n\n'Jane Doe'\n\nemail",
+    "metadata": {
+      "module": "420-514",
+      "source": "https://cegepmv.github.io/420-514/usets/lab_ts/index.html",
+      "title": "🧪 Laboratoire : Intégrer TypeScript avec Express :: Collecte et interprétation de données",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "00\n\ninterface\n\nUser\n\nnumber\n\nname\n\nstring\n\nemail\n\nstring\n\nconst\n\nusers\n\nUser\n\nname\n\n'John Doe'\n\nemail\n\n'john.doe@example.com'\n\nname\n\n'Jane Doe'\n\nemail\n\n'jane.doe@example.com'\n\n// Route pour obtenir tous les utilisateurs\n\napp\n\nget\n\n'/users'\n\n, (\n\nreq\n\nRequest\n\nres\n\nResponse\n\n) => {\n\nres\n\njson\n\nusers\n\n});\n\n// Route pour obtenir un utilisateur par ID\n\napp\n\nget\n\n'/users/:id'\n\n, (\n\nreq\n\nRequest\n\nres\n\nResponse\n\n) => {\n\nconst\n\nuserId\n\nparseInt(\n\nreq\n\nparams\n\nconst\n\nuser\n\nusers\n\nfind\n\n===\n\nuserId\n\nuser\n\n) {\n\nres\n\njson\n\nuser\n\nelse\n\nres\n\nstatus\n\n404\n\nsend\n\n'User not found'\n\n});\n\n// Démarrer le serveur\n\napp\n\nlisten\n\nport\n\n, () => {\n\nconsole\n\nlog\n\n`Serveur en écoute sur http://localhost:\n\nport\n\n});\n\nGestion des Erreurs Typée\n\nVous pouvez typer les middlewares de gestion des erreurs pour assurer une meilleure sécurité des types lors de la gestion des exceptions.\n\nimport\n\nexpress\n\n, {\n\nRequest\n\nResponse\n\nNextFunction\n\nfrom\n\n'express'\n\nconst\n\napp\n\nexpress\n\n();\n\nconst\n\nport\n\n3000\n\n// Middleware de gestion des erreurs\n\napp\n\nuse\n\nerr\n\nError,\n\nreq\n\nRequest\n\nres\n\nResponse\n\nnext\n\nNextFunction\n\n) => {\n\nconsole\n\nerror\n\nerr\n\nstack\n\nres\n\nstatus\n\n500\n\njson\n\nmessage\n\n'Une erreur est survenue'\n\nerror\n\nerr\n\nmessage\n\n});\n\n});\n\n// Exemple de route qui provoque une erreur\n\napp\n\nget\n\n'/error'\n\n, (\n\nreq\n\nRequest\n\nres\n\nResponse\n\n) => {\n\nthrow\n\nnew\n\nError(",
+    "metadata": {
+      "module": "420-514",
+      "source": "https://cegepmv.github.io/420-514/usets/lab_ts/index.html",
+      "title": "🧪 Laboratoire : Intégrer TypeScript avec Express :: Collecte et interprétation de données",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "err\n\nmessage\n\n});\n\n});\n\n// Exemple de route qui provoque une erreur\n\napp\n\nget\n\n'/error'\n\n, (\n\nreq\n\nRequest\n\nres\n\nResponse\n\n) => {\n\nthrow\n\nnew\n\nError(\n\n'Erreur simulée!'\n\n});\n\napp\n\nlisten\n\nport\n\n, () => {\n\nconsole\n\nlog\n\n`Serveur en écoute sur http://localhost:\n\nport\n\n});\n\nStructure de projet recommandée :\n\nVoici une structure de projet recommandée pour organiser les interfaces ainsi que les autres éléments du projet.\n\nStructure de Projet TypeScript avec des Interfaces Séparées\n\n├── src/\n\n│   ├── interfaces/\n\n│   │   ├── user.interface.ts\n\n│   │   ├── product.interface.ts\n\n│   │   ├── order.interface.ts\n\n│   ├── models/\n\n│   │   ├── user.model.ts\n\n│   │   ├── product.model.ts\n\n│   │   ├── order.model.ts\n\n│   ├── controllers/\n\n│   │   ├── user.controller.ts\n\n│   │   ├── product.controller.ts\n\n│   │   ├── order.controller.ts\n\n│   ├── services/\n\n│   │   ├── user.service.ts\n\n│   │   ├── product.service.ts\n\n│   │   ├── order.service.ts\n\n│   ├── middlewares/\n\n│   │   ├── auth.middleware.ts\n\n│   │   ├── error.middleware.ts\n\n│   ├── routes/\n\n│   │   ├── user.route.ts\n\n│   │   ├── product.route.ts\n\n│   ├── utils/\n\n│   │   ├── logger.ts\n\n│   ├── app.ts\n\n│   ├── index.ts\n\n├── tests/\n\n│   ├── user.test.ts\n\n│   ├── product.test.ts\n\n├── tsconfig.json\n\n├── package.json\n\n└── README.md\n\nCréation de la structure proposée",
+    "metadata": {
+      "module": "420-514",
+      "source": "https://cegepmv.github.io/420-514/usets/lab_ts/index.html",
+      "title": "🧪 Laboratoire : Intégrer TypeScript avec Express :: Collecte et interprétation de données",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "x.ts\n\n├── tests/\n\n│   ├── user.test.ts\n\n│   ├── product.test.ts\n\n├── tsconfig.json\n\n├── package.json\n\n└── README.md\n\nCréation de la structure proposée\n\nExplication de la Structure\n\nsrc/\n\n: Dossier principal contenant tout le code source du projet.\n\ninterfaces/\n\n: Ce dossier regroupe toutes les interfaces du projet. Chaque interface est placée dans un fichier séparé et nommée en fonction du domaine auquel elle appartient. Par exemple, les interfaces liées aux utilisateurs se trouvent dans\n\nuser.interface.ts\n\nExemple\n\nuser.interface.ts\n\nexport\n\ninterface\n\nUser\n\nnumber\n\nname\n\nstring\n\nemail\n\nstring\n\nmodels/\n\n: Contient les modèles de données. Les modèles sont souvent des classes qui implémentent les interfaces définies dans le dossier\n\ninterfaces/\n\nExemple\n\nuser.model.ts\n\nimport\n\nUser\n\nfrom\n\n'../interfaces/user.interface'\n\nexport\n\nclass\n\nUserModel\n\nimplements\n\nUser\n\nconstructor\n\npublic\n\nnumber\n\npublic\n\nname\n\nstring\n\npublic\n\nemail\n\nstring\n\n) {}\n\ncontrollers/\n\n: Contient les fichiers qui gèrent la logique des routes, c’est-à-dire les contrôleurs. Chaque contrôleur est lié à un domaine spécifique comme les utilisateurs, les produits, etc.\n\nExemple\n\nuser.controller.ts\n\nimport\n\nRequest\n\nResponse\n\nfrom\n\n'express'\n\nimport\n\nUserService\n\nfrom\n\n'../services/user.service'\n\nexport\n\nclass\n\nUserController\n\npublic\n\nasync\n\ngetAllUsers\n\nreq\n\nRequest",
+    "metadata": {
+      "module": "420-514",
+      "source": "https://cegepmv.github.io/420-514/usets/lab_ts/index.html",
+      "title": "🧪 Laboratoire : Intégrer TypeScript avec Express :: Collecte et interprétation de données",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "ponse\n\nfrom\n\n'express'\n\nimport\n\nUserService\n\nfrom\n\n'../services/user.service'\n\nexport\n\nclass\n\nUserController\n\npublic\n\nasync\n\ngetAllUsers\n\nreq\n\nRequest\n\nres\n\nResponse\n\nPromise\n\nvoid\n\n> {\n\nconst\n\nusers\n\nawait\n\nUserService\n\ngetAllUsers\n\n();\n\nres\n\njson\n\nusers\n\nservices/\n\n: Contient la logique métier, c’est-à-dire les services. Les services sont responsables de l’interaction avec les bases de données, les APIs externes, ou toute autre logique métier.\n\nExemple\n\nuser.service.ts\n\nimport\n\nUser\n\nfrom\n\n'../interfaces/user.interface'\n\nimport\n\nUserModel\n\nfrom\n\n'../models/user.model'\n\nexport\n\nclass\n\nUserService\n\npublic\n\nstatic\n\nasync\n\ngetAllUsers\n\nPromise\n\nUser\n\n> {\n\n// Logique pour récupérer tous les utilisateurs\n\nreturn\n\nnew\n\nUserModel\n\n'John Doe'\n\n'john.doe@example.com'\n\n)];\n\nmiddlewares/\n\n: Contient les middlewares utilisés par l’application, tels que l’authentification, la gestion des erreurs, etc.\n\nExemple\n\nauth.middleware.ts\n\nimport\n\nRequest\n\nResponse\n\nNextFunction\n\nfrom\n\n'express'\n\nexport\n\nfunction\n\nauthMiddleware\n\nreq\n\nRequest\n\nres\n\nResponse\n\nnext\n\nNextFunction\n\nvoid\n\n// Logique d'authentification\n\nnext\n\n();\n\nroutes/\n\n: Ce dossier contient les fichiers de routes qui définissent les points d’entrée (endpoints) de l’application. Ces routes appellent généralement les contrôleurs pour traiter les requêtes.\n\nExemple\n\nuser.route.ts\n\nimport",
+    "metadata": {
+      "module": "420-514",
+      "source": "https://cegepmv.github.io/420-514/usets/lab_ts/index.html",
+      "title": "🧪 Laboratoire : Intégrer TypeScript avec Express :: Collecte et interprétation de données",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "ts d’entrée (endpoints) de l’application. Ces routes appellent généralement les contrôleurs pour traiter les requêtes.\n\nExemple\n\nuser.route.ts\n\nimport\n\nRouter\n\nfrom\n\n'express'\n\nimport\n\nUserController\n\nfrom\n\n'../controllers/user.controller'\n\nconst\n\nrouter\n\nRouter\n\n();\n\nconst\n\nuserController\n\nnew\n\nUserController\n\n();\n\nrouter\n\nget\n\n'/users'\n\nuserController\n\ngetAllUsers\n\nexport\n\ndefault\n\nrouter\n\nutils/\n\n: Ce dossier contient des utilitaires ou des fonctions réutilisables comme la gestion des logs, les helpers, etc.\n\nExemple\n\nlogger.ts\n\nimport\n\nwinston\n\nfrom\n\n'winston'\n\nexport\n\nconst\n\nlogger\n\nwinston\n\ncreateLogger\n\nlevel\n\n'info'\n\nformat\n\nwinston.format.json\n\n(),\n\ntransports\n\nnew\n\nwinston\n\ntransports\n\nConsole\n\n()],\n\n});\n\ntests/\n\n: Contient les tests unitaires et d’intégration. Chaque test est généralement lié à un fichier source.\n\nExemple\n\nuser.test.ts\n\nimport\n\nUserService\n\nfrom\n\n'../src/services/user.service'\n\ntest\n\n'should return all users'\n\nasync\n\nconst\n\nusers\n\nawait\n\nUserService\n\ngetAllUsers\n\n();\n\nexpect\n\nusers\n\nlength\n\ntoBe\n\n});\n\nCet exemple utilise la librairie de test\n\nJest\n\n, il faut donc l’installer avant :\n\n# Installer Jest et ts-jest\n\nnpm install jest ts-jest @types/jest --save-dev\n\n# Initialiser Jest avec TypeScript\n\nnpx ts-jest config\n\ninit\n\napp.ts",
+    "metadata": {
+      "module": "420-514",
+      "source": "https://cegepmv.github.io/420-514/usets/lab_ts/index.html",
+      "title": "🧪 Laboratoire : Intégrer TypeScript avec Express :: Collecte et interprétation de données",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": ":\n\n# Installer Jest et ts-jest\n\nnpm install jest ts-jest @types/jest --save-dev\n\n# Initialiser Jest avec TypeScript\n\nnpx ts-jest config\n\ninit\n\napp.ts\n\n: Fichier d’entrée principal de l’application où l’initialisation d’Express et d’autres configurations de base sont effectuées.\n\nExemple\n\nimport\n\nexpress\n\nfrom\n\n'express'\n\nimport\n\nuserRoutes\n\nfrom\n\n'./routes/user.route'\n\nimport\n\nproductRoutes\n\nfrom\n\n'./routes/product.route'\n\nimport\n\nerrorMiddleware\n\nfrom\n\n'./middlewares/error.middleware'\n\nconst\n\napp\n\nexpress\n\n();\n\napp\n\nuse\n\nexpress\n\njson\n\n());\n\napp\n\nuse\n\n'/api'\n\nuserRoutes\n\napp\n\nuse\n\n'/api'\n\nproductRoutes\n\napp\n\nuse\n\nerrorMiddleware\n\nexport\n\ndefault\n\napp\n\nserver.ts\n\n: Fichier pour démarrer le serveur Node.js.\n\nExemple\n\nimport\n\napp\n\nfrom\n\n'./app'\n\nconst\n\nport\n\n3000\n\napp\n\nlisten\n\nport\n\n, ()\n\nconsole\n\nlog\n\n`Serveur en écoute sur <http://localhost>:\n\nport\n\n});\n\nCette structure de projet permet de séparer les préoccupations (concerns) de manière claire et maintenable. Les interfaces sont isolées dans leur propre dossier (\n\ninterfaces/\n\n), ce qui rend le projet modulaire et évolutif. Chaque composant (modèles, contrôleurs, services, etc.) est organisé dans des dossiers dédiés, facilitant ainsi la navigation et la gestion du code dans des projets de grande envergure.\n\nTest de l’Api\n\nCréez une collection Postman pour tester l’Api.",
+    "metadata": {
+      "module": "420-514",
+      "source": "https://cegepmv.github.io/420-514/usets/lab_ts/index.html",
+      "title": "🧪 Laboratoire : Intégrer TypeScript avec Express :: Collecte et interprétation de données",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "✏️ Exercices : expressions régulères\n\nExercice 1 : Validation d’un mot de passe\n\nObjectif :\n\nCréer une fonction qui valide un mot de passe selon les règles suivantes :\n\nAu moins 8 caractères.\n\nContient au moins une lettre majuscule.\n\nContient au moins une lettre minuscule.\n\nContient au moins un chiffre.\n\nContient au moins un caractère spécial (ex:\n\n!@#$%^&*\n\nInstructions :\n\nCréez une fonction\n\nvalidatePassword\n\nqui prend une chaîne de caractères en entrée et retourne\n\ntrue\n\nsi le mot de passe est valide, sinon\n\nfalse\n\nExercice 2 : Nettoyage d’une chaîne de caractères\n\nObjectif :\n\nCréer une fonction qui nettoie une chaîne de caractères en :\n\nSupprimant tous les caractères spéciaux, sauf les espaces.\n\nConvertissant plusieurs espaces consécutifs en un seul espace.\n\nSupprimant les espaces au début et à la fin de la chaîne.\n\nInstructions :\n\nCréez une fonction\n\ncleanString\n\nqui prend une chaîne en entrée et retourne la chaîne nettoyée.\n\nExercice 3 : Extraction des numéros de téléphone\n\nObjectif :\n\nCréer une fonction qui extrait tous les numéros de téléphone d’un texte. Les numéros peuvent être au format\n\n(123) 456-7890\n\n123-456-7890\n\nInstructions :\n\nCréez une fonction",
+    "metadata": {
+      "module": "420-514",
+      "source": "https://cegepmv.github.io/420-514/regex/exoregex/index.html",
+      "title": "✏️ Exercices : expressions régulères :: Collecte et interprétation de données",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "extrait tous les numéros de téléphone d’un texte. Les numéros peuvent être au format\n\n(123) 456-7890\n\n123-456-7890\n\nInstructions :\n\nCréez une fonction\n\nextractPhoneNumbers\n\nqui prend une chaîne de caractères en entrée et retourne un tableau de numéros de téléphone.\n\nExercice 4 : Validation d’un code postal\n\nObjectif :\n\nCréer une fonction qui valide un code postal. Un code postal valide suit les règles suivantes :\n\n5 chiffres pour un code postal américain (ex : 12345).\n\n6 caractères pour un code postal canadien (ex : A1A 1A1).\n\nInstructions :\n\nCréez une fonction\n\nvalidatePostalCode\n\nqui valide les deux formats.\n\nExercice 5 : Extraction des liens URL\n\nObjectif :\n\nCréer une fonction qui extrait toutes les URL d’un texte.\n\nInstructions :\n\nCréez une fonction\n\nextractUrls\n\nqui prend une chaîne de caractères en entrée et retourne un tableau de toutes les URL.\n\nExercice 6 : Validation d’un nom d’utilisateur\n\nObjectif :\n\nCréer une fonction qui valide un nom d’utilisateur selon les règles suivantes :\n\nSeulement des lettres, chiffres et underscores.\n\nDoit commencer par une lettre.\n\nLongueur comprise entre 3 et 15 caractères.\n\nInstructions :\n\nCréez une fonction\n\nvalidateUsername\n\npour vérifier ces conditions.\n\nExercice 7 : Suppression des caractères spéciaux d’un texte\n\nObjectif :",
+    "metadata": {
+      "module": "420-514",
+      "source": "https://cegepmv.github.io/420-514/regex/exoregex/index.html",
+      "title": "✏️ Exercices : expressions régulères :: Collecte et interprétation de données",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "ctions :\n\nCréez une fonction\n\nvalidateUsername\n\npour vérifier ces conditions.\n\nExercice 7 : Suppression des caractères spéciaux d’un texte\n\nObjectif :\n\nCréer une fonction qui supprime tous les caractères spéciaux d’une chaîne sauf les espaces.\n\nInstructions :\n\nCréez une fonction\n\nremoveSpecialCharacters\n\nqui prend une chaîne en entrée et supprime tous les caractères spéciaux.\n\nExercice 8 : Formater les dates\n\nObjectif :\n\nCréer une fonction qui formate toutes les dates dans un texte au format\n\nDD/MM/YYYY\n\n. Les dates sont présentes au format\n\nMM/DD/YYYY\n\nYYYY-MM-DD\n\nInstructions :\n\nCréez une fonction\n\nformatDates\n\nqui prend une chaîne contenant des dates et les reformate au format\n\nDD/MM/YYYY",
+    "metadata": {
+      "module": "420-514",
+      "source": "https://cegepmv.github.io/420-514/regex/exoregex/index.html",
+      "title": "✏️ Exercices : expressions régulères :: Collecte et interprétation de données",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "🧪 Laboratoire : Configuration HTTPS\n\nConfigurer HTTPS pour des connexions sécurisées dans une application Node.js avec Express est une étape cruciale pour sécuriser les communications entre les clients et le serveur. HTTPS chiffre les données échangées pour empêcher les interceptions et les attaques “man-in-the-middle”. Voici comment vous pouvez configurer HTTPS dans une application Express.\n\nObtenir un certificat SSL/TLS\n\nPour utiliser HTTPS, vous avez besoin d’un certificat SSL/TLS. Vous pouvez obtenir un certificat de plusieurs façons :\n\nCertificats auto-signés\n\n: Bon pour le développement ou les tests, mais non approuvé par les navigateurs.\n\nCertificats émis par une autorité de certification (CA)\n\n: Pour les environnements de production. Vous pouvez obtenir ces certificats via des services comme\n\nLet’s Encrypt\n\n, qui fournit des certificats gratuits.\n\nGénérer un certificat auto-signé (pour le Développement)\n\nPour le développement, vous pouvez générer un certificat auto-signé à l’aide de\n\nopenssl\n\nopenssl genpkey -algorithm RSA -out key.pem\n\nopenssl req -new -key key.pem -out csr.pem\n\nopenssl x509 -req -days\n\n365\n\n-in csr.pem -signkey key.pem -out cert.pem",
+    "metadata": {
+      "module": "420-514",
+      "source": "https://cegepmv.github.io/420-514/securapi/labhttpsconfig/index.html",
+      "title": "🧪 Laboratoire : Configuration HTTPS :: Collecte et interprétation de données",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "pkey -algorithm RSA -out key.pem\n\nopenssl req -new -key key.pem -out csr.pem\n\nopenssl x509 -req -days\n\n365\n\n-in csr.pem -signkey key.pem -out cert.pem\n\nCela génère deux fichiers :\n\nkey.pem\n\n: La clé privée.\n\ncert.pem\n\n: Le certificat.\n\nConfigurer HTTPS dans une application express\n\nUne fois que vous avez les fichiers de certificat et de clé, vous pouvez configurer votre serveur Express pour utiliser HTTPS.\n\nMettre à jour\n\nindex.js\n\npour HTTPS\n\nModifiez votre fichier\n\nindex.js\n\npour utiliser\n\nhttps\n\nà la place de\n\nhttp\n\nindex.js\n\nconst\n\nexpress\n\nrequire\n\n'express'\n\nconst\n\nhttps\n\nrequire\n\n'https'\n\nconst\n\nrequire\n\n'fs'\n\nconst\n\npath\n\nrequire\n\n'path'\n\nconst\n\napp\n\nexpress\n\n();\n\nconst\n\nport\n\nprocess\n\nenv\n\nPORT\n\n3000\n\n// Charger le certificat et la clé\n\nconst\n\noptions\n\nkey\n\nreadFileSync\n\npath\n\njoin\n\n__dirname\n\n'key.pem'\n\n)),\n\ncert\n\nreadFileSync\n\npath\n\njoin\n\n__dirname\n\n'cert.pem'\n\n// Middleware JSON\n\napp\n\nuse\n\nexpress\n\njson\n\n());\n\n// Route simple pour tester\n\napp\n\nget\n\n'/'\n\n, (\n\nreq\n\nres\n\n) => {\n\nres\n\nsend\n\n'Connexion HTTPS sécurisée'\n\n});\n\n// Créer le serveur HTTPS\n\nhttps\n\ncreateServer\n\noptions\n\napp\n\nlisten\n\nport\n\n, () => {\n\nconsole\n\nlog\n\n`Serveur HTTPS en écoute sur <https://localhost>:\n\nport\n\n});\n\nTester la Configuration HTTPS\n\nDémarrez le Serveur\n\nnode index.js\n\nAccédez à l’application\n\nOuvrez votre navigateur et accédez à",
+    "metadata": {
+      "module": "420-514",
+      "source": "https://cegepmv.github.io/420-514/securapi/labhttpsconfig/index.html",
+      "title": "🧪 Laboratoire : Configuration HTTPS :: Collecte et interprétation de données",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "calhost>:\n\nport\n\n});\n\nTester la Configuration HTTPS\n\nDémarrez le Serveur\n\nnode index.js\n\nAccédez à l’application\n\nOuvrez votre navigateur et accédez à\n\nhttps://localhost:3000\n\n. Si vous utilisez un certificat auto-signé, le navigateur affichera une alerte de sécurité, car le certificat n’est pas émis par une autorité de certification reconnue. Vous pouvez ignorer l’alerte pour tester en développement.\n\nRedirection HTTP vers HTTPS\n\nPour vous assurer que tous les utilisateurs utilisent des connexions sécurisées, vous pouvez configurer une redirection de HTTP vers HTTPS.\n\nConfigurer le serveur HTTP pour rediriger vers HTTPS\n\nAjoutez un serveur HTTP séparé qui redirige toutes les requêtes vers HTTPS.\n\nindex.js\n\n(mis à jour)\n\nconst\n\nexpress\n\nrequire\n\n'express'\n\nconst\n\nhttps\n\nrequire\n\n'https'\n\nconst\n\nhttp\n\nrequire\n\n'http'\n\nconst\n\nrequire\n\n'fs'\n\nconst\n\npath\n\nrequire\n\n'path'\n\nconst\n\napp\n\nexpress\n\n();\n\nconst\n\nhttpsPort\n\nprocess\n\nenv\n\nHTTPS_PORT\n\n3000\n\nconst\n\nhttpPort\n\nprocess\n\nenv\n\nHTTP_PORT\n\n3001\n\n// Charger le certificat et la clé\n\nconst\n\noptions\n\nkey\n\nreadFileSync\n\npath\n\njoin\n\n__dirname\n\n'key.pem'\n\n)),\n\ncert\n\nreadFileSync\n\npath\n\njoin\n\n__dirname\n\n'cert.pem'\n\n// Middleware JSON\n\napp\n\nuse\n\nexpress\n\njson\n\n());\n\n// Route simple pour tester\n\napp\n\nget\n\n'/'\n\n, (\n\nreq\n\nres\n\n) => {\n\nres\n\nsend\n\n'Connexion HTTPS sécurisée'\n\n});",
+    "metadata": {
+      "module": "420-514",
+      "source": "https://cegepmv.github.io/420-514/securapi/labhttpsconfig/index.html",
+      "title": "🧪 Laboratoire : Configuration HTTPS :: Collecte et interprétation de données",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "re JSON\n\napp\n\nuse\n\nexpress\n\njson\n\n());\n\n// Route simple pour tester\n\napp\n\nget\n\n'/'\n\n, (\n\nreq\n\nres\n\n) => {\n\nres\n\nsend\n\n'Connexion HTTPS sécurisée'\n\n});\n\n// Créer le serveur HTTPS\n\nhttps\n\ncreateServer\n\noptions\n\napp\n\nlisten\n\nhttpsPort\n\n, () => {\n\nconsole\n\nlog\n\n`Serveur HTTPS en écoute sur <https://localhost>:\n\nhttpsPort\n\n});\n\n// Créer le serveur HTTP qui redirige vers HTTPS\n\nhttp\n\ncreateServer\n\nreq\n\nres\n\n) => {\n\nres\n\nwriteHead\n\n301\n\n, {\n\n\"Location\"\n\n`https://localhost:\n\nhttpsPort\n\n}${\n\nreq\n\nurl\n\n});\n\nres\n\nend\n\n();\n\n}).\n\nlisten\n\nhttpPort\n\n, () => {\n\nconsole\n\nlog\n\n`Serveur HTTP en écoute sur <http://localhost>:\n\nhttpPort\n\n});\n\nSi le certificat provien d’une source non approuvées, il est possible que vous ne pouvez accéder au\n\nlocalhost\n\navec https, mais en dev on va juste cliquer sur avancer puis continuer avec la connexion non sécurisée.\n\nConfigurer le serveur pour la production\n\nSi vous déployez sur un serveur de production, vous devez configurer le serveur web (comme Nginx ou Apache) pour gérer les certificats SSL et rediriger le trafic HTTP vers HTTPS.\n\nNe jamais inclure de certificats en production avec le code\n\nEn production, les certificats et les clés privées doivent être gérés indépendamment du code source pour des raisons de sécurité. Utilisez des outils de gestion de certificats (comme\n\nLet’s Encrypt",
+    "metadata": {
+      "module": "420-514",
+      "source": "https://cegepmv.github.io/420-514/securapi/labhttpsconfig/index.html",
+      "title": "🧪 Laboratoire : Configuration HTTPS :: Collecte et interprétation de données",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "ées doivent être gérés indépendamment du code source pour des raisons de sécurité. Utilisez des outils de gestion de certificats (comme\n\nLet’s Encrypt\n\npour les certificats gratuits) ou des services cloud pour les stocker et les renouveler automatiquement.\n\n7. Bonnes pratiques supplémentaires pour la sécurité des certificats\n\nPermissions d’accès aux fichiers\n\n: Les fichiers de certificat doivent avoir des permissions limitées pour que seuls les utilisateurs du système qui en ont besoin puissent y accéder. Par exemple, vous pouvez limiter les accès avec la commande\n\nchmod\n\nsous Linux :\n\nchmod\n\n600\n\ncerts/key.pem\n\nchmod\n\n600\n\ncerts/cert.pem\n\nCela permet uniquement au propriétaire de lire et d’écrire dans ces fichiers.\n\nEnvironnement de production\n\n: Pour les environnements de production, vous pouvez stocker les certificats dans des services de gestion de certificats comme\n\nAWS Certificate Manager\n\nAzure Key Vault\n\n, afin de ne pas avoir à gérer manuellement les fichiers sur le serveur.\n\nVariables d’environnement\n\n: Vous pouvez aussi stocker les chemins vers les fichiers de certificats dans des\n\nvariables d’environnement\n\n. Cela rend votre projet plus portable entre différents environnements (local, production, CI/CD). Exemple :\n\n.env\n\nSSL_KEY_PATH=./certs/key.pem\n\nSSL_CERT_PATH=./certs/cert.pem\n\nChargement dans votre application",
+    "metadata": {
+      "module": "420-514",
+      "source": "https://cegepmv.github.io/420-514/securapi/labhttpsconfig/index.html",
+      "title": "🧪 Laboratoire : Configuration HTTPS :: Collecte et interprétation de données",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "onnements (local, production, CI/CD). Exemple :\n\n.env\n\nSSL_KEY_PATH=./certs/key.pem\n\nSSL_CERT_PATH=./certs/cert.pem\n\nChargement dans votre application\n\nconst\n\ncertificatOptions\n\nkey\n\nfs.readFileSync\n\nprocess\n\nenv\n\nSSL_KEY_PATH\n\ncert\n\nfs.readFileSync\n\nprocess\n\nenv\n\nSSL_CERT_PATH\n\nAutres ressources\n\nComment générer un CSR en Node.js - SSL Dragon\n\nHTTPS | Node.js v22.8.0 Documentation\n\nTLS (SSL) | Node.js v22.8.0 Documentation\n\nGet Started - ZeroSSL",
+    "metadata": {
+      "module": "420-514",
+      "source": "https://cegepmv.github.io/420-514/securapi/labhttpsconfig/index.html",
+      "title": "🧪 Laboratoire : Configuration HTTPS :: Collecte et interprétation de données",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "🧪 Laboratoire : Mechanismes pour authentification sécuritaire\n\n1. JWT\n\nExemple avec JSON Web Token (JWT) :\n\nnpm install express jsonwebtoken bcryptjs\n\nAvec TypeScript, il ne faut pas ajouter les packages nécessaires :\n\nnpm i --save-dev @types/jsonwebtoken @types/bcryptjs\n\nconst\n\nexpress\n\nrequire\n\n'express'\n\nconst\n\njwt\n\nrequire\n\n'jsonwebtoken'\n\nconst\n\nbcrypt\n\nrequire\n\n'bcryptjs'\n\nconst\n\napp\n\nexpress\n\n();\n\napp\n\nuse\n\nexpress\n\njson\n\n());\n\nconst\n\nusers\n\n[];\n\n// Simuler une base de données en mémoire\n\napp\n\npost\n\n'/register'\n\nasync\n\nreq\n\nres\n\n) => {\n\nconst\n\nhashedPassword\n\nawait\n\nbcrypt\n\nhash\n\nreq\n\nbody\n\npassword\n\nconst\n\nuser\n\nusername\n\nreq\n\nbody\n\nusername\n\npassword\n\nhashedPassword\n\nusers\n\npush\n\nuser\n\nres\n\nstatus\n\n201\n\nsend\n\n'Utilisateur enregistré'\n\n});\n\napp\n\npost\n\n'/login'\n\nasync\n\nreq\n\nres\n\n) => {\n\nconst\n\nuser\n\nusers\n\nfind\n\nuser\n\nuser\n\nusername\n\n===\n\nreq\n\nbody\n\nusername\n\nuser\n\nawait\n\nbcrypt\n\ncompare\n\nreq\n\nbody\n\npassword\n\nuser\n\npassword\n\n)) {\n\nconst\n\naccessToken\n\njwt\n\nsign\n\nusername\n\nuser\n\nusername\n\n'SECRET_KEY'\n\n, {\n\nexpiresIn\n\n'1h'\n\n});\n\nres\n\njson\n\naccessToken\n\n});\n\nelse\n\nres\n\nstatus\n\n403\n\nsend\n\n'Nom d’utilisateur ou mot de passe incorrect'\n\n});\n\napp\n\nlisten\n\n3000\n\n, () => {\n\nconsole",
+    "metadata": {
+      "module": "420-514",
+      "source": "https://cegepmv.github.io/420-514/securapi/labauthsecure/index.html",
+      "title": "🧪 Laboratoire : Mechanismes pour authentification sécuritaire :: Collecte et interprétation de données",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "res\n\njson\n\naccessToken\n\n});\n\nelse\n\nres\n\nstatus\n\n403\n\nsend\n\n'Nom d’utilisateur ou mot de passe incorrect'\n\n});\n\napp\n\nlisten\n\n3000\n\n, () => {\n\nconsole\n\nlog\n\n'Serveur démarré sur le port 3000'\n\n});\n\nÉtablissement de connexion sécurisée\n\nIl est recommandé d’utiliser HTTPS pour sécuriser les connexions entre le client et le serveur.\n\nExemple avec HTTPS :\n\nnpm install express fs https\n\nconst\n\nrequire\n\n'fs'\n\nconst\n\nhttps\n\nrequire\n\n'https'\n\nconst\n\nexpress\n\nrequire\n\n'express'\n\nconst\n\napp\n\nexpress\n\n();\n\n// Charger les certificats\n\nconst\n\noptions\n\nkey\n\nreadFileSync\n\n'server.key'\n\ncert\n\nreadFileSync\n\n'server.cert'\n\napp\n\nget\n\n'/'\n\n, (\n\nreq\n\nres\n\n) => {\n\nres\n\nsend\n\n'Connexion sécurisée'\n\n});\n\nhttps\n\ncreateServer\n\noptions\n\napp\n\nlisten\n\n3000\n\n, () => {\n\nconsole\n\nlog\n\n'Serveur HTTPS démarré sur le port 3000'\n\n});\n\nPour ce faire, vous devez disposer d’un certificat SSL valide, qui peut être obtenu auprès d’une autorité de certification (AC).\n\nConfiguration HTTPS pour des connexions sécurisées\n\nUtilisation de clés publiques\n\nLe chiffrement RSA avec des clés publiques et privées est une méthode courante.\n\nExemple d’utilisation de clés publiques pour le chiffrement :\n\nnpm install node-rsa\n\nnpm i --save-dev @types/node-rsa\n\nconst\n\nNodeRSA\n\nrequire\n\n'node-rsa'\n\nconst\n\nkey\n\nnew\n\nNodeRSA\n\n512\n\n});\n\nconst\n\npublicKey\n\nkey\n\nexportKey\n\n'public'\n\nconst",
+    "metadata": {
+      "module": "420-514",
+      "source": "https://cegepmv.github.io/420-514/securapi/labauthsecure/index.html",
+      "title": "🧪 Laboratoire : Mechanismes pour authentification sécuritaire :: Collecte et interprétation de données",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "--save-dev @types/node-rsa\n\nconst\n\nNodeRSA\n\nrequire\n\n'node-rsa'\n\nconst\n\nkey\n\nnew\n\nNodeRSA\n\n512\n\n});\n\nconst\n\npublicKey\n\nkey\n\nexportKey\n\n'public'\n\nconst\n\nprivateKey\n\nkey\n\nexportKey\n\n'private'\n\n// Chiffrement avec clé publique\n\nconst\n\ntext\n\n'Données sensibles'\n\nconst\n\nencrypted\n\nkey\n\nencrypt\n\ntext\n\n'base64'\n\nconsole\n\nlog\n\n'Texte chiffré :'\n\nencrypted\n\n// Déchiffrement avec clé privée\n\nkey\n\nimportKey\n\nprivateKey\n\n'private'\n\nconst\n\ndecrypted\n\nkey\n\ndecrypt\n\nencrypted\n\n'utf8'\n\nconsole\n\nlog\n\n'Texte déchiffré :'\n\ndecrypted\n\nUtilisation de clés secrètes\n\nLes clés secrètes sont utilisées dans les algorithmes symétriques comme AES.\n\nExemple de chiffrement symétrique avec AES :\n\nnpm install crypto\n\nconst\n\ncrypto\n\nrequire\n\n'crypto'\n\n// Clé secrète\n\nconst\n\nsecretKey\n\n'my-secret-key-123'\n\n// Chiffrement\n\nfunction\n\nencrypt\n\ntext\n\n) {\n\nconst\n\ncipher\n\ncrypto\n\ncreateCipher\n\n'aes-256-ctr'\n\nsecretKey\n\nlet\n\nencrypted\n\ncipher\n\nupdate\n\ntext\n\n'utf8'\n\n'hex'\n\nencrypted\n\ncipher\n\nfinal\n\n'hex'\n\nreturn\n\nencrypted\n\n// Déchiffrement\n\nfunction\n\ndecrypt\n\nencryptedText\n\n) {\n\nconst\n\ndecipher\n\ncrypto\n\ncreateDecipher\n\n'aes-256-ctr'\n\nsecretKey\n\nlet\n\ndecrypted\n\ndecipher\n\nupdate\n\nencryptedText\n\n'hex'\n\n'utf8'\n\ndecrypted\n\ndecipher\n\nfinal\n\n'utf8'\n\nreturn\n\ndecrypted\n\nconst\n\ntext\n\n'Données à protéger'\n\nconst\n\nencrypted\n\nencrypt\n\ntext\n\nconst\n\ndecrypted\n\ndecrypt\n\nencrypted",
+    "metadata": {
+      "module": "420-514",
+      "source": "https://cegepmv.github.io/420-514/securapi/labauthsecure/index.html",
+      "title": "🧪 Laboratoire : Mechanismes pour authentification sécuritaire :: Collecte et interprétation de données",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "decipher\n\nfinal\n\n'utf8'\n\nreturn\n\ndecrypted\n\nconst\n\ntext\n\n'Données à protéger'\n\nconst\n\nencrypted\n\nencrypt\n\ntext\n\nconst\n\ndecrypted\n\ndecrypt\n\nencrypted\n\nconsole\n\nlog\n\n'Texte chiffré :'\n\nencrypted\n\nconsole\n\nlog\n\n'Texte déchiffré :'\n\ndecrypted\n\nStockage sécuritaire des données des utilisateurs\n\nLe hachage est utilisé pour stocker les mots de passe de manière sécurisée.\n\nExemple avec bcryptjs pour hacher les mots de passe :\n\nnpm install bcryptjs\n\nconst\n\nbcrypt\n\nrequire\n\n'bcryptjs'\n\n// Hachage du mot de passe\n\nasync\n\nfunction\n\nhashPassword\n\npassword\n\n) {\n\nconst\n\nhashedPassword\n\nawait\n\nbcrypt\n\nhash\n\npassword\n\nreturn\n\nhashedPassword\n\n// Vérification du mot de passe\n\nasync\n\nfunction\n\nverifyPassword\n\npassword\n\nhashedPassword\n\n) {\n\nconst\n\nmatch\n\nawait\n\nbcrypt\n\ncompare\n\npassword\n\nhashedPassword\n\nreturn\n\nmatch\n\nconst\n\npassword\n\n'monMotDePasse'\n\nhashPassword\n\npassword\n\nthen\n\nhashedPassword\n\n=> {\n\nconsole\n\nlog\n\n'Mot de passe haché :'\n\nhashedPassword\n\nverifyPassword\n\npassword\n\nhashedPassword\n\nthen\n\nisMatch\n\n=> {\n\nconsole\n\nlog\n\n'Les mots de passe correspondent :'\n\nisMatch\n\n});\n\n});\n\nGestion des accès\n\nVous pouvez utiliser les middlewares pour restreindre l’accès aux routes selon les rôles des utilisateurs.\n\nExemple de gestion des accès avec des rôles utilisateurs :\n\nconst\n\nexpress\n\nrequire\n\n'express'\n\nconst\n\njwt\n\nrequire\n\n'jsonwebtoken'\n\nconst",
+    "metadata": {
+      "module": "420-514",
+      "source": "https://cegepmv.github.io/420-514/securapi/labauthsecure/index.html",
+      "title": "🧪 Laboratoire : Mechanismes pour authentification sécuritaire :: Collecte et interprétation de données",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "lisateurs.\n\nExemple de gestion des accès avec des rôles utilisateurs :\n\nconst\n\nexpress\n\nrequire\n\n'express'\n\nconst\n\njwt\n\nrequire\n\n'jsonwebtoken'\n\nconst\n\napp\n\nexpress\n\n();\n\napp\n\nuse\n\nexpress\n\njson\n\n());\n\nconst\n\nSECRET_KEY\n\n'SECRET_KEY'\n\n// Middleware de vérification du rôle\n\nfunction\n\nauthenticateToken\n\nreq\n\nres\n\nnext\n\n) {\n\nconst\n\ntoken\n\nreq\n\nheaders\n\n'authorization'\n\nsplit\n\n' '\n\ntoken\n\nreturn\n\nres\n\nsendStatus\n\n403\n\njwt\n\nverify\n\ntoken\n\nSECRET_KEY\n\n, (\n\nerr\n\nuser\n\n) => {\n\nerr\n\nreturn\n\nres\n\nsendStatus\n\n403\n\nreq\n\nuser\n\nuser\n\nnext\n\n();\n\n});\n\nfunction\n\nauthorizeRole\n\nrole\n\n) {\n\nreturn\n\nreq\n\nres\n\nnext\n\n) => {\n\nreq\n\nuser\n\nrole\n\n!==\n\nrole\n\nreturn\n\nres\n\nsendStatus\n\n401\n\nnext\n\n();\n\n// Route accessible uniquement par un administrateur\n\napp\n\nget\n\n'/admin'\n\nauthenticateToken\n\nauthorizeRole\n\n'admin'\n\n), (\n\nreq\n\nres\n\n) => {\n\nres\n\nsend\n\n'Bienvenue, administrateur !'\n\n});\n\napp\n\nlisten\n\n3000\n\n, () => {\n\nconsole\n\nlog\n\n'Serveur démarré sur le port 3000'\n\n});",
+    "metadata": {
+      "module": "420-514",
+      "source": "https://cegepmv.github.io/420-514/securapi/labauthsecure/index.html",
+      "title": "🧪 Laboratoire : Mechanismes pour authentification sécuritaire :: Collecte et interprétation de données",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "🧪 Laboratoire : Documentation Swagger et versionnement\n\n🧪 Exercices pratiques\n\nObjectifs :\n\nDocumenter l’API\n\nCréer deux versions d’une route\n\n/users\n\nModifier la structure retournée entre v1 et v2\n\nDocumenter les deux versions dans Swagger\n\nTester avec Postman\n\nExercice 1 :\n\nImporter votre fichier swagger dans\n\nSwagger Editor\n\nTester la génération de documentation\n\nUtiliser Postman pour tester les routes /users, /login, /orders\n\nAjouter un token JWT manuellement dans les headers (Authorization: Bearer )\n\nCréer d’autres routes (PUT, DELETE) si elles n’existent pas, les documenter et les tester\n\nExercice 2 :\n\n→ retourne\n\n[ { id, username } ]\n\n→ retourne\n\n[ { id, username, email, role } ]",
+    "metadata": {
+      "module": "420-514",
+      "source": "https://cegepmv.github.io/420-514/docapi/labdocversion/index.html",
+      "title": "🧪 Laboratoire : Documentation Swagger et versionnement :: Collecte et interprétation de données",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "🧪 Laboratoire : MongoDB avec Atlas et Compass\n\nÉtape 1 : Installation de MongoDB\n\na. Installer MongoDB sur Windows :\n\nAllez sur le site officiel de\n\nMongoDB\n\net téléchargez la version communautaire de MongoDB.\n\nSuivez les instructions de l’installateur pour installer MongoDB sur votre machine.\n\nMongoDB s’exécute comme un service sous Windows, donc après l’installation, le service MongoDB devrait démarrer automatiquement.\n\nb. Installer MongoDB sur Linux :\n\nPour installer MongoDB sur Ubuntu :\n\nsudo apt update\n\nsudo apt install -y mongodb\n\nDémarrez le service MongoDB :\n\nsudo systemctl start mongodb\n\nVérifiez que MongoDB fonctionne :\n\nsudo systemctl status mongodb\n\nc. Installer MongoDB sur macOS :\n\nUtilisez\n\nHomebrew\n\npour installer MongoDB :\n\nbrew tap mongodb/brew\n\nbrew install mongodb-community@6.0\n\nDémarrez MongoDB :\n\nbrew services start mongodb-community@6.0\n\nÉtape 2 : Démarrer MongoDB et le shell Mongo\n\nMongoDB inclut un shell appelé\n\nmongosh\n\n, qui permet d’interagir avec la base de données via des commandes.\n\nPour ouvrir le shell Mongo, tapez simplement\n\nmongosh\n\ndans votre terminal ou invite de commande.\n\nVous devriez voir une invite comme celle-ci :\n\n> mongosh",
+    "metadata": {
+      "module": "420-514",
+      "source": "https://cegepmv.github.io/420-514/dbnosql/labmongodb/index.html",
+      "title": "🧪 Laboratoire : MongoDB avec Atlas et Compass :: Collecte et interprétation de données",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "ouvrir le shell Mongo, tapez simplement\n\nmongosh\n\ndans votre terminal ou invite de commande.\n\nVous devriez voir une invite comme celle-ci :\n\n> mongosh\n\nDans notre cas on va utiliser MongoDB Compass avec MongoDB Atlas pour créer le cluster pour stocker nos bases de données.\n\nAller sur le lien suivant et créer un compte avec\n\nGoogle\n\nou Github :\n\nLoad Data into Atlas\n\nCréer votre premier Cluster :\n\nChoisissez l’option gratuite avec n’importe quel des 3 fournisseurs proposés :\n\nDonner un nom d’utilisateur et un mot de passe pour pouvoir se connecter à votre Cluster :\n\nSet Up MongoDB Atlas\n\nVous pouvez choisir la méthode de connection souhaitée. Nous allons choisir la connection avec Compass :\n\nVous pouvez vous connecter à votre cluster dans compass avec l’URI suivant (en remplaçant les informations entre <>):\n\nmongodb\n\nsrv\n\n//<user>:<db_password>@<cluster-name>.o4pdb.mongodb.net/\n\nMettez votre mot de passe dans le placeholder correspondant.\n\nUne fois connecté, vous pouvez voir les bases de données contenant dans votre cluster :\n\nÉtape 3 : Créer une base de données et une collection\n\nDans MongoDB, les bases de données contiennent des\n\ncollections\n\n(équivalent des tables dans une base de données relationnelle), et les collections contiennent des\n\ndocuments\n\nCréer une base de données",
+    "metadata": {
+      "module": "420-514",
+      "source": "https://cegepmv.github.io/420-514/dbnosql/labmongodb/index.html",
+      "title": "🧪 Laboratoire : MongoDB avec Atlas et Compass :: Collecte et interprétation de données",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "collections\n\n(équivalent des tables dans une base de données relationnelle), et les collections contiennent des\n\ndocuments\n\nCréer une base de données\n\nDans MongoDB, pour créer une base de données, il suffit de la sélectionner et elle sera créée automatiquement lorsqu’on y insère des données :\n\nuse ma_base_de_donnees\n\nCréer une collection\n\nLes collections sont créées lors de l’insertion d’un document. Par exemple :\n\ndb.createCollection\n\n\"utilisateurs\"\n\nÉtape 4 : Insérer des documents dans une collection\n\nLes documents sont insérés sous forme d’objets JSON. Voici comment ajouter un utilisateur dans la collection “utilisateurs” :\n\ndb.utilisateurs.insertOne\n\n\"nom\"\n\n\"Alice\"\n\n\"age\"\n\n: 25,\n\n\"email\"\n\n\"alice@example.com\"\n\nVous pouvez également insérer plusieurs documents à la fois en utilisant\n\ninsertMany\n\ndb.utilisateurs.insertMany\n\n\"nom\"\n\n\"Bob\"\n\n\"age\"\n\n: 30,\n\n\"email\"\n\n\"bob@example.com\"\n\n\"nom\"\n\n\"Charlie\"\n\n\"age\"\n\n: 22,\n\n\"email\"\n\n\"charlie@example.com\"\n\nÉtape 5 : Rechercher des documents\n\nPour récupérer des documents, utilisez la commande\n\nfind\n\nRechercher tous les documents\n\ndb.utilisateurs.find\n\nRechercher des documents spécifiques\n\nPour rechercher un utilisateur avec le nom “Alice” :\n\ndb.utilisateurs.find\n\n\"nom\"\n\n\"Alice\"\n\nRechercher avec des conditions\n\nPar exemple, pour rechercher les utilisateurs de plus de 25 ans :",
+    "metadata": {
+      "module": "420-514",
+      "source": "https://cegepmv.github.io/420-514/dbnosql/labmongodb/index.html",
+      "title": "🧪 Laboratoire : MongoDB avec Atlas et Compass :: Collecte et interprétation de données",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "nom “Alice” :\n\ndb.utilisateurs.find\n\n\"nom\"\n\n\"Alice\"\n\nRechercher avec des conditions\n\nPar exemple, pour rechercher les utilisateurs de plus de 25 ans :\n\ndb.utilisateurs.find\n\n\"age\"\n\n$gt\n\nÉtape 6 : Mettre à jour des documents\n\nMongoDB vous permet de mettre à jour des documents existants avec la commande\n\nupdateOne\n\nupdateMany\n\nMettre à jour un document\n\nPour modifier l’âge de “Alice” :\n\ndb.utilisateurs.updateOne\n\n\"nom\"\n\n\"Alice\"\n\n$set\n\n\"age\"\n\nMettre à jour plusieurs documents\n\nPour augmenter l’âge de tous les utilisateurs de 2 ans :\n\ndb.utilisateurs.updateMany\n\n$inc\n\n\"age\"\n\nÉtape 7 : Supprimer des documents\n\nPour supprimer des documents, utilisez\n\ndeleteOne\n\ndeleteMany\n\nSupprimer un document spécifique\n\nPour supprimer l’utilisateur “Charlie” :\n\ndb.utilisateurs.deleteOne\n\n\"nom\"\n\n\"Charlie\"\n\nSupprimer plusieurs documents\n\nPour supprimer tous les utilisateurs de plus de 30 ans :\n\ndb.utilisateurs.deleteMany\n\n\"age\"\n\n$gt\n\nÉtape 8 : Indexation\n\nMongoDB permet d’indexer des champs pour améliorer les performances des requêtes. Voici comment créer un index sur le champ “nom” :\n\ndb.utilisateurs.createIndex\n\n\"nom\"\n\nVous pouvez également créer des\n\nindex composites\n\nsur plusieurs champs, par exemple sur “nom” et “email” :\n\ndb.utilisateurs.createIndex\n\n\"nom\"\n\n: 1,\n\n\"email\"\n\nValidation du schéma :\n\nAjouter un shéma de validation :",
+    "metadata": {
+      "module": "420-514",
+      "source": "https://cegepmv.github.io/420-514/dbnosql/labmongodb/index.html",
+      "title": "🧪 Laboratoire : MongoDB avec Atlas et Compass :: Collecte et interprétation de données",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "hamps, par exemple sur “nom” et “email” :\n\ndb.utilisateurs.createIndex\n\n\"nom\"\n\n: 1,\n\n\"email\"\n\nValidation du schéma :\n\nAjouter un shéma de validation :\n\nLes documents qui ne respectent pas le schéma je fais find pour les sélectionner puis Delete pour les supprimer\n\nOu mettre une valeur par défaut :\n\nÉtape 9 : Utiliser l’agrégation\n\nL’agrégation permet de réaliser des opérations complexes sur les données, comme des groupements, des tris, et des filtres avancés.\n\nExemple de pipeline d’agrégation\n\nPour calculer l’âge moyen des utilisateurs :\n\ndb.utilisateurs.aggregate\n\n$group\n\n\"_id\"\n\n: null,\n\n\"ageMoyen\"\n\n$avg\n\n$age\n\nPipeline plus complexe\n\nCalculer le nombre d’utilisateurs par tranche d’âge :\n\ndb.utilisateurs.aggregate\n\n$bucket\n\n\"groupBy\"\n\n$age\n\n\"boundaries\"\n\n20, 30, 40,\n\n\"default\"\n\n\"50+\"\n\n\"output\"\n\n\"nombre\"\n\n$sum\n\nÉtape 10 : Sauvegarde et restauration de données\n\nMongoDB offre des outils pour sauvegarder et restaurer des données.\n\nSauvegarde\n\nUtilisez la commande\n\nmongodump\n\npour sauvegarder une base de données :\n\nmongodump --db ma_base_de_donnees --out /path/to/backup\n\nRestauration\n\nUtilisez\n\nmongorestore\n\npour restaurer les données :\n\nmongorestore /path/to/backup\n\nÉtape 11 : Accéder à MongoDB via une application Node.js\n\nMongoDB peut être utilisé avec diverses applications, dont\n\nNode.js",
+    "metadata": {
+      "module": "420-514",
+      "source": "https://cegepmv.github.io/420-514/dbnosql/labmongodb/index.html",
+      "title": "🧪 Laboratoire : MongoDB avec Atlas et Compass :: Collecte et interprétation de données",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "restore /path/to/backup\n\nÉtape 11 : Accéder à MongoDB via une application Node.js\n\nMongoDB peut être utilisé avec diverses applications, dont\n\nNode.js\n\n. Voici un exemple d’intégration avec Node.js :\n\nInstallez le driver MongoDB pour Node.js :\n\nnpm install mongodb\n\nCréez une connexion dans votre fichier JavaScript :\n\nconst\n\nMongoClient\n\nrequire\n\n'mongodb'\n\nconst\n\nuri\n\n\"mongodb://localhost:27017\"\n\nconst\n\nclient\n\nnew\n\nMongoClient\n\nuri\n\nasync\n\nfunction\n\nrun\n\n() {\n\ntry\n\nawait\n\nclient\n\nconnect\n\n();\n\nconst\n\ndatabase\n\nclient\n\n'ma_base_de_donnees'\n\nconst\n\nutilisateurs\n\ndatabase\n\ncollection\n\n'utilisateurs'\n\nconst\n\nnouvelUtilisateur\n\nnom\n\n\"John\"\n\nage\n\nemail\n\n\"john@example.com\"\n\nconst\n\nresultat\n\nawait\n\nutilisateurs\n\ninsertOne\n\nnouvelUtilisateur\n\nconsole\n\nlog\n\n`Nouveau document inséré avec l'ID\n\nresultat\n\ninsertedId\n\nfinally\n\nawait\n\nclient\n\nclose\n\n();\n\nrun\n\n().\n\ncatch\n\nconsole\n\ndir\n\nExemples de requêtes, recherche et tri",
+    "metadata": {
+      "module": "420-514",
+      "source": "https://cegepmv.github.io/420-514/dbnosql/labmongodb/index.html",
+      "title": "🧪 Laboratoire : MongoDB avec Atlas et Compass :: Collecte et interprétation de données",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "🧪 Laboratoire : Intégration de MongoDB avec Node.js (V3)\n\nObjectif principal\n\n: Concevoir un projet Node.js complet en intégrant MongoDB, la validation des données, la configuration des environnements, l’organisation professionnelle du code par version (v1, v2, v3), ainsi qu’une documentation Swagger.\n\nContexte du laboratoire\n\nVous développez un service Web RESTful pour gérer les utilisateurs, produits et commandes d’une plateforme. Le projet évolue à travers\n\ntrois versions\n\nd’API (v1, v2, v3), chacune correspondant à une étape d’évolution de l’architecture ou du modèle de données.\n\n🗂 Structure du projet\n\nLe projet adopte\n\nl’approche B\n\navec une organisation par\n\nversion d’API\n\nsrc/\n\n├── app.ts\n\n├── config/             # Configuration selon l'environnement (dev, prod)\n\n├── common/             # Middlewares, helpers, constantes, erreurs globales\n\n├── v1/                 # Première version de l’API\n\n│   ├── controllers/\n\n│   ├── services/\n\n│   ├── models/\n\n│   ├── routes/\n\n│   └── validations/\n\n├── v2/                 # Évolution des règles métier\n\n│   ├── controllers/\n\n│   ├── services/\n\n│   ├── models/\n\n│   ├── routes/\n\n│   └── validations/",
+    "metadata": {
+      "module": "420-514",
+      "source": "https://cegepmv.github.io/420-514/dbnosql/labmongodbnode/index.html",
+      "title": "🧪 Laboratoire : Intégration de MongoDB avec Node.js (V3) :: Collecte et interprétation de données",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "├── v2/                 # Évolution des règles métier\n\n│   ├── controllers/\n\n│   ├── services/\n\n│   ├── models/\n\n│   ├── routes/\n\n│   └── validations/\n\n└── v3/                 # Version professionnelle avec MongoDB, Swagger, etc.\n\n├── controllers/\n\n├── services/\n\n├── models/\n\n├── routes/\n\n├── validations/\n\n├── aggregations/\n\n└── swagger/\n\nClasses et entités\n\nLes modèles d’objet suivants sont attendus, dans la\n\n// User\n\nnumber\n\nname\n\nstring\n\nemail\n\nstring\n\nusername\n\nstring\n\npassword\n\nstring\n\nrole?\n\nstring\n\n// Product\n\nnumber\n\nname\n\nstring\n\ndescription\n\nstring\n\nprice\n\nnumber\n\nstock\n\nnumber\n\n// Order\n\nnumber\n\nuserId\n\nnumber\n\nproductId\n\nnumber\n\nquantity\n\nnumber\n\ntotalPrice\n\nnumber\n\nAjout recommandé\n\n: méthode d’agrégation pour calculer les ventes totales par produit, ou les commandes par utilisateur.\n\nÉtapes :\n\nÉtape 1 : Initialisation du projet\n\nCloner votre projet qui inclu les version V1 et V2 de votre projet template. Si vous ne l’avez pas créez le projet avec\n\nnpm init\n\net installez :\n\nnpm install express mongoose dotenv cors swagger-ui-express\n\nnpm install -D typescript ts-node nodemon @types/express @types/node\n\nGénérez les dossiers et la structure de version.\n\nsrc/\n\n├── app.ts\n\n├── config/             # Configuration selon l'environnement (dev, prod)",
+    "metadata": {
+      "module": "420-514",
+      "source": "https://cegepmv.github.io/420-514/dbnosql/labmongodbnode/index.html",
+      "title": "🧪 Laboratoire : Intégration de MongoDB avec Node.js (V3) :: Collecte et interprétation de données",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "es/node\n\nGénérez les dossiers et la structure de version.\n\nsrc/\n\n├── app.ts\n\n├── config/             # Configuration selon l'environnement (dev, prod)\n\n├── common/             # Middlewares, helpers, constantes, erreurs globales\n\n├── v1/                 # Première version de l’API\n\n│   ├── controllers/\n\n│   ├── services/\n\n│   ├── models/\n\n│   ├── routes/\n\n│   └── validations/\n\n├── v2/                 # Évolution des règles métier\n\n│   ├── controllers/\n\n│   ├── services/\n\n│   ├── models/\n\n│   ├── routes/\n\n│   └── validations/\n\n└── v3/                 # Version professionnelle avec MongoDB, Swagger, etc.\n\n├── controllers/\n\n├── services/\n\n├── models/\n\n├── routes/\n\n├── validations/\n\n├── aggregations/\n\n└── swagger/\n\nAjoutez la configuration TypeScript (\n\ntsconfig.json\n\n) et un\n\n.env\n\npour la connexion MongoDB.\n\nÉtape 2 : Intégration de MongoDB (v3)\n\nCréez une base\n\necommerce-db\n\nCréez les\n\nschémas Mongoose\n\npour\n\nUser\n\nProduct\n\nOrder\n\nUtilisez des\n\nvalidations\n\navec Joi ou zod (email, mot de passe, prix > 0, stock ≥ 0, etc.).\n\nImplémentez les services pour CRUD de chaque entité.\n\nTestez les routes avec Postman.\n\nÉtape 3 : Ajout des agrégations\n\nAjoutez des routes GET qui utilisent des opérations d’agrégation :\n\n/api/v3/orders/summary\n\n/api/v3/products/most-sold\n\n/api/v3/users/top-buyers\n\nÉtape 4 : Swagger et documentation",
+    "metadata": {
+      "module": "420-514",
+      "source": "https://cegepmv.github.io/420-514/dbnosql/labmongodbnode/index.html",
+      "title": "🧪 Laboratoire : Intégration de MongoDB avec Node.js (V3) :: Collecte et interprétation de données",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "lisent des opérations d’agrégation :\n\n/api/v3/orders/summary\n\n/api/v3/products/most-sold\n\n/api/v3/users/top-buyers\n\nÉtape 4 : Swagger et documentation\n\nCréez un fichier\n\nswagger.json\n\ndans\n\nv3/swagger/\n\nDans\n\nswagger.ts\n\nimport\n\nswaggerUi\n\nfrom\n\n'swagger-ui-express'\n\nimport\n\nRouter\n\nfrom\n\n'express'\n\nimport\n\nfrom\n\n'fs'\n\nimport\n\npath\n\nfrom\n\n'path'\n\nconst\n\nswaggerRouter\n\nRouter\n\n();\n\nconst\n\nswaggerDocs\n\nJSON.parse\n\nreadFileSync\n\npath\n\njoin\n\n__dirname\n\n'../swagger/v1/swagger.json'\n\n'utf-8'\n\n)),\n\nJSON.parse\n\nreadFileSync\n\npath\n\njoin\n\n__dirname\n\n'../swagger/v2/swagger.json'\n\n'utf-8'\n\n)),\n\nJSON.parse\n\nreadFileSync\n\npath\n\njoin\n\n__dirname\n\n'../swagger/v3/swagger.json'\n\n'utf-8'\n\nswaggerRouter\n\nuse\n\n'/v1'\n\nswaggerUi\n\nserve\n\nswaggerUi\n\nsetup\n\nswaggerDocs\n\n));\n\nswaggerRouter\n\nuse\n\n'/v2'\n\nswaggerUi\n\nserve\n\nswaggerUi\n\nsetup\n\nswaggerDocs\n\n));\n\nswaggerRouter\n\nuse\n\n'/v3'\n\nswaggerUi\n\nserve\n\nswaggerUi\n\nsetup\n\nswaggerDocs\n\n));\n\nexport\n\ndefault\n\nswaggerRouter\n\nimport\n\nexpress\n\nfrom\n\n'express'\n\nimport\n\nswaggerRouter\n\nfrom\n\n'./swagger'\n\nconst\n\napp\n\nexpress\n\n();\n\napp\n\nuse\n\n'/api-docs'\n\nswaggerRouter\n\nAjoutez la documentation des routes (Users, Products, Orders).\n\nimport\n\nexpress\n\nfrom\n\n'express'\n\nimport\n\nconnectDB\n\nfrom\n\n'./config/db'\n\nimport\n\nswaggerUi\n\nfrom\n\n'swagger-ui-express'\n\nimport\n\nswaggerDocument\n\nfrom\n\n'../public/swagger.json'\n\nconst\n\napp",
+    "metadata": {
+      "module": "420-514",
+      "source": "https://cegepmv.github.io/420-514/dbnosql/labmongodbnode/index.html",
+      "title": "🧪 Laboratoire : Intégration de MongoDB avec Node.js (V3) :: Collecte et interprétation de données",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "rt\n\nconnectDB\n\nfrom\n\n'./config/db'\n\nimport\n\nswaggerUi\n\nfrom\n\n'swagger-ui-express'\n\nimport\n\nswaggerDocument\n\nfrom\n\n'../public/swagger.json'\n\nconst\n\napp\n\nexpress\n\n();\n\nconnectDB\n\n();\n\napp\n\nuse\n\nexpress\n\njson\n\n());\n\napp\n\nuse\n\n'/api-docs'\n\nswaggerUi\n\nserve\n\nswaggerUi\n\nsetup\n\nswaggerDocument\n\n));\n\napp\n\nuse\n\n'/api/v1/'\n\nrequire\n\n'./v1/routes'\n\n));\n\napp\n\nuse\n\n'/api/v2/'\n\nrequire\n\n'./v2/routes'\n\n));\n\napp\n\nuse\n\n'/api/v3/'\n\nrequire\n\n'./v3/routes'\n\n));\n\napp\n\nlisten\n\nprocess\n\nenv\n\nPORT\n\n, ()\n\nconsole\n\nlog\n\n`Server on port\n\nprocess\n\nenv\n\nPORT\n\n});\n\nMontez Swagger UI sur\n\n/api-docs/v3\n\nÉtape 5 : Configuration des environnements\n\n.env.development\n\n.env.production\n\nconfig/index.ts\n\ncharge les bons paramètres pour charger la bon BD.\n\nBonus (si le temps le permet)\n\nPagination et tri dans les listes de produits",
+    "metadata": {
+      "module": "420-514",
+      "source": "https://cegepmv.github.io/420-514/dbnosql/labmongodbnode/index.html",
+      "title": "🧪 Laboratoire : Intégration de MongoDB avec Node.js (V3) :: Collecte et interprétation de données",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "Configuration d’un serveur de test avec Node.js\n\nPour configurer un\n\nserveur de test\n\navec\n\nNode.js\n\n, vous pouvez mettre en place un environnement de test séparé avec des configurations et des outils dédiés aux tests.\n\nÉtapes pour configurer un serveur de test en Node.js\n\nOrganisation des Environnements\n\n: Utilisez des fichiers de configuration pour séparer les paramètres de test et de production.\n\nConfiguration de l’application\n\n: Modifiez les paramètres en fonction de l’environnement.\n\nUtilisation d’outils de tests\n\n: Employez des outils de test comme\n\nMocha\n\nChai\n\n, et\n\nSupertest\n\npour automatiser les tests.\n\nÉtape 1 : Organisation des environnements avec un fichier\n\n.env\n\nLes environnements sont souvent définis dans un fichier\n\n.env\n\npour isoler les paramètres de configuration.\n\nInstaller dotenv\n\npour lire les variables d’environnement :\n\nnpm install dotenv\n\nCréer deux fichiers .env\n\npour les environnements de\n\ntest\n\nproduction\n\nFichier\n\n.env.test\n\nNODE_ENV=test\n\nPORT=4000\n\nDB_CONNECTION_STRING=mongodb://localhost:27017/testdb\n\nJWT_SECRET=mytestsecret\n\nFichier\n\n.env.production\n\nNODE_ENV=production\n\nPORT=3000\n\nDB_CONNECTION_STRING=mongodb://localhost:27017/proddb",
+    "metadata": {
+      "module": "420-514",
+      "source": "https://cegepmv.github.io/420-514/tests/labconfigsrvtest/index.html",
+      "title": "Configuration d’un serveur de test avec Node.js :: Collecte et interprétation de données",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "27017/testdb\n\nJWT_SECRET=mytestsecret\n\nFichier\n\n.env.production\n\nNODE_ENV=production\n\nPORT=3000\n\nDB_CONNECTION_STRING=mongodb://localhost:27017/proddb\n\nJWT_SECRET=myproductionsecret\n\nConfigurer dotenv dans votre application\n\npour lire les fichiers\n\n.env\n\nen fonction de l’environnement :\n\n// src/app.js\n\nrequire\n\n'dotenv'\n\nconfig\n\npath\n\nprocess\n\nenv\n\nNODE_ENV\n\n===\n\n'test'\n\n'.env.test'\n\n'.env.production'\n\n});\n\nconst\n\nexpress\n\nrequire\n\n'express'\n\nconst\n\napp\n\nexpress\n\n();\n\napp\n\nget\n\n'/'\n\n, (\n\nreq\n\nres\n\n) => {\n\nres\n\nsend\n\n'Hello, this is the '\n\nprocess\n\nenv\n\nNODE_ENV\n\n' environment!'\n\n});\n\nmodule\n\nexports\n\napp\n\nDémarrer l’application\n\nPour le mode production :\n\nNODE_ENV\n\nproduction node src/app.js\n\nPour le mode test :\n\nNODE_ENV\n\ntest node src/app.js\n\nÉtape 2 : Définir les scripts de tests\n\nInstaller les dépendances de tests\n\npour Node.js :\n\nnpm install --save-dev mocha chai supertest\n\nConfigurer le script de test dans\n\npackage.json\n\nAjoutez un script pour lancer les tests dans le fichier\n\npackage.json\n\n\"scripts\"\n\n\"start\"\n\n\"node src/app.js\"\n\n\"test\"\n\n\"NODE_ENV=test mocha src/tests --exit\"\n\nÉtape 3 : Créer un test d’intégration pour le serveur de test\n\nCréer un fichier de test\n\ndans\n\nsrc/tests/app.test.js\n\npour vérifier si le serveur fonctionne correctement dans l’environnement de test.\n\nconst\n\nchai\n\nrequire\n\n'chai'\n\nconst\n\nchaiHttp",
+    "metadata": {
+      "module": "420-514",
+      "source": "https://cegepmv.github.io/420-514/tests/labconfigsrvtest/index.html",
+      "title": "Configuration d’un serveur de test avec Node.js :: Collecte et interprétation de données",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "rc/tests/app.test.js\n\npour vérifier si le serveur fonctionne correctement dans l’environnement de test.\n\nconst\n\nchai\n\nrequire\n\n'chai'\n\nconst\n\nchaiHttp\n\nrequire\n\n'chai-http'\n\nconst\n\napp\n\nrequire\n\n'../app'\n\nconst\n\nexpect\n\nchai\n\nexpect\n\nchai\n\nuse\n\nchaiHttp\n\ndescribe\n\n'GET /'\n\n, () => {\n\n'should return 200 in test environment'\n\n, (\n\ndone\n\n) => {\n\nchai\n\nrequest\n\napp\n\nget\n\n'/'\n\nend\n\nerr\n\nres\n\n) => {\n\nexpect\n\nres\n\nhave\n\nstatus\n\n200\n\nexpect\n\nres\n\ntext\n\nequal\n\n'Hello, this is the test environment!'\n\ndone\n\n();\n\n});\n\n});\n\n});\n\nLancer les tests\n\nnpm test\n\nLe serveur de test démarre dans l’environnement\n\ntest\n\n, et les variables spécifiques à cet environnement sont utilisées.\n\nÉtape 4 : Utilisation d’une base de données de test\n\nPour un serveur de test, il est recommandé d’utiliser une\n\nbase de données séparée\n\ndes données de production. Avec MongoDB, par exemple, vous pouvez utiliser une base de données dédiée pour les tests en configurant la variable\n\nDB_CONNECTION_STRING\n\ndans\n\n.env.test\n\nExemple d’initialisation de la base de données dans\n\napp.js\n\nconst\n\nmongoose\n\nrequire\n\n'mongoose'\n\nmongoose\n\nconnect\n\nprocess\n\nenv\n\nDB_CONNECTION_STRING\n\n, {\n\nuseNewUrlParser\n\ntrue\n\nuseUnifiedTopology\n\ntrue\n\nthen\n\n(() =>\n\nconsole\n\nlog\n\n'Connecté à la base de données de test'\n\ncatch\n\nerr\n\n) =>\n\nconsole\n\nerror",
+    "metadata": {
+      "module": "420-514",
+      "source": "https://cegepmv.github.io/420-514/tests/labconfigsrvtest/index.html",
+      "title": "Configuration d’un serveur de test avec Node.js :: Collecte et interprétation de données",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "useNewUrlParser\n\ntrue\n\nuseUnifiedTopology\n\ntrue\n\nthen\n\n(() =>\n\nconsole\n\nlog\n\n'Connecté à la base de données de test'\n\ncatch\n\nerr\n\n) =>\n\nconsole\n\nerror\n\n'Erreur de connexion à la base de données de test'\n\nerr\n\n));\n\nRésumé des étapes\n\nEnvironnements de configuration\n\n: Utilisez des fichiers\n\n.env\n\npour isoler les paramètres de test et de production.\n\nScripts de tests\n\n: Configurez un script dans\n\npackage.json\n\npour lancer les tests dans l’environnement de test.\n\nTests automatisés\n\n: Utilisez\n\nJest ou\n\nMocha\n\nChai\n\n, et\n\nSupertest\n\npour valider le comportement du serveur.\n\nBase de données de test\n\n: Utilisez une base de données dédiée pour les tests pour éviter d’altérer les données de production.",
+    "metadata": {
+      "module": "420-514",
+      "source": "https://cegepmv.github.io/420-514/tests/labconfigsrvtest/index.html",
+      "title": "Configuration d’un serveur de test avec Node.js :: Collecte et interprétation de données",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  }
+]

@@ -1,0 +1,412 @@
+[
+  {
+    "text": "Programmation orientée objet\n\nPlans de cours\n\n📋 Samuel Fostiné :\n\nPlan de cours\n\nHoraire et disponibilités des enseignants\n\n✔️ Samuel Fostiné :\n\nLien vers mon horaire et mes disponibilités\n\nSamuel Fostiné\n\nNom de l’évaluation\n\nPondération\n\nSemaine de l’évaluation\n\n10 quiz (Wooclap) (Les 8 meilleures quiz)\n\n10 %\n\nSemaine 2 à 14\n\nExamen 1\n\n15%\n\nSemaine 5\n\nExamen 2\n\n20 %\n\nSemaine 11\n\nLaboratoire\n\n10 %\n\nSemaine 8\n\nProjet remise final\n\n15 %\n\nSemaine 14\n\nExamen final\n\n30 %\n\nSemaine 15",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/",
+      "title": "Programmation orientée objet",
+      "type": "web",
+      "corpus": "cours"
+    }
+  },
+  {
+    "text": "Introduction\n\n1. Qu’est-ce que Java ?\n\nJava est à la fois un\n\nlangage de programmation orienté objet\n\net une\n\nplateforme informatique\n\n. Sa philosophie principale est le\n\nWORA\n\nWrite Once, Run Anywhere\n\n) : écrivez votre code une fois, et exécutez-le n’importe où sans modification.\n\nLes trois piliers de Java : JDK, JRE et JVM\n\nPour comprendre comment Java fonctionne, il faut distinguer ces trois composants essentiels :\n\nJDK (Java Development Kit)\n\n: C’est la boîte à outils complète pour le développeur. Elle contient le compilateur (\n\njavac\n\n), les bibliothèques de base et le JRE.\n\nJRE (Java Runtime Environment)\n\n: C’est l’environnement nécessaire pour\n\nexécuter\n\nun programme Java. Il contient les bibliothèques de classes et la JVM.\n\nJVM (Java Virtual Machine)\n\n: C’est le cœur du système. Elle interprète le “Bytecode” pour que l’ordinateur puisse le comprendre.",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/intro/index.html",
+      "title": "Introduction :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "cours"
+    }
+  },
+  {
+    "text": "contient les bibliothèques de classes et la JVM.\n\nJVM (Java Virtual Machine)\n\n: C’est le cœur du système. Elle interprète le “Bytecode” pour que l’ordinateur puisse le comprendre.\n\nRessource complémentaire :\n\nJava : Les fondamentaux expliqués (JDK, JRE et JVM)\n\n2. Caractéristiques principales du langage\n\nOrienté Objet (POO)\n\n: Tout est considéré comme un “objet” (une entité avec des caractéristiques et des comportements).\n\nGestion automatique de la mémoire\n\n: Grâce au\n\nGarbage Collector\n\n(Ramasse-miettes), Java libère automatiquement la mémoire inutilisée.\n\nSécurité\n\n: Conçu pour les environnements réseaux, il possède des barrières strictes contre les accès mémoire non autorisés.\n\nMulti-thread\n\n: Java permet d’exécuter plusieurs parties d’un programme simultanément.\n\n3. Installation, compilation et exécution\n\nInstallation\n\nVous devez installer un\n\nJDK\n\n(comme OpenJDK ou Oracle JDK). Vérifiez l’installation avec la commande :\n\njava -version\n\nCompilation et exécution d’un programme Java\n\nD’abord, tu dois t’assurer que Java est bien installé sur ton ordinateur",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/intro/index.html",
+      "title": "Introduction :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "cours"
+    }
+  },
+  {
+    "text": "). Vérifiez l’installation avec la commande :\n\njava -version\n\nCompilation et exécution d’un programme Java\n\nD’abord, tu dois t’assurer que Java est bien installé sur ton ordinateur\n\nOuvre une invite de commandes (cmd) sous Windows (Terminal sous Mac/Linux).\n\nTape la commande\n\njava -version\n\n. Cette commande devrait vous dire la version de Java qui est installé sur votre ordinateur.\n\nTape aussi la commande\n\njavac -version\n\n. Cette commande devrait te dire la version du compilateur de Java installé sur ton ordinateur\n\nNote: Ces commandes fonctionnent seulement si Java et le compilateur de Java sont installés et que le chemin où le répertoire de Java se trouve est mis dans le\n\nPATH\n\ndes variables d’environnement (À expliquer en classe pour que ce soit plus clair)\n\nExécution du code dans le fichier Main.java\n\nOuvre une invite de commandes (cmd) sous Windows (Terminal sous Mac/Linux).\n\nNavigue vers le dossier où se trouve votre fichier .java\n\nExécute la commande\n\njava Main.java\n\nTraditionnellement, Java fonctionne en deux étapes :\n\nCompilation\n\n: Le code source (",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/intro/index.html",
+      "title": "Introduction :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "cours"
+    }
+  },
+  {
+    "text": "Navigue vers le dossier où se trouve votre fichier .java\n\nExécute la commande\n\njava Main.java\n\nTraditionnellement, Java fonctionne en deux étapes :\n\nCompilation\n\n: Le code source (\n\n.java\n\n) est transformé en bytecode (\n\n.class\n\n) grâce à la commande :\n\njavac Main.java\n\nExécution\n\n: Le bytecode est ensuite exécuté avec la commande :\n\njava Main\n\nAstuce : Depuis une version relativement récente de Java, il est aussi possible d’exécuter directement un fichier\n\n.java\n\nsans passer explicitement par l’étape de compilation (\n\njavac\n\njava Main.java\n\nCela permet d’exécuter rapidement un programme, mais à noter :\n\nLe fichier\n\n.class\n\nest\n\ngénéré temporairement\n\nIl est ensuite\n\nsupprimé automatiquement\n\naprès l’exécution.\n\n📝 Cette méthode est pratique pour tester du code rapidement, mais dans un projet structuré, on utilise généralement\n\njavac\n\nsuivi de\n\njava\n\nCompilation et exécution sans le PATH configuré\n\nSi vous recevez l’erreur :\n\n'javac' n'est pas reconnu en tant que commande interne...\n\n, cela signifie que votre système ne sait pas où se trouve le dossier\n\nbin",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/intro/index.html",
+      "title": "Introduction :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "cours"
+    }
+  },
+  {
+    "text": "le PATH configuré\n\nSi vous recevez l’erreur :\n\n'javac' n'est pas reconnu en tant que commande interne...\n\n, cela signifie que votre système ne sait pas où se trouve le dossier\n\nbin\n\ndu JDK. Vous devez alors utiliser le\n\nchemin absolu\n\nCompiler le fichier\n\n: Il faut appeler l’exécutable\n\njavac\n\ndirectement.\n\nSur Windows\n\n\"C:\\Program Files\\Java\\jdk-21\\bin\\javac\"\n\nMain.java\n\nSur macOS / Linux\n\n/usr/lib/jvm/jdk-21/bin/javac Main.java\n\nRésultat : Un fichier\n\nMain.class\n\napparaît dans votre dossier.\n\nExécuter le programme\n\n: Il faut appeler l’exécutable\n\njava\n\n(la JVM).\n\nSur Windows\n\n\"C:\\Program Files\\Java\\jdk-21\\bin\\java\"\n\nMain\n\nSur macOS / Linux\n\n/usr/lib/jvm/jdk-21/bin/java Main\n\nRésoudre l’erreur de Classpath (\n\n-cp\n\nC’est l’erreur la plus frustrante pour les débutants :\n\nCould not find or load main class\n\n. Cela arrive quand la JVM ne sait pas\n\noù chercher\n\nvos fichiers\n\n.class\n\nL’option\n\n-cp\n\n(ou\n\n-classpath\n\nCette option force Java à regarder dans des répertoires précis.\n\nChercher dans le dossier actuel (\n\njava -cp . Main\n\nChercher dans un dossier spécifique (ex:",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/intro/index.html",
+      "title": "Introduction :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "cours"
+    }
+  },
+  {
+    "text": "-cp\n\n(ou\n\n-classpath\n\nCette option force Java à regarder dans des répertoires précis.\n\nChercher dans le dossier actuel (\n\njava -cp . Main\n\nChercher dans un dossier spécifique (ex:\n\nbin\n\njava -cp bin Main\n\nChercher dans plusieurs dossiers ou JARs\n\nWindows\n\njava -cp \".;lib/mysql.jar\" Main\n\n(séparateur\n\nLinux/Mac\n\njava -cp .:lib/mysql.jar Main\n\n(séparateur\n\n4. Les outils de développement (IDE)\n\nBien que vous puissiez écrire du Java dans un simple bloc-notes, les développeurs utilisent des\n\nIDE\n\n(Environnements de Développement Intégrés) pour être plus efficaces. Ces logiciels regroupent l’édition de code, la compilation automatique et le débogage.\n\nIDE\n\nPoints forts\n\nIntelliJ IDEA\n\nDéveloppé par JetBrains. C’est le plus moderne et le plus intelligent (recommandé pour la productivité).\n\nEclipse\n\nHistorique, entièrement gratuit et open-source. Très utilisé dans les grandes entreprises.\n\nVS Code\n\nTrès léger et polyvalent. Nécessite l’installation du “Java Extension Pack” pour fonctionner.",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/intro/index.html",
+      "title": "Introduction :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "cours"
+    }
+  },
+  {
+    "text": "Variables\n\n🎯 Qu’est-ce qu’une variable?\n\nUne variable, c’est comme un casier dans votre vestiaire du cégep. Vous pouvez y mettre vos affaires, les changer, les oublier (oups), et même y mettre n’importe quoi (tant que ça rentre et que c’est du bon type).\n\nL’identificateur (Le nom) : C’est l’étiquette sur le casier (ex: 304). C’est ce qui permet au programme de retrouver l’endroit exact en mémoire.\n\nLa valeur (Le contenu) : C’est ce que tu déposes à l’intérieur (ton manuel de programmation, ton ordinateur).\n\nLe type (Le format) : C’est la taille et la configuration du casier. Un casier pour un vélo n’a pas la même forme qu’un casier pour un manteau.\n\nAutre définition: Une\n\nvariable\n\n, c’est comme une boîte dans laquelle on range une valeur. Elle a toujours\n\ntrois éléments essentiels\n\ntype nom = valeur;\n\nPar exemple :\n\nint\n\nvar1\n\nIci :\n\nint\n\n→ le type de la variable (entier)\n\nvar1",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/variables/index.html",
+      "title": "Variables :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "cours"
+    }
+  },
+  {
+    "text": "îte dans laquelle on range une valeur. Elle a toujours\n\ntrois éléments essentiels\n\ntype nom = valeur;\n\nPar exemple :\n\nint\n\nvar1\n\nIci :\n\nint\n\n→ le type de la variable (entier)\n\nvar1\n\n→ le nom de la variable\n\n→ la valeur qu’elle contient\n\nLes types\n\nEn Java, les types de données sont divisés en deux grandes familles :\n\nLes types primitifs\n\n(8 types)\n\nLes types références\n\n(classes comme\n\nString\n\nScanner\n\n, etc.)\n\nLes types\n\nprimitifs\n\nsont les\n\nbriques de base\n\nde tout programme Java. Ils permettent de représenter les informations simples :\n\nnombres, caractères, booléens\n\n🧮a. Les nombres entiers\n\nIls servent à stocker des\n\nvaleurs sans virgule\n\n, positives ou négatives. Chaque type utilise un certain nombre d’octets et a une plage de valeurs définie :\n\nType\n\nTaille (bits / octets)\n\nValeur minimale\n\nValeur maximale\n\nExemple\n\nbyte\n\n8 bits (1 octet)\n\n-128\n\n127\n\nbyte b = 10;\n\nshort\n\n16 bits (2 octets)\n\n-32 768\n\n32 767\n\nshort s = 1000;\n\nint\n\n32 bits (4 octets)\n\n-2 147 483 648\n\n2 147 483 647\n\nint i = 42;\n\nlong\n\n64 bits (8 octets)\n\n-9 223 372 036 854 775 808",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/variables/index.html",
+      "title": "Variables :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "cours"
+    }
+  },
+  {
+    "text": "ort\n\n16 bits (2 octets)\n\n-32 768\n\n32 767\n\nshort s = 1000;\n\nint\n\n32 bits (4 octets)\n\n-2 147 483 648\n\n2 147 483 647\n\nint i = 42;\n\nlong\n\n64 bits (8 octets)\n\n-9 223 372 036 854 775 808\n\n9 223 372 036 854 775 807\n\nlong l = 100L;\n\nIl existe des\n\nconstantes\n\nutiles comme\n\nInteger.MAX_VALUE\n\nLong.MIN_VALUE\n\npour obtenir ces limites sans les retenir.\n\n🌊 b. Les nombres à virgule (flottants)\n\nIls permettent de représenter des\n\nvaleurs décimales\n\n(≈ des réels), avec une approximation en base 2.\n\nType\n\nTaille (bits / octets)\n\nPrécision\n\nValeur min / max\n\nExemple\n\nfloat\n\n32 bits (4 octets)\n\n~7 chiffres significatifs\n\n±1.4×10⁻⁴⁵ → ±3.4×10³⁸\n\nfloat f = 3.14f;\n\ndouble\n\n64 bits (8 octets)\n\n~15-16 chiffres significatifs\n\n±4.9×10⁻³²⁴ → ±1.8×10³⁰⁸\n\ndouble d = 2.718;\n\n💡 En Java,\n\nles littéraux décimaux sont des\n\ndouble\n\npar défaut\n\n. Pour un\n\nfloat\n\n, on ajoute un\n\nà la fin.\n\n🔤 c. Le caractère\n\nLe type\n\nchar\n\nreprésente\n\nun seul caractère Unicode\n\n(lettre, symbole, emoji, etc.) :\n\nType\n\nTaille (bits)\n\nPlage Unicode\n\nExemple\n\nchar\n\n16 bits\n\n0 à 65 535 (U+0000 à U+FFFF)\n\nchar c = 'A';",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/variables/index.html",
+      "title": "Variables :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "cours"
+    }
+  },
+  {
+    "text": "ar\n\nreprésente\n\nun seul caractère Unicode\n\n(lettre, symbole, emoji, etc.) :\n\nType\n\nTaille (bits)\n\nPlage Unicode\n\nExemple\n\nchar\n\n16 bits\n\n0 à 65 535 (U+0000 à U+FFFF)\n\nchar c = 'A';\n\n🎨 Les caractères sont entourés de\n\nquotes simples\n\n'A'\n\n) et peuvent contenir aussi des caractères spéciaux ou emojis :\n\nchar\n\nlettre\n\n'f'\n\n🔘 d. Le booléen\n\nboolean\n\nest un type logique qui représente\n\nvrai ou faux\n\n, souvent utilisé dans les conditions :\n\nType\n\nValeurs possibles\n\nExemple\n\nboolean\n\ntrue\n\nfalse\n\nboolean actif = false;\n\n💬 Très utile pour représenter des états binaires : activé/désactivé, visible/caché, connecté/non connecté…\n\nboolean\n\nestPret\n\ntrue\n\nboolean\n\nestFini\n\nfalse\n\n✨ Récap visuel\n\nCatégorie\n\nTypes\n\nRôle principal\n\n🧮 Entiers\n\nbyte\n\nshort\n\nint\n\nlong\n\nStocker des nombres sans virgule\n\n🌊 Flottants\n\nfloat\n\ndouble\n\nReprésenter des valeurs décimales\n\n🔤 Caractères\n\nchar\n\nReprésenter un caractère Unicode\n\n🔘 Booléens\n\nboolean\n\nReprésenter une valeur vraie ou fausse\n\nLes chaînes de caractères (String ) c’est quoi?\n\nLien vers la classe String de l’API Java\n\nEn Java, une",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/variables/index.html",
+      "title": "Variables :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "cours"
+    }
+  },
+  {
+    "text": "actère Unicode\n\n🔘 Booléens\n\nboolean\n\nReprésenter une valeur vraie ou fausse\n\nLes chaînes de caractères (String ) c’est quoi?\n\nLien vers la classe String de l’API Java\n\nEn Java, une\n\nchaîne de caractères\n\n(ou\n\nString\n\n) est un objet qui représente une\n\nséquence de caractères\n\nContrairement à certains langages où les chaînes sont simplement des tableaux de caractères (\n\nchar[]\n\n), en Java, elles sont des\n\nobjets\n\nde la classe\n\nString\n\nExemple :\n\nString\n\nmessage\n\n\"Bonjour !\"\n\nUtilisation simple\n\nCréer une chaîne :\n\nString\n\nnom\n\n\"Alice\"\n\n//Afficher une chaîne :\n\nSystem\n\nout\n\nprintln\n\nnom\n\nConnaître la longueur :\n\nint\n\nlongueur\n\nnom\n\nlength\n\n();\n\nrenvoie\n\nConcaténation\n\nconcaténation\n\npermet de\n\ncombiner plusieurs chaînes\n\nen une seule.\n\nUtilisation de l’opérateur\n\nString\n\nprenom\n\n\"Alice\"\n\nString\n\nmessage\n\n\"Bonjour, \"\n\nprenom\n\n\" !\"\n\nSystem\n\nout\n\nprintln\n\nmessage\n\nBonjour\n\nAlice\n\nConcaténation avec des nombres :\n\nint\n\nage\n\nString\n\ninfo\n\n\"Elle a \"\n\nage\n\n\" ans.\"\n\nSystem\n\nout\n\nprintln\n\ninfo\n\nElle\n\nans\n\nMéthodes Statistiques de la classe\n\nString\n\nLes méthodes\n\nstatiques",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/variables/index.html",
+      "title": "Variables :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "cours"
+    }
+  },
+  {
+    "text": "tion avec des nombres :\n\nint\n\nage\n\nString\n\ninfo\n\n\"Elle a \"\n\nage\n\n\" ans.\"\n\nSystem\n\nout\n\nprintln\n\ninfo\n\nElle\n\nans\n\nMéthodes Statistiques de la classe\n\nString\n\nLes méthodes\n\nstatiques\n\nde la classe\n\nString\n\nne nécessitent pas de créer une instance de\n\nString\n\npour les utiliser. Vous les appelez directement sur la classe elle-même. Voici quelques exemples de méthodes statiques courantes :\n\nExemple 1 :\n\nString.format()\n\nCette méthode statique permet de formater une chaîne de caractères en utilisant des espaces réservés (placeholders).\n\npublic\n\nclass\n\nExempleStringStatic\n\npublic\n\nstatic\n\nvoid\n\nmain\n\nString\n\nargs\n\nString\n\nname\n\n\"Alice\"\n\nint\n\nage\n\nString\n\nformattedString\n\nString\n\nformat\n\n\"Nom : %s, Âge : %d\"\n\nname\n\nage\n\nSystem\n\nout\n\nprintln\n\nformattedString\n\nSortie attendue\n\nNom : Alice, Âge : 30\n\nMéthodes Non Statiques de la classe\n\nString\n\nLes méthodes\n\nnon-statiques\n\nnécessitent une instance de la classe\n\nString\n\npour être utilisées. Vous devez créer un objet\n\nString\n\npour appeler ces méthodes. Voici quelques exemples :\n\nExemple 1 :\n\nlength()",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/variables/index.html",
+      "title": "Variables :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "cours"
+    }
+  },
+  {
+    "text": "nécessitent une instance de la classe\n\nString\n\npour être utilisées. Vous devez créer un objet\n\nString\n\npour appeler ces méthodes. Voici quelques exemples :\n\nExemple 1 :\n\nlength()\n\nCette méthode retourne la longueur (nombre de caractères) de la chaîne de caractères.\n\npublic\n\nclass\n\nExempleStringNonStatic\n\npublic\n\nstatic\n\nvoid\n\nmain\n\nString\n\nargs\n\nString\n\nmessage\n\n\"Bonjour\"\n\nint\n\nlength\n\nmessage\n\nlength\n\n();\n\n// Appel de la méthode non statique\n\nSystem\n\nout\n\nprintln\n\n\"La longueur de la chaîne est : \"\n\nlength\n\nSortie attendue\n\nLa longueur de la chaîne est : 7\n\nExemple 2 :\n\ncharAt()\n\nCette méthode retourne le caractère situé à une position spécifiée dans la chaîne.\n\npublic\n\nclass\n\nExempleStringNonStatic\n\npublic\n\nstatic\n\nvoid\n\nmain\n\nString\n\nargs\n\nString\n\nmessage\n\n\"Java\"\n\nchar\n\ncharacter\n\nmessage\n\ncharAt\n\n// Récupère le caractère à l'indice 2\n\nSystem\n\nout\n\nprintln\n\n\"Le caractère à l'indice 2 est : \"\n\ncharacter\n\nSortie attendue\n\nLe caractère à l'indice 2 est : v\n\nExemple 3 :\n\nsubstring()",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/variables/index.html",
+      "title": "Variables :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "cours"
+    }
+  },
+  {
+    "text": "écupère le caractère à l'indice 2\n\nSystem\n\nout\n\nprintln\n\n\"Le caractère à l'indice 2 est : \"\n\ncharacter\n\nSortie attendue\n\nLe caractère à l'indice 2 est : v\n\nExemple 3 :\n\nsubstring()\n\nCette méthode retourne une sous-chaîne de la chaîne principale en fonction des indices donnés.\n\npublic\n\nclass\n\nExempleStringNonStatic\n\npublic\n\nstatic\n\nvoid\n\nmain\n\nString\n\nargs\n\nString\n\nmessage\n\n\"Bienvenue\"\n\nString\n\nsubstring\n\nmessage\n\nsubstring\n\n// Extrait de l'indice 3 à 6\n\nSystem\n\nout\n\nprintln\n\n\"Sous-chaîne : \"\n\nsubstring\n\nSortie attendue\n\nSous-chaîne : nven\n\nExemple 4 :\n\ntoLowerCase()\n\ntoUpperCase()\n\nCes méthodes convertissent tous les caractères de la chaîne en minuscules ou en majuscules.\n\npublic\n\nclass\n\nExempleStringNonStatic\n\npublic\n\nstatic\n\nvoid\n\nmain\n\nString\n\nargs\n\nString\n\nmessage\n\n\"Java Programming\"\n\nString\n\nlower\n\nmessage\n\ntoLowerCase\n\n();\n\n// Convertir en minuscules\n\nString\n\nupper\n\nmessage\n\ntoUpperCase\n\n();\n\n// Convertir en majuscules\n\nSystem\n\nout\n\nprintln\n\n\"En minuscules : \"\n\nlower\n\nSystem\n\nout\n\nprintln\n\n\"En majuscules : \"\n\nupper\n\nSortie attendue",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/variables/index.html",
+      "title": "Variables :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "cours"
+    }
+  },
+  {
+    "text": "ing\n\nupper\n\nmessage\n\ntoUpperCase\n\n();\n\n// Convertir en majuscules\n\nSystem\n\nout\n\nprintln\n\n\"En minuscules : \"\n\nlower\n\nSystem\n\nout\n\nprintln\n\n\"En majuscules : \"\n\nupper\n\nSortie attendue\n\nEn minuscules : java programming\n\nEn majuscules : JAVA PROGRAMMING\n\nExemple 5 :\n\ncontains()\n\nCette méthode permet de vérifier si une chaîne contient une sous-chaîne spécifiée.\n\npublic\n\nclass\n\nExempleStringNonStatic\n\npublic\n\nstatic\n\nvoid\n\nmain\n\nString\n\nargs\n\nString\n\nmessage\n\n\"Java est génial!\"\n\nboolean\n\ncontains\n\nmessage\n\ncontains\n\n\"génial\"\n\n// Vérifie si \"génial\" est dans la chaîne\n\nSystem\n\nout\n\nprintln\n\n\"La chaîne contient 'génial' ? \"\n\ncontains\n\nSortie attendue\n\nLa chaîne contient 'génial' ? true\n\nRésumé des différences entre les méthodes statiques et non-statiques :\n\nMéthodes statiques\n\nAppelées sur la classe elle-même,\n\npas besoin d’instance\n\nExemples :\n\nString.valueOf()\n\nString.format()\n\nString.join()\n\nMéthodes non-statiques\n\nAppelées sur une instance de la classe\n\nString\n\nExemples :\n\nlength()\n\ncharAt()\n\nsubstring()\n\ntoLowerCase()\n\n🔄 Conversion implicite vs explicite en Java",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/variables/index.html",
+      "title": "Variables :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "cours"
+    }
+  },
+  {
+    "text": "n()\n\nMéthodes non-statiques\n\nAppelées sur une instance de la classe\n\nString\n\nExemples :\n\nlength()\n\ncharAt()\n\nsubstring()\n\ntoLowerCase()\n\n🔄 Conversion implicite vs explicite en Java\n\nLa conversion permet de changer le type d’une donnée pour l’adapter à une autre variable ou expression.\n\na. Conversion implicite (promotion automatique)\n\nJava effectue\n\nautomatiquement\n\nla conversion quand il n’y a\n\npas de risque de perte de données\n\nSe produit souvent quand on passe d’un type\n\nplus petit\n\nà un type\n\nplus grand\n\nExemples classiques :\n\nVers\n\nExemple\n\nint\n\ndouble\n\ndouble d = 5;\n\nbyte\n\nint\n\nint x = 10;\n\nint\n\ndouble\n\nConversion\n\nimplicite\n\nb. Conversion explicite (casting)\n\nNécessaire quand il y a un\n\nrisque de perte de données\n\nincompatibilité\n\nLe programmeur doit forcer la conversion avec un\n\ncast\n\n(type)\n\nExemples classiques :\n\nVers\n\nExemple\n\ndouble\n\nint\n\nint x = (int) 9.99;\n\nlong\n\nint\n\nint y = (int) 100000L;\n\ndouble\n\nint\n\nint\n\nConversion\n\nexplicite\n\ndécimale\n\nperdue\n\nc. Différences clés\n\nAspect\n\nConversion implicite\n\nConversion explicite\n\nNécessite une action ?",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/variables/index.html",
+      "title": "Variables :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "cours"
+    }
+  },
+  {
+    "text": "int y = (int) 100000L;\n\ndouble\n\nint\n\nint\n\nConversion\n\nexplicite\n\ndécimale\n\nperdue\n\nc. Différences clés\n\nAspect\n\nConversion implicite\n\nConversion explicite\n\nNécessite une action ?\n\nNon, automatique\n\nOui, cast obligatoire\n\n(type)\n\nRisque de perte\n\nNon\n\nOui\n\nSens\n\nDu plus petit au plus grand\n\nDu plus grand au plus petit\n\nExemples\n\nint\n\ndouble\n\ndouble\n\nint\n\nd. En résumé\n\nConversion implicite\n\n= sûre, automatique, du type petit vers grand.\n\nConversion explicite\n\n= risquée, forcée, du type grand vers petit.\n\nUtilise toujours le casting explicite pour éviter les erreurs de compilation.\n\n🧠 À retenir\n\nJava convertit\n\ntout seul\n\nquand c’est sûr.\n\nPour tout ce qui peut perdre des infos, il faut\n\ncaster\n\nmanuellement.\n\nSois vigilant avec les conversions explicites, elles peuvent tronquer ou modifier la valeur.\n\nConversion des types\n\nLe terme le plus utilisé pour la technique de conversion est « Casting ».\n\nCas 1\n\nConversion 1 : String vers les numériques\n\nConversion 2 : Les numériques vers une String en utilisant la méthode valueOf()",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/variables/index.html",
+      "title": "Variables :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "cours"
+    }
+  },
+  {
+    "text": "pour la technique de conversion est « Casting ».\n\nCas 1\n\nConversion 1 : String vers les numériques\n\nConversion 2 : Les numériques vers une String en utilisant la méthode valueOf()\n\nConversion 3 : Les numériques vers une String en utilisant la méthode toString()\n\nConversion 4 : String vers les primitifs\n\nConversion 5 : Primitifs vers String\n\nConversion 6 : Les primitifs vers une String en utilisant la méthode valueOf()\n\nAutomatique vs manuelle\n\nConversion automatique : il s’agit d’une conversion d’un type plus petit en un type plus grand\n\nbyte -> short -> char -> int -> long -> float -> double\n\nCas 2\n\nConversion manuelle :\n\nil s’agit de la conversion d’un type plus grand en un type de taille plus petite. Il suffit de rajouter le casting du type voulu à droite.\n\ndouble -> float -> long -> int -> char -> short -> byte\n\ndouble d = 2000.23;\n\nfloat f = (float)d;\n\nlong l = (long) f;\n\nQuand on diminue la taille il y a parfois une perte d’information comme si l’on passe de float à int:\n\nfloat\n\n53F\n\nSystem\n\nout\n\nprintln\n\nint\n\nPour résumer :",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/variables/index.html",
+      "title": "Variables :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "cours"
+    }
+  },
+  {
+    "text": "d;\n\nlong l = (long) f;\n\nQuand on diminue la taille il y a parfois une perte d’information comme si l’on passe de float à int:\n\nfloat\n\n53F\n\nSystem\n\nout\n\nprintln\n\nint\n\nPour résumer :\n\nDans le cas d’une conversion de petit vers grand ➔ on ne fait rien.\n\nDans le cas d’une conversion d’un grand vers un petit ➔ il faut « Caster » la partie droite en type du petit.",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/variables/index.html",
+      "title": "Variables :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "cours"
+    }
+  },
+  {
+    "text": "Opérateurs\n\nOpérateurs Arithmétiques en Java\n\nOpérateur\n\nNom\n\nDescription\n\nExemple\n\nRésultat\n\nAddition\n\nSomme de deux valeurs\n\nint x = 10 + 5;\n\nSoustraction\n\nDifférence entre deux valeurs\n\nint x = 20 - 8;\n\nMultiplication\n\nProduit de deux valeurs\n\ndouble x = 5.5 * 2;\n\n11.0\n\nDivision\n\nQuotient de la division\n\nint x = 10 / 3;\n\n(Entier)\n\nModulo\n\nReste de la division entière\n\nint x = 10 % 3;\n\nOpérateurs d’incrémentation et de décrémentation\n\nOpérateur\n\nNom\n\nPosition\n\nDescription\n\nExemple\n\nRésultat (x)\n\n++x\n\nPré-incrémentation\n\nAvant\n\nIncrémente, puis retourne la valeur\n\nint y = ++x;\n\nAugmenté de 1\n\nx++\n\nPost-incrémentation\n\nAprès\n\nRetourne la valeur, puis incrémente\n\nint y = x++;\n\nAugmenté de 1\n\n--x\n\nPré-décrémentation\n\nAvant\n\nDécrémente, puis retourne la valeur\n\nint y = --x;\n\nDiminué de 1\n\nx--\n\nPost-décrémentation\n\nAprès\n\nRetourne la valeur, puis décrémente\n\nint y = x--;\n\nDiminué de 1",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/operateurs/index.html",
+      "title": "Opérateurs :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "cours"
+    }
+  },
+  {
+    "text": "émentation\n\nAvant\n\nDécrémente, puis retourne la valeur\n\nint y = --x;\n\nDiminué de 1\n\nx--\n\nPost-décrémentation\n\nAprès\n\nRetourne la valeur, puis décrémente\n\nint y = x--;\n\nDiminué de 1\n\nPourquoi la position est-elle importante ?\n\nLa différence réside dans la\n\nvaleur retournée\n\npar l’expression au moment de l’exécution :\n\nPré (\n\n++x\n\n) :\n\nMise à jour d’abord, puis utilisation immédiate.\n\nPost (\n\nx++\n\n) :\n\nUtilisation de la valeur actuelle, puis mise à jour juste après.\n\nExemple de comparaison :\n\nint\n\nint\n\nint\n\nresultatA\n\n// a devient 11, puis resultatA reçoit 11\n\nint\n\nresultatB\n\n// resultatB reçoit 10, puis b devient 11\n\n// À la fin :\n\n// a est 11, resultatA est 11\n\nest\n\nresultatB\n\nest\n\nOpérateurs Logiques en Java\n\nLes opérateurs logiques permettent de tester plusieurs conditions à la fois et retournent toujours une valeur booléenne (\n\ntrue\n\nfalse\n\nOpérateur\n\nNom\n\nDescription\n\nExemple\n\nET (AND)\n\nRetourne\n\ntrue\n\ntoutes\n\nles conditions sont vraies\n\n(age >= 18 && aPermis)\n\nOU (OR)\n\nRetourne\n\ntrue\n\nau moins une\n\ncondition est vraie\n\n(estSamedi || estDimanche)\n\nNON (NOT)",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/operateurs/index.html",
+      "title": "Opérateurs :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "cours"
+    }
+  },
+  {
+    "text": "(AND)\n\nRetourne\n\ntrue\n\ntoutes\n\nles conditions sont vraies\n\n(age >= 18 && aPermis)\n\nOU (OR)\n\nRetourne\n\ntrue\n\nau moins une\n\ncondition est vraie\n\n(estSamedi || estDimanche)\n\nNON (NOT)\n\nInverse la valeur logique\n\n!estConnecte\n\nOU exclusif (XOR)\n\nRetourne\n\ntrue\n\nune seule\n\ncondition est vraie\n\n(optionA ^ optionB)\n\nTables de vérité (Résumé)\n\nA && B\n\nA || B\n\nA ^ B\n\ntrue\n\ntrue\n\ntrue\n\ntrue\n\nfalse\n\nfalse\n\ntrue\n\nfalse\n\nfalse\n\ntrue\n\ntrue\n\nfalse\n\nfalse\n\ntrue\n\nfalse\n\ntrue\n\ntrue\n\ntrue\n\nfalse\n\nfalse\n\nfalse\n\nfalse\n\nfalse\n\ntrue\n\nLe concept de “Court-circuit” (Short-circuit)\n\nLes opérateurs\n\nsont dits\n\nà court-circuit\n\nen Java :\n\nAvec\n\nSi la première condition est\n\nfausse\n\n, la seconde n’est pas évaluée.\n\nAvec\n\nSi la première condition est\n\nvraie\n\n, Java s’arrête immédiatement.\n\nAstuce :\n\nPlacez toujours la condition la plus risquée ou coûteuse en deuxième position.\n\nOpérateurs logiques : Court-circuit vs Évaluation complète\n\nType\n\nComportement\n\nCourt-circuit\n\nÉvalue la 2e condition uniquement si nécessaire\n\nÉvaluation complète\n\nÉvalue toujours les deux conditions",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/operateurs/index.html",
+      "title": "Opérateurs :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "cours"
+    }
+  },
+  {
+    "text": ": Court-circuit vs Évaluation complète\n\nType\n\nComportement\n\nCourt-circuit\n\nÉvalue la 2e condition uniquement si nécessaire\n\nÉvaluation complète\n\nÉvalue toujours les deux conditions\n\nPourquoi utiliser l’évaluation complète (\n\n) ?\n\nCes opérateurs sont utilisés lorsque la deuxième condition contient un\n\neffet de bord\n\nqui doit absolument être exécuté (incrémentation, appel de méthode, etc.).\n\nExemple de différence\n\nint\n\ncompteur\n\nboolean\n\nconditionFausse\n\nfalse\n\n// Cas 1 : Court-circuit (&&)\n\nconditionFausse\n\ncompteur\n\nSystem\n\nout\n\nprintln\n\ncompteur\n\n// Affiche 0\n\n// Cas 2 : Évaluation complète (&)\n\nconditionFausse\n\ncompteur\n\nSystem\n\nout\n\nprintln\n\ncompteur\n\nAffiche\n\nOpérateurs de comparaison en Java\n\nLes opérateurs de comparaison permettent de vérifier la relation entre deux expressions.\n\nLe résultat est toujours une valeur booléenne (\n\ntrue\n\nfalse\n\nOpérateur\n\nNom\n\nDescription\n\nExemple\n\nRésultat\n\nÉgalité\n\ntrue\n\nsi les valeurs primitives sont identiques\n\n5 == 5\n\ntrue\n\nInégalité\n\ntrue\n\nsi les valeurs sont différentes\n\n5 != 3\n\ntrue\n\nPlus grand que\n\ntrue",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/operateurs/index.html",
+      "title": "Opérateurs :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "cours"
+    }
+  },
+  {
+    "text": "ion\n\nExemple\n\nRésultat\n\nÉgalité\n\ntrue\n\nsi les valeurs primitives sont identiques\n\n5 == 5\n\ntrue\n\nInégalité\n\ntrue\n\nsi les valeurs sont différentes\n\n5 != 3\n\ntrue\n\nPlus grand que\n\ntrue\n\nsi la valeur de gauche est strictement supérieure\n\n10 > 5\n\ntrue\n\nPlus petit que\n\ntrue\n\nsi la valeur de gauche est strictement inférieure\n\n2 < 1\n\nfalse\n\nPlus grand ou égal\n\ntrue\n\nsi la valeur de gauche est supérieure ou égale\n\n5 >= 5\n\ntrue\n\nPlus petit ou égal\n\ntrue\n\nsi la valeur de gauche est inférieure ou égale\n\n4 <= 3\n\nfalse\n\nConfusion entre\n\nErreur fréquente chez les débutants :\n\nest l’opérateur d’assignation.\n\nest l’opérateur de comparaison.\n\nComparaison de chaînes de caractères (\n\nString\n\n) en Java\n\n⚠️ En Java, l’opérateur\n\ncompare les\n\nréférences\n\n, pas le contenu des chaînes. Pour comparer les valeurs des chaines de caractères, il faut utiliser la fonction\n\nequals\n\nou sa version ``equalsIgnoreCase`\n\nString\n\nnomUn\n\n\"Bob\"\n\nString\n\nnomDeux\n\n\"bob\"\n\nboolean\n\nsontEgaux\n\nnomUn\n\nequals\n\nnomDeux\n\n// false (sensible à la casse)\n\nboolean\n\nsontEgauxNonSensible\n\nnomUn\n\nequals\n\nnomDeux\n\ntrue",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/operateurs/index.html",
+      "title": "Opérateurs :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "cours"
+    }
+  },
+  {
+    "text": "tring\n\nnomUn\n\n\"Bob\"\n\nString\n\nnomDeux\n\n\"bob\"\n\nboolean\n\nsontEgaux\n\nnomUn\n\nequals\n\nnomDeux\n\n// false (sensible à la casse)\n\nboolean\n\nsontEgauxNonSensible\n\nnomUn\n\nequals\n\nnomDeux\n\ntrue\n\nignore\n\nles\n\ncasses",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/operateurs/index.html",
+      "title": "Opérateurs :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "cours"
+    }
+  },
+  {
+    "text": "Structures de contrôle\n\nLes structures de contrôle en Java\n\nIntroduction\n\nJusqu’à présent, vos programmes s’exécutaient\n\nligne par ligne\n\n, de haut en bas, comme une recette suivie à la lettre.\n\nLes\n\nstructures de contrôle\n\npermettent de\n\nprendre des décisions\n\net de\n\nrépéter des actions\n\n👉 Grâce à elles, un programme devient\n\nintelligent\n\ndynamique\n\nutile dans la vraie vie\n\nOn distingue trois grandes familles :\n\nLes\n\nstructures conditionnelles\n\n(faire un choix)\n\nLes\n\nstructures répétitives\n\n(répéter une action)\n\nLes\n\nstructures de contrôle de flux\n\n(modifier le déroulement)\n\n1. Les structures conditionnelles\n\nLes structures conditionnelles permettent d’exécuter du code\n\nseulement si une condition est vraie\n\n1.1 La structure\n\nSyntaxe\n\ncondition\n\n// instructions exécutées si la condition est vraie\n\nRègle importante :\n\nLa condition doit toujours être\n\nune expression booléenne",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/structures/index.html",
+      "title": "Structures de contrôle :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "cours"
+    }
+  },
+  {
+    "text": "est vraie\n\n1.1 La structure\n\nSyntaxe\n\ncondition\n\n// instructions exécutées si la condition est vraie\n\nRègle importante :\n\nLa condition doit toujours être\n\nune expression booléenne\n\n, c’est-à-dire une expression qui retourne\n\ntrue\n\nfalse\n\n1.1 La structure\n\nSyntaxe\n\ncondition\n\n// instructions exécutées si la condition est vraie\n\nLa condition est évaluée :\n\nsi elle est true, le bloc est exécuté\n\nsi elle est false, le bloc est ignoré\n\nExemple\n\nint\n\nage\n\nage\n\nSystem\n\nout\n\nprintln\n\n\"Accès autorisé\"\n\n1.2 La structure if / else\n\nPermet de choisir entre deux chemins possibles.\n\nSyntaxe\n\ncondition\n\n// exécuté si la condition est vraie\n\nelse\n\n// exécuté si la condition est fausse\n\nExemple\n\nint\n\ntemperature\n\ntemperature\n\nSystem\n\nout\n\nprintln\n\n\"Il fait chaud\"\n\nelse\n\nSystem\n\nout\n\nprintln\n\n\"Il fait frais\"\n\nUn seul des deux blocs sera exécuté.\n\n❓ L’opérateur ternaire en Java\n\nL’opérateur\n\nternaire\n\nest une\n\nforme abrégée du\n\nif...else\n\n, qui permet d’\n\nécrire des conditions simples en une seule ligne\n\nIl est souvent utilisé pour\n\nrendre le code plus concis",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/structures/index.html",
+      "title": "Structures de contrôle :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "cours"
+    }
+  },
+  {
+    "text": "pérateur\n\nternaire\n\nest une\n\nforme abrégée du\n\nif...else\n\n, qui permet d’\n\nécrire des conditions simples en une seule ligne\n\nIl est souvent utilisé pour\n\nrendre le code plus concis\n\n, surtout lorsqu’on veut\n\naffecter une valeur selon une condition\n\n🧰 Syntaxe de base\n\ncondition\n\nvaleurSiVrai\n\nvaleurSiFaux\n\nC’est comme dire :\n\n“Si la condition est vraie, retourne ceci ; sinon, retourne cela.”\n\n📦 Exemple simple\n\nint\n\nâge\n\nString\n\nstatut\n\nâge\n\n\"Majeur\"\n\n\"Mineur\"\n\nSystem\n\nout\n\nprintln\n\nstatut\n\nAffiche\n\nMajeur\n\n✳️ C’est équivalent à :\n\nString\n\nstatut\n\nâge\n\nstatut\n\n\"Majeur\"\n\nelse\n\nstatut\n\n\"Mineur\"\n\n⚙️ Utilisation typique\n\nL’opérateur ternaire est\n\ntrès utilisé pour affecter une valeur\n\nselon une condition :\n\ndouble\n\nnote\n\nString\n\nrésultat\n\nnote\n\n\"Réussi\"\n\n\"Échoué\"\n\nOn peut aussi l’utiliser directement dans un\n\nSystem.out.println()\n\nSystem\n\nout\n\nprintln\n\nnote\n\n\"Excellent\"\n\n\"À améliorer\"\n\n🛑 À éviter pour les cas complexes\n\nMême si l’opérateur ternaire est pratique, il\n\ndevient illisible si la condition ou les valeurs sont longues\n\n// Trop compliqué !\n\nString\n\ngrade\n\nscore",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/structures/index.html",
+      "title": "Structures de contrôle :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "cours"
+    }
+  },
+  {
+    "text": "iter pour les cas complexes\n\nMême si l’opérateur ternaire est pratique, il\n\ndevient illisible si la condition ou les valeurs sont longues\n\n// Trop compliqué !\n\nString\n\ngrade\n\nscore\n\n\"A\"\n\nscore\n\n\"B\"\n\n\"C\"\n\nDifficile\n\nlire\n\nmaintenir\n\n➡️ Dans ces cas-là, préfère une structure\n\nif...else\n\nclassique.\n\n🔥 À retenir\n\nL’opérateur ternaire est une\n\nforme courte de\n\nif...else\n\nIl s’écrit :\n\n(condition) ? valeurSiVrai : valeurSiFaux;\n\nTrès utile pour\n\ninitialiser une variable\n\nselon une condition.\n\néviter\n\nsi la logique devient trop complexe ou trop imbriquée.\n\nRends le code\n\nplus compact\n\n, mais pas toujours plus clair.\n\n1.3 La structure if / else if / else\n\nUtilisée lorsqu’il y a plusieurs choix possibles.\n\nSyntaxe\n\ncondition1\n\n// cas 1\n\nelse\n\ncondition2\n\n// cas 2\n\nelse\n\n// cas par défaut\n\nExemple\n\nint\n\nnote\n\nnote\n\nSystem\n\nout\n\nprintln\n\n\"Excellent\"\n\nelse\n\nnote\n\nSystem\n\nout\n\nprintln\n\n\"Réussi\"\n\nelse\n\nSystem\n\nout\n\nprintln\n\n\"Échec\"\n\nLes conditions sont testées dans l’ordre, et Java s’arrête dès qu’une condition est vraie.\n\n1.4 Erreurs fréquentes avec les conditions",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/structures/index.html",
+      "title": "Structures de contrôle :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "cours"
+    }
+  },
+  {
+    "text": "Réussi\"\n\nelse\n\nSystem\n\nout\n\nprintln\n\n\"Échec\"\n\nLes conditions sont testées dans l’ordre, et Java s’arrête dès qu’une condition est vraie.\n\n1.4 Erreurs fréquentes avec les conditions\n\nConfusion entre\n\n// ERREUR\n\nCORRECT\n\nOubli des accolades\n\nSystem\n\nout\n\nprintln\n\n\"Positif\"\n\nSystem\n\nout\n\nprintln\n\n\"Fin\"\n\nDans ce cas, “Fin” s’affiche toujours.\n\n🎛️ Les instructions\n\nswitch\n\nen Java\n\nL’instruction\n\nswitch\n\npermet de\n\ntester la valeur d’une variable\n\net d’exécuter\n\ndifférents blocs de code\n\nselon son\n\ncontenu exact\n\nC’est une\n\nalternative plus claire aux chaînes de\n\nif...else if\n\nquand on compare\n\nune même variable\n\nplusieurs valeurs possibles\n\n🧰 Syntaxe de base\n\nswitch\n\nvariable\n\ncase\n\nvaleur1\n\n// Code si variable == valeur1\n\nbreak\n\ncase\n\nvaleur2\n\n// Code si variable == valeur2\n\nbreak\n\ndefault\n\n// Code si aucune des valeurs ne correspond\n\n🧱 Éléments clés :\n\nMot-clé\n\nRôle\n\ncase\n\nSpécifie une\n\nvaleur à tester\n\nbreak\n\nTermine le\n\nswitch\n\n, évite les “chutes”\n\ndefault\n\n(optionnel) Bloc exécuté\n\npar défaut\n\n📦 Exemple simple\n\nint\n\njour\n\nswitch\n\njour\n\ncase\n\nSystem\n\nout\n\nprintln",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/structures/index.html",
+      "title": "Structures de contrôle :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "cours"
+    }
+  },
+  {
+    "text": "leur à tester\n\nbreak\n\nTermine le\n\nswitch\n\n, évite les “chutes”\n\ndefault\n\n(optionnel) Bloc exécuté\n\npar défaut\n\n📦 Exemple simple\n\nint\n\njour\n\nswitch\n\njour\n\ncase\n\nSystem\n\nout\n\nprintln\n\n\"Lundi\"\n\nbreak\n\ncase\n\nSystem\n\nout\n\nprintln\n\n\"Mardi\"\n\nbreak\n\ncase\n\nSystem\n\nout\n\nprintln\n\n\"Mercredi\"\n\nbreak\n\ndefault\n\nSystem\n\nout\n\nprintln\n\n\"Jour inconnu\"\n\n➡️ Affichera :\n\nMercredi\n\n⚠️ Le\n\nbreak\n\nest important !\n\nSans le\n\nbreak\n\n, le programme\n\ncontinue dans les cases suivantes\n\n, même si elles ne correspondent pas :\n\nint\n\nswitch\n\ncase\n\nSystem\n\nout\n\nprintln\n\n\"Un\"\n\ncase\n\nSystem\n\nout\n\nprintln\n\n\"Deux\"\n\ncase\n\nSystem\n\nout\n\nprintln\n\n\"Trois\"\n\n➡️ Affichera :\n\nDeux\n\nTrois\n\n🧠 Le bloc\n\ndefault\n\nLe mot-clé\n\ndefault\n\npermet de\n\ngérer les cas non prévus\n\nchar\n\nlettre\n\n'z'\n\nswitch\n\nlettre\n\ncase\n\n'a'\n\nSystem\n\nout\n\nprintln\n\n\"Voyelle A\"\n\nbreak\n\ncase\n\n'e'\n\nSystem\n\nout\n\nprintln\n\n\"Voyelle E\"\n\nbreak\n\ndefault\n\nSystem\n\nout\n\nprintln\n\n\"Autre lettre\"\n\n🔁 Compatibilité du\n\nswitch\n\nEn Java, tu peux utiliser\n\nswitch\n\navec les types suivants :\n\nType autorisé\n\nExemples\n\nint\n\nshort\n\nbyte\n\nchar\n\nswitch (entier)\n\nString",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/structures/index.html",
+      "title": "Structures de contrôle :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "cours"
+    }
+  },
+  {
+    "text": "\"Autre lettre\"\n\n🔁 Compatibilité du\n\nswitch\n\nEn Java, tu peux utiliser\n\nswitch\n\navec les types suivants :\n\nType autorisé\n\nExemples\n\nint\n\nshort\n\nbyte\n\nchar\n\nswitch (entier)\n\nString\n\n(depuis Java 7)\n\nswitch (nom)\n\nenum\n\nswitch (couleur)\n\n❌ Pas compatible avec\n\nfloat\n\ndouble\n\nboolean\n\n, ni avec des expressions complexes.\n\n🔥 À retenir\n\nswitch\n\nest pratique pour\n\ntester des cas précis\n\nUtilise\n\nbreak\n\npour\n\néviter les exécutions non désirées\n\nLe bloc\n\ndefault\n\nest\n\noptionnel\n\nmais utile.\n\nCompatible avec\n\nint\n\nchar\n\nString\n\nenum\n\n, etc.\n\nPlus lisible que plusieurs\n\nelse if\n\nquand on compare\n\nla même variable\n\n2. Les structures répétitives (boucles)\n\nLes boucles permettent de\n\nrépéter un bloc de code\n\ntant qu’une condition est respectée.\n\n2.1 La boucle while\n\nLa condition est testée avant chaque répétition.\n\nSyntaxe\n\nwhile\n\ncondition\n\n// instructions répétées\n\nExemple\n\nint\n\ncompteur\n\nwhile\n\ncompteur\n\nSystem\n\nout\n\nprintln\n\ncompteur\n\ncompteur\n\n2.2 La boucle do / while\n\nLe bloc s’exécute au moins une fois, puis la condition est testée.\n\nSyntaxe\n\n// instructions\n\nwhile",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/structures/index.html",
+      "title": "Structures de contrôle :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "cours"
+    }
+  },
+  {
+    "text": "e\n\ncompteur\n\nSystem\n\nout\n\nprintln\n\ncompteur\n\ncompteur\n\n2.2 La boucle do / while\n\nLe bloc s’exécute au moins une fois, puis la condition est testée.\n\nSyntaxe\n\n// instructions\n\nwhile\n\ncondition\n\nExemple\n\nint\n\nchoix\n\nSystem\n\nout\n\nprintln\n\n\"Menu affiché\"\n\nchoix\n\nwhile\n\nchoix\n\n2.3 La boucle for\n\nUtilisée lorsque le nombre de répétitions est connu à l’avance.\n\nSyntaxe\n\nfor\n\ninitialisation\n\ncondition\n\nincrémentation\n\n// instructions\n\nExemple\n\nfor\n\nint\n\nSystem\n\nout\n\nprintln\n\n2.4 Comparaison des boucles\n\nBoucle\n\nUtilisation recommandée\n\nwhile\n\nNombre de répétitions inconnu\n\ndo/while\n\nAu moins une exécution nécessaire\n\nfor\n\nNombre de répétitions connu\n\n3. Les structures de contrôle du flux\n\n3.1 L’instruction break\n\nPermet de\n\nsortir immédiatement\n\nd’une boucle.\n\nfor\n\nint\n\nbreak\n\nSystem\n\nout\n\nprintln\n\n3.2 L’instruction continue\n\nPermet de\n\npasser directement à l’itération suivante.\n\nfor\n\nint\n\ncontinue\n\nSystem\n\nout\n\nprintln",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/structures/index.html",
+      "title": "Structures de contrôle :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "cours"
+    }
+  },
+  {
+    "text": "Méthodes\n\n🛠️ Les Méthodes en Java : Segmenter pour mieux régner\n\nEn programmation, une méthode est un\n\nbloc de code nommé\n\nqui contient une séquence d’instructions. Au lieu d’écrire tout votre code dans le bloc principal (\n\nmain\n\n), vous créez des unités de travail spécialisées que vous pouvez appeler au besoin.\n\nL’analogie de la boîte\n\n: Imaginez une méthode comme une boîte fermée. Vous ne voyez pas forcément l’engrenage à l’intérieur, mais vous savez comment l’utiliser en appuyant sur un bouton ou en y insérant des données.\n\n1. La boîte d’action simple (\n\nvoid\n\nsans paramètre)\n\nIl s’agit du type de méthode le plus élémentaire. Elle ne demande aucune information et ne renvoie aucune donnée. Elle exécute simplement une tâche prédéfinie.\n\nvoid\n\n: Ce mot-clé signifie “vide”. Il indique que la méthode ne rend rien au programme.",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/methodes/index.html",
+      "title": "Méthodes :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "cours"
+    }
+  },
+  {
+    "text": "une information et ne renvoie aucune donnée. Elle exécute simplement une tâche prédéfinie.\n\nvoid\n\n: Ce mot-clé signifie “vide”. Il indique que la méthode ne rend rien au programme.\n\n: Les parenthèses vides indiquent que la boîte ne nécessite aucune donnée d’entrée pour fonctionner.\n\npublic\n\nstatic\n\nvoid\n\nafficherEntete\n\nSystem\n\nout\n\nprintln\n\n\"******************************\"\n\nSystem\n\nout\n\nprintln\n\n\"   BIENVENUE AU SYSTÈME      \"\n\nSystem\n\nout\n\nprintln\n\n\"******************************\"\n\n2. La boîte avec instructions (\n\nvoid\n\navec paramètres)\n\nCette méthode a besoin d’informations pour fonctionner (des paramètres), mais elle ne renvoie toujours pas de résultat au programme. Elle utilise les entrées pour effectuer une action, comme un affichage personnalisé.\n\nParamètres\n\n: Ce sont les variables déclarées entre les parenthèses. Elles servent de “fiches d’instructions” pour la méthode.\n\npublic\n\nstatic\n\nvoid\n\nsaluerUtilisateur\n\nString\n\nprenom\n\nint\n\nage\n\nSystem\n\nout\n\nprintln\n\n\"Bonjour \"\n\nprenom\n\n\" !\"\n\nSystem\n\nout\n\nprintln\n\n\"Vous avez \"\n\nage\n\n\" ans.\"",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/methodes/index.html",
+      "title": "Méthodes :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "cours"
+    }
+  },
+  {
+    "text": "our la méthode.\n\npublic\n\nstatic\n\nvoid\n\nsaluerUtilisateur\n\nString\n\nprenom\n\nint\n\nage\n\nSystem\n\nout\n\nprintln\n\n\"Bonjour \"\n\nprenom\n\n\" !\"\n\nSystem\n\nout\n\nprintln\n\n\"Vous avez \"\n\nage\n\n\" ans.\"\n\n3. La boîte de calcul (Avec paramètres et retour)\n\nC’est l’analogie complète de la\n\nmachine distributrice\n\nVous insérez des données (l’argent) : ce sont les\n\nParamètres\n\nLa machine transforme l’entrée : c’est le\n\nTraitement\n\nElle vous éjecte un produit (le bonbon) : c’est le\n\nRetour\n\nType de retour\n\n: On remplace\n\nvoid\n\npar le type de la donnée qui sortira de la boîte (ex:\n\nint\n\ndouble\n\nString\n\nInstruction\n\nreturn\n\n: C’est le mécanisme qui permet d’expulser la valeur finale hors de la méthode.\n\npublic\n\nstatic\n\ndouble\n\ncalculerTaxe\n\ndouble\n\nmontantBrut\n\ndouble\n\ntaxe\n\nmontantBrut\n\n// Calcul de la taxe de 15%\n\nreturn\n\ntaxe\n\n// On éjecte le résultat vers l'appelant\n\n4. Synthèse : Quel type de boîte choisir ?\n\nPour déterminer la structure de votre méthode, vous devez vous poser deux questions fondamentales avant même de commencer à coder.\n\nLe guide de décision\n\nEntrée (Paramètres) :",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/methodes/index.html",
+      "title": "Méthodes :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "cours"
+    }
+  },
+  {
+    "text": "r ?\n\nPour déterminer la structure de votre méthode, vous devez vous poser deux questions fondamentales avant même de commencer à coder.\n\nLe guide de décision\n\nEntrée (Paramètres) :\n\nEst-ce que ma machine a besoin de données extérieures pour fonctionner ?\n\nSortie (Retour) :\n\nEst-ce que ma machine doit fournir une réponse que je vais réutiliser plus tard dans mon code ?\n\nTableau récapitulatif des structures\n\nType de méthode\n\nType de retour\n\nParamètres\n\nAnalogie de la boîte\n\nAction pure\n\nvoid\n\nAucun\n\nLe bouton “Alarme”\n\n: on appuie, le son sort, aucune information n’est demandée.\n\nAction paramétrée\n\nvoid\n\nPrésents\n\nLe haut-parleur\n\n: on lui donne un texte, il le diffuse, mais il ne nous redonne rien en main.\n\nCalculatrice\n\nint\n\ndouble\n\n, etc.\n\nPrésents\n\nLa machine distributrice\n\n: on insère de l’argent, la machine traite, et nous redonne un produit.\n\n💡 La règle d’or : “Une tâche, une boîte”\n\nUne erreur fréquente est de vouloir créer une boîte qui fait trop de choses (ex: calculer, afficher, et sauvegarder).\n\nMauvaise pratique :",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/methodes/index.html",
+      "title": "Méthodes :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "cours"
+    }
+  },
+  {
+    "text": "💡 La règle d’or : “Une tâche, une boîte”\n\nUne erreur fréquente est de vouloir créer une boîte qui fait trop de choses (ex: calculer, afficher, et sauvegarder).\n\nMauvaise pratique :\n\nUne méthode géante difficile à corriger.\n\nBonne pratique :\n\nPlusieurs petites méthodes simples qui s’appellent entre elles. Cela rend votre code modulaire et beaucoup plus facile à déboguer pour vos travaux pratiques.\n\n5. Exemples supplémentaires par mise en situation\n\nA. La boîte “Vérificatrice” (Type boolean)\n\nCette boîte reçoit une information et répond simplement par\n\nVrai\n\nFaux\n\n. C’est très utile pour valider des conditions de jeu.\n\nEntrée\n\n: L’âge de l’utilisateur.\n\nSortie\n\n: Un signal (Vrai/Faux) indiquant si l’accès est permis.\n\npublic\n\nstatic\n\nboolean\n\nestMajeur\n\nint\n\nage\n\nage\n\nreturn\n\ntrue\n\nelse\n\nreturn\n\nfalse",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/methodes/index.html",
+      "title": "Méthodes :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "cours"
+    }
+  },
+  {
+    "text": "Tableaux\n\n📦 Les tableaux 1D en Java\n\ntableau (array)\n\npermet de\n\nstocker plusieurs valeurs\n\ndans une\n\nmême variable\n\n, toutes du\n\nmême type\n\n(int, double, etc.).\n\nLes\n\ntableaux à une dimension (1D)\n\nsont comme une\n\nliste ordonnée\n\nde valeurs, accessibles grâce à leur\n\nindice\n\n🏗️ Déclaration et création\n\n✏️ Déclarer un tableau\n\nint\n\nnotes\n\ndéclaration\n\n🛠️ Créer un tableau\n\nnotes\n\nnew\n\nint\n\ntableau\n\nentiers\n\ntous\n\nOu, préférablement, tout en une ligne :\n\nint\n\nnotes\n\nnew\n\nint\n\n💡 Tous les éléments sont\n\nautomatiquement initialisés\n\nType\n\nValeur par défaut\n\nint\n\ndouble\n\n0.0\n\nboolean\n\nfalse\n\nString\n\nnull\n\n🧊 Accès aux éléments\n\nUn tableau utilise\n\ndes indices\n\nqui commencent à\n\nnotes\n\n// affecte 17 au premier élément\n\nSystem\n\nout\n\nprintln\n\nnotes\n\naffiche\n\n💥 Accéder à un\n\nindice hors-limites\n\nprovoque une\n\nerreur\n\nnotes\n\nErreur\n\nIndexOutOfBoundsException\n\n🪞 Initialisation rapide",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/tableaux/index.html",
+      "title": "Tableaux :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "cours"
+    }
+  },
+  {
+    "text": "premier élément\n\nSystem\n\nout\n\nprintln\n\nnotes\n\naffiche\n\n💥 Accéder à un\n\nindice hors-limites\n\nprovoque une\n\nerreur\n\nnotes\n\nErreur\n\nIndexOutOfBoundsException\n\n🪞 Initialisation rapide\n\nOn peut directement donner des valeurs au moment de la création :\n\nint\n\njours\n\n📏 La propriété\n\n.length\n\nChaque tableau possède une propriété spéciale :\n\nint\n\ntaille\n\nnotes\n\nlength\n\nici\n\n❗ Ce n’est\n\npas une méthode\n\n(pas de parenthèses !)\n\n🧪 Exemples simples\n\nint\n\nvaleurs\n\nSystem\n\nout\n\nprintln\n\nvaleurs\n\n// 20\n\nSystem\n\nout\n\nprintln\n\nvaleurs\n\nlength\n\n// 3\n\nvaleurs\n\nSystem\n\nout\n\nprintln\n\nvaleurs\n\n🧠 À retenir\n\nUn tableau\n\nstocke plusieurs valeurs\n\ndu même type.\n\nLes\n\nindices commencent à 0\n\n.length\n\ndonne le\n\nnombre d’éléments\n\ndu tableau.\n\nNe jamais dépasser les\n\nbornes\n\ndu tableau !",
+    "metadata": {
+      "module": "420-210",
+      "source": "https://cegepmv.github.io/420-210/tableaux/index.html",
+      "title": "Tableaux :: Programmation orientée objet",
+      "type": "web",
+      "corpus": "cours"
+    }
+  }
+]

@@ -1,0 +1,985 @@
+
+/* =================================================================================================
+   EduCare — main.css (CLEAN FINAL)
+   ================================================================================================= */
+
+/* =========================
+   Fonts
+   ========================= */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap");
+
+:root{
+   --modules-offset: clamp(35px, 2vh, 24px);
+
+  --glass-bg: rgba(220, 235, 255, 0.18);
+  --glass-br: rgba(255,255,255,0.22);
+  --glass-shadow: 0 12px 24px rgba(0,0,0,0.18);
+
+  --text-white: rgba(255,255,255,0.95);
+  --text-dim: rgba(255,255,255,0.72);
+}
+
+body, button, .edu-btn, .nav-text{
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+}
+
+/* =========================
+   Background
+   ========================= */
+.stApp{
+  background:
+    linear-gradient(rgba(7, 131, 255, 0.55), rgba(23, 53, 83, 0.55)),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%230b3554'/%3E%3Cstop offset='0.5' stop-color='%231e6fa3'/%3E%3Cstop offset='1' stop-color='%230b4a73'/%3E%3C/linearGradient%3E%3CradialGradient id='glow' cx='70%25' cy='25%25' r='80%25'%3E%3Cstop offset='0' stop-color='%23a8d8ff' stop-opacity='0.45'/%3E%3Cstop offset='55%25' stop-color='%235aa7da' stop-opacity='0.18'/%3E%3Cstop offset='100%25' stop-color='%230b3554' stop-opacity='0'/%3E%3C/radialGradient%3E%3ClinearGradient id='facet' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23ffffff' stop-opacity='0.18'/%3E%3Cstop offset='1' stop-color='%23ffffff' stop-opacity='0.03'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='1600' height='900' fill='url(%23bg)'/%3E%3Crect width='1600' height='900' fill='url(%23glow)'/%3E%3Cg fill='url(%23facet)' stroke='%23ffffff' stroke-opacity='0.12' stroke-width='1.6'%3E%3Cpolygon points='-200,850 480,120 760,210 60,980'/%3E%3Cpolygon points='260,900 820,190 1120,310 520,1080'/%3E%3Cpolygon points='720,940 1300,320 1680,460 1080,1120'/%3E%3Cpolygon points='-150,600 350,80 520,150 0,720'/%3E%3Cpolygon points='900,820 1450,260 1750,360 1200,940'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* =========================
+   Layout / spacing
+   ========================= */
+.block-container{
+  padding-top: 1.6rem !important;   /* ✔️ descend tout légèrement */
+  padding-bottom: 20px;
+}
+
+
+div[data-testid="stVerticalBlock"]{ gap: 12px; }
+
+.panel{
+  background: rgba(255,255,255,0.10);
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 14px;
+  padding: 12px;
+  backdrop-filter: blur(6px);
+}
+
+/* =========================
+   Column alignment
+   ========================= */
+.left-modules{
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* 🔥 centre tout horizontalement */
+}
+
+.right-modules{ margin-top: var(--modules-offset); }
+
+/* IMPORTANT: ne PAS cacher h3/p globalement (ça casse l'app)
+   => on masque seulement dans la bigarea */
+.bigarea h3,
+.bigarea p{
+  display: none !important;
+}
+
+/* =========================
+   Big area
+   ========================= */
+.bigarea{
+  margin-top: 18px;
+  height: 550px;
+
+  background: rgba(188, 152, 20, 0.483);
+  border: 1px solid rgba(198, 16, 16, 0.22);
+  border-radius: 14px;
+
+  /* ✅ layout chat */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* =========================
+   Chat input — glass (Safari OK)
+   ========================= */
+
+/* wrapper global du widget */
+div[data-testid="stTextArea"]{
+  background: transparent !important;
+  margin-top: 10px !important; 
+}
+
+/* wrapper interne Streamlit autour du textarea */
+div[data-testid="stTextArea"] > div{
+  background: rgba(14, 89, 81, 0.5) !important;  /* ⬅️ PLUS transparent */
+  border-radius: 18px !important;
+  /* padding: 10px 12px !important; */
+  border: 1px solid rgba(255,255,255,0.12) !important;
+
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+
+}
+
+/* parfois Streamlit ajoute encore un div entre les deux */
+div[data-testid="stTextArea"] > div > div{
+  background: transparent !important;
+}
+
+/* le textarea */
+textarea#chat_input_main{
+  background: transparent !important;            /* ⬅️ laisse voir le glass */
+  color: rgba(255,255,255,0.95) !important;
+  border: none !important;
+  outline: none !important;
+  padding: 12px 10px !important;
+  box-shadow: none !important;
+  resize: none !important;
+}
+
+/* placeholder */
+textarea#chat_input_main::placeholder{
+  color: rgba(255,255,255,0.45) !important;
+  font-style: italic;
+}
+
+/* focus */
+/* div[data-testid="stTextArea"]:focus-within > div{
+  border-color: rgba(120,180,255,0.8) !important;
+  box-shadow: 0 0 0 3px rgba(120,180,255,0.25) !important;
+} */
+
+
+
+/* =========================
+   Micro-animation focus (respiration)
+   ========================= */
+
+/* @keyframes educareBreath {
+  0%   { box-shadow: 0 0 0 3px rgba(120,180,255,0.18), 0 10px 26px rgba(0,0,0,0.20); }
+  50%  { box-shadow: 0 0 0 4px rgba(120,180,255,0.30), 0 12px 50px rgba(0,0,0,0.28); }
+  100% { box-shadow: 0 0 0 6x rgba(212, 157, 7, 0.18), 0 10px 26px rgba(212, 157, 7, 0.18); }
+} */
+
+/* on anime le wrapper interne au focus */
+/* div[data-testid="stTextArea"]:focus-within > div{
+  animation: educareBreath 1.2s ease-in-out infinite;
+  border-color: rgba(233, 140, 27, 0.75) !important;
+} */
+
+/* =========================
+   Logo
+   ========================= */
+
+.left-modules [data-testid="stImage"]{
+  width: auto !important;        /* ✅ au lieu de 100% */
+  display: block !important;
+  margin: 0 auto !important;     /* ✅ centre le wrapper */
+}
+
+
+.left-modules [data-testid="stImage"] > figure{ margin: 0 !important; }
+
+.left-modules [data-testid="stImage"] img{
+  display: block !important;
+  margin: 0 auto !important;
+
+  border-radius: 22px;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.12);
+  background: rgba(255,255,255,0.95);
+  padding: 10px;
+}
+
+/* =========================
+   Top-right Progress button
+   ========================= */
+.top-progress-btn{
+  margin-top: 50px;
+  margin-bottom: -20px;
+}
+
+/* wrapper colonne droite (si tu l'utilises en HTML) */
+.right-col-wrap{
+  padding-right: 0 !important;
+}
+
+.right-col-wrap .top-progress-btn,
+.right-col-wrap .right-modules{
+  width: 100%;
+}
+
+/* bouton HTML */
+.progression-svg-btn{
+  width: 100%;
+  box-sizing: border-box;
+
+
+  padding: 0 20px;
+  margin-top: -20px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  border-radius: 18px;
+  background: rgba(220,235,255,0.9);
+  border: 1px solid rgba(255,255,255,0.6);
+
+  box-shadow: 0 10px 22px rgba(0,0,0,0.18);
+  cursor: pointer;
+
+  transition: transform 120ms ease, filter 150ms ease;
+}
+
+.progression-svg-btn:hover{
+  transform: translateY(-1px);
+  filter: brightness(1.03);
+}
+
+.progression-svg-btn .prog-ico{
+  width: 70px;
+  height: 70px;
+  flex-shrink: 0;
+
+  fill: rgba(230, 172, 13, 0.9);
+  stroke: rgba(48, 39, 15, 0.9);
+  stroke-width: 3.5;
+}
+
+.progression-svg-btn .prog-text{
+  font-size: 16px;
+  font-weight: 800;
+  color: rgba(15,34,48,0.95);
+}
+
+/* =========================
+   Intro bot (dans bigarea)
+   ========================= */
+#intro-bot{
+  height: 100%;
+  padding: 18px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.bot-card{
+  width: 100%;
+  max-width: 740px;
+  height: 510px;
+  margin: 0 auto;
+
+  background: rgba(14, 87, 182, 0.22);
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 16px;
+
+  backdrop-filter: blur(8px);
+  box-shadow: 0 16px 30px rgba(0,0,0,0.25);
+}
+
+.bot-head{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border-bottom: 1px solid rgba(255,255,255,0.10);
+}
+
+.bot-dot{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(120, 220, 255, 0.9);
+  box-shadow: 0 0 18px rgba(120, 220, 255, 0.55);
+}
+
+.bot-title{
+  color: rgba(255,255,255,0.92);
+  font-weight: 800;
+  letter-spacing: 0.2px;
+}
+
+.bot-body{
+  height: 350px;
+  overflow: auto;
+  padding: 14px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bot-bubble{
+  align-self: flex-start;
+  max-width: 92%;
+  padding: 10px 12px;
+  border-radius: 14px;
+
+  background: rgba(220,235,255,0.22);
+  border: 1px solid rgba(255,255,255,0.14);
+
+  color: rgba(255,255,255,0.92);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.bot-hint{
+  padding: 70px 14px 14px;
+  color: rgba(255,255,255,0.65);
+  font-size: 12px;
+}
+
+/* typing */
+.bot-typing{
+  display: inline-flex;
+  gap: 6px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: rgba(220,235,255,0.18);
+  border: 1px solid rgba(255,255,255,0.12);
+  width: fit-content;
+}
+
+.bot-typing span{
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.85);
+  animation: botPulse 1s infinite ease-in-out;
+}
+.bot-typing span:nth-child(2){ animation-delay: .15s; }
+.bot-typing span:nth-child(3){ animation-delay: .30s; }
+
+@keyframes botPulse{
+  0%, 100% { transform: translateY(0); opacity: .55; }
+  50%      { transform: translateY(-3px); opacity: 1; }
+}
+
+/* =========================
+   Bottom nav buttons (optional)======BOTTOM======
+   ========================= */
+.nav-svg-btn{
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: -22px !important; 
+  margin-left: 380px;
+  border-radius: 16px;
+
+  background: rgba(220, 172, 14, 0.09);
+  border: 1px solid rgba(227, 186, 22, 0.95);
+
+  box-shadow: 0 10px 22px rgba(0,0,0,0.18);
+  cursor: pointer;
+
+  transition: transform 120ms ease, filter 150ms ease, box-shadow 120ms ease;
+}
+
+.nav-svg-btn:hover{
+  transform: translateY(-1px);
+  filter: brightness(1.04);
+  box-shadow: 0 14px 26px rgba(0,0,0,0.25);
+}
+.nav-svg-btn:active{ transform: scale(0.985); }
+
+.nav-ico{
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+
+  fill: none;
+  stroke: rgba(227, 186, 22, 0.95);
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.nav-text{
+  color: rgb(241, 179, 71);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.15;
+  text-align: center;
+}
+/* Disparition totale du placeholder au focus */
+textarea:focus::placeholder{
+  color: transparent !important;
+}
+/* =========================
+   Footer
+   ========================= */
+.footer{
+  text-align: center;
+  color: rgba(255,255,255,0.5);
+  font-size: 10px;
+  margin-top:-40px;
+}
+
+/* =========================
+   Popup Progression (Modal)
+   ========================= */
+.educare-modal-overlay{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: auto;
+}
+
+.educare-modal{
+  width: min(560px, 92vw);
+  background: rgba(20,28,40,0.95);
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 16px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+  color: white;
+  overflow: hidden;
+}
+
+.educare-modal-head{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  border-bottom: 1px solid rgba(255,255,255,0.10);
+}
+
+.educare-modal-title{
+  color: rgba(255,255,255,0.92);
+  font-weight: 800;
+  font-size: 16px;
+}
+
+.educare-modal-x{
+  background: transparent;
+  border: none;
+  color: rgba(255,255,255,0.78);
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.educare-modal-body{ padding: 14px; }
+
+.educare-metric{
+  background: rgba(220,235,255,0.10);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 14px;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+}
+
+.educare-metric-k{
+  color: rgba(255,255,255,0.62);
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.educare-metric-v{
+  color: rgba(255,255,255,0.92);
+  font-weight: 800;
+}
+
+.educare-metric-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.educare-section-title{
+  margin-top: 10px;
+  margin-bottom: 8px;
+  color: rgba(255,255,255,0.8);
+  font-weight: 700;
+}
+
+.educare-list{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.educare-row{
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: rgba(220,235,255,0.08);
+  border: 1px solid rgba(255,255,255,0.10);
+}
+
+.educare-k{
+  color: rgba(255,255,255,0.88);
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.educare-v{
+  color: rgba(120,220,255,0.95);
+  font-weight: 800;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.educare-empty{
+  color: rgba(255,255,255,0.60);
+  padding: 10px 2px;
+}
+
+.educare-actions{
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.educare-primary, .educare-secondary{
+  border-radius: 12px;
+  padding: 10px 12px;
+  border: 1px solid rgba(255,255,255,0.18);
+  cursor: pointer;
+  font-weight: 800;
+}
+
+.educare-primary{
+  background: rgba(120,220,255,0.25);
+  color: rgba(255,255,255,0.92);
+}
+
+.educare-secondary{
+  background: transparent;
+  color: rgba(255,255,255,0.80);
+}
+
+/* badges */
+.educare-badges{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.educare-badge{
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.10);
+  border: 1px solid rgba(255,255,255,0.14);
+  color: rgba(255,255,255,0.92);
+  font-weight: 800;
+  font-size: 12px;
+}
+
+/* progression courses */
+.educare-courses{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.educare-course{
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: rgba(220,235,255,0.08);
+  border: 1px solid rgba(255,255,255,0.10);
+}
+
+.educare-course-top{
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: baseline;
+  margin-bottom: 8px;
+}
+
+.educare-course-name{
+  color: rgba(255,255,255,0.92);
+  font-weight: 800;
+  font-size: 13px;
+}
+
+.educare-course-meta{
+  color: rgba(120,220,255,0.95);
+  font-weight: 800;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.educare-bar{
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.10);
+  border: 1px solid rgba(255,255,255,0.14);
+  overflow: hidden;
+}
+
+.educare-bar-fill{
+  height: 100%;
+  border-radius: 999px;
+  background: rgba(120,220,255,0.75);
+}
+
+.educare-course-foot{
+  margin-top: 6px;
+  color: rgba(255,255,255,0.72);
+  font-weight: 800;
+  font-size: 12px;
+  text-align: right;
+}
+
+/* =========================
+   EduCare — Buttons (GLOBAL safe)
+   ========================= */
+
+/* N'affecte que les boutons Streamlit */
+div[data-testid="stButton"] button{
+  width: 100% !important;
+  min-height: 86px !important;
+  background: rgba(20, 60, 140, 0.90) !important;  /* bleu par défaut */
+  color: rgba(255,255,255,0.96) !important;
+
+  border-radius: 18px !important;
+  border: 1px solid rgba(255,255,255,0.22) !important;
+
+  font-size: 14px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.2px !important;
+  line-height: 1.2 !important;
+
+  box-shadow: 0 14px 28px rgba(0,0,0,0.22) !important;
+  backdrop-filter: blur(8px) !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+
+  padding: 0 18px !important;
+  margin: 0 !important;
+}
+
+/* ===== Etat sélectionné via type="primary"/"secondary" ===== */
+
+/* bouton sélectionné */
+button[data-testid="baseButton-primary"]{
+  background: rgba(220, 40, 40, 0.95) !important;
+
+  color: white !important;
+
+  border: 1px solid rgba(255,255,255,0.38) !important;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.30) !important;
+
+  filter: brightness(1.08) !important;
+}
+
+/* boutons non sélectionnés */
+button[data-testid="baseButton-secondary"]{
+  background: rgba(8, 90, 255, 0.9) !important;
+  color: rgba(255,255,255,0.96) !important;
+
+  border: 1px solid rgba(255,255,255,0.22) !important;
+  border-radius: 18px !important;
+
+  box-shadow: 0 12px 22px rgba(0,0,0,0.22) !important;
+  backdrop-filter: blur(8px) !important;
+}
+
+
+button[data-testid^="baseButton-"]:hover{
+  transform: translateY(-1px);
+  filter: brightness(1.06);
+  box-shadow: 0 18px 34px rgba(0,0,0,0.28);
+}
+
+
+button[data-testid^="baseButton-"]:active{
+  transform: scale(0.99);
+}
+
+div[data-testid="stButton"] button *{
+  white-space: normal !important;
+  margin: 0 !important;
+}
+
+/* =========================================================
+   Animations + Selected state (modules)
+   ========================================================= */
+
+@keyframes fadeSlideUp{
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Logo wrap (marges) */
+/* .logo-wrap{
+  margin: 12px 0 22px 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+} */
+
+/* Alignement vertical du logo avec la barre de chat */
+.logo-wrap{
+  margin-top: -8px;        /* ⬅️ remonte le logo */
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+
+/* Boutons Streamlit (style + animation) */
+div[data-testid="stButton"] button{
+  width: 100% !important;
+  min-height: 86px !important;
+
+  background: rgba(20, 60, 140, 0.90) !important; /* bleu par défaut */
+  color: rgba(255,255,255,0.96) !important;
+
+  border-radius: 18px !important;
+  border: 1px solid rgba(255,255,255,0.22) !important;
+
+  font-size: 14px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.2px !important;
+  line-height: 1.2 !important;
+
+  box-shadow: 0 14px 28px rgba(0,0,0,0.22) !important;
+  backdrop-filter: blur(8px) !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+
+  padding: 0 18px !important;
+  margin: 0 !important;
+
+  animation: fadeSlideUp 420ms ease both; /* ✅ animation visible */
+  transition: transform 120ms ease, filter 150ms ease, box-shadow 120ms ease;
+}
+
+/* Texte wrap */
+div[data-testid="stButton"] button *{
+  white-space: normal !important;
+  margin: 0 !important;
+}
+
+/* Hover seulement si cliquable */
+div[data-testid="stButton"] button:not(:disabled):hover{
+  transform: translateY(-1px) !important;
+  filter: brightness(1.06) !important;
+  box-shadow: 0 18px 34px rgba(0,0,0,0.28) !important;
+}
+
+/* Active seulement si cliquable */
+div[data-testid="stButton"] button:not(:disabled):active{
+  transform: scale(0.99) !important;
+}
+
+/* ✅ Sélection persistante = disabled => rouge */
+div[data-testid="stButton"] button:disabled{
+  background: rgba(220, 40, 40, 0.95) !important;
+  border-color: rgba(255,255,255,0.35) !important;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.30) !important;
+
+  opacity: 1 !important;     /* évite l’effet grisé */
+  cursor: default !important;
+  filter: none !important;
+  transform: none !important;
+}
+
+.right-modules div[data-testid="stButton"]:nth-of-type(1) button{ animation-delay: 40ms !important; }
+.right-modules div[data-testid="stButton"]:nth-of-type(2) button{ animation-delay: 80ms !important; }
+.right-modules div[data-testid="stButton"]:nth-of-type(3) button{ animation-delay: 120ms !important; }
+.right-modules div[data-testid="stButton"]:nth-of-type(4) button{ animation-delay: 160ms !important; }
+.right-modules div[data-testid="stButton"]:nth-of-type(5) button{ animation-delay: 200ms !important; }
+
+
+.educare-header{
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+}
+
+.educare-logo{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+.educare-title{
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.95);
+}
+
+
+/* =========================
+   Blinking underscore (cursor hint)
+   ========================= */
+
+
+#educare-caret-auto.educare-caret{
+  animation: educareBlink 1.0s steps(1, end) infinite !important;
+  -webkit-animation: educareBlink 1.0s steps(1, end) infinite !important;
+  will-change: opacity;
+}
+
+@keyframes educareBlink{
+  0%,49%{opacity:1}
+  50%,100%{opacity:0}
+}
+
+
+/* ===== Mode APP : pas de scroll page ===== */
+html, body{
+  height: 100%;
+  overflow: hidden !important;
+}
+
+/* Streamlit containers (selon versions) */
+[data-testid="stAppViewContainer"],
+[data-testid="stMain"],
+section.main{
+  height: 100vh !important;
+  overflow: hidden !important;
+}
+
+/* =========================
+   EduCare — Focus BREATH FINAL
+   ========================= */
+
+div[data-testid="stTextArea"] > div{
+  border: 1px solid rgba(255,255,255,0.14) !important;
+  box-sizing: border-box !important;
+  transition: background 200ms ease;
+  overflow: hidden !important;     
+}
+
+/* focus visible, sans déplacement */
+div[data-testid="stTextArea"] > div:focus-within{
+  border-color: rgba(233,140,27,0.75) !important;
+  animation: educareBreath 1.6s ease-in-out infinite;
+}
+div[data-testid="stTextArea"] > div:has(textarea:not(:placeholder-shown)){
+  animation: none !important;
+}
+
+/* animation respirante (INSET = ne bouge pas) */
+@keyframes educareBreath{
+  0%{
+    box-shadow: inset 0 0 0 2px rgba(233,140,27,0.18);
+  }
+  50%{
+    box-shadow: inset 0 0 0 4px rgba(233,140,27,0.32);
+  }
+  100%{
+    box-shadow: inset 0 0 0 2px rgba(233,140,27,0.18);
+  }
+}
+
+/* =========================
+    Position haut du Bouton choisir un parcours
+   ========================= */
+   .top-nav-card{
+  width: 100%;
+  margin: 10px 0 18px 0;     /* espace après logo */
+  border-radius: 18px;
+  cursor: pointer;
+  user-select: none;
+  margin-top: 16px;
+}
+
+.top-nav-inner{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 14px 16px;
+}
+
+.top-nav-card:focus{
+  outline: 2px solid rgba(255,255,255,0.35);
+  outline-offset: 3px;
+}
+/* Carte cliquable "top" : on remet le contour comme le bouton du bas */
+.top-nav-card{
+  width: 100%;
+  margin: 12px 0 18px 0;
+  border-radius: 22px;
+
+  /* ✅ contour */
+  border: 2px solid rgba(255, 214, 74, 0.75);
+
+  /* ✅ effet de lueur */
+  box-shadow: 0 0 0 2px rgba(255, 214, 74, 0.15) inset,
+              0 10px 26px rgba(0,0,0,0.25);
+
+  background: rgba(15, 35, 70, 0.25);
+  backdrop-filter: blur(6px);
+
+  cursor: pointer;
+  user-select: none;
+}
+
+.top-nav-card:hover{
+  border-color: rgba(255, 214, 74, 0.95);
+}
+
+.top-nav-card:active{
+  transform: translateY(1px);
+}
+
+.top-nav-inner{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 18px 18px;
+}
+/* Texte plus grand pour les boutons TOP (gauche & droite) */
+.top-nav-card .nav-text{
+  font-size: 16px;        /* ← augmente ici (ex: 20px si tu veux plus) */
+  font-weight: 700;       /* un peu plus lisible */
+  line-height: 1.25;
+  text-align: center;
+}
+
+
+/* ---- MODULES VERROUILLÉS ---- */
+.locked-module{
+  opacity: 0.55 !important;
+  filter: grayscale(0.2) !important;
+  cursor: not-allowed !important;
+  position: relative !important;
+}
+
+/* Cadenas en overlay (à droite) */
+.locked-module::after{
+  content: "🔒";
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  opacity: 0.95;
+}
+
+/* Option : texte un peu plus “désactivé” */
+.locked-module *{
+  opacity: 0.9;
+}
+
+
+.bot-bubble, .user-bubble { white-space: pre-wrap; word-break: break-word; }
+#intro-bot .bot-bubble,
+#intro-bot .user-bubble {
+  color: white !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+

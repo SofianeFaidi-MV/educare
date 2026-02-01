@@ -1,0 +1,562 @@
+
+
+/* =========================
+   EduCare - main.css (FINAL)
+   ========================= */
+
+/* =========================
+   FOND
+   ========================= */
+.stApp {
+  background:
+    linear-gradient(rgba(7, 131, 255, 0.55), rgba(23, 53, 83, 0.55)),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%230b3554'/%3E%3Cstop offset='0.5' stop-color='%231e6fa3'/%3E%3Cstop offset='1' stop-color='%230b4a73'/%3E%3C/linearGradient%3E%3CradialGradient id='glow' cx='70%25' cy='25%25' r='80%25'%3E%3Cstop offset='0' stop-color='%23a8d8ff' stop-opacity='0.45'/%3E%3Cstop offset='55%25' stop-color='%235aa7da' stop-opacity='0.18'/%3E%3Cstop offset='100%25' stop-color='%230b3554' stop-opacity='0'/%3E%3C/radialGradient%3E%3ClinearGradient id='facet' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23ffffff' stop-opacity='0.18'/%3E%3Cstop offset='1' stop-color='%23ffffff' stop-opacity='0.03'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='1600' height='900' fill='url(%23bg)'/%3E%3Crect width='1600' height='900' fill='url(%23glow)'/%3E%3Cg fill='url(%23facet)' stroke='%23ffffff' stroke-opacity='0.12' stroke-width='1.6'%3E%3Cpolygon points='-200,850 480,120 760,210 60,980'/%3E%3Cpolygon points='260,900 820,190 1120,310 520,1080'/%3E%3Cpolygon points='720,940 1300,320 1680,460 1080,1120'/%3E%3Cpolygon points='-150,600 350,80 520,150 0,720'/%3E%3Cpolygon points='900,820 1450,260 1750,360 1200,940'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* =========================
+   GLOBAL LAYOUT
+   ========================= */
+.block-container{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  max-width: 1400px;
+}
+
+/* espace vertical entre blocs streamlit */
+div[data-testid="stVerticalBlock"]{ gap: 12px; }
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+body, button, .edu-btn, .nav-text{
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+.footer{
+  text-align: center;
+  color: rgba(255,255,255,0.5);
+  font-size: 10px;
+  margin-top: 10px;
+}
+
+/* =========================
+   BIG AREA
+   ========================= */
+.bigarea{
+  margin-top: -10px;
+  height: 500px;
+  background: rgba(227, 180, 10, 0.25);
+  border: 1px solid rgba(255,255,255,0.22);
+  border-radius: 14px;
+}
+
+/* ⚠️ Ne masque QUE dans la bigarea */
+.bigarea h3, .bigarea p{
+  display:none !important;
+}
+
+/* =========================
+   INPUT / CHATBOX
+   ========================= */
+.chatbox label{ display:none !important; }
+
+.chatbox textarea{
+  background: rgba(220,230,255,0.85) !important;
+  border-radius: 14px !important;
+  border: 1px solid rgba(255,255,255,0.45) !important;
+  font-size: 18px !important;
+}
+
+/* =========================
+   ALIGNEMENTS COLONNES
+   ========================= */
+:root{
+  --modules-offset: clamp(56px, 6vh, 96px);
+}
+
+.left-modules{ margin-top: var(--modules-offset); }
+.right-modules{ margin-top: var(--modules-offset); }
+
+/* wrapper colonne droite : même largeur pour progression + modules */
+.right-col-wrap{ padding-right: 0 !important; }
+.right-col-wrap .top-progress-btn,
+.right-col-wrap .right-modules{ width: 100%; }
+
+/* =========================
+   BOUTON TOP RIGHT : "Votre progression"
+   ========================= */
+.top-progress-btn{
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+
+.progression-svg-btn{
+  width: 100%;
+  box-sizing: border-box;
+
+  height: 120px;
+  padding: 0 20px;
+  margin-top: -20px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  border-radius: 18px;
+  background: rgba(220,235,255,0.9);
+  border: 1px solid rgba(255,255,255,0.6);
+
+  box-shadow: 0 10px 22px rgba(0,0,0,0.18);
+  cursor: pointer;
+
+  transition: transform 120ms ease, filter 150ms ease;
+}
+
+.progression-svg-btn:hover{
+  transform: translateY(-1px);
+  filter: brightness(1.03);
+}
+
+.progression-svg-btn .prog-ico{
+  width: 70px;
+  height: 70px;
+  flex-shrink: 0;
+
+  fill:  rgba(230, 172, 13, 0.9);
+  stroke: rgba(48, 39, 15, 0.9);
+  stroke-width: 3.5;
+}
+
+.progression-svg-btn .prog-text{
+  font-size: 24px;
+  font-weight: 800;
+  color: rgba(15,34,48,0.95);
+}
+
+/* =========================
+   MODULES (GAUCHE + DROITE) : LOOK GLASS IDENTIQUE
+   ========================= */
+.left-modules .stButton > button[key^="module_btn_"],
+.right-modules .stButton > button[key^="module_btn_"]{
+  width: 100% !important;
+  height: 86px !important;
+
+  background: rgba(220, 235, 255, 0.18) !important;
+  border: 1px solid rgba(255,255,255,0.22) !important;
+  border-radius: 18px !important;
+
+  color: rgba(255,255,255,0.95) !important;
+  font-size: 14px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.2px !important;
+  line-height: 1.2 !important;
+
+  box-shadow: 0 12px 24px rgba(0,0,0,0.18) !important;
+  backdrop-filter: blur(8px) !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+
+  padding: 0 18px !important;
+  margin-left: 0 !important;
+
+  transition: transform 120ms ease, filter 150ms ease, box-shadow 120ms ease;
+}
+
+.left-modules .stButton > button[key^="module_btn_"]:hover,
+.right-modules .stButton > button[key^="module_btn_"]:hover{
+  transform: translateY(-1px) !important;
+  filter: brightness(1.05) !important;
+  box-shadow: 0 16px 30px rgba(0,0,0,0.24) !important;
+}
+
+.left-modules .stButton > button[key^="module_btn_"]:active,
+.right-modules .stButton > button[key^="module_btn_"]:active{
+  transform: scale(0.99) !important;
+}
+
+/* wrap texte propre */
+.left-modules .stButton > button[key^="module_btn_"] *,
+.right-modules .stButton > button[key^="module_btn_"] *{
+  white-space: normal !important;
+  margin: 0 !important;
+}
+
+/* =========================
+   NAV BOTTOM (si tu utilises .nav-svg-btn)
+   ========================= */
+.nav-svg-btn{
+  width: fit-content;
+  height: fit-content;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  margin-left: 380px;
+  border-radius: 16px;
+
+  background: rgba(220, 172, 14, 0.09);
+  border: 1px solid rgba(255,255,255,0.22);
+
+  box-shadow: 0 10px 22px rgba(0,0,0,0.18);
+  cursor: pointer;
+
+  transition: transform 120ms ease, filter 150ms ease, box-shadow 120ms ease;
+}
+
+.nav-svg-btn span{
+  font-size: 12px;
+  color: #ffffff;
+}
+
+.nav-svg-btn:hover{
+  transform: translateY(-1px);
+  filter: brightness(1.04);
+  box-shadow: 0 14px 26px rgba(0,0,0,0.25);
+}
+
+.nav-svg-btn:active{
+  transform: scale(0.985);
+}
+
+.nav-ico{
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+
+  fill: none;
+  stroke: rgba(227, 186, 22, 0.95);
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.nav-text{
+  color: rgb(12, 194, 234);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.15;
+  text-align: center;
+}
+
+/* =========================
+   INTRO BOT (dans la bigarea)
+   ========================= */
+#intro-bot{
+  height: 100%;
+  padding: 18px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.bot-card{
+  width: 100%;
+  max-width: 740px;
+  margin: 0 auto;
+  background: rgba(10, 18, 28, 0.35);
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 16px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 16px 30px rgba(0,0,0,0.25);
+}
+
+.bot-head{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border-bottom: 1px solid rgba(255,255,255,0.10);
+}
+
+.bot-dot{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(120, 220, 255, 0.9);
+  box-shadow: 0 0 18px rgba(120, 220, 255, 0.55);
+}
+
+.bot-title{
+  color: rgba(255,255,255,0.92);
+  font-weight: 800;
+  letter-spacing: 0.2px;
+}
+
+.bot-body{
+  height: 230px;
+  overflow: auto;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bot-bubble{
+  align-self: flex-start;
+  max-width: 92%;
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: rgba(220,235,255,0.22);
+  border: 1px solid rgba(255,255,255,0.14);
+  color: rgba(255,255,255,0.92);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.bot-hint{
+  padding: 10px 14px 14px;
+  color: rgba(255,255,255,0.65);
+  font-size: 12px;
+}
+
+.bot-typing{
+  display: inline-flex;
+  gap: 6px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: rgba(220,235,255,0.18);
+  border: 1px solid rgba(255,255,255,0.12);
+  width: fit-content;
+}
+
+.bot-typing span{
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.85);
+  animation: botPulse 1s infinite ease-in-out;
+}
+
+.bot-typing span:nth-child(2){ animation-delay: .15s; }
+.bot-typing span:nth-child(3){ animation-delay: .30s; }
+
+@keyframes botPulse{
+  0%, 100% { transform: translateY(0); opacity: .55; }
+  50%      { transform: translateY(-3px); opacity: 1; }
+}
+
+/* =========================
+   POPUP PROGRESSION (MODAL)
+   ========================= */
+.educare-modal-overlay{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: auto;
+}
+
+.educare-modal{
+  width: min(560px, 92vw);
+  background: rgba(20,28,40,0.95);
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 16px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+  color: white;
+  overflow: hidden;
+}
+
+.educare-modal-head{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  border-bottom: 1px solid rgba(255,255,255,0.10);
+}
+
+.educare-modal-title{
+  color: rgba(255,255,255,0.92);
+  font-weight: 800;
+  font-size: 16px;
+}
+
+.educare-modal-x{
+  background: transparent;
+  border: none;
+  color: rgba(255,255,255,0.78);
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.educare-modal-body{ padding: 14px; }
+
+.educare-metric{
+  background: rgba(220,235,255,0.10);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 14px;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+}
+
+.educare-metric-k{
+  color: rgba(255,255,255,0.62);
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.educare-metric-v{
+  color: rgba(255,255,255,0.92);
+  font-weight: 800;
+}
+
+.educare-metric-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.educare-section-title{
+  margin-top: 10px;
+  margin-bottom: 8px;
+  color: rgba(255,255,255,0.8);
+  font-weight: 700;
+}
+
+.educare-list{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.educare-row{
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: rgba(220,235,255,0.08);
+  border: 1px solid rgba(255,255,255,0.10);
+}
+
+.educare-k{
+  color: rgba(255,255,255,0.88);
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.educare-v{
+  color: rgba(120,220,255,0.95);
+  font-weight: 800;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.educare-empty{
+  color: rgba(255,255,255,0.60);
+  padding: 10px 2px;
+}
+
+.educare-actions{
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.educare-primary, .educare-secondary{
+  border-radius: 12px;
+  padding: 10px 12px;
+  border: 1px solid rgba(255,255,255,0.18);
+  cursor: pointer;
+  font-weight: 800;
+}
+
+.educare-primary{
+  background: rgba(120,220,255,0.25);
+  color: rgba(255,255,255,0.92);
+}
+
+.educare-secondary{
+  background: transparent;
+  color: rgba(255,255,255,0.80);
+}
+
+/* Badges */
+.educare-badges{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.educare-badge{
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.10);
+  border: 1px solid rgba(255,255,255,0.14);
+  color: rgba(255,255,255,0.92);
+  font-weight: 800;
+  font-size: 12px;
+}
+
+/* Progression par cours */
+.educare-courses{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.educare-course{
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: rgba(220,235,255,0.08);
+  border: 1px solid rgba(255,255,255,0.10);
+}
+
+.educare-course-top{
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: baseline;
+  margin-bottom: 8px;
+}
+
+.educare-course-name{
+  color: rgba(255,255,255,0.92);
+  font-weight: 800;
+  font-size: 13px;
+}
+
+.educare-course-meta{
+  color: rgba(120,220,255,0.95);
+  font-weight: 800;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.educare-bar{
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.10);
+  border: 1px solid rgba(255,255,255,0.14);
+  overflow: hidden;
+}
+
+.educare-bar-fill{
+  height: 100%;
+  border-radius: 999px;
+  background: rgba(120,220,255,0.75);
+}
+
+.educare-course-foot{
+  margin-top: 6px;
+  color: rgba(255,255,255,0.72);
+  font-weight: 800;
+  font-size: 12px;
+  text-align: right;
+}

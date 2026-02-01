@@ -1,0 +1,202 @@
+[
+  {
+    "text": "Questions et exercices\n\nQuestions théoriques\n\nQuestion 1 :\n\nQuel est le résultat du code suivant:\n\npublic\n\nclass\n\nQuestion1\n\npublic\n\nstatic\n\nint\n\nmethode1\n\n() {\n\nint\n\nreturn\n\npublic\n\nstatic\n\nvoid\n\nmain\n\n(String\n\nargs) {\n\nmethode1();\n\nint\n\n12;\n\nmethode1();\n\nSystem.\n\nout\n\nprintln\n\n(j);\n\nQuestion 2 :\n\nQuel est le résultat du code suivant:\n\npublic\n\nclass\n\nQuestion2\n\npublic\n\nstatic\n\nvoid\n\nmain\n\n(String\n\nargs) {\n\ntry\n\nint\n\ni, sum;\n\nsum\n\n10;\n\nfor\n\n1; i\n\n3 ;\n\ni) {\n\nsum\n\n(sum\n\ni);\n\nSystem.\n\nout\n\nprintln\n\n(i);\n\ncatch\n\n(Exception e) {\n\nSystem.\n\nout\n\nprint\n\n\"Erreur!\"\n\nQuestion 3 :\n\nQuel est le résultat du code suivant:\n\npublic\n\nclass\n\nQuestion3\n\npublic\n\nstatic\n\nvoid\n\nmain\n\n(String\n\nargs) {\n\nint\n\nval1\n\nint\n\nval2\n\nString str\n\n\"9\"\n\nSystem.\n\nout\n\nprintln\n\n(val1\n\nval2\n\nstr);\n\nQuestion 4 :\n\nQuel est le résultat du code suivant:\n\npublic\n\nclass\n\nQuestion4\n\npublic\n\nstatic\n\nvoid\n\nmain\n\n(String\n\nargs) {\n\ntry\n\nint\n\na, b;\n\nSystem.\n\nout\n\nprint\n\n\"A\"\n\ncatch\n\n(Exception e) {\n\nSystem.\n\nout\n\nprint\n\n\"B\"\n\nfinally\n\nSystem.\n\nout\n\nprint\n\n\"C\"\n\nQuestion 5 :\n\nQuel est le résultat du code suivant:\n\npublic\n\nclass\n\nQuestion5\n\npublic\n\nstatic\n\nvoid\n\nmain\n\n(String\n\nargs) {\n\nString obj\n\n\"Bonjour\"\n\nString obj1\n\n\"Bonsoir\"",
+    "metadata": {
+      "module": "420-311",
+      "source": "https://cegepmv.github.io/420-311/intro/exercices/index.html",
+      "title": "Questions et exercices :: Structures de donnée",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "st le résultat du code suivant:\n\npublic\n\nclass\n\nQuestion5\n\npublic\n\nstatic\n\nvoid\n\nmain\n\n(String\n\nargs) {\n\nString obj\n\n\"Bonjour\"\n\nString obj1\n\n\"Bonsoir\"\n\nString obj2\n\n\"Bonjour\"\n\nSystem.\n\nout\n\nprintln\n\n(obj.\n\nequals\n\n(obj1)\n\n\" \"\n\nobj.\n\nequals\n\n(obj2));\n\nQuestion 6 :\n\nQuel est le résultat du code suivant:\n\npublic\n\nclass\n\nClasseA\n\npublic\n\nint\n\npublic\n\nint\n\npublic\n\nclass\n\nClasseB\n\nextends\n\nClasseA {\n\npublic\n\nint\n\npublic\n\nvoid\n\nafficheToi\n\n() {\n\nsuper\n\nSystem.\n\nout\n\nprintln\n\n\" \"\n\nj);\n\npublic\n\nclass\n\nQuestion6\n\npublic\n\nstatic\n\nvoid\n\nmain\n\n(String\n\nargs) {\n\nClasseB obj\n\nnew\n\nClasseB();\n\nobj.\n\nobj.\n\nobj.\n\nafficheToi\n\n();\n\nQuestion 7 :\n\nQuel est le résultat du code suivant:\n\npublic\n\nclass\n\nClasseA\n\npublic\n\nint\n\npublic\n\nclass\n\nClasseB\n\nextends\n\nClasseA {\n\npublic\n\nint\n\npublic\n\nvoid\n\nafficheToi\n\n() {\n\nsuper\n\nSystem.\n\nout\n\nprintln\n\n( j\n\n\" \"\n\ni);\n\npublic\n\nclass\n\nMain\n\npublic\n\nstatic\n\nvoid\n\nmain\n\n(String\n\nargs) {\n\nClasseB obj\n\nnew\n\nClasseB();\n\nobj.\n\nobj.\n\nobj.\n\nafficheToi\n\n();\n\nQuestion 8 :\n\nQuel est le résultat du code suivant:\n\npublic\n\nclass\n\nQuestion8\n\npublic\n\nstatic\n\nvoid\n\nmain\n\n(String\n\nargs) {\n\nString s\n\n\"Hello World\"\n\nint\n\nindexOf\n\n'o'\n\nint\n\nlastIndexOf\n\n'l'\n\nSystem.\n\nout\n\nprintln\n\n\" \"\n\nB);\n\nQuestion 9 :\n\nQuel est le résultat du code suivant:\n\npublic\n\nclass\n\nQuestion9\n\npublic\n\nstatic\n\nvoid\n\nmain\n\n(String\n\nargs) {\n\nchar\n\nch;\n\n\"hello\"",
+    "metadata": {
+      "module": "420-311",
+      "source": "https://cegepmv.github.io/420-311/intro/exercices/index.html",
+      "title": "Questions et exercices :: Structures de donnée",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "B);\n\nQuestion 9 :\n\nQuel est le résultat du code suivant:\n\npublic\n\nclass\n\nQuestion9\n\npublic\n\nstatic\n\nvoid\n\nmain\n\n(String\n\nargs) {\n\nchar\n\nch;\n\n\"hello\"\n\ncharAt\n\n(1);\n\nSystem.\n\nout\n\nprintln\n\n(ch);\n\nQuestion 10 :\n\nQuel est le résultat du code suivant:\n\npublic\n\nclass\n\nQuestion10\n\npublic\n\nstatic\n\nvoid\n\nmain\n\n(String\n\nargs) {\n\nString chars\n\n\"a\"\n\n\"b\"\n\n\"c\"\n\n\"a\"\n\n\"c\"\n\nfor\n\nint\n\n0; i\n\nchars.\n\nlength\n\nfor\n\nint\n\n1; j\n\nchars.\n\nlength\n\n(chars\n\ncompareTo\n\n(chars\n\nSystem.\n\nout\n\nprint\n\n(chars\n\nQuestion 11 :\n\nQuel est le résultat du code suivant:\n\npublic\n\nclass\n\nQuestion11\n\npublic\n\nstatic\n\nvoid\n\nmain\n\n(String\n\nargs) {\n\nint\n\nnew\n\nint\n\nint\n\n{ 1, 2, 3, 4, 5 };\n\nSystem.\n\nout\n\nprintln\n\n(a1.\n\nlength\n\n\" \"\n\na2.\n\nlength\n\nQuestion 12 :\n\nQuel est le résultat du code suivant:\n\npublic\n\nclass\n\nQuestion12\n\npublic\n\nstatic\n\nvoid\n\nmain\n\n(String\n\nargs) {\n\nint\n\narr\n\n{ 1, 2, 3, 4, 5 };\n\nfor\n\nint\n\n0; i\n\narr.\n\nlength\n\nSystem.\n\nout\n\nprint\n\n(arr\n\n\" \"\n\nQuestion 13 :\n\nQuel est le résultat du code suivant:\n\npublic\n\nclass\n\nQuestion13\n\npublic\n\nstatic\n\nint\n\nparam1;\n\npublic\n\nstatic\n\nint\n\nparam2;\n\npublic\n\nvoid\n\nadd\n\nint\n\nint\n\nb) {\n\nparam1\n\nparam2\n\nparam1\n\npublic\n\nstatic\n\nvoid\n\nmain\n\n(String args\n\n) {\n\nQuestion13 obj1\n\nnew\n\nQuestion13();\n\nQuestion13 obj2\n\nnew\n\nQuestion13();\n\nint\n\nobj1.\n\nadd\n\n(a, a\n\n1);\n\nobj2.\n\nadd\n\n(5, a);\n\nSystem.\n\nout\n\nprintln\n\n(obj1.\n\nparam1\n\n\" \"\n\nobj2.",
+    "metadata": {
+      "module": "420-311",
+      "source": "https://cegepmv.github.io/420-311/intro/exercices/index.html",
+      "title": "Questions et exercices :: Structures de donnée",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "uestion13();\n\nQuestion13 obj2\n\nnew\n\nQuestion13();\n\nint\n\nobj1.\n\nadd\n\n(a, a\n\n1);\n\nobj2.\n\nadd\n\n(5, a);\n\nSystem.\n\nout\n\nprintln\n\n(obj1.\n\nparam1\n\n\" \"\n\nobj2.\n\nparam2\n\nQuestion 14 :\n\nQuel est le résultat du code suivant:\n\nimport\n\njava.util.Arrays;\n\npublic\n\nclass\n\nQuestion14\n\npublic\n\nstatic\n\nvoid\n\nmain\n\n(String\n\nargs) {\n\nint\n\ntab\n\nnew\n\nint\n\nfor\n\nint\n\n5; i\n\n0; i\n\n) {\n\ntab\n\nArrays.\n\nsort\n\n(tab);\n\nfor\n\nint\n\n0; i\n\ni) {\n\nSystem.\n\nout\n\nprint\n\n(tab\n\nQuestion 15 :\n\nQuel est le résultat du code suivant:\n\npublic\n\nclass\n\nQuestion15\n\npublic\n\nstatic\n\nint\n\nparam1;\n\npublic\n\nvoid\n\nincrement\n\n() {\n\nparam1\n\npublic\n\nstatic\n\nvoid\n\nmain\n\n(String args\n\n) {\n\nQuestion15 obj1\n\nnew\n\nQuestion15();\n\nQuestion15 obj2\n\nnew\n\nQuestion15();\n\nobj1.\n\nparam1\n\nobj1.\n\nincrement\n\n();\n\nobj2.\n\nincrement\n\n();\n\nSystem.\n\nout\n\nprintln\n\n(obj1.\n\nparam1\n\n\" \"\n\nobj2.\n\nparam1\n\nQuestion 16 :\n\nQuel est le résultat du code suivant:\n\nimport\n\njava.util.Arrays;\n\npublic\n\nclass\n\nQuestion16\n\npublic\n\nstatic\n\nvoid\n\nmain\n\n(String args\n\n) {\n\nint\n\ntab\n\nnew\n\nint\n\nfor\n\nint\n\n5; i\n\n0; i\n\n) {\n\ntab\n\nArrays.\n\nsort\n\n(tab);\n\nfor\n\nint\n\n0; i\n\ni) {\n\nSystem.\n\nout\n\nprint\n\n(tab\n\nQuestion 17 :\n\nQuel est le résultat du code suivant:\n\npublic\n\nclass\n\nQuestion17\n\npublic\n\nstatic\n\nvoid\n\nmain\n\n(String\n\nargs) {\n\nClasseB classeB\n\nnew\n\nClasseB();\n\nSystem.\n\nout\n\nprintln\n\n\"Valeur = \"\n\nclasseB.\n\ncalculer\n\n(3, 6));\n\nclass\n\nClassA",
+    "metadata": {
+      "module": "420-311",
+      "source": "https://cegepmv.github.io/420-311/intro/exercices/index.html",
+      "title": "Questions et exercices :: Structures de donnée",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "tatic\n\nvoid\n\nmain\n\n(String\n\nargs) {\n\nClasseB classeB\n\nnew\n\nClasseB();\n\nSystem.\n\nout\n\nprintln\n\n\"Valeur = \"\n\nclasseB.\n\ncalculer\n\n(3, 6));\n\nclass\n\nClassA\n\nfinal\n\npublic\n\nint\n\ncalculer\n\nint\n\nint\n\nb) {\n\nreturn\n\nclass\n\nClasseB\n\nextends\n\nClasseA {\n\npublic\n\nint\n\ncalculer\n\nint\n\nint\n\nb) {\n\nreturn\n\nQuestion 18 :\n\nQuel est le résultat du code suivant:\n\npublic\n\nclass\n\nQuestion18\n\npublic\n\nstatic\n\nvoid\n\nmain\n\n(String args\n\n) {\n\nint\n\nparam1, param2\n\nparam1\n\n10;\n\n(param1\n\nparam1\n\n0) {\n\nSystem.\n\nout\n\nprintln\n\n(param2);\n\nelse\n\nSystem.\n\nout\n\nprintln\n\nparam2);\n\nQuestion 19 :\n\nQuel est le résultat du code suivant:\n\npublic\n\nclass\n\nQuestion19\n\npublic\n\nstatic\n\nint\n\nparam1;\n\npublic\n\nstatic\n\nint\n\nparam2;\n\npublic\n\nvoid\n\nadd\n\nint\n\nval1,\n\nint\n\nval2) {\n\nparam1\n\nval1\n\nval2;\n\nparam2\n\nparam1\n\nval2;\n\npublic\n\nstatic\n\nvoid\n\nmain\n\n(String\n\nargs) {\n\nQuestion19 instance1\n\nnew\n\nQuestion19 ();\n\nQuestion19 instance2\n\nnew\n\nQuestion19 ();\n\nQuestion19 instance3\n\nnew\n\nQuestion19 ();\n\nint\n\nabc\n\ninstance1.\n\nadd\n\n(abc, abc\n\n1);\n\ninstance3.\n\nadd\n\n(6, 6\n\nabc);\n\ninstance2.\n\nadd\n\n(5, abc\n\n2);\n\nSystem.\n\nout\n\nprintln\n\n(instance1.\n\nparam1\n\nSystem.\n\nout\n\nprintln\n\n(instance2.\n\nparam2\n\nQuestion 20 :\n\nQuel est le résultat du code suivant:\n\nimport\n\njava.util.Arrays;\n\npublic\n\nclass\n\nQuestion20\n\npublic\n\nstatic\n\nvoid\n\nmain\n\n(String args\n\n) {\n\nint\n\narray\n\nnew\n\nint\n\nfor\n\nint\n\n5; i\n\n0; i\n\n) {",
+    "metadata": {
+      "module": "420-311",
+      "source": "https://cegepmv.github.io/420-311/intro/exercices/index.html",
+      "title": "Questions et exercices :: Structures de donnée",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "import\n\njava.util.Arrays;\n\npublic\n\nclass\n\nQuestion20\n\npublic\n\nstatic\n\nvoid\n\nmain\n\n(String args\n\n) {\n\nint\n\narray\n\nnew\n\nint\n\nfor\n\nint\n\n5; i\n\n0; i\n\n) {\n\narray\n\nArrays.\n\nsort\n\n(array);\n\nSystem.\n\nout\n\nprint\n\n(Arrays.\n\ntoString\n\n(array));\n\nQuestion 21 :\n\nQuel est le résultat du code suivant:\n\npublic\n\nclass\n\nQuestion21\n\npublic\n\nstatic\n\nvoid\n\nmain\n\n(String\n\nargs) {\n\nQuestion21 instance\n\nnew\n\nQuestion21();\n\ninstance.\n\nmyMethod\n\n();\n\npublic\n\nvoid\n\nmyMethod\n\n(){\n\nlong\n\ntab1\n\n{6,8,9};\n\nlong\n\ntab2\n\naffectation(tab1);\n\nSystem.\n\nout\n\nprint\n\n(tab1\n\ntab1\n\ntab1\n\n\" \"\n\nSystem.\n\nout\n\nprintln\n\n(tab2\n\ntab2\n\ntab2\n\npublic\n\nlong\n\naffectation\n\nlong\n\ntab3){\n\ntab3\n\nreturn\n\ntab3;\n\nExercices pratiques\n\nExercice 1 :\n\nSoit la String suivante:\n\nA-b-C-d-E-f-1234-***///->\n\n, écrire un programme en Java qui:\n\n👍 convertit chaque caractère alphabétique majuscule de la String en un caractère minuscule;\n\n👍 Convertis chaque caractère alphabétique minuscule de la String en un caractère majuscule;\n\n👍 Supprime tous les caractères spéciaux de la String;\n\nExercice 2 :\n\nSoit le tableau suivant:\n\nString [] days = { \"Lundi\", \"Mardi\", \"Mercredi\", \"Jeudi\", \"Vendredi\", \"Samedi\", \"Dimanche\"};\n\nÉcrire un programme en Java qui:\n\n👍 choisi aléatoirement une journée du tableau et l’affiche;\n\n👍 Tri le tableau;\n\nExercice 3 :\n\nSoit le code Java suivant:\n\nString str1\n\n\"Bonjour\"",
+    "metadata": {
+      "module": "420-311",
+      "source": "https://cegepmv.github.io/420-311/intro/exercices/index.html",
+      "title": "Questions et exercices :: Structures de donnée",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "qui:\n\n👍 choisi aléatoirement une journée du tableau et l’affiche;\n\n👍 Tri le tableau;\n\nExercice 3 :\n\nSoit le code Java suivant:\n\nString str1\n\n\"Bonjour\"\n\nString str2\n\nnew\n\nString (\n\n\"Bonjour\"\n\nstr1\n\nstr2;\n\n//3\n\nstr1.\n\nequals\n\n(str2);\n\nExpliquez la différence entre les 02 lignes de code (ligne 3 et ligne 4)?\n\nExercice 4 :\n\nSoit la classe Compte bancaire avec les attributs suivants:\n\nidCpte (numéro unique: donc 2 comptes ne peuvent pas avoir le même ID);\n\nfirstName;\n\nlastName;\n\nsolde;\n\nEn utilisant les collections Java (List, Set et Map) et en vous utilisant l’API Java, vous devez coder les méthodes suivantes:\n\n👍 addCompteToCollection (List | Set | Map)\n\n👍 serachCompteInCollection (List | Set | Map)\n\n👍 sortCollection (List | Set | Map)\n\n👍 removeCompteFromCollection (List | Set | Map)\n\n👍 emptyCollectionComptes (List | Set | Map)\n\nExercice 5 :\n\nÉcrire un code Java qui convertit un tableau d’entiers (tableau à crochets) en une collection de type List.\n\nÉcrire un code Java qui convertit une collection de type List en un tableau à crochets.\n\nÉcrire un code Java qui convertit une collection de type List en une collection de Type Set.\n\nÉcrire un code Java qui convertit une collection de type Set en une collection de Type List.\n\nÉcrire un code Java qui convertit une collection de type List en une collection de Type Map.",
+    "metadata": {
+      "module": "420-311",
+      "source": "https://cegepmv.github.io/420-311/intro/exercices/index.html",
+      "title": "Questions et exercices :: Structures de donnée",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "e collection de type Set en une collection de Type List.\n\nÉcrire un code Java qui convertit une collection de type List en une collection de Type Map.\n\nÉcrire un code Java qui convertit une collection de type Map en une collection de Type List.\n\nExercice 6 :\n\nSoit le tableau de conversion des devises suivant :\n\nVers\n\nTaux\n\nDollar canadien (CAD)\n\nEuro\n\n1 CAD = 0.74 EURO\n\nDollar canadien (CAD)\n\nDollar américain (USD)\n\n1 CAD = 0.69 USD\n\nEuro\n\nDollar canadien (CAD)\n\n1 EURO = 1.45 CAD\n\nDollar américain (USD)\n\nDollar canadien (CAD)\n\n1 USD = 1.36 CAD\n\nÉcrire un programme Java qui demande à un utilisateur de choisir un type conversion et saisir un montant à convertir. Le programme traitera la conversion et affichera le montant converti.\n\nCondition:\n\nLe programme n’acceptera que les montants entre 90 et 6500, cela dans chaque sorte de devises.\n\nLe programme ne doit pas s’arrêter tant que l’utilisateur n’aura pas choisi de quitter.\n\nExercice 7 :\n\nSoit le système de notation universitaire :\n\nNote numérique\n\nNote littérale\n\n90 et +\n\nDe 80 à 89\n\nDe 70 à 79\n\nDe 60 à 69\n\nDe 50 à 59\n\n< 50\n\nÉcrire un programme Java qui demande à un utilisateur de saisir 4 notes numériques. Ensuite le programme calculera la moyenne et affichera la note littérale correspondante.\n\nCondition\n\nLe programme n’acceptera que les notes entre 0 et 100.\n\nExemple",
+    "metadata": {
+      "module": "420-311",
+      "source": "https://cegepmv.github.io/420-311/intro/exercices/index.html",
+      "title": "Questions et exercices :: Structures de donnée",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "gramme calculera la moyenne et affichera la note littérale correspondante.\n\nCondition\n\nLe programme n’acceptera que les notes entre 0 et 100.\n\nExemple\n\nLe programme demande les notes à l’utilisateur : Veuillez saisir vos notes Svp :\n\nL’utilisateur saisit les notes suivantes :\n\n59, 72.5, 83.73, 45.5\n\nLe programme calculera la moyenne et affichera :\n\nVotre moyenne numérique est : 65,18 ce qui donnera en littérale la note de D.\n\nExercice 8 :\n\nSoit la liste des villes suivantes : Ottawa, Paris, Berne, Washington, Berlin, Madrid, Mexico.\n\n🌼 Écrire un programme Java qui génère aléatoirement 2 villes parmi la liste des villes et demandera à un utilisateur de deviner les 2 villes au bout de 3 tentatives.\n\nSi l’utilisateur arrive à deviner les 2 villes aléatoires, le programme affichera un message et quittera.\n\nSi l’utilisateur n’arrive pas à deviner les 2 villes aléatoires au bout de 3 tentatives, le programme affichera le résultat et quittera.\n\nClarification\n\nModèle de message en cas de succès de devinette\n\nBravo! Vous avez deviné les 2 villes : Ottawa et Paris.\n\nModèle de message en cas d’échec de devinette\n\nOups! En 3 tentatives, vous n’êtes pas arrivé à deviner les 2 villes : Ottawa et Paris.\n\nExercice 9 :\n\nOn souhaite gérer une liste de prénoms d’étudiants dans un cours.\n\nRéalise un programme Java qui :",
+    "metadata": {
+      "module": "420-311",
+      "source": "https://cegepmv.github.io/420-311/intro/exercices/index.html",
+      "title": "Questions et exercices :: Structures de donnée",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "iner les 2 villes : Ottawa et Paris.\n\nExercice 9 :\n\nOn souhaite gérer une liste de prénoms d’étudiants dans un cours.\n\nRéalise un programme Java qui :\n\nCrée une liste de type ArrayList\n\nAjoute les prénoms suivants : “Alice”, “Bob”, “Charlie”, “Diane”.\n\nAffiche la taille de la liste et son contenu.\n\nDemande à l’utilisateur d’entrer un prénom, puis :\n\nVérifie s’il est présent dans la liste (affiche un message approprié).\n\nSi présent, affiche sa position dans la liste.\n\nSupprime un prénom donné par l’utilisateur et réaffiche la liste.\n\nTrie la liste par ordre alphabétique et affiche le résultat.\n\nExercice 10 :\n\nSoit le diagramme de classes suivant :\n\nCréer les classes Java correspondant aux classes du diagramme. Il vous faudra respecter les attributs et les relations entre les différentes classes.\n\nÉcrire une méthode de service qui permet de calculer le prix réel d’un produit suivant la règle suivante :\n\na. Si le produit est biologique, « indiceBio » et le produit appartiennent à un fournisseur habitant la province du « Québec », alors le prix réel est :\n\ni.\tPrix réel = prix du produit + prix du produit*tps + prix du produit * tvq.\n\nb. Si le produit est biologique, « indiceBio » et le produit appartiennent à un fournisseur habitant le Canada (sauf la province du Québec) alors le prix réel est :",
+    "metadata": {
+      "module": "420-311",
+      "source": "https://cegepmv.github.io/420-311/intro/exercices/index.html",
+      "title": "Questions et exercices :: Structures de donnée",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "it est biologique, « indiceBio » et le produit appartiennent à un fournisseur habitant le Canada (sauf la province du Québec) alors le prix réel est :\n\ni.\tPrix réel = prix du produit + prix du produit*tps.\n\nc. Si le produit est biologique « indiceBio » et le produit appartient à un fournisseur habitant les USA alors le prix réel est :\n\ni.\tPrix réel = prix du produit + prix du produit*usTax.\n\nÉcrire une méthode de service qui permet de calculer le total prix (la somme totale) des produits de tous les fournisseurs américains.\n\nExercice 11 :\n\nSoit la String suivante: String chaineDepart = “$_%4*1;-0er2bo%t?c(o(id>er7dn1ev”\n\nécrire le programme qui traite l’algorithme suivant:\n\nLire la String « chaineDepart »\n\nParcourir la String et appliquer le traitement suivant:\n\nMettre les 04 premiers caractères dans une Stack (appelée stack01);\n\nMettre les 04 caractères suivants dans une liste (appelée liste01);\n\nMettre les 04 caractères suivants dans un vecteur (appelée vecteur01);\n\nMettre le reste de la chaine dans une Queue (appelée queue01);\n\nDéclarer un String vide appelé resultat01;\n\nDéclarer un String vide appelé resultat02;\n\nDépilez le premier élément de la stack01 et ajoutez-le à la String resultat01;\n\nAjouter à la String resultat01, le 2e qui se trouve dans liste01;",
+    "metadata": {
+      "module": "420-311",
+      "source": "https://cegepmv.github.io/420-311/intro/exercices/index.html",
+      "title": "Questions et exercices :: Structures de donnée",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "02;\n\nDépilez le premier élément de la stack01 et ajoutez-le à la String resultat01;\n\nAjouter à la String resultat01, le 2e qui se trouve dans liste01;\n\nParcourez le vecteur01, si l’élément est un chiffre, mettez-le dans la String resultat01, sinon mettez-le dans la String resultat02;\n\nDéfiler la queue01, mettez seulement les lettres alphabétiques dans la String resultat02.\n\nInversez les 02 Strings;\n\nDéclarer un String vide appelé resultatFinal;\n\nCopiez les 08 premiers caractères de la String resultat02 dans la String resultatFinal;\n\nAjoutez un espace à la String resultatFinal;\n\nCopiez les 02 premiers éléments de la String resultat01 dans la String resultatFinal;\n\nAjoutez un espace à la String resultatFinal;\n\nCopiez le reste des caractères de la String resultat02 dans la String resultatFinal;\n\nAjoutez un espace à la String resultatFinal;\n\nCopiez le reste des caractères de la String resultat01 dans la String resultatFinal;\n\nAfficher le résultat;",
+    "metadata": {
+      "module": "420-311",
+      "source": "https://cegepmv.github.io/420-311/intro/exercices/index.html",
+      "title": "Questions et exercices :: Structures de donnée",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "📝 Exercices sur complexité algorithmique\n\n🔹 Exercice 1 :\n\nfor\n\nint\n\n0; i\n\nn; i\n\n) {\n\nSystem.\n\nout\n\nprintln\n\n(i);\n\n👉 Quelle est la complexité temporelle en fonction de\n\n🔹 Exercice 2\n\nwhile\n\n1) {\n\n👉 Quelle est la complexité temporelle ?\n\n🔹 Exercice 3\n\npublic\n\nstatic\n\nboolean\n\nrechercheLineaire\n\nint\n\ntab,\n\nint\n\nval) {\n\nfor\n\nint\n\nx : tab) {\n\nval)\n\nreturn\n\ntrue\n\nreturn\n\nfalse\n\n👉 Quelle est la complexité temporelle\n\ndans le pire cas\n\n🔹Exercice 4\n\npublic\n\nstatic\n\nvoid\n\ninsertionSort\n\nint\n\ntab) {\n\nfor\n\nint\n\n1; i\n\ntab.\n\nlength\n\n; i\n\n) {\n\nint\n\ncle\n\ntab\n\nint\n\nwhile\n\ntab\n\ncle) {\n\ntab\n\ntab\n\ntab\n\ncle;\n\n👉 Quelle est la complexité\n\ndans le meilleur cas\n\ndans le pire cas\n\n🔹Exercice 5\n\nClassez les algorithmes suivants du plus rapide au plus lent quand\n\ndevient très grand :\n\nO(n²)\n\nO(n log n)\n\nO(n)\n\nO(log n)\n\n🔹Exercice 6\n\nVous avez ce code :\n\nfor\n\nint\n\n0; i\n\nn; i\n\n) {\n\nfor\n\nint\n\n0; j\n\nn; j\n\n2) {\n\nSystem.\n\nout\n\nprintln\n\n\",\"\n\nj);\n\n👉 Quelle est la complexité de cet algorithme ? Expliquez.\n\n🔹Exercice 7\n\npublic\n\nstatic\n\nint\n\nsomme\n\nint\n\ntab) {\n\nint\n\ntotal\n\nfor\n\nint\n\nn : tab) {\n\ntotal\n\nreturn\n\ntotal;\n\nQuestion\n\n: Quelle est la complexité spatiale de cette méthode ? Justifiez votre réponse.\n\n🔹Exercice 8",
+    "metadata": {
+      "module": "420-311",
+      "source": "https://cegepmv.github.io/420-311/complexalgo/exercices/index.html",
+      "title": "📝 Exercices sur complexité algorithmique :: Structures de donnée",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "l\n\nfor\n\nint\n\nn : tab) {\n\ntotal\n\nreturn\n\ntotal;\n\nQuestion\n\n: Quelle est la complexité spatiale de cette méthode ? Justifiez votre réponse.\n\n🔹Exercice 8\n\npublic\n\nstatic\n\nint\n\ndoubleTableau\n\nint\n\ntab) {\n\nint\n\nresultat\n\nnew\n\nint\n\ntab.\n\nlength\n\nfor\n\nint\n\n0; i\n\ntab.\n\nlength\n\n; i\n\n) {\n\nresultat\n\ntab\n\nreturn\n\nresultat;\n\nQuestion\n\n: Combien de mémoire supplémentaire est utilisée par rapport à la taille de l’entrée\n\n🔹Exercice 9\n\nint\n\n[][]\n\nmatrice\n\nnew\n\nint\n\nQuestion\n\n: Quelle est la complexité spatiale de cette structure ?\n\n🔹Exercice 10\n\nOn veut calculer la suite de Fibonacci :\n\nVersion récursive simple\n\npublic\n\nstatic\n\nint\n\nfib\n\nint\n\nn) {\n\nreturn\n\nreturn\n\nfib(n\n\nfib(n\n\n2);\n\nVersion avec mémoïsation\n\npublic\n\nstatic\n\nint\n\nfibMemo\n\nint\n\nint\n\nmemo) {\n\n(memo\n\nreturn\n\nmemo\n\nreturn\n\nmemo\n\nfibMemo(n\n\n1, memo)\n\nfibMemo(n\n\n2, memo);\n\nreturn\n\nmemo\n\nQuestions\n\nQuelle est la complexité spatiale des deux versions ?\n\nPourquoi la version avec mémoïsation consomme plus de mémoire mais gagne en temps ?\n\n🔹Exercice 11 :\n\nÉcrivez un programme qui :\n\nCréez un tableau de 1 million d’entiers.\n\nCréez une\n\nLinkedList\n\net un\n\nArrayList\n\nchacun contenant 1 million d’entiers.\n\nComparez la mémoire consommée (avec\n\nRuntime.getRuntime().totalMemory() - freeMemory()\n\n) pour chaque structure.",
+    "metadata": {
+      "module": "420-311",
+      "source": "https://cegepmv.github.io/420-311/complexalgo/exercices/index.html",
+      "title": "📝 Exercices sur complexité algorithmique :: Structures de donnée",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "hacun contenant 1 million d’entiers.\n\nComparez la mémoire consommée (avec\n\nRuntime.getRuntime().totalMemory() - freeMemory()\n\n) pour chaque structure.\n\nObserver concrètement l’impact de la structure choisie sur la mémoire. Que remarquez vous ?",
+    "metadata": {
+      "module": "420-311",
+      "source": "https://cegepmv.github.io/420-311/complexalgo/exercices/index.html",
+      "title": "📝 Exercices sur complexité algorithmique :: Structures de donnée",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "Exercices sur les threads\n\nExercices Threads simples\n\nExercice 1:\n\nCréer un thread simple\n\nÉcrire une classe Compteur qui :\n\nimplémente Runnable ;\n\naffiche les nombres de 1 à 10 avec Thread.sleep(200) entre chaque ;\n\nlancer deux compteurs en parallèle dans main.\n\nExercice 2:\n\nPartage de données + synchronized\n\nCréer une classe CompteurPartage avec un entier valeur.\n\nDeux threads incrémentent valeur 1000 fois chacun, avec et sans synchronized.\n\nObserver la différence sur le résultat.\n\nExercice 3:\n\nMini producteur / consommateur\n\nUne liste de String partagée ;\n\nle thread principal ajoute des chaînes “Tâche 1”, “Tâche 2”, … dans la liste ;\n\nun thread travailleur prend les tâches et les affiche avec un sleep.\n\nExercices avec de\n\nSemaphore\n\nExercice 1\n\nParking à 3 places avec\n\nSemaphore\n\nOn veut simuler un\n\npetit parking\n\nqui ne peut accueillir que\n\n3 voitures\n\nen même temps.\n\nChaque voiture est un thread.\n\nLe parking a une capacité maximale de 3.\n\nSi le parking est plein, la voiture doit\n\nattendre\n\nqu’une place se libère.\n\nConsignes\n\nCréer une classe\n\nParking\n\navec :\n\nun attribut\n\nSemaphore\n\ninitialisé à\n\npermissions ;\n\nune méthode\n\nentrer(String nomVoiture)",
+    "metadata": {
+      "module": "420-311",
+      "source": "https://cegepmv.github.io/420-311/threads/exercices/index.html",
+      "title": "Exercices sur les threads :: Structures de donnée",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "se libère.\n\nConsignes\n\nCréer une classe\n\nParking\n\navec :\n\nun attribut\n\nSemaphore\n\ninitialisé à\n\npermissions ;\n\nune méthode\n\nentrer(String nomVoiture)\n\naffiche que la voiture attend une place ;\n\nappelle\n\nacquire()\n\nsur le sémaphore ;\n\naffiche que la voiture est entrée dans le parking ;\n\nsimule un stationnement avec\n\nThread.sleep(...)\n\nlibère la place avec\n\nrelease()\n\naffiche que la voiture sort du parking.\n\nCréer une classe\n\nVoiture\n\nqui implémente\n\nRunnable\n\npossède une référence vers le\n\nParking\n\ndans\n\nrun()\n\n, appelle\n\nparking.entrer(nomVoiture)\n\nDans un\n\nmain\n\n, créer\n\n5 threads voitures\n\n(par ex. V1, V2, V3, V4, V5) et les démarrer.\n\nRésultat attendu (approx.)\n\nOn veut voir quelque chose du genre (l’ordre peut varier) :\n\nV1 attend une place...\n\nV2 attend une place...\n\nV3 attend une place...\n\nV1 entre dans le parking.\n\nV2 entre dans le parking.\n\nV3 entre dans le parking.\n\nV4 attend une place...\n\nV5 attend une place...\n\nV1 sort du parking.\n\nV4 entre dans le parking.\n\nV2 sort du parking.\n\nV5 entre dans le parking.\n\n...\n\nOn ne doit jamais voir plus de\n\n3 voitures “dans le parking”\n\nen même temps.\n\nExercice 2\n\nFile de commandes limitée (buffet) avec\n\nSemaphore\n\nOn simule un\n\nbuffet\n\noù :\n\nproducteur\n\najoute des plats dans un\n\nbuffer de taille max = 3\n\nconsommateur\n\nprend les plats un par un.\n\nOn ne veut\n\njamais",
+    "metadata": {
+      "module": "420-311",
+      "source": "https://cegepmv.github.io/420-311/threads/exercices/index.html",
+      "title": "Exercices sur les threads :: Structures de donnée",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "simule un\n\nbuffet\n\noù :\n\nproducteur\n\najoute des plats dans un\n\nbuffer de taille max = 3\n\nconsommateur\n\nprend les plats un par un.\n\nOn ne veut\n\njamais\n\ndéposer un plat si le buffer est plein ;\n\nretirer un plat si le buffer est vide.\n\nSémaphores à utiliser\n\nOn va utiliser\n\n2 sémaphores\n\nsemPlacesLibres\n\n: nombre de places disponibles dans le buffer\n\ninitialisé à 3 ;\n\nsemPlatsDispo\n\n: nombre de plats actuellement disponibles\n\ninitialisé à 0.\n\nune seule\n\nstructure de données partagée :\n\npar exemple, un\n\nList<String> buffer = new ArrayList<>();\n\naccès protégé par\n\nsynchronized\n\nConsignes\n\nCréer une classe\n\nBuffet\n\nAttributs :\n\nList<String> buffer\n\nSemaphore semPlacesLibres\n\n(3)\n\nSemaphore semPlatsDispo\n\n(0)\n\nMéthode\n\nproduire(String plat)\n\nsemPlacesLibres.acquire()\n\nsynchronized(buffer) { ... }\n\n→ ajouter le plat au buffer\n\nsemPlatsDispo.release()\n\nMéthode\n\nconsommer()\n\nsemPlatsDispo.acquire()\n\nString plat; synchronized(buffer) { ... }\n\n→ retirer le plat du buffer\n\nsemPlacesLibres.release()\n\nretourner le plat\n\nCréer une classe\n\nProducteur\n\n(implémente\n\nRunnable\n\n) :\n\nDans\n\nrun()\n\nproduire par ex. 10 plats (\n\n\"Plat 1\"\n\n\"Plat 2\"\n\n, …), avec un petit\n\nsleep\n\nCréer une classe\n\nConsommateur\n\n(implémente\n\nRunnable\n\n) :\n\nDans\n\nrun()\n\nconsommer dans une boucle (ex. 10 plats), avec un petit\n\nsleep\n\nDans le\n\nmain\n\nCréer un",
+    "metadata": {
+      "module": "420-311",
+      "source": "https://cegepmv.github.io/420-311/threads/exercices/index.html",
+      "title": "Exercices sur les threads :: Structures de donnée",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "classe\n\nConsommateur\n\n(implémente\n\nRunnable\n\n) :\n\nDans\n\nrun()\n\nconsommer dans une boucle (ex. 10 plats), avec un petit\n\nsleep\n\nDans le\n\nmain\n\nCréer un\n\nBuffet buffet = new Buffet();\n\nCréer un thread producteur + un thread consommateur.\n\nDémarrer les deux.\n\nRésultat attendu (approx.)\n\nOn veut voir une alternance du style :\n\nProducteur dépose Plat 1\n\nProducteur dépose Plat 2\n\nConsommateur prend Plat 1\n\nProducteur dépose Plat 3\n\nProducteur veut déposer Plat 4 mais le buffer est plein → il attend (bloqué dans acquire)\n\nConsommateur prend Plat 2\n\n...\n\nbuffer\n\nne doit jamais contenir plus de 3 plats.\n\nLe consommateur\n\nn’essaie pas\n\nde prendre un plat quand il n’y en a pas (il attend automatiquement).\n\nExercices avec\n\nTimer\n\nTimerTask\n\nExercice 1 – Mini horloge console\n\nOn veut créer un programme qui affiche une “horloge simulée” dans la console.\n\nSpécifications\n\nLe programme demande à l’utilisateur un nombre de secondes, par exemple :\n\nCombien de secondes ? 5\n\nLe programme démarre un\n\nTimer\n\nqui affiche chaque seconde :\n\nt = 1 s\n\nt = 2 s\n\n...\n\nt = N s\n\nAprès\n\nsecondes, le programme :\n\narrête le\n\nTimer\n\n(annule les tâches),\n\naffiche un message de fin, par exemple :\n\nFin du chrono.\n\nContraintes\n\nUtiliser\n\njava.util.Timer\n\njava.util.TimerTask\n\nNe pas utiliser de boucle\n\nwhile(true) { Thread.sleep(...); }\n\npour cette horloge.",
+    "metadata": {
+      "module": "420-311",
+      "source": "https://cegepmv.github.io/420-311/threads/exercices/index.html",
+      "title": "Exercices sur les threads :: Structures de donnée",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  },
+  {
+    "text": "rono.\n\nContraintes\n\nUtiliser\n\njava.util.Timer\n\njava.util.TimerTask\n\nNe pas utiliser de boucle\n\nwhile(true) { Thread.sleep(...); }\n\npour cette horloge.\n\nBien fermer le\n\nTimer\n\navec\n\ncancel()\n\nlorsque le chrono est terminé.\n\nPistes\n\nCréer une classe\n\nChronoTask\n\nqui étend\n\nTimerTask\n\net qui :\n\nconnaît le nombre de secondes max,\n\nincrémente un compteur interne à chaque exécution de\n\nrun()\n\nDans\n\nmain\n\nlire le nombre de secondes avec un\n\nScanner\n\ncréer un\n\nTimer\n\nprogrammer la tâche avec\n\nscheduleAtFixedRate(...)\n\nExercice 2 – Minuteur à rebours\n\nVariante : au lieu d’afficher\n\nt = 1 s\n\nt = 2 s\n\n, …, on affiche un\n\ncompte à rebours\n\nExemple pour 5 secondes :\n\nTemps restant : 5 s\n\nTemps restant : 4 s\n\nTemps restant : 3 s\n\nTemps restant : 2 s\n\nTemps restant : 1 s\n\nBOUM ! (ou un message de votre choix)\n\nMême principe :\n\nTimer\n\nTimerTask\n\n, mais on décrémente au lieu d’incrémenter.",
+    "metadata": {
+      "module": "420-311",
+      "source": "https://cegepmv.github.io/420-311/threads/exercices/index.html",
+      "title": "Exercices sur les threads :: Structures de donnée",
+      "type": "web",
+      "corpus": "exercices"
+    }
+  }
+]

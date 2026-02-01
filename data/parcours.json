@@ -1,0 +1,24 @@
+{
+  "parcours": [
+    {
+      "id": "prog",
+      "titre": "Introduction à la programmation",
+      "description": "Bases, logique, Python/JS."
+    },
+    {
+      "id": "web",
+      "titre": "Applications Web",
+      "description": "Frontend/Backend, APIs, déploiement."
+    },
+    {
+      "id": "iot",
+      "titre": "Introduction aux plateformes IdO",
+      "description": "Capteurs, réseaux, IoT."
+    },
+    {
+      "id": "sec",
+      "titre": "Piratage éthique",
+      "description": "Sécurité, bonnes pratiques, labs."
+    }
+  ]
+}

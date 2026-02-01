@@ -1,0 +1,16 @@
+{
+  "ressources": [
+    {
+      "id": "r1",
+      "titre": "Guide Python",
+      "type": "PDF",
+      "lien": ""
+    },
+    {
+      "id": "r2",
+      "titre": "Cheatsheet Git",
+      "type": "Lien",
+      "lien": ""
+    }
+  ]
+}
