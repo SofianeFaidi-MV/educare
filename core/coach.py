@@ -648,26 +648,26 @@ def generate_reply(user_text: str, context: Optional[Dict[str, Any]] = None) -> 
     q = user_text.lower().strip()
     words = [w for w in q.split() if w]
 
-    # (A) "intro" / "introduction" -> forcer une intention "cours"
-    if q in {"intro", "introduction"}:
-        # Option 1 (recommandée) : demander précision
-        st.session_state["pending_clarification"] = user_text
-        return (
-            "Quand tu dis **« intro »**, tu veux plutôt :\n"
-            "1) l’introduction **du cours** (concepts, objectifs)\n"
-            "2) l’introduction **des exercices**\n\n"
-            "Réponds **1** ou **2** 🙂"
-        )
+    # # (A) "intro" / "introduction" -> forcer une intention "cours"
+    # if q in {"intro", "introduction"}:
+    #     # Option 1 (recommandée) : demander précision
+    #     st.session_state["pending_clarification"] = user_text
+    #     return (
+    #         "Quand tu dis **« intro »**, tu veux plutôt :\n"
+    #         "1) l’introduction **du cours** (concepts, objectifs)\n"
+    #         "2) l’introduction **des exercices**\n\n"
+    #         "Réponds **1** ou **2** 🙂"
+    #     )
 
     # (B) Si l'utilisateur répond 1 ou 2 après clarification
-    pending = st.session_state.get("pending_clarification")
-    if pending and q in {"1", "2"}:
-        st.session_state["pending_clarification"] = None
-        if q == "1":
-            # on enrichit la requête pour pousser vers les pages cours
-            user_text = "introduction du cours programmation concepts de base objectifs"
-        else:
-            user_text = "introduction des exercices consignes exercices programmation"
+    # pending = st.session_state.get("pending_clarification")
+    # if pending and q in {"1", "2"}:
+    #     st.session_state["pending_clarification"] = None
+    #     if q == "1":
+    #         # on enrichit la requête pour pousser vers les pages cours
+    #         user_text = "introduction du cours programmation concepts de base objectifs"
+    #     else:
+    #         user_text = "introduction des exercices consignes exercices programmation"
 
     # 🔹 1) RAG
     # ⚠️ top_k interne pour récupérer assez de chunks, puis on sélectionne
